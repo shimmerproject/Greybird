@@ -1,0 +1,34 @@
+style "terminal"	= "murrine-dark"
+{
+	bg[NORMAL]	= @text_color
+	bg[ACTIVE]	= @text_color
+	bg[PRELIGHT]	= @text_color
+	bg[SELECTED]	= @text_color
+	
+}
+
+style "terminal-screen" = "murrine-dark"
+{
+	base[NORMAL]	= @text_color
+	bg[NORMAL]	= @selected_fg_color
+	bg[PRELIGHT]	= shade (0.7, @selected_fg_color)	
+	TerminalScreen::background-darkness	= 0.75
+}
+
+style "terminal-scrollbar"
+{
+	bg[NORMAL]	= @selected_fg_color
+	bg[PRELIGHT]	= shade (0.7, @selected_fg_color)
+	
+	engine "murrine" {
+		gradient_shades			= {0.65,0.65,0.65,0.65}
+		trough_shades	        	= { 0.1, 0.1}
+		border_shades			= { 0.1, 0.1}
+		prelight_shade			= 1.35
+		contrast			= 0.0
+	}
+}
+
+widget "*TerminalWindow"				style "terminal"
+widget "*TerminalWindow.*.GtkVScrollbar"		style "terminal-scrollbar"
+widget "*TerminalWindow.*.TerminalScreen*"              style "terminal-screen"

@@ -1,0 +1,85 @@
+style "theme-panel" = "murrine-dark"
+{
+	xthickness	= 1
+	ythickness	= 0
+
+	engine "murrine" {
+		#border_shades	= { 1.3, 0.9 }
+		contrast	= 0.0
+		roundness	= 0
+		glowstyle	= 0
+		glow_shade	= 1.4
+		glazestyle	= 2
+		#trough_border_shades	= { 3.0, 2.5 } # improve visibility in panel-plugins using the progressbar (xfce4-timer-plugin)
+	}
+}
+
+style "theme-panel-text"
+{
+	fg[NORMAL]	= @selected_fg_color
+	fg[PRELIGHT]	= "#ffffff"
+	fg[ACTIVE]	= @selected_fg_color
+	
+	text[NORMAL]   = @selected_fg_color
+	text[PRELIGHT] = "#ffffff"
+	text[ACTIVE]   = @selected_fg_color
+}
+
+style "panel-entry"
+{
+	fg[NORMAL]	= @text_color
+	fg[PRELIGHT]	= @text_color
+	fg[ACTIVE]	= @text_color	
+
+	text[NORMAL]   = @text_color
+	text[PRELIGHT] = @text_color
+	text[ACTIVE]   = @text_color
+}
+
+style "theme-main-menu-text" = "theme-panel-text"
+{
+	fg[PRELIGHT]   = "#ffffff"
+	text[PRELIGHT] = "#ffffff"
+}
+
+widget "*PanelWidget*"              style "theme-panel"
+widget "*PanelApplet*"              style "theme-panel"
+widget "*fast-user-switch*"         style "theme-panel"
+widget "*CPUFreq*Applet*"           style "theme-panel"
+widget "*indicator-applet*"         style "theme-panel"
+class "PanelApp*"                   style "theme-panel"
+class "PanelToplevel*"              style "theme-panel"
+widget_class "*PanelToplevel*"      style "theme-panel"
+widget_class "*notif*"              style "theme-panel"
+widget_class "*Notif*"              style "theme-panel"
+widget_class "*Tray*"               style "theme-panel" 
+widget_class "*tray*"               style "theme-panel"
+widget_class "*computertemp*"       style "theme-panel"
+widget_class "*Applet*Tomboy*"      style "theme-panel"
+widget_class "*Applet*Netstatus*"   style "theme-panel"
+#widget_class "*DbusmenuGtkMenu*"    style "theme-panel" # dark background for ayatana-indicators
+class "GtkEntry"		    style "panel-entry"
+
+# Fixes for tooltip text in some apps.
+widget_class "*Notif*Beagle*"       style "theme-panel"
+widget_class "*Notif*Brasero*"      style "theme-panel"
+
+# XFCE panel theming.
+widget "*Xfce*Panel*"               style "theme-panel"
+class "*Xfce*Panel*"                style "theme-panel"
+class "*SexyIconEntry*"		    style:highest "panel-entry"
+
+# Make sure panel text color doesn't change
+widget_class "*Panel*MenuBar*"      style "theme-main-menu-text"
+widget_class "*Panel*<GtkMenuBar>*" style "theme-main-menu-text"
+widget "*.clock-applet-button.*"    style "theme-panel-text"
+widget "*PanelApplet*"              style "theme-panel-text"
+
+# dark menus
+widget_class "*<GtkMenu>*"              	style "murrine-dark"
+widget_class "*<GtkMenuItem>*"          	style "murrine-wide-dark"
+widget_class "*<GtkMenuItem>.*.<GtkCalendar>"	style "murrine-dark"
+widget_class "*<GtkMenuItem>.*.<GtkEntry>"	style "panel-entry"
+widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale-dark"
+widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
+widget "*.gtk-combobox-popup-menu.*"   		style "murrine-wide-dark"
