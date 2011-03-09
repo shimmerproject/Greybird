@@ -100,3 +100,4 @@ widget "*.gtk-combobox-popup-menu.*"   		style "murrine-wide-dark"
 
 # dark bg and black text for gdm's panel
 widget_class "*GdmGreeterPanel*" style "panel-entry"
+widget "*GdmClockWidget*" style "murrine-dark"
