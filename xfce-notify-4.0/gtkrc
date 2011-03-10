@@ -1,6 +1,6 @@
 style "greybird-notify-window"
 {
-    bg[NORMAL] = "#4d4d4d" 
+    bg[NORMAL] = "#111" 
     XfceNotifyWindow::border-color = "#ffffff"
     XfceNotifyWindow::border-radius = 10.0
     XfceNotifyWindow::border-width = 3.0
@@ -14,14 +14,12 @@ style "greybird-notify-button"
     fg[NORMAL] = "#ffffff"
     fg[PRELIGHT] = "#ffffff"
 }
-widget_class "XfceNotifyWindow.*.GtkButton*" style "greybird-notify-button"
 
 style "greybird-notify-text"
 {
     fg[NORMAL] = "#ffffff"
     GtkWidget::link-color = "#a7a7a7"
 }
-widget_class "XfceNotifyWindow.*.<GtkLabel>" style "greybird-notify-text"
 
 style "greybird-notify-progressbar"
 {
@@ -42,6 +40,9 @@ style "greybird-notify-progressbar"
 		progressbarstyle    = 0
 	}
 }
+
+widget_class "XfceNotifyWindow.*.GtkButton*" style "greybird-notify-button"
+widget_class "XfceNotifyWindow.*.<GtkLabel>" style "greybird-notify-text"
 widget_class "XfceNotifyWindow.*.<GtkProgress>" style "greybird-notify-progressbar"
-widget_class "XfceNotifyWindow.*.<GtkProgressBar> style "greybird-notify-progressbar"
+widget_class "XfceNotifyWindow.*.<GtkProgressBar>" style "greybird-notify-progressbar"
 
