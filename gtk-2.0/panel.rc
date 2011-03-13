@@ -72,7 +72,6 @@ widget_class "*tray*"               style "theme-panel"
 widget_class "*computertemp*"       style "theme-panel"
 widget_class "*Applet*Tomboy*"      style "theme-panel"
 widget_class "*Applet*Netstatus*"   style "theme-panel"
-class "GtkEntry"		    style "panel-entry"
 
 # Fixes for tooltip text in some apps.
 widget_class "*Notif*Beagle*"       style "theme-panel"
@@ -81,7 +80,11 @@ widget_class "*Notif*Brasero*"      style "theme-panel"
 # XFCE panel theming.
 widget "*Xfce*Panel*"               style "theme-panel"
 class "*Xfce*Panel*"                style "theme-panel"
-class "*SexyIconEntry*"		    style:highest "panel-entry"
+
+# Fix gtk-entries in the panel
+class "GtkEntry"		    style "murrine-combo"
+class "*SexyIconEntry*"		    style:highest "murrine-combo"	# fixes dict-plugin
+widget "*xfce4-verve-plugin*GtkEntry"	style:highest "murrine-combo"	# fixes verve-plugin
 
 # Make sure panel text color doesn't change
 widget_class "*Panel*MenuBar*"      style "theme-main-menu-text"

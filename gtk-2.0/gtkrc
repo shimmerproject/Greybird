@@ -432,6 +432,12 @@ style "murrine-statusbar"
 
 style "murrine-comboboxentry"
 {
+	text[NORMAL]		= @text_color
+	text[PRELIGHT]		= @text_color
+	
+	fg[NORMAL]	= @text_color
+	fg[PRELIGHT]	= @text_color
+	
 	engine "murrine"
 	{
 		contrast      = 0.4
@@ -441,7 +447,7 @@ style "murrine-comboboxentry"
 	}
 }
 
-style "murrine-spinbutton"
+style "murrine-combo" = "murrine-comboboxentry"
 {
 	bg[ACTIVE] = shade (0.85, @bg_color) # Color for pressed-spinbuttons.
 }
@@ -531,7 +537,7 @@ class "GtkCalendar"  style "murrine-wide"
 class "GtkToolbar"   style "murrine-toolbar"
 class "GtkHandleBox*" style "murrine-toolbar"
 
-class "GtkSpinButton"  style "murrine-spinbutton"
+class "GtkSpinButton"  style "murrine-combo"
 class "GtkScale"       style "murrine-scale"
 class "GtkVScale"      style "murrine-vscale"
 class "GtkHScale"      style "murrine-hscale"
@@ -555,7 +561,7 @@ widget_class "*<GtkNotebook>"    style "murrine-notebook"
 widget_class "*<GtkStatusbar>*"  style "murrine-statusbar"
 
 widget_class "*<GtkComboBoxEntry>*" style "murrine-comboboxentry"
-widget_class "*<GtkCombo>*"         style "murrine-comboboxentry"
+widget_class "*<GtkCombo>*"         style "murrine-combo"
 
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
 #widget_class "*<GtkMenuItem>*" style "menubar-menuitem-prelight"
