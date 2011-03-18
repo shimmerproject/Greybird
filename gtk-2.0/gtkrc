@@ -43,7 +43,7 @@ style "murrine-default"
 	GtkMenu			::horizontal-padding			= 0
 	GtkMenu			::vertical-padding			= 0
 
-	GtkPaned		::handle-size          			= 6
+	GtkPaned		::handle-size          			= 3
 
 	GtkNotebook		::tab-overlap				=-2
 
@@ -673,5 +673,8 @@ style "chrome-gtk-frame"
 
 class "ChromeGtkFrame" style "chrome-gtk-frame"
 
-include "panel.rc"	# This includes the file that handles panel theming.
-include "terminal.rc"
+# panel theming
+include "apps/panel.rc"
+# application specific theming
+include "apps/terminal.rc"
+include "apps/thunar.rc"
