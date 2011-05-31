@@ -6,6 +6,7 @@ Desktop Suite for Xfce.
 Greybird is the default theme in Xubuntu 11.04.
 
 The Greybird desktop suite includes:
-– GTK+ theme
-– xfwm theme
+– GTK2 theme
+– GTK3 theme
+– xfwm themes
 – xfce-notify theme

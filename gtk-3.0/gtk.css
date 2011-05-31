@@ -1,0 +1,131 @@
+/* Default color scheme */
+@define-color base_color #ffffff;
+@define-color bg_color #cecece;
+@define-color tooltip_bg_color #000000;
+@define-color selected_bg_color #8b98a9;
+@define-color text_color #000000;
+@define-color fg_color #3c3c3c;
+@define-color tooltip_fg_color #e1e1e1;
+@define-color selected_fg_color #f5f5f5;
+@define-color dark_bg_color #686868;
+
+/* Colormap actually used by the theme, to be overridden in other css files */
+@define-color theme_base_color @base_color;
+@define-color theme_text_color @text_color;
+@define-color theme_bg_color @bg_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_tooltip_bg_color @tooltip_bg_color;
+@define-color theme_tooltip_fg_color @tooltip_fg_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color theme_dark_bg_color @dark_bg_color;
+
+/* Gradient colors start */
+
+@define-color menubar_gradient_a #cecece;
+@define-color menubar_gradient_b #c4c4c4;
+
+@define-color toolbar_gradient_a #c4c4c4;
+@define-color toolbar_gradient_b #b8b8b8;
+
+@define-color button_gradient_a #fbfbfb;
+@define-color button_gradient_b #dedede;
+
+@define-color listview_header_gradient_a #ececec;
+@define-color listview_header_gradient_b #d8d8d8;
+
+@define-color button_border_gradient_a #afafaf;
+@define-color button_border_gradient_b #7a7a7a;
+
+@define-color scrolltrough_gradient_a #ffffff;
+@define-color scrolltrough_gradient_b #ffffff;
+@define-color scrollslider shade (#686868, 1.4);
+@define-color scrollslider_border #ffffff;
+
+@define-color keyboard_focus_border_a #a2b8ca;
+@define-color keyboard_focus_border_b #7591a9;
+
+@define-color progressbar_background_a #a0b6c8;
+@define-color progressbar_background_b #b5c8d7;
+@define-color progressbar_border #8298aa;
+@define-color scale_fill_a #a0b6c8;
+@define-color scale_fill_b #b5c8d7;
+
+/* Gradient colors end */
+
+@define-color sidebar_color #e8e8e8;
+
+@define-color insensitive_bg_color #f5f5f5;
+@define-color insensitive_fg_color #a7a7a7;
+
+@define-color link_color #08c;
+@define-color frame_color #afafaf;
+@define-color inactive_frame_color #c8c8c8;
+
+@define-color warning_color #f57900;
+@define-color error_color #cc0000;
+@define-color success_color #4e9a06;
+
+@define-color highlighted_border #afafaf;
+@define-color internal_element_color #afafaf;
+
+@define-color menu_controls_color shade (#afafaf, 0.50);
+
+/* Not everything below here is used in this theme */
+
+@define-color info_fg_color rgb (181, 171, 156);
+@define-color info_bg_color rgb (252, 252, 189);
+@define-color warning_fg_color rgb (173, 120, 41);
+@define-color warning_bg_color rgb (250, 173, 61);
+@define-color question_fg_color rgb (97, 122, 214);
+@define-color question_bg_color rgb (138, 173, 212);
+@define-color error_fg_color rgb (166, 38, 38);
+@define-color error_bg_color rgb (237, 54, 54);
+
+@define-color os_chrome_bg_color black;
+@define-color os_chrome_fg_color #ccc;
+@define-color os_chrome_selected_bg_color #333;
+@define-color os_chrome_selected_fg_color white;
+
+@define-color chrome_bg_color #222;
+@define-color chrome_fg_color #fff;
+
+@define-color focused_entry_border #7591a9;
+
+/* Not used for the buttons in this theme. */
+@define-color button_gradient_color_a #f5f5f5;
+@define-color button_gradient_color_b #eee;
+@define-color button_border #a7a7a7;
+
+@define-color button_hover_gradient_color_a @theme_base_color;
+@define-color button_hover_gradient_color_b shade (@button_gradient_color_a, 0.94);
+
+@define-color button_active_gradient_color_a #eeeeee;
+@define-color button_active_gradient_color_b shade (@button_active_gradient_color_a, 0.83);
+
+@define-color trough_bg_color_a #afafaf;
+@define-color trough_bg_color_b #e4e4e4;
+
+@define-color active_switch_bg_color_a #509ae7;
+@define-color active_switch_bg_color_b #84b8ee;
+
+@define-color switch_slider_color #eeeeee;
+@define-color switch_slider_border #2a79cb;
+
+@define-color notebook_border #a6a6a6;
+@define-color notebook_active_tab_border #1372d3;
+@define-color notebook_selected_tab_color #8dc0f3;
+
+@define-color notebook_tab_gradient_a @theme_base_color;
+@define-color notebook_tab_gradient_b @switch_slider_color;
+
+@define-color toolbar_gradient_base #aaaaaa;
+@define-color toolbar_gradient_step1 #bcbcbc;
+@define-color toolbar_gradient_step2 #d9d9d9;
+@define-color toolbar_gradient_final #e5e5e5;
+
+@define-color toolbar_active_button_color #eeeeee;
+
+@define-color expander_row_selected_color #acccee;
+
+@import url("gtk-widgets.css");
