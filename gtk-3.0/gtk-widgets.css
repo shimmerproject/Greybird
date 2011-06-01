@@ -686,7 +686,7 @@ GtkComboBox .button:prelight {
 
 .menuitem {
 	-adwaita-menuitem-arrow-color: @menu_controls_color;
-	padding: 2;
+	padding: 1;
 	color: @theme_base_color;
 }
 
