@@ -667,7 +667,7 @@ GtkComboBox .button:prelight {
 .menubar.menuitem {
 	border-width: 1;
 	border-style: none;
-	padding: 3 3;
+	padding: 1 1;
 	color: @theme_text_color;
 }
 
