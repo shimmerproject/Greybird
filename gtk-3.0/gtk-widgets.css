@@ -539,11 +539,11 @@ GtkComboBox .button:prelight {
 }
 
 .scrollbar.slider:insensitive {
-	background-color: @theme_base_color;
+	background-color: @theme_bg_color;
 }
 
 .scrollbar.trough:insensitive {
-	background-color: shade (@theme_bg_color, 0.882);
+	background-color: @theme_base_color;
 }
 
 /***********
