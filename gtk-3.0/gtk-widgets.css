@@ -644,7 +644,7 @@ GtkComboBox .button:prelight {
 		to (@menubar_gradient_b));
 	border-width: 0;
 	border-style: none;
-	padding: 2;
+	padding: 1;
 	color: @theme_text_color;
 
 	-GtkWidget-window-dragging: true;
