@@ -5,6 +5,7 @@ style "sidepane"
 	base[NORMAL]	= shade (1.55,@selected_bg_color)
 	base[INSENSITIVE]	= shade (1.55,@selected_bg_color)
 	bg[NORMAL]	= shade (1.55,@selected_bg_color)
+	bg[PRELIGHT]	= shade (1.40,@selected_bg_color)
 }
 
 style "sidepane-scrollbar"
