@@ -51,5 +51,6 @@ style "sidepane-scrollbar"
 
 widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarShortcutsPane*" style "sidepane"
 widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane*" style "sidepane"
-widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarShortcutsPane.*" style "sidepane-scrollbar"
-widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.*" style "sidepane-scrollbar"
+widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarShortcutsPane.GtkVScrollbar" style "sidepane-scrollbar"
+widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkVScrollbar" style "sidepane-scrollbar"
+widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkHScrollbar" style "sidepane-scrollbar"
