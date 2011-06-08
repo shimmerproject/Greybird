@@ -580,12 +580,13 @@ widget_class "*<GtkProgress>"	       style "murrine-progressbar"
 widget_class "*<GtkProgressBar>"       style "murrine-progressbar"
 
 # Treeview header
-widget_class "*.<GtkTreeView>.<GtkButton>" style "murrine-treeview-header"
-widget_class "*.<GtkCTree>.<GtkButton>"    style "murrine-treeview-header"
-widget_class "*.<GtkList>.<GtkButton>"     style "murrine-treeview-header"
-widget_class "*.<GtkCList>.<GtkButton>"    style "murrine-treeview-header"
-widget_class "*.<GtkCMCTree>.<GtkButton>"    style "murrine-treeview-header" # Claws-Mail treeview-headers
-widget_class "*.<GtkCMCList>.<GtkButton>"    style "murrine-treeview-header" # Claws-Mail treeview-headers
+widget_class "*.<GtkTreeView>.<GtkButton>"	style "murrine-treeview-header"
+widget_class "*.<GtkCTree>.<GtkButton>"	style "murrine-treeview-header"
+widget_class "*.<GtkList>.<GtkButton>"		style "murrine-treeview-header"
+widget_class "*.<GtkCList>.<GtkButton>"	style "murrine-treeview-header"
+widget_class "*.<GtkCMCTree>.<GtkButton>"	style "murrine-treeview-header" # Claws-Mail treeview-headers
+widget_class "*.<GtkCMCList>.<GtkButton>"	style "murrine-treeview-header" # Claws-Mail treeview-headers
+widget_class "*GnmSimpleCanvas*"		style "murrine-treeview-header" # Gnumeric treeview-headers
 
 # Workarounds for Evolution
 widget_class "*.ETable.ECanvas"    style "murrine-treeview-header"
