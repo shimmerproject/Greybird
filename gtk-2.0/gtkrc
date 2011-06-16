@@ -3,7 +3,7 @@
 # based on "Bluebird" by Simon Steinbeiß and Pasi Lallinaho
 # Description: As is the original theme, this theme is 100% free and open source.
 
-gtk_color_scheme	= "bg_color:#CECECE\nselected_bg_color:#8b98a9\nbase_color:#FFFFFF" # Background, base.
+gtk_color_scheme	= "bg_color:#CECECE\nselected_bg_color:#9cabbe\nbase_color:#FFFFFF" # Background, base.
 gtk_color_scheme	= "fg_color:#3C3C3C\nselected_fg_color:#f5f5f5\ntext_color:#000000" # Foreground, text. 
 gtk_color_scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
 gtk_color_scheme	= "link_color:#74a0c6" # Hyperlinks
@@ -250,7 +250,7 @@ style "murrine-entry" = "murrine-wider" {
 style "murrine-button" = "murrine-wider"
 {	
 	bg[NORMAL]        = shade (1.06, @bg_color) 
-	bg[PRELIGHT]      = shade (1.45, @selected_bg_color)  
+	bg[PRELIGHT]      = shade (1.35, @selected_bg_color)  
 	bg[ACTIVE]        = shade (0.85, @bg_color)
 	bg[SELECTED]      = shade (1.0, @selected_bg_color)  
 	bg[INSENSITIVE]   = shade (0.95, @bg_color)
@@ -339,6 +339,7 @@ style "murrine-treeview"
   	engine "murrine" 
 	{
 		roundness = 0  # This makes treeview progressbars square.
+		gradient_shades     = {1.1,1.1,1.1,1.03}
 	}
 }
 
