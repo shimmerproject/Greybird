@@ -80,6 +80,9 @@ style "murrine-default"
 	GtkWidget		::new-tooltip-style			= 1
 	GtkWidget		::focus-line-width			= 1
 	GtkWidget		::focus-padding				= 0
+	
+	GtkWindow       ::resize-grip-height            = 13
+        GtkWindow       ::resize-grip-width             = 13
 
 	xthickness = 1
 	ythickness = 1
