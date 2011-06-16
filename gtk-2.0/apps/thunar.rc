@@ -2,56 +2,31 @@
 
 style "sidepane"
 {
-	base[NORMAL]	= shade (1.55,@selected_bg_color)
-	base[INSENSITIVE]	= shade (1.55,@selected_bg_color)
-	bg[NORMAL]	= shade (1.55,@selected_bg_color)
-	bg[PRELIGHT]	= shade (1.40,@selected_bg_color)
+	base[NORMAL]	= shade (1.4,@selected_bg_color)
+	base[INSENSITIVE]	= shade (1.4,@selected_bg_color)
+	bg[NORMAL]	= shade (1.4,@selected_bg_color)
+	bg[PRELIGHT]	= shade (1.2,@selected_bg_color)
 }
 
 style "sidepane-scrollbar"
 {
 	GtkScrollbar::trough-side-details = 1
-#	GtkScrollbar::stepper-spacing	= 1
-	
-#	GtkScrollbar::focus-line-width	= 0
-#	GtkScrollbar::activate-slider	= 1
-#	GtkScrollbar::trough-border	= 0
-#	GtkScrolledWindow	::scrollbars-within-bevel		= 1
 
-	
-	#base[INSENSITIVE]	= shade (1.55,@selected_bg_color)
-
-	#base[INSENSITIVE] = shade (1.55,@selected_bg_color)
-	bg[NORMAL]	= shade (1.55,@selected_bg_color)
-	bg[ACTIVE]	= shade (1.55,@selected_bg_color)
+	bg[NORMAL]	= shade (1.4,@selected_bg_color)
+	bg[ACTIVE]	= shade (1.4,@selected_bg_color)
 	bg[SELECTED]	= shade (1.4, @panel_bg)
 	bg[INSENSITIVE]	= @base_color
 	
 	engine "murrine" {
 		colorize_scrollbar	= TRUE
 		roundness		= 6
-#		gradient_shades		= {0.65,0.65,0.65,0.65}
-#		gradient_shades		= {1.0,1.0,1.0,1.0}
-#		highlight_shade		= 1.0
-#		glow_shade		= 1.0
-#		reliefstyle		= 2
-#		gradient_colors		= FALSE
 		focus_color		= shade (1.55,@selected_bg_color)
-#		lightborder_shade       = 0.0
-#		lightborderstyle	= 1
-#		trough_shades		= { 1.0, 0.5 }
-#		cellstyle		= 0
-#		trough_shades		= { 1.2, 1.0 }
-#		trough_border_shades	= { 5.0, 0.0 }
 		border_shades		= { 1.2, 1.2 }
-#		shadow_shades		= { 0.0, 0.0 }
-#		contrast		= 0.1			# no trough-border
-#		prelight_shade		= 0.65
 	}
 }
 
-widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarShortcutsPane*" style "sidepane"
-widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane*" style "sidepane"
+widget_class "*ThunarShortcutsView*" style "sidepane"
+widget_class "*ThunarTreeView*" style "sidepane"
 widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarShortcutsPane.GtkVScrollbar" style "sidepane-scrollbar"
 widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkVScrollbar" style "sidepane-scrollbar"
 widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkHScrollbar" style "sidepane-scrollbar"
