@@ -460,7 +460,7 @@ style "murrine-scale" = "murrine-button"
 {
 	GtkWidget	::focus-line-width	= 0
 	GtkWidget	::focus-padding		= 2
-	bg[ACTIVE]				= @selected_fg_color
+	bg[ACTIVE]				= @base_color
 	bg[NORMAL]				= @panel_bg
 	bg[PRELIGHT]				= shade (0.5, @panel_bg)
 	bg[INSENSITIVE]				= @panel_bg

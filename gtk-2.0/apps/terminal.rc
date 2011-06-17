@@ -10,14 +10,14 @@ style "terminal"	= "murrine-dark"
 style "terminal-screen" = "murrine-dark"
 {
 	base[NORMAL]	= @text_color
-	bg[NORMAL]	= @selected_fg_color
+	bg[NORMAL]	= @base_color
 	bg[PRELIGHT]	= shade (0.7, @selected_fg_color)	
 	TerminalScreen::background-darkness	= 0.75
 }
 
 style "terminal-scrollbar"
 {
-	bg[NORMAL]	= @selected_fg_color
+	bg[NORMAL]	= @base_color
 	bg[PRELIGHT]	= shade (0.7, @selected_fg_color)
 	
 	engine "murrine" {
