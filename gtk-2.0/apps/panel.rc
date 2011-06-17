@@ -8,15 +8,15 @@ style "theme-panel" = "murrine-dark"
 	bg[PRELIGHT]	= shade (0.35, @bg_color_dark)
 	bg[SELECTED]	= shade (0.5, @bg_color_dark)
 	
-	fg[NORMAL]	= shade (0.9, @selected_fg_color)
-	fg[PRELIGHT]	= @selected_fg_color
-	fg[ACTIVE]	= shade (0.9, @selected_fg_color)
-	fg[SELECTED]	= shade (0.9, @selected_fg_color)
+	fg[NORMAL]	= shade (0.9, @base_color)
+	fg[PRELIGHT]	= @base_color
+	fg[ACTIVE]	= shade (0.9, @base_color)
+	fg[SELECTED]	= shade (0.9, @base_color)
 	
-	text[NORMAL]   = shade (0.9, @selected_fg_color)
-	text[PRELIGHT] = @selected_fg_color
-	text[ACTIVE]   = shade (0.9, @selected_fg_color)
-	text[SELECTED]   = shade (0.9, @selected_fg_color)
+	text[NORMAL]   = shade (0.9, @base_color)
+	text[PRELIGHT] = @base_color
+	text[ACTIVE]   = shade (0.9, @base_color)
+	text[SELECTED]   = shade (0.9, @base_color)
 
 	engine "murrine" {
 		#border_shades	= { 1.3, 0.9 }
@@ -31,13 +31,13 @@ style "theme-panel" = "murrine-dark"
 
 style "theme-panel-text"
 {
-	fg[NORMAL]	= @selected_fg_color
+	fg[NORMAL]	= @base_color
 	fg[PRELIGHT]	= "#ffffff"
-	fg[ACTIVE]	= @selected_fg_color
+	fg[ACTIVE]	= @base_color
 	
-	text[NORMAL]   = @selected_fg_color
+	text[NORMAL]   = @base_color
 	text[PRELIGHT] = "#ffffff"
-	text[ACTIVE]   = @selected_fg_color
+	text[ACTIVE]   = @base_color
 }
 
 style "panel-entry" = "murrine-dark"
