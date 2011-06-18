@@ -2,9 +2,9 @@
 
 style "sidepane"
 {
-	base[NORMAL]	= shade (1.4,@selected_bg_color)
-	base[INSENSITIVE]	= shade (1.4,@selected_bg_color)
-	bg[NORMAL]	= shade (1.4,@selected_bg_color)
+	base[NORMAL]	= mix (0.2, @bg_color,shade (1.03,@selected_bg_color))
+	base[INSENSITIVE]	= shade (1.03,@selected_bg_color)
+	bg[NORMAL]	= mix (0.2, @bg_color,shade (1.03,@selected_bg_color))
 	bg[PRELIGHT]	= shade (1.2,@selected_bg_color)
 }
 
@@ -12,8 +12,8 @@ style "sidepane-scrollbar"
 {
 	GtkScrollbar::trough-side-details = 1
 
-	bg[NORMAL]	= shade (1.4,@selected_bg_color)
-	bg[ACTIVE]	= shade (1.4,@selected_bg_color)
+	bg[NORMAL]	= mix (0.2, @bg_color,shade (1.03,@selected_bg_color))
+	bg[ACTIVE]	= mix (0.2, @bg_color,shade (1.03,@selected_bg_color))
 	bg[SELECTED]	= shade (1.4, @panel_bg)
 	bg[INSENSITIVE]	= @base_color
 	
@@ -27,6 +27,6 @@ style "sidepane-scrollbar"
 
 widget_class "*ThunarShortcutsView*" style "sidepane"
 widget_class "*ThunarTreeView*" style "sidepane"
-widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarShortcutsPane.GtkVScrollbar" style "sidepane-scrollbar"
-widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkVScrollbar" style "sidepane-scrollbar"
-widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkHScrollbar" style "sidepane-scrollbar"
+#widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarShortcutsPane.GtkVScrollbar" style "sidepane-scrollbar"
+#widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkVScrollbar" style "sidepane-scrollbar"
+#widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkHScrollbar" style "sidepane-scrollbar"
