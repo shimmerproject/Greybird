@@ -367,7 +367,7 @@ style "murrine-treeview-header" = "murrine-button"
 	engine "murrine" 
 	{
 		roundness = 0  # This makes treeview progressbars square.
-		gradient_shades     = {1.0,1.03,1.5,1.1}
+		gradient_shades     = {0.98,1.0,1.3,1.35}
 	}
 }
 
