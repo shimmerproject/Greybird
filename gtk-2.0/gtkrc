@@ -3,8 +3,8 @@
 # based on "Bluebird" by Simon Steinbeiß and Pasi Lallinaho
 # Description: As is the original theme, this theme is 100% free and open source.
 
-gtk_color_scheme	= "bg_color:#CECECE\nselected_bg_color:#e7eff9\nbase_color:#fcfcfc" # Background, base.
-gtk_color_scheme	= "fg_color:#3C3C3C\nselected_fg_color:#1d3349\ntext_color:#000000" # Foreground, text. 
+gtk_color_scheme	= "bg_color:#CECECE\nselected_bg_color:#9db6cd\nbase_color:#fcfcfc" # Background, base.
+gtk_color_scheme	= "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text. 
 gtk_color_scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
 gtk_color_scheme	= "link_color:#74a0c6" # Hyperlinks
 gtk_color_scheme	= "panel_bg:#686868" # Panel bg color
@@ -139,7 +139,7 @@ style "murrine-default"
 		menuitemstyle       = 0                 # 0 = flat, 1 = glassy, 2 = striped
 		menustyle           = 0                 # 0 = no vertical menu stripe, 1 = display vertical menu stripe
 		prelight_shade      = .95               # shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors		
-		progressbarstyle    = 0                 # 0 = nothing, 1 = stripes, 2 = lines
+		progressbarstyle    = 1                 # 0 = nothing, 1 = stripes, 2 = lines
 		reliefstyle         = 3                 # 0 = flat, 1 = inset, 2 = shadow
 		rgba                = FALSE             # FALSE = disabled, TRUE = enabled
 		roundness           = 3                 # 0 = squared, 1 = old default, more will increase roundness
@@ -262,7 +262,7 @@ style "murrine-entry" = "murrine-wider" {
 style "murrine-button" = "murrine-wider"
 {	
 	bg[NORMAL]        = shade (1.02, @bg_color) 
-	bg[PRELIGHT]      = shade (1.05, @selected_bg_color)  
+	bg[PRELIGHT]      = shade (1.35, @selected_bg_color)  
 	bg[ACTIVE]        = shade (0.85, @bg_color)
 	bg[SELECTED]      = shade (0.5, @selected_bg_color)  
 	bg[INSENSITIVE]   = shade (0.95, @bg_color)
@@ -354,7 +354,7 @@ style "murrine-treeview"
   	engine "murrine" 
 	{
 		roundness = 0
-		gradient_shades     = {1.1,1.1,1.1,1.09}
+		gradient_shades     = {1.1,1.1,1.1,1.1}
 	}
 }
 
@@ -371,6 +371,7 @@ style "murrine-treeview-header" = "murrine-button"
 	{
 		roundness = 0  # This makes treeview progressbars square.
 		textstyle               = 1
+		gradient_shades     = {1.0,1.03,1.5,1.1}
 	}
 }
 
@@ -409,7 +410,7 @@ style "murrine-progressbar"
 		trough_shades	= {0.95, 1.15}
 		trough_border_shades	= { 0.8, 0.7 }
 		roundness 	= 4
-		contrast	= 0.2
+		contrast	= 0.8
 		border_shades	= { 1.0, 0.8 }
 		lightborder_shade   = 1.0
 		glowstyle	= 0
