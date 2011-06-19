@@ -262,7 +262,7 @@ style "murrine-entry" = "murrine-wider" {
 style "murrine-button" = "murrine-wider"
 {	
 	bg[NORMAL]        = shade (1.02, @bg_color) 
-	bg[PRELIGHT]      = shade (1.35, @selected_bg_color)  
+	bg[PRELIGHT]      = mix(0.3, @bg_color, shade (1.3, @selected_bg_color))
 	bg[ACTIVE]        = shade (0.85, @bg_color)
 	bg[SELECTED]      = shade (0.5, @selected_bg_color)  
 	bg[INSENSITIVE]   = shade (0.95, @bg_color)
