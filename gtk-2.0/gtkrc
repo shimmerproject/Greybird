@@ -289,7 +289,6 @@ style "murrine-notebook"
 	{
 		roundness       = 3
 		contrast        = 1.1
-		textstyle	= 1
 	}
 }
 
@@ -340,8 +339,6 @@ style "menubar-menuitem"
 	text[NORMAL]   = @base_color
 	text[PRELIGHT] = @base_color
 	text[SELECTED] = @base_color
-	engine "murrine"
-	{ textstyle = 1 }
 }
 
 style "menubar-menuitem-prelight"
@@ -370,7 +367,6 @@ style "murrine-treeview-header" = "murrine-button"
 	engine "murrine" 
 	{
 		roundness = 0  # This makes treeview progressbars square.
-		textstyle               = 1
 		gradient_shades     = {1.0,1.03,1.5,1.1}
 	}
 }
