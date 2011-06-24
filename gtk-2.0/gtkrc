@@ -60,10 +60,13 @@ style "murrine-default"
 	GtkScale		::trough-side-details			= 1
 
 	GtkScrollbar		::min-slider-length			= 50
-	GtkScrollbar		::slider-width				= 6
-	GtkScrollbar		::has-backward-stepper 			= 0 
+	GtkScrollbar		::slider-width				= 7
+	GtkScrollbar		::trough-border				= 4
+	#GtkScrollbar		::trough-under-steppers			= 0
+	GtkScrollbar		::has-backward-stepper 			= 1
+	#GtkScrollbar		::arrow-scaling				= 0.8
 	#GtkScrollbar		::has_secondary_backward_stepper	= 1 
-	GtkScrollbar		::has-forward-stepper			= 0 
+	GtkScrollbar		::has-forward-stepper			= 1 
 	#GtkScrollbar		::has_secondary_forward_stepper		= 0 
 
 	GtkScrolledWindow	::scrollbar-spacing			= 0
@@ -82,8 +85,8 @@ style "murrine-default"
 	GtkWidget		::focus-line-width			= 1
 	GtkWidget		::focus-padding				= 0
 	
-	GtkWindow       ::resize-grip-height            = 13
-        GtkWindow       ::resize-grip-width             = 13
+	GtkWindow		::resize-grip-height			= 13
+        GtkWindow		::resize-grip-width			= 13
 
 	xthickness = 1
 	ythickness = 1
@@ -351,7 +354,7 @@ style "murrine-treeview"
   	engine "murrine" 
 	{
 		roundness = 0
-		gradient_shades     = {1.1,1.1,1.1,1.1}
+		gradient_shades     = {1.1,1.1,1.1,1.0}
 	}
 }
 
@@ -416,6 +419,29 @@ style "murrine-progressbar"
 
 style "murrine-scrollbar" {
 	
+	GtkScrollbar::stepper-size	= 5
+	GtkScrollbar::arrow-scaling	= 0.0
+	
+	bg[NORMAL]	= shade (1.3, @base_color)
+	bg[SELECTED]	= shade (0.90, @bg_color)
+	bg[ACTIVE]	= shade (1.75, @base_color)
+	bg[PRELIGHT]	= shade (0.75, @bg_color)
+	bg[INSENSITIVE]	= shade (0.75, @bg_color)
+	
+	engine "murrine" {
+		arrowstyle	= 0
+		colorize_scrollbar = TRUE
+		roundness	= 6
+		border_shades	= {0.60, 0.60}
+		trough_shades	= {1.1, 1.3}
+		contrast	= 0.0
+		gradient_shades	= {1.1,1.1,0.95,0.95}
+		prelight_shade	= 0.75
+	}
+}
+
+style "murrine-scrollbar-mockup" {
+	
 #	GtkScrollbar::trough-side-details	= 1
 	GtkScrollbar::trough-border = 4
 	
@@ -448,17 +474,18 @@ style "murrine-scrollbar-old"
 		arrowstyle		= 1
 		roundness		= 6
 		gradient_shades		= {1.0,1.0,1.0,1.0}
-		highlight_shade		= 1.0
-		glow_shade		= 1.0
-		reliefstyle		= 0
-		gradient_colors		= FALSE
-		lightborder_shade       = 1.0
-		lightborderstyle	= 0
+		#highlight_shade		= 1.0
+		#glow_shade		= 1.0
+		#reliefstyle		= 0
+		#gradient_colors		= FALSE
+		#lightborder_shade       = 1.0
+		#lightborderstyle	= 0
 		#trough_shades	        = { 0.97, 0.97}
 		#trough_border_shades	= { 2.0, 2.0 }
 		#border_shades		= { 0.85, 0.85}		# slider border outline
 		#shadow_shades		= { 0.5, 0.8 }
-		trough_shades		= { 1.135, 1.135}
+		#trough_shades		= { 1.135, 1.135}
+		trough_shades		= { 1.5, 1.5 }
 		border_shades		= { 2.0, 2.0 }		# slider border outline
 		contrast		= 0.0			# no trough-border
 		prelight_shade		= 0.65
@@ -543,10 +570,15 @@ style "murrine-nautilus-location" # Workaround for nautilus' messages.
 	bg[NORMAL] = shade (1.25, @selected_bg_color)
 }
 
-style "murrine-radiocheck" = "murrine-default"
+style "murrine-radiocheck" #= "murrine-button"
 {
-	text[NORMAL]    = @selected_fg_color # Color for checks/radio items.
-	text[PRELIGHT]  = @selected_fg_color # Color for checks/radio items.
+	base[SELECTED]	= shade (1.6, @selected_bg_color)
+	engine "murrine" {
+#		lightborder_shade	= 1.9
+	}
+
+#	text[NORMAL]	= @selected_fg_color # Color for checks/radio items.
+#	text[PRELIGHT]	= @selected_fg_color # Color for checks/radio items.
 }
 
 style "murrine-toolbar" = "murrine-default"
@@ -559,6 +591,15 @@ style "murrine-toolbar" = "murrine-default"
 		gradient_shades     		= {1.0,0.94,0.94,0.88}
 	}
 }
+
+style "xfce-header"
+{
+	base[NORMAL]	 = shade (1.18, @bg_color)
+	engine "murrine" {
+		gradient_shades = {0.1,0.5,0.6,1.0}
+	}
+}
+
 
 style "murrine-borderless"
 {
@@ -608,7 +649,7 @@ class "GtkVScrollbar"  style "murrine-scrollbar"
 class "GtkHScrollbar"  style "murrine-scrollbar"
 
 class "GtkRadio*"	style "murrine-radiocheck"
-class "GtkCheck*"	style "murrine-radiocheck"
+class "GtkCheck*"	style "murrine-default"
 
 # General matching following, the order is choosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
 
@@ -627,8 +668,6 @@ widget_class "*<GtkNotebook>"    style "murrine-notebook"
 widget_class "*<GtkStatusbar>*"  style "murrine-statusbar"
 #widget "*Gnumeric*GtkVBox.GtkNotebook"	style "murrine-borderless"
 
-widget_class "*GnmSimpleCanvas*"		style "murrine-treeview-header"
-
 #widget_class "GimpDisplayShell*GtkTable*" style "murrine-default"
 #widget_class "*GimpStatusbar*" style "murrine-default"
 #widget_class "*Gnumeric*"	style "murrine-borderless"
@@ -637,7 +676,6 @@ widget_class "*<GtkComboBoxEntry>*" style "murrine-comboboxentry"
 widget_class "*<GtkCombo>*"         style "murrine-combo"
 
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
-#widget_class "*<GtkMenuItem>*" style "menubar-menuitem-prelight"
 widget_class "*<GtkMenu>*"              style "murrine-menu"
 widget_class "*<GtkMenuBar>*"		style "murrine-menu"
 # Scale widget in menus (e.g. ubuntu's sound indicator)
@@ -645,6 +683,7 @@ widget_class "*<GtkMenuItem>.*.<GtkScale>" style "murrine-scale"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        style "murrine-treeview"
+widget_class "*SongTree*GtkDrawingArea"		style "murrine-treeview"
 
 widget_class "*GtkHPaned" style "murrine-paned"
 widget_class "*GtkVPaned" style "murrine-paned"
@@ -659,6 +698,9 @@ widget_class "*.<GtkList>.<GtkButton>"     style "murrine-treeview-header"
 widget_class "*.<GtkCList>.<GtkButton>"    style "murrine-treeview-header"
 widget_class "*.<GtkCMCTree>.<GtkButton>"    style "murrine-treeview-header" # Claws-Mail treeview-headers
 widget_class "*.<GtkCMCList>.<GtkButton>"    style "murrine-treeview-header" # Claws-Mail treeview-headers
+widget_class "*GnmSimpleCanvas*"		style "murrine-treeview-header" # Gnumeric treeview-headers
+
+widget_class "*XfceHeading*"			style "xfce-header"
 
 # Workarounds for Evolution
 widget_class "*.ETable.ECanvas"    style "murrine-treeview-header"
@@ -727,6 +769,7 @@ widget_class "*<GtkCList>" style "murrine-fg-is-text-color-workaround"
 widget_class "*<EelEditableLabel>" style "murrine-fg-is-text-color-workaround"
 
 widget "xfwm4-tabwin*" style "tabwin-dark"
+
 
 
 # Google Chrome/Chromium theming (requires 9.0.597 or newer)
