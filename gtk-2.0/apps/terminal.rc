@@ -4,24 +4,22 @@ style "terminal"	= "murrine-dark"
 	bg[ACTIVE]	= @text_color
 	bg[PRELIGHT]	= @text_color
 	bg[SELECTED]	= @text_color
-	
+	base[NORMAL]	= @text_color
 }
 
 style "terminal-screen" = "murrine-dark"
 {
 	base[NORMAL]	= @text_color
-	bg[NORMAL]	= @base_color
-	bg[PRELIGHT]	= shade (0.7, @selected_fg_color)	
+	bg[NORMAL]	= @selected_fg_color
+	bg[PRELIGHT]	= shade (0.7, @selected_fg_color)
 	TerminalScreen::background-darkness	= 0.75
 }
 
 style "terminal-scrollbar"
 {
-	bg[NORMAL]	= @base_color
-	bg[PRELIGHT]	= shade (0.7, @selected_fg_color)
-	
 	engine "murrine" {
-		gradient_shades			= {0.65,0.65,0.65,0.65}
+		gradient_shades			= {2.5,2.5,2.5,2.5}
+		glowstyle			= 0
 		trough_shades	        	= { 0.1, 0.1}
 		border_shades			= { 0.1, 0.1}
 		prelight_shade			= 1.35
@@ -29,6 +27,23 @@ style "terminal-scrollbar"
 	}
 }
 
-widget "*TerminalWindow"				style "terminal"
+style "terminal-notebook" = "murrine-dark"
+{
+	bg[NORMAL]	= shade (0.0, @text_color_dark) # Tab background.
+	bg[ACTIVE]	= shade (0.2, @text_color_dark) # Unfocused tab background.
+	bg[PRELIGHT]	= shade (0.1, @selected_fg_color)
+	base[NORMAL]	= @text_color
+	fg[NORMAL]	= "#fff"
+	fg[ACTIVE]	= "#fff"
+	engine "murrine"
+	{
+		roundness       = 0
+		contrast        = 0.1
+		prelight_shade	= 1.5
+	}
+}
+
+class "*TerminalWindow"				style "terminal"
+#widget_class "TerminalWindow*GtkNotebook"			style "terminal-notebook"
 widget "*TerminalWindow.*.GtkVScrollbar"		style "terminal-scrollbar"
 widget "*TerminalWindow.*.TerminalScreen*"              style "terminal-screen"
