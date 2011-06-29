@@ -570,15 +570,19 @@ style "murrine-nautilus-location" # Workaround for nautilus' messages.
 	bg[NORMAL] = shade (1.25, @selected_bg_color)
 }
 
-style "murrine-radiocheck" #= "murrine-button"
+style "murrine-radiocheck"
 {
-	base[SELECTED]	= shade (1.6, @selected_bg_color)
-	engine "murrine" {
-#		lightborder_shade	= 1.9
-	}
+	bg[NORMAL]	= shade (1.06, @bg_color) 
+	bg[PRELIGHT]	= shade (1.06, @bg_color)  
+	bg[ACTIVE]	= shade (0.85, @bg_color)
+	bg[SELECTED]	= shade (1.0, @selected_bg_color)  
+	bg[INSENSITIVE]	= shade (0.95, @bg_color)
 
-#	text[NORMAL]	= @selected_fg_color # Color for checks/radio items.
-#	text[PRELIGHT]	= @selected_fg_color # Color for checks/radio items.
+  	engine "murrine" 
+	{
+		contrast		= .8
+		lightborder_shade	= 1.9
+	}
 }
 
 style "murrine-toolbar" = "murrine-default"
@@ -649,7 +653,7 @@ class "GtkVScrollbar"  style "murrine-scrollbar"
 class "GtkHScrollbar"  style "murrine-scrollbar"
 
 class "GtkRadio*"	style "murrine-radiocheck"
-class "GtkCheck*"	style "murrine-default"
+class "GtkCheck*"	style "murrine-radiocheck"
 
 # General matching following, the order is choosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
 
@@ -683,13 +687,15 @@ widget_class "*<GtkMenuItem>.*.<GtkScale>" style "murrine-scale"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        style "murrine-treeview"
-widget_class "*SongTree*GtkDrawingArea"		style "murrine-treeview"
 
 widget_class "*GtkHPaned" style "murrine-paned"
 widget_class "*GtkVPaned" style "murrine-paned"
 
 widget_class "*<GtkProgress>"	       style "murrine-progressbar"
 widget_class "*<GtkProgressBar>"       style "murrine-progressbar"
+
+widget_class "*<GtkRadioButton>*"		style "murrine-radiocheck"
+widget_class "*<GtkCheckButton>*"		style "murrine-radiocheck"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>" style "murrine-treeview-header"
