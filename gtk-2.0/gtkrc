@@ -149,7 +149,6 @@ style "murrine-default"
 		scrollbarstyle      = 0                 # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
 		separatorstyle      = 1                 # 0 = Hard seperators 1 = Smooth seperators
 		sliderstyle         = 0                 # 0 = nothing added, 1 = handles
-		spinbuttonstyle	    = 1
 		stepperstyle        = 1                 # 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		shadow_shades       = { 0.8, 2.2 }      # gradient for shadows.		
 		textstyle           = 0                 # 0 = normal text, 1 = inset		
@@ -604,6 +603,13 @@ style "xfce-header"
 	}
 }
 
+style "xfdesktop-windowlist" #= "murrine-menu"
+{
+	bg[NORMAL]	= @base_color
+	fg[INSENSITIVE]   = shade (0.95, @base_color)
+	text[INSENSITIVE]   = shade (0.95, @base_color)
+}
+
 
 style "murrine-borderless"
 {
@@ -707,6 +713,7 @@ widget_class "*.<GtkCMCList>.<GtkButton>"    style "murrine-treeview-header" # C
 widget_class "*GnmSimpleCanvas*"		style "murrine-treeview-header" # Gnumeric treeview-headers
 
 widget_class "*XfceHeading*"			style "xfce-header"
+widget_class "*XfceDesktop*"			style "xfdesktop-windowlist"
 
 # Workarounds for Evolution
 widget_class "*.ETable.ECanvas"    style "murrine-treeview-header"
