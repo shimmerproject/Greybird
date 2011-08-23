@@ -1,0 +1,107 @@
+/*********
+ * Menus *
+ *********/
+.menu {
+	padding: 0;
+	background-image: none;
+	background-color: @dark_bg_color;
+	border-color: shade (@dark_bg_color,0.5);
+	color: @selected_fg_color;
+}
+
+/* menuitem */
+.menuitem {
+	padding: 2;
+	border-width: 1;
+	border-radius: 0;
+	border-style: solid;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@menuitem_background_a, 1.0)),
+		to (shade (@menuitem_background_b, 1.0)));
+
+	-unico-bullet-color: @selected_fg_color;
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (alpha (@theme_selected_bg_color, 0.0)),
+		to (alpha (@theme_selected_bg_color, 0.0)));
+	-unico-inner-stroke-style: none;
+}
+
+.menuitem:active {
+	color: @selected_fg_color;
+}
+
+.menuitem:prelight {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@theme_dark_bg_color, 0.50)),
+		to (shade (@theme_dark_bg_color, 0.40)));
+	background-color: shade (@bg_color_dark,0.5);
+	border-style: solid;
+	border-width: 1; /* Keep at 1. Menu gets bumpy otherwise. */
+	border-radius: 0;
+	border-color: shade (@dark_bg_color,0.3);
+}
+
+
+
+.menuitem *:prelight {
+	color: @selected_fg_color;
+	text-shadow: none;
+}
+
+.menuitem:insensitive,
+.menuitem *:insensitive {
+	color: mix (@theme_fg_color, @theme_bg_color, 0.5);
+}
+
+.menuitem.check:active,
+.menuitem.radio:active {
+	color: @selected_fg_color;
+	-unico-bullet-color: @selected_fg_color;
+}
+
+.menuitem.check:active:prelight,
+.menuitem.radio:active:prelight {
+	color: @selected_fg_color;
+	-unico-bullet-color: @selected_fg_color;
+}
+
+/* menubar */
+.menubar {
+	-GtkWidget-window-dragging: true;
+	color: @theme_fg_color;
+	background-image: -gtk-gradient (linear,
+		left top,
+		left bottom,
+		from (@toolbar_gradient_base),
+		to (@toolbar_gradient_final));
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (alpha (@theme_bg_color, 1.0)),
+		to (alpha (@toolbar_border, 1.0)));
+	border-style: solid;
+	border-width: 1;
+}
+
+.menubar.menuitem {
+	border-radius: 0;
+	border-width: 1;
+}
+
+.menubar.menuitem:* {
+	color: @text_color;
+}
+
+.menubar.menuitem:prelight {
+	color: @theme_fg_color;
+	text-shadow: none;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@dark_bg_color, 0.70)),
+		to (shade (@dark_bg_color, 0.50)));
+	background-color: shade (@bg_color_dark,0.7);
+	border-width: 0;
+	border-color: @inactive_frame_color;
+	border-style: none;
+	-unico-inner-stroke-style: none;
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (alpha (@inactive_frame_color, 1.0)),
+		to (alpha (@inactive_frame_color, 1.0)));
+}

@@ -1,0 +1,186 @@
+/********
+ * Misc *
+ ********/
+/* gnome-terminal */
+TerminalScreen {
+	background-color: @theme_base_color;
+	color: @theme_fg_color;
+	-TerminalScreen-background-darkness: 0.95;
+}
+
+/* GtkAssistant */
+GtkAssistant .sidebar .highlight {
+	color: @theme_fg_color;
+	font: bold;
+}
+
+GtkAssistant .sidebar {
+	padding: 12;
+	border-width: 1;
+	border-radius: 2;
+	border-style: solid;
+	border-color: @inactive_frame_color;
+	color: mix (@theme_fg_color, @theme_bg_color, 0.40);
+	background-color: shade (@theme_bg_color, 0.97);
+}
+
+/* Sidebar */
+/* Using color-stops as borders aren't a good idea. Replace with border-right when it's supported. */
+.sidebar,
+.sidebar.view {
+	background-color: shade (@sidebar_color, 1.00);
+	background-image: -gtk-gradient (linear,
+		left top, right top,
+		from (shade (@sidebar_color,1.00)),
+		color-stop (0.98, shade (@sidebar_color, 1.00)),
+		color-stop (0.99, shade (@sidebar_color, 1.00)),
+		color-stop (1.00, shade (@sidebar_color, 0.86)),
+		to (shade (@sidebar_color,1.00)));
+	color: @theme_fg_color;
+}
+
+.sidebar.menuitem:selected {
+	background-color: shade (@theme_selected_bg_color, 0.99);
+	color: @theme_fg_color;
+}
+
+/* View */
+GtkViewport,
+GtkIconView {
+	border-radius: 2;
+	padding: 0;
+}
+
+GtkIconView.view.cell:selected,
+GtkIconView.view.cell:selected:focused {
+	background-color: @theme_selected_bg_color;
+	border-radius: 2;
+}
+
+.view {
+	background-color: @theme_base_color;
+	color: @theme_fg_color;
+	border-radius: 0;
+	border-width: 0;
+}
+
+/* Calendars */
+GtkCalendar.view {
+	border-radius: 2;
+	border-style: solid;
+	border-width: 1;
+	padding: 2;
+}
+
+GtkCalendar.header {
+	border-radius: 0;
+	background-image: -gtk-gradient (linear,
+		left top,
+		left bottom,
+		from (shade (@theme_bg_color, 1.04)),
+		to (shade (@theme_bg_color, 0.89)));
+	border-width: 0;
+}
+
+GtkCalendar.button {
+	background-image: -gtk-gradient (linear,
+		left top,
+		left bottom,
+		from (rgba (0, 0, 0, 0)),
+		to (rgba (0, 0, 0, 0)));
+}
+
+.highlight,
+GtkCalendar.highlight {
+	background-color: @theme_selected_bg_color;
+	color: @theme_selected_fg_color;
+	border-radius: 0;
+	padding: 0;
+	border-width: 0;
+}
+
+/**********************
+ * Fallback Mode Panel
+ **********************/
+PanelWidget,
+PanelApplet,
+PanelToplevel {
+	background-color: @dark_bg_color;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@dark_bg_color, 1.05)),
+		to (shade (@dark_bg_color, 1.05)));
+	color: @dark_fg_color;
+	border-radius: 0;
+	-unico-inner-stroke-style: none;
+	-unico-outer-stroke-style: none;
+	text-shadow: none;
+	padding: 0;
+	border-width:0;
+}
+
+PanelApplet > GtkMenuBar.menubar,
+.gnome-panel-menu-bar,
+PanelMenuBar.menubar,
+PanelApplet > GtkMenuBar.menubar.menuitem,
+PanelMenuBar.menubar.menuitem {
+	background-color: @dark_bg_color;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@dark_bg_color, 1.05)),
+		to (shade (@dark_bg_color, 1.05)));
+	color: @dark_fg_color;
+	text-shadow: none;/*0 -1 shade (@fg_color, 1.0);*/
+}
+
+ClockBox {
+	color: @dark_fg_color;
+	text-shadow: 0 -1 shade (@fg_color, 1.0);
+}
+
+PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
+.gnome-panel-menu-bar.menuitem:prelight {
+}
+
+PanelAppletFrame { 
+	background-color: @dark_bg_color;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@dark_bg_color, 1.05)),
+		to (shade (@dark_bg_color, 1.05)));
+}
+
+PanelApplet .button {
+	background-color: @dark_bg_color;
+	background-image: none;
+	color: @dark_fg_color;
+	border-radius: 0;
+	-unico-inner-stroke-style: none;
+	-unico-outer-stroke-style: none;
+	text-shadow: none;
+	border-width:0;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@dark_bg_color, 1.05)),
+		to (shade (@dark_bg_color, 1.05)));
+}
+
+PanelApplet .button:prelight:active,
+PanelApplet .button:active {
+	background-color: shade (@dark_bg_color, 0.85);
+	background-image: none;
+	color: @dark_fg_color;
+}
+
+PanelApplet .button :prelight {
+	background-color: shade (@dark_bg_color, 1.2);
+	background-image: none;
+	color: @dark_fg_color;
+}
+
+NaTrayApplet {
+}
+
+WnckPager, WnckTasklist {
+	background-color: @dark_bg_color;
+}
+
+GsmFailWhaleDialog,
+GsmFailWhaleDialog * {
+}

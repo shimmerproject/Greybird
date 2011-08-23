@@ -1,0 +1,132 @@
+/***********
+ * Borders *
+ ***********/
+/* border and inner stroke */
+.button,
+.frame,
+.notebook {
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@theme_bg_color, 0.7)),
+		to (shade (@theme_bg_color, 0.7)));
+	-unico-inner-stroke-style: custom;
+	-unico-inner-stroke-color: alpha (shade (@theme_bg_color, 1.26), 0.2);
+}
+
+.button:insensitive,
+.frame:insensitive,
+.notebook:insensitive {
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@theme_bg_color, 0.8)),
+		to (shade (@theme_bg_color, 0.8)));                         
+}
+
+/* inset */
+.button:active,
+.button:insensitive,
+.check,
+.entry,
+.radio {
+	-unico-outer-stroke-style: custom;
+	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (alpha (shade (@theme_bg_color, 0.9), 0.6)),
+		to (alpha (shade (@theme_bg_color, 1.05), 0.6)));
+}
+
+/* shadow */
+.button,
+.primary-toolbar.toolbar.raised.button,
+.check:active,
+.frame,
+.notebook .button,
+.notebook,
+.radio:active {
+	-unico-outer-stroke-style: custom;
+	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (alpha (shade (@theme_bg_color, 0.05), 0.05)),
+		to (alpha (shade (@theme_bg_color, 0.05), 0.09)));
+}
+
+/* frame */
+.frame {
+	border-radius: 0;
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@theme_bg_color, 0.8)),
+		to (shade (@theme_bg_color, 0.8)));	
+}
+
+/* GtkScrolledWindow */
+GtkScrolledWindow.frame {
+	border-style: solid;
+	border-color: @internal_element_color;
+	border-width: 1;
+	border-radius: 0;
+}
+
+/****************
+ * Text Entries *
+ ****************/
+.entry,
+.toolbar.entry {
+	background-color: @theme_base_color;
+	background-image: -gtk-gradient (linear,
+		left top, left bottom,
+		from (shade (@theme_base_color, 0.82)),
+		color-stop (0.12, shade (@theme_base_color, 0.98)),
+		color-stop (0.16, shade (@theme_base_color, 1.0)),
+		to (@theme_base_color));
+	border-radius: 2;
+	border-width: 1;
+	border-style: solid;
+	-unico-border-gradient: -gtk-gradient (linear,
+		left top, left bottom,
+		from (shade (@theme_border_color_b, 1.00)),
+		to (shade (@theme_border_color_a, 1.00)));
+	padding: 2;
+}
+
+.entry:focused {
+	border-color: @theme_selected_bg_color;
+	-unico-border-gradient: none;
+}
+
+.entry:insensitive {
+	background-color: @insensitive_bg_color;
+	-unico-border-gradient: -gtk-gradient (linear,
+		left top, left bottom,
+		from (shade (@inactive_frame_border_a, 1.00)),
+		to (shade (@inactive_frame_border_b, 1.00)));
+}
+
+.entry.progressbar {
+	background-color: @theme_selected_bg_color;
+	color: @theme_selected_fg_color;
+	border-width: 1;
+	border-radius: 1;
+	border-color: @progressbar_border;
+}
+
+/**************
+ * Separators *
+ **************/
+GtkSeparator {
+	border-style: solid;
+	border-color: shade (@theme_bg_color, 0.9);
+	-unico-border-gradient: none;
+	-unico-inner-stroke-style: custom;
+	-unico-inner-stroke-color: alpha (shade (@theme_bg_color, 1.26), 0.3);
+}
+
+.button GtkSeparator {
+	border-style: solid;
+	border-color: shade (@button_bg_color, 0.9);
+	-unico-inner-stroke-style: custom;
+	-unico-inner-stroke-color: alpha (shade (@button_bg_color, 1.26), 0.3);
+}
+
+.menuitem.separator {
+	border-style: solid;
+	border-color: alpha (@dark_bg_color, 0.45);
+	-unico-border-gradient: none;
+	-unico-inner-stroke-style: custom;
+	-unico-inner-stroke-color: alpha (shade (@dark_bg_color, 1.26), 0.3);
+}
