@@ -1,8 +1,8 @@
 /* 
-	AUTHOR: lassekongo83
-	WEBSITE: http://lassekongo83.deviantart.com
+	AUTHOR: Simon Steinbeiß
+	BASED ON zukitwo BY lassekongo83
 	LICENSE: GPL
-	DESCRIPTION: A minimalistic and usable theme made for gtk3 apps.
+	DESCRIPTION: A port of greybird to gtk3.
 */
 
 /* default color scheme */
@@ -32,7 +32,7 @@
 @define-color success_color #4e9a06;
 
 /* theme common colors */
-@define-color button_bg_color #e2e2e2;
+@define-color button_bg_color shade (@bg_color,1.02);
 @define-color button_insensitive_bg_color mix (@button_bg_color, @theme_bg_color, 0.6);
 @define-color dark_bg_color #686868;
 @define-color dark_fg_color #FFF;
@@ -52,10 +52,10 @@
 @define-color toolbar_gradient_final #c4c4c4;
 @define-color toolbar_border #c4c4c4;
 
-@define-color button_gradient_color_a #fbfbfb;
-@define-color button_gradient_color_b #dedede;
-@define-color button_hover_gradient_color_a shade (@button_gradient_color_a, 1.10);
-@define-color button_hover_gradient_color_b shade (@button_gradient_color_b, 1.10);
+@define-color button_gradient_color_a shade (@button_bg_color,1.1);
+@define-color button_gradient_color_b shade (@button_bg_color,0.95);
+@define-color button_hover_gradient_color_a mix (@bg_color, shade (@selected_bg_color,1.4),0.7);
+@define-color button_hover_gradient_color_b mix (@bg_color, shade (@selected_bg_color,1.25),0.5);
 @define-color button_active_gradient_color_a shade (@button_gradient_color_b, 0.80);
 @define-color button_active_gradient_color_b shade (@button_gradient_color_a, 0.80);
 
@@ -78,7 +78,7 @@
 @define-color listview_header_gradient_a #ececec;
 @define-color listview_header_gradient_b #d8d8d8;
 @define-color listview_border #cbcbcb;
-@define-color sidebar_color #e8e8e8;
+@define-color sidebar_color mix (@bg_color,shade (@selected_bg_color,1.35),0.8);
 /* End user defined for this theme */
 
 @import url("gtk-widgets.css");

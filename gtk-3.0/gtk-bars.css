@@ -97,9 +97,7 @@ GtkProgressBar.trough.vertical,
 /*************
  * Scrollbar *
  *************/
-/* Using the adwaita engine to fix a small consistency bug */
 .scrollbar {
-	engine: adwaita;
 	background-image: none;
 	border-style: solid;
 	-GtkRange-trough-border: 4;
@@ -114,7 +112,6 @@ GtkProgressBar.trough.vertical,
 
 /* Through */
 .scrollbar.trough.vertical {
-	engine: adwaita;
 	background-image: -gtk-gradient (linear,
 		left top, right top,
 		from (shade (@trough_bg_color_b, 1.0)),
@@ -130,7 +127,6 @@ GtkProgressBar.trough.vertical,
 }
 
 .scrollbar.trough.horizontal {
-	engine: adwaita;
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
 		from (shade (@trough_bg_color_b, 1.0)),
@@ -148,7 +144,6 @@ GtkProgressBar.trough.vertical,
 /* Sliders and buttons */
 .scrollbar.slider.vertical,
 .scrollbar.button.vertical {
-	engine: adwaita;
 	background-image: -gtk-gradient (linear,
 		left top, right top,
 		from (@scrollslider_gradient_a),
@@ -160,7 +155,6 @@ GtkProgressBar.trough.vertical,
 }
 
 .scrollbar.slider.vertical:prelight {
-	engine: adwaita;
 	background-image: -gtk-gradient (linear,
 		left top, right top,
 		from (shade (@scrollslider_gradient_a, 0.75)),
@@ -170,7 +164,6 @@ GtkProgressBar.trough.vertical,
 }
 
 .scrollbar.slider.vertical:prelight:active {
-	engine: adwaita;
 	background-image: -gtk-gradient (linear,
 		left top, right top,
 		from (shade (@scrollslider_gradient_a, 0.75)),
@@ -181,7 +174,6 @@ GtkProgressBar.trough.vertical,
 
 .scrollbar.slider.horizontal,
 .scrollbar.button.horizontal {
-	engine: adwaita;
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
 		from (@scrollslider_gradient_a),
@@ -193,7 +185,6 @@ GtkProgressBar.trough.vertical,
 }
 
 .scrollbar.slider.horizontal:prelight {
-	engine: adwaita;
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
 		from (shade (@scrollslider_gradient_a, 0.90)),
@@ -203,7 +194,6 @@ GtkProgressBar.trough.vertical,
 }
 
 .scrollbar.slider.horizontal:prelight:active {
-	engine: adwaita;
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
 		from (shade (@scrollslider_gradient_a, 0.90)),
@@ -213,12 +203,10 @@ GtkProgressBar.trough.vertical,
 }
 
 .scrollbar.slider:insensitive {
-	engine: adwaita;
 	background-color: @theme_base_color;
 }
 
 .scrollbar.trough:insensitive {
-	engine: adwaita;
 	background-color: shade (@theme_bg_color, 0.882);
 }
 
@@ -242,13 +230,26 @@ GtkProgressBar.trough.vertical,
 .toolbar {
 	border-style: solid;
 	border-color: shade (@theme_bg_color,0.9);
+	background-color: shade (@bg_color,0.86);
 	border-width: 0;
 	border-radius: 0;
 	padding: 1;
+	-unico-border-gradient: -gtk-gradient (linear,
+                left top, left bottom,
+                from (alpha (#000, 0.30)),
+                color-stop (0.15, alpha (#000, 0.10)),
+                color-stop (0.85, alpha (#000, 0.10)),
+                to (alpha (#fff, 0.50)));
 }
 
 .toolbar:insensitive {
-	color: alpha (@theme_fg_color, 0.6);
+	color: shade (@fg_color, 0.7);
+	background-image: none;
+	background-color: shade (@theme_bg_color, 0.97);
+
+	border-style: solid;
+	border-width: 1;
+	border-color: shade (@theme_bg_color, 0.91);
 }
 
 /* Toolbar buttons */
@@ -269,7 +270,7 @@ GtkProgressBar.trough.vertical,
 .primary-toolbar.toolbar.button:insensitive {
 	border-style: none;
 	border-width: 0;
-	color: @insensitive_fg_color;
+	color: shade (@insensitive_fg_color, 0.5);
 	background-image: none;
 	background-color: alpha (@theme_base_color, 0.0);
 	-GtkWidget-focus-line-width: 0;

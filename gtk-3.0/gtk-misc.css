@@ -40,8 +40,8 @@ GtkAssistant .sidebar {
 }
 
 .sidebar.menuitem:selected {
-	background-color: shade (@theme_selected_bg_color, 0.99);
-	color: @theme_fg_color;
+	background-color: shade (@theme_selected_bg_color, 0.8);
+	color: @text_color;
 }
 
 /* View */

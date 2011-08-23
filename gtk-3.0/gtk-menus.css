@@ -86,7 +86,7 @@
 	border-width: 1;
 }
 
-.menubar.menuitem:* {
+.menubar.menuitem {
 	color: @text_color;
 }
 
