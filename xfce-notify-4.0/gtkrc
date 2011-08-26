@@ -1,5 +1,6 @@
 style "greybird-notify-window"
 {
+    XfceNotifyWindow::summary-bold = 1
     bg[NORMAL] = "#111" 
     XfceNotifyWindow::border-color = "#ffffff"
     XfceNotifyWindow::border-radius = 10.0
