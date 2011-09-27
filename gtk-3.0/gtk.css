@@ -2,7 +2,7 @@
 	AUTHOR: Simon Steinbeiß
 	BASED ON zukitwo BY lassekongo83
 	LICENSE: GPL
-	DESCRIPTION: A port of greybird to gtk3.
+	DESCRIPTION: A port of Greybird to gtk3.
 */
 
 /* default color scheme */
@@ -36,6 +36,7 @@
 @define-color button_insensitive_bg_color mix (@button_bg_color, @theme_bg_color, 0.6);
 @define-color dark_bg_color #686868;
 @define-color dark_fg_color #FFF;
+@define-color transparent rgba (0, 0, 0, 0);
 
 @define-color internal_element_color #afafaf;
 @define-color insensitive_bg_color #f5f5f5;

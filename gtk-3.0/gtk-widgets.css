@@ -1,4 +1,5 @@
 * {
+	-GtkArrow-arrow-scaling: 0.6;
 	-GtkButton-child-displacement-x: 1;
 	-GtkButton-child-displacement-y: 1;
 	-GtkButton-default-border: 0;
@@ -7,8 +8,6 @@
 	-GtkButton-inner-border: 3;
 	-GtkCheckButton-indicator-size: 16;
 	-GtkCheckMenuItem-indicator-size: 14;
-	-GtkComboBox-arrow-scaling: 0.5;
-	-GtkComboBox-shadow-type: 2;
 	-GtkEntry-inner-border: 2;
 	-GtkEntry-progress-border: 0; 
 	-GtkExpander-expander-size: 10;   
@@ -23,10 +22,12 @@
 	-GtkProgressBar-min-horizontal-bar-height: 10;
 	-GtkProgressBar-min-vertical-bar-width: 10;
 	-GtkRange-trough-border: 1;
-	-GtkRange-slider-width: 11;
-	-GtkRange-stepper-size: 13;
+	-GtkRange-slider-width: 9;
+	-GtkRange-stepper-size: 9;
 	-GtkRange-trough-under-steppers: 1;
 	-GtkRange-stepper-spacing: 0;
+	-GtkRange-show-fill-level: 1;
+	-GtkScale-slider-length: 11;
 	-GtkScale-trough-border: 0;
 	-GtkScale-trough-side-details: 1;
 	-GtkScrollbar-activate-slider: 1;
@@ -53,8 +54,7 @@
 	-GtkWidget-focus-line-width: 1;
 	-GtkWidget-link-color: @link_color;
 	-GtkWidget-visited-link-color: @link_color;
-	-GtkWindow-resize-grip-width: 0;
-	-GtkWindow-resize-grip-height: 0;
+	-GtkWindow-resize-grip-default: false;
 	-WnckTasklist-fade-overlay-rect: 0;
 
 	border-width: 1;
@@ -62,11 +62,12 @@
 
 	engine: unico;
 
-	-unico-inner-stroke-color: rgba (0, 0, 0, 0);
-	-unico-focus-border-color: alpha (#fff, 0.0);
-	-unico-focus-border-radius: 2;
-	-unico-focus-fill-color: alpha (#fff, 0.0);
-	-unico-focus-outer-stroke-color: alpha (#fff, 0.0);
+	-unico-focus-border-color: alpha (@selected_bg_color, 0.6);
+	-unico-focus-border-radius: 4;
+	-unico-focus-fill-color: alpha (@selected_bg_color, 0.25);
+	-unico-focus-outer-stroke-color: @transparent;
+	-unico-inner-stroke-color: none;
+	-unico-inner-stroke-width: 0;
 }
 
 /***************
@@ -99,7 +100,7 @@ GtkWindow {
 }
 
 *:insensitive {
-	background-color: @insensitive_bg_color;
+	background-color: @bg_color;
 	color: @insensitive_fg_color;
 	border-color: @insensitive_border_color;
 }
@@ -116,8 +117,8 @@ GtkWindow {
 
 .tooltip {
 	padding: 4 4;
-	border-style: solid;
-	border-width: 1;
+	border-style: none;
+	border-width: 0;
 	border-color: shade (@theme_tooltip_bg_color, 0.80);
 	background-color: @theme_tooltip_bg_color;
 	color: @theme_tooltip_fg_color;

@@ -6,10 +6,8 @@
 .frame,
 .notebook {
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.7)),
-		to (shade (@theme_bg_color, 0.7)));
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@theme_bg_color, 1.26), 0.2);
+                                           from (shade (@bg_color, 0.76)),
+                                           to (shade (@bg_color, 0.7)));
 }
 
 .button:insensitive,
@@ -17,7 +15,11 @@
 .notebook:insensitive {
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@theme_bg_color, 0.8)),
-		to (shade (@theme_bg_color, 0.8)));                         
+		to (shade (@theme_bg_color, 0.8)));
+	-unico-outer-stroke-style: custom;
+	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (alpha (shade (@theme_bg_color, 0.9), 0.6)),
+		to (alpha (shade (@theme_bg_color, 1.1), 0.7)));
 }
 
 /* inset */
@@ -48,18 +50,8 @@
 
 /* frame */
 .frame {
-	border-radius: 0;
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.8)),
-		to (shade (@theme_bg_color, 0.8)));	
-}
-
-/* GtkScrolledWindow */
-GtkScrolledWindow.frame {
-	border-style: solid;
-	border-color: @internal_element_color;
-	border-width: 1;
-	border-radius: 0;
+	border-radius: 3;
+	-unico-outer-stroke-width: 0;
 }
 
 /****************
@@ -90,11 +82,12 @@ GtkScrolledWindow.frame {
 }
 
 .entry:insensitive {
-	background-color: @insensitive_bg_color;
-	-unico-border-gradient: -gtk-gradient (linear,
-		left top, left bottom,
-		from (shade (@inactive_frame_border_a, 1.00)),
-		to (shade (@inactive_frame_border_b, 1.00)));
+    background-color: shade (@bg_color, 1.06);
+    background-image: none;
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (alpha (shade (@bg_color, 0.05), 0.04)),
+                                                 to (alpha (shade (@bg_color, 0.05), 0.02)));
 }
 
 .entry.progressbar {
@@ -103,30 +96,4 @@ GtkScrolledWindow.frame {
 	border-width: 1;
 	border-radius: 1;
 	border-color: @progressbar_border;
-}
-
-/**************
- * Separators *
- **************/
-GtkSeparator {
-	border-style: solid;
-	border-color: shade (@theme_bg_color, 0.9);
-	-unico-border-gradient: none;
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@theme_bg_color, 1.26), 0.3);
-}
-
-.button GtkSeparator {
-	border-style: solid;
-	border-color: shade (@button_bg_color, 0.9);
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@button_bg_color, 1.26), 0.3);
-}
-
-.menuitem.separator {
-	border-style: solid;
-	border-color: alpha (@dark_bg_color, 0.45);
-	-unico-border-gradient: none;
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@dark_bg_color, 1.26), 0.3);
 }
