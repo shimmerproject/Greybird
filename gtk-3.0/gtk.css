@@ -15,16 +15,6 @@
 @define-color tooltip_bg_color #000000;
 @define-color tooltip_fg_color #FFFFFF;
 
-/* other color schemes could simply override these */
-@define-color theme_bg_color @bg_color;
-@define-color theme_fg_color @fg_color;
-@define-color theme_base_color @base_color;
-@define-color theme_text_color @text_color;
-@define-color theme_selected_bg_color @selected_bg_color;
-@define-color theme_selected_fg_color @selected_fg_color;
-@define-color theme_tooltip_bg_color @tooltip_bg_color;
-@define-color theme_tooltip_fg_color @tooltip_fg_color;
-
 /* misc colors used by gtk+ */
 @define-color link_color #74a0c6;
 @define-color warning_color #f57900;
@@ -33,7 +23,7 @@
 
 /* theme common colors */
 @define-color button_bg_color shade (@bg_color,1.02);
-@define-color button_insensitive_bg_color mix (@button_bg_color, @theme_bg_color, 0.6);
+@define-color button_insensitive_bg_color mix (@button_bg_color, @bg_color, 0.6);
 @define-color dark_bg_color #686868;
 @define-color dark_fg_color #FFF;
 @define-color transparent rgba (0, 0, 0, 0);
@@ -71,8 +61,8 @@
 @define-color menuitem_background_b #7a94a9;
 
 /* User defined for this theme */
-@define-color theme_border_color_a #afafaf;
-@define-color theme_border_color_b #7a7a7a;
+@define-color border_color_a #afafaf;
+@define-color border_color_b #7a7a7a;
 @define-color scrollslider_gradient_a #d8d8d8;
 @define-color scrollslider_gradient_b #bdbdbd;
 @define-color scrollslider_border #9a9a9a;

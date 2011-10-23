@@ -62,11 +62,11 @@ GtkScale.slider:hover,
 	transition: 200ms ease-in-out;
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade(@theme_border_color_a,1.4)),
-		to (shade(@theme_border_color_b,1.1)));
+		from (shade(@border_color_a,1.4)),
+		to (shade(@border_color_b,1.1)));
 
 	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@theme_bg_color, 1.26), 0.0);
+	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.0);
 }
 
 .button:hover, 
@@ -78,8 +78,8 @@ GtkScale.slider:hover,
 
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@theme_border_color_a, 0.90)),
-		to (shade (@theme_border_color_b, 0.90)));
+		from (shade (@border_color_a, 0.90)),
+		to (shade (@border_color_b, 0.90)));
 }
 
 .button:active,
@@ -93,22 +93,22 @@ GtkScale.slider:hover,
 	-unico-glow-color: shade(@bg_color,0.9);
 	-unico-glow-radius: 0;
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_border_color_b, 1.00)),
-		to (shade (@theme_border_color_a, 0.90)));
+		from (shade (@border_color_b, 1.00)),
+		to (shade (@border_color_a, 0.90)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (alpha (@theme_fg_color, 0.2)),
+		from (alpha (@fg_color, 0.2)),
 		to (alpha (shade (@button_bg_color, 1.26), 0.0)));
 }
 
 .button:insensitive {
 	background-image: none;
-	background-color: shade (@theme_bg_color, 0.97);
+	background-color: shade (@bg_color, 0.97);
 
 	border-style: solid;
 	border-width: 1;
-	border-color: shade (@theme_bg_color, 0.91);
+	border-color: shade (@bg_color, 0.91);
 /*	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@button_insensitive_bg_color, 1.04)),
 		to (shade (@button_insensitive_bg_color, 0.96)));
@@ -207,7 +207,7 @@ row:selected:focused {
 		left top, left bottom,
 		from (shade (@menuitem_background_a, 1.00)),
 		to (shade (@menuitem_background_b, 1.00)));
-	background-color: shade(@theme_selected_bg_color,1.1);
+	background-color: shade(@selected_bg_color,1.1);
 }
 
 row:selected {
@@ -227,15 +227,15 @@ row:selected {
 .radio,
 .radio row {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_base_color, 0.96)),
-		color-stop (0.10, shade (@theme_base_color, 0.98)),
-		to (@theme_base_color));
+		from (shade (@base_color, 0.96)),
+		color-stop (0.10, shade (@base_color, 0.98)),
+		to (@base_color));
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.68)),
-		to (shade (@theme_bg_color, 0.68)));
+		from (shade (@bg_color, 0.68)),
+		to (shade (@bg_color, 0.68)));
 	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@theme_base_color, 0.1), 0.02);
+	-unico-inner-stroke-color: alpha (shade (@base_color, 0.1), 0.02);
 	border-width: 1;
 	border-style: solid;
 }
@@ -245,15 +245,15 @@ row:selected {
 .radio:hover,
 .radio row:hover {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_base_color, 0.96)),
-		color-stop (0.10, shade (@theme_base_color, 0.98)),
-		to (@theme_base_color));
+		from (shade (@base_color, 0.96)),
+		color-stop (0.10, shade (@base_color, 0.98)),
+		to (@base_color));
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.68)),
-		to (shade (@theme_bg_color, 0.68)));
+		from (shade (@bg_color, 0.68)),
+		to (shade (@bg_color, 0.68)));
 	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@theme_base_color, 0.1), 0.02);
+	-unico-inner-stroke-color: alpha (shade (@base_color, 0.1), 0.02);
 	border-width: 1;
 	border-style: solid;
 }
@@ -277,20 +277,20 @@ row:selected {
 .radio row:selected:active,
 .radio row:selected:focused:active {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_selected_bg_color, 1.1)),
-		to (shade (@theme_selected_bg_color, 0.9)));
+		from (shade (@selected_bg_color, 1.1)),
+		to (shade (@selected_bg_color, 0.9)));
 
-	-unico-bullet-color: @text_color; /* shade (@theme_selected_fg_color, 1.0); */
-	-unico-bullet-outline-color: shade (@theme_selected_bg_color, 1.2);
+	-unico-bullet-color: @text_color; /* shade (@selected_fg_color, 1.0); */
+	-unico-bullet-outline-color: shade (@selected_bg_color, 1.2);
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_selected_bg_color, 0.7)),
-		to (shade (@theme_selected_bg_color, 0.7)));
+		from (shade (@selected_bg_color, 0.7)),
+		to (shade (@selected_bg_color, 0.7)));
 	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@theme_selected_bg_color, 1.56), 0.4);
+	-unico-inner-stroke-color: alpha (shade (@selected_bg_color, 1.56), 0.4);
 	-unico-outer-stroke-style: custom;
 	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (shade (@theme_bg_color, 0.05), 0.02)),
-		to (alpha (shade (@theme_bg_color, 0.05), 0.08)));
+		from (alpha (shade (@bg_color, 0.05), 0.02)),
+		to (alpha (shade (@bg_color, 0.05), 0.08)));
 	border-width: 1;
 	border-style: solid;
 }
@@ -304,20 +304,20 @@ row:selected {
 .radio row:selected:active:hover,
 .radio row:selected:focused:active:hover {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_selected_bg_color, 1.1)),
-		to (shade (@theme_selected_bg_color, 0.9)));
+		from (shade (@selected_bg_color, 1.1)),
+		to (shade (@selected_bg_color, 0.9)));
 
-	-unico-bullet-color: shade (@theme_selected_fg_color, 1.0);
-	-unico-bullet-outline-color: shade (@theme_selected_bg_color, 0.6);
+	-unico-bullet-color: shade (@selected_fg_color, 1.0);
+	-unico-bullet-outline-color: shade (@selected_bg_color, 0.6);
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_selected_bg_color, 0.7)),
-		to (shade (@theme_selected_bg_color, 0.7)));
+		from (shade (@selected_bg_color, 0.7)),
+		to (shade (@selected_bg_color, 0.7)));
 	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@theme_selected_bg_color, 1.56), 0.4);
+	-unico-inner-stroke-color: alpha (shade (@selected_bg_color, 1.56), 0.4);
 	-unico-outer-stroke-style: custom;
 	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (shade (@theme_bg_color, 0.05), 0.02)),
-		to (alpha (shade (@theme_bg_color, 0.05), 0.08)));
+		from (alpha (shade (@bg_color, 0.05), 0.02)),
+		to (alpha (shade (@bg_color, 0.05), 0.08)));
 	border-width: 1;
 	border-style: solid;
 }
@@ -325,7 +325,7 @@ row:selected {
 .check:insensitive,
 .radio:insensitive {
 	background-image: none;
-	background-color: shade (@theme_bg_color, 0.96);
+	background-color: shade (@bg_color, 0.96);
 	border-width: 1;
 	border-style: solid;
 }
@@ -333,17 +333,17 @@ row:selected {
 .check:insensitive:active,
 .radio:insensitive:active {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.96)),
-		to (shade (@theme_bg_color, 0.9)));
+		from (shade (@bg_color, 0.96)),
+		to (shade (@bg_color, 0.9)));
 
-	-unico-bullet-color: shade (@theme_bg_color, 0.6);
-	-unico-bullet-outline-color: shade (@theme_bg_color, 1.0);
+	-unico-bullet-color: shade (@bg_color, 0.6);
+	-unico-bullet-outline-color: shade (@bg_color, 1.0);
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.8)),
-		to (shade (@theme_bg_color, 0.7)));
+		from (shade (@bg_color, 0.8)),
+		to (shade (@bg_color, 0.7)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: none;
-	-unico-inner-stroke-color: alpha (shade (@theme_bg_color, 1.26), 0.2);
+	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.2);
 	border-width: 1;
 	border-style: solid;
 }
@@ -438,8 +438,8 @@ GtkScale.progressbar {
 
 GtkScale.trough {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.92)),
-		to (shade (@theme_bg_color, 0.96)));
+		from (shade (@bg_color, 0.92)),
+		to (shade (@bg_color, 0.96)));
 }
 
 /***************
@@ -470,13 +470,13 @@ GtkSwitch {
 
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (@theme_border_color_a),
-		to (@theme_border_color_b));
+		from (@border_color_a),
+		to (@border_color_b));
 
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (alpha (@theme_base_color, 0.9)),
+		from (alpha (@base_color, 0.9)),
 		to (alpha (shade (@button_bg_color, 1.26), 0.0)));
 }
 
@@ -487,30 +487,30 @@ GtkSwitch.trough {
 		to (shade (@progressbar_through_b, 1.0)));
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_border_color_b, 1.00)),
-		to (shade (@theme_border_color_a, 1.00)));
+		from (shade (@border_color_b, 1.00)),
+		to (shade (@border_color_a, 1.00)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (alpha (@theme_fg_color, 0.2)),
+		from (alpha (@fg_color, 0.2)),
 		to (alpha (shade (@button_bg_color, 1.26), 0.0)));
 }
 
 GtkSwitch.trough:active {
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@theme_selected_bg_color, 0.9)),
-		to (shade (@theme_selected_bg_color, 1.0)));
+		from (shade (@selected_bg_color, 0.9)),
+		to (shade (@selected_bg_color, 1.0)));
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_border_color_b, 1.00)),
-		to (shade (@theme_border_color_a, 1.00)));
+		from (shade (@border_color_b, 1.00)),
+		to (shade (@border_color_a, 1.00)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (alpha (shade (@theme_selected_bg_color, 0.6),0.2)),
-		to (alpha (shade (@theme_selected_bg_color, 1.26), 0.0)));
-	color: @theme_base_color;
+		from (alpha (shade (@selected_bg_color, 0.6),0.2)),
+		to (alpha (shade (@selected_bg_color, 1.26), 0.0)));
+	color: @base_color;
 }
 
 /*******************
@@ -519,19 +519,19 @@ GtkSwitch.trough:active {
 .notebook {
 	padding: 2;
 	border-radius: 4;
-	background-color: shade (@theme_bg_color, 1.1);
+	background-color: shade (@bg_color, 1.1);
 }
 
 .notebook tab {
 	border-radius: 4;
 	padding: 2 3 0;
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.85)),
-		to (shade (@theme_bg_color, 0.78)));
+		from (shade (@bg_color, 0.85)),
+		to (shade (@bg_color, 0.78)));
 }
 
 .notebook tab:active {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 1.05)),
-		to (shade (@theme_bg_color, 1.1)));
+		from (shade (@bg_color, 1.05)),
+		to (shade (@bg_color, 1.1)));
 }

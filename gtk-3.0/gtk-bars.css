@@ -19,7 +19,7 @@
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (alpha (@theme_base_color, 0.5)),
+		from (alpha (@base_color, 0.5)),
 		to (alpha (shade (@button_bg_color, 1.26), 0.0)));
 }
 
@@ -40,7 +40,7 @@
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, right top,
-		from (alpha (@theme_base_color, 0.5)),
+		from (alpha (@base_color, 0.5)),
 		to (alpha (shade (@button_bg_color, 1.26), 0.0)));
 }
 
@@ -82,16 +82,16 @@ GtkProgressBar.trough.vertical,
 .trough row:selected:focused {
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
-		from (mix (@trough_bg_color_a, @theme_selected_bg_color, 0.25)),
-		to (mix (@trough_bg_color_b, @theme_selected_bg_color, 0.25)));
+		from (mix (@trough_bg_color_a, @selected_bg_color, 0.25)),
+		to (mix (@trough_bg_color_b, @selected_bg_color, 0.25)));
 }
 
 .trough.vertical row:selected,
 .trough.vertical row:selected:focused {
 	background-image: -gtk-gradient (linear,
 		left top, right top,
-		from (mix (@trough_bg_color_a, @theme_selected_bg_color, 0.25)),
-		to (mix (@trough_bg_color_b, @theme_selected_bg_color, 0.25)));
+		from (mix (@trough_bg_color_a, @selected_bg_color, 0.25)),
+		to (mix (@trough_bg_color_b, @selected_bg_color, 0.25)));
 }
 
 /*************
@@ -116,7 +116,7 @@ GtkProgressBar.trough.vertical,
 		left top, right top,
 		from (shade (@trough_bg_color_b, 1.05)),
 		to (shade (@trough_bg_color_a,1.3)));
-	background-color: shade (@theme_bg_color, 0.882);
+	background-color: shade (@bg_color, 0.882);
 	border-radius: 0;
 	border-width: 0;
 	border-style: none;
@@ -127,7 +127,7 @@ GtkProgressBar.trough.vertical,
 		left top, left bottom,
 		from (shade (@trough_bg_color_b, 1.05)),
 		to (shade (@trough_bg_color_a,1.3)));
-	background-color: shade (@theme_bg_color, 0.882);
+	background-color: shade (@bg_color, 0.882);
 	border-radius: 0;
 	border-width: 0;
 	border-style: none;
@@ -140,7 +140,7 @@ GtkProgressBar.trough.vertical,
 		left top, right top,
 		from (@scrollslider_gradient_a),
 		to (shade(@scrollslider_gradient_a,0.95)));
-	background-color: @theme_base_color;
+	background-color: @base_color;
 	border-color: shade(@scrollslider_border,1.1);
 	border-radius: 10;
 	border-width: 1;
@@ -151,7 +151,7 @@ GtkProgressBar.trough.vertical,
 		left top, right top,
 		from (shade (@scrollslider_gradient_a, 0.94)),
 		to (shade (@scrollslider_gradient_a, 0.9)));
-	background-color: @theme_base_color;
+	background-color: @base_color;
 	border-color: shade (@scrollslider_border, 1.05);
 }
 
@@ -160,7 +160,7 @@ GtkProgressBar.trough.vertical,
 		left top, right top,
 		from (shade (@scrollslider_gradient_a, 0.94)),
 		to (shade (@scrollslider_gradient_b, 0.9)));
-	background-color: @theme_base_color;
+	background-color: @base_color;
 	border-color: shade (@scrollslider_border, 1.05);
 }
 
@@ -170,7 +170,7 @@ GtkProgressBar.trough.vertical,
 		left top, left bottom,
 		from (@scrollslider_gradient_a),
 		to (shade(@scrollslider_gradient_a,0.95)));
-	background-color: @theme_base_color;
+	background-color: @base_color;
 	border-color: shade (@scrollslider_border, 1.05);
 	border-radius: 10;
 	border-width: 1;
@@ -181,7 +181,7 @@ GtkProgressBar.trough.vertical,
 		left top, left bottom,
 		from (shade (@scrollslider_gradient_a, 0.94)),
 		to (shade (@scrollslider_gradient_a, 0.9)));
-	background-color: @theme_base_color;
+	background-color: @base_color;
 	border-color: @scrollslider_border;
 }
 
@@ -190,16 +190,16 @@ GtkProgressBar.trough.vertical,
 		left top, left bottom,
 		from (shade (@scrollslider_gradient_a, 0.94)),
 		to (shade (@scrollslider_gradient_b, 0.9)));
-	background-color: @theme_base_color;
+	background-color: @base_color;
 	border-color: shade (@scrollslider_border, 1.05);
 }
 
 .scrollbar.slider:insensitive {
-	background-color: @theme_base_color;
+	background-color: @base_color;
 }
 
 .scrollbar.trough:insensitive {
-	background-color: shade (@theme_bg_color, 0.882);
+	background-color: shade (@bg_color, 0.882);
 }
 
 /* GtkScrolledWindow */
@@ -291,7 +291,7 @@ GtkViewport.frame {
 
 .toolbar {
 	border-style: solid;
-	border-color: shade (@theme_bg_color,0.9);
+	border-color: shade (@bg_color,0.9);
 	background-color: shade (@bg_color,0.86);
 	border-width: 0;
 	border-radius: 0;
@@ -307,11 +307,11 @@ GtkViewport.frame {
 .toolbar:insensitive {
 	color: shade (@fg_color, 0.7);
 	background-image: none;
-	background-color: shade (@theme_bg_color, 0.97);
+	background-color: shade (@bg_color, 0.97);
 
 	border-style: solid;
 	border-width: 1;
-	border-color: shade (@theme_bg_color, 0.91);
+	border-color: shade (@bg_color, 0.91);
 }
 
 /* Toolbar buttons */
@@ -334,7 +334,7 @@ GtkViewport.frame {
 	border-width: 0;
 	color: shade (@insensitive_fg_color, 0.5);
 	background-image: none;
-	background-color: alpha (@theme_base_color, 0.0);
+	background-color: alpha (@base_color, 0.0);
 	-GtkWidget-focus-line-width: 0;
 }
 
@@ -347,8 +347,8 @@ GtkViewport.frame {
 	border-radius: 2;
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@theme_border_color_a, 1.10)),
-		to (shade (@theme_border_color_b, 1.10)));
+		from (shade (@border_color_a, 1.10)),
+		to (shade (@border_color_b, 1.10)));
 }
 
 .primary-toolbar.toolbar.button:active {
@@ -360,9 +360,9 @@ GtkViewport.frame {
 	border-style: solid;
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@theme_border_color_b, 1.00)),
-		to (shade (@theme_border_color_a, 1.00)));
-	color: @theme_fg_color;
+		from (shade (@border_color_b, 1.00)),
+		to (shade (@border_color_a, 1.00)));
+	color: @fg_color;
 }
 
 .primary-toolbar.toolbar.button:active:hover {
@@ -374,9 +374,9 @@ GtkViewport.frame {
 	border-style: solid;
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@theme_border_color_b, 1.10)),
-		to (shade (@theme_border_color_a, 1.10)));
-	color: @theme_fg_color;
+		from (shade (@border_color_b, 1.10)),
+		to (shade (@border_color_a, 1.10)));
+	color: @fg_color;
 }
 
 .primary-toolbar.toolbar.button:active:insensitive {
@@ -397,8 +397,8 @@ GtkViewport.frame {
 
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@theme_border_color_a, 1.00)),
-		to (shade (@theme_border_color_b, 1.00)));
+		from (shade (@border_color_a, 1.00)),
+		to (shade (@border_color_b, 1.00)));
 }
 
 .primary-toolbar.toolbar.raised.button:insensitive {
@@ -414,8 +414,8 @@ GtkViewport.frame {
 
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@theme_border_color_a, 1.10)),
-		to (shade (@theme_border_color_b, 1.10)));
+		from (shade (@border_color_a, 1.10)),
+		to (shade (@border_color_b, 1.10)));
 	border-width: 1;
 	border-style: solid;
 }
@@ -426,7 +426,7 @@ GtkViewport.frame {
 		left top, left bottom,
 		from (@button_active_gradient_color_a),
 		to (alpha (@button_active_gradient_color_b, 0.13)));
-	background-color: @theme_base_color;
+	background-color: @base_color;
 
 	border-color: @highlighted_border;
 	border-width: 1;

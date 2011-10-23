@@ -3,14 +3,14 @@
  ********/
 /* gnome-terminal */
 TerminalScreen {
-	background-color: @theme_base_color;
-	color: @theme_fg_color;
+	background-color: @base_color;
+	color: @fg_color;
 	-TerminalScreen-background-darkness: 0.95;
 }
 
 /* GtkAssistant */
 GtkAssistant .sidebar .highlight {
-	color: @theme_fg_color;
+	color: @fg_color;
 	font: bold;
 }
 
@@ -20,8 +20,8 @@ GtkAssistant .sidebar {
 	border-radius: 2;
 	border-style: solid;
 	border-color: @inactive_frame_color;
-	color: mix (@theme_fg_color, @theme_bg_color, 0.40);
-	background-color: shade (@theme_bg_color, 0.97);
+	color: mix (@fg_color, @bg_color, 0.40);
+	background-color: shade (@bg_color, 0.97);
 }
 
 /* Sidebar */
@@ -36,11 +36,11 @@ GtkAssistant .sidebar {
 		color-stop (0.99, shade (@sidebar_color, 1.00)),
 		color-stop (1.00, shade (@sidebar_color, 0.86)),
 		to (shade (@sidebar_color,1.00)));
-	color: @theme_fg_color;
+	color: @fg_color;
 }
 
 .sidebar.menuitem:selected {
-	background-color: shade (@theme_selected_bg_color, 0.8);
+	background-color: shade (@selected_bg_color, 0.8);
 	color: @text_color;
 }
 
@@ -53,13 +53,13 @@ GtkIconView {
 
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focused {
-	background-color: @theme_selected_bg_color;
+	background-color: @selected_bg_color;
 	border-radius: 2;
 }
 
 .view {
-	background-color: @theme_base_color;
-	color: @theme_fg_color;
+	background-color: @base_color;
+	color: @fg_color;
 	border-radius: 0;
 	border-width: 0;
 }
@@ -77,8 +77,8 @@ GtkCalendar.header {
 	background-image: -gtk-gradient (linear,
 		left top,
 		left bottom,
-		from (shade (@theme_bg_color, 1.04)),
-		to (shade (@theme_bg_color, 0.89)));
+		from (shade (@bg_color, 1.04)),
+		to (shade (@bg_color, 0.89)));
 	border-width: 0;
 }
 
@@ -92,8 +92,8 @@ GtkCalendar.button {
 
 .highlight,
 GtkCalendar.highlight {
-	background-color: @theme_selected_bg_color;
-	color: @theme_selected_fg_color;
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
 	border-radius: 0;
 	padding: 0;
 	border-width: 0;

@@ -75,28 +75,28 @@
  ***************/
 
 GtkWindow {
-	color: @theme_fg_color;
+	color: @fg_color;
 }
 
 * {
-	background-color: @theme_bg_color;
+	background-color: @bg_color;
 	-unico-inner-stroke-style: none;
 	-unico-outer-stroke-style: none;
 }
 
 *:hover {
-	background-color: shade (@theme_bg_color, 1.02);
-	color: @theme_fg_color;
+	background-color: shade (@bg_color, 1.02);
+	color: @fg_color;
 }
 
 *:selected {
-	background-color: @theme_selected_bg_color;
-	color: @theme_selected_fg_color;
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
 }
 
 *:selected:focused {
-	background-color: @theme_selected_bg_color;
-	color: @theme_selected_fg_color;
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
 }
 
 *:insensitive {
@@ -106,7 +106,7 @@ GtkWindow {
 }
 
 *:active {
-	background-color: shade (@theme_bg_color, 0.915);
+	background-color: shade (@bg_color, 0.915);
 }
 
 .background {
@@ -119,9 +119,9 @@ GtkWindow {
 	padding: 4 4;
 	border-style: none;
 	border-width: 0;
-	border-color: shade (@theme_tooltip_bg_color, 0.80);
-	background-color: @theme_tooltip_bg_color;
-	color: @theme_tooltip_fg_color;
+	border-color: shade (@tooltip_bg_color, 0.80);
+	background-color: @tooltip_bg_color;
+	color: @tooltip_fg_color;
 }
 
 .grip {
@@ -129,8 +129,8 @@ GtkWindow {
 }
 
 .rubberband {
-	background-color: alpha (@theme_selected_bg_color, 0.35);
-	border-color: @theme_selected_bg_color;
+	background-color: alpha (@selected_bg_color, 0.35);
+	border-color: @selected_bg_color;
 	border-style: solid;
 	border-width: 1;
 	border-radius: 2;
@@ -144,12 +144,12 @@ GtkWindow {
 
 .pane-separator:prelight,
 .pane-separator:selected {
-	color: @theme_text_color;
+	color: @text_color;
 }
 
 GtkStatusbar {
 	padding: 5;
-	color: @theme_fg_color;
+	color: @fg_color;
 	-GtkStatusbar-shadow-type: none;
 }
 

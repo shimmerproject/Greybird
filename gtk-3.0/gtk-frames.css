@@ -14,12 +14,12 @@
 .frame:insensitive,
 .notebook:insensitive {
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.8)),
-		to (shade (@theme_bg_color, 0.8)));
+		from (shade (@bg_color, 0.8)),
+		to (shade (@bg_color, 0.8)));
 	-unico-outer-stroke-style: custom;
 	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (shade (@theme_bg_color, 0.9), 0.6)),
-		to (alpha (shade (@theme_bg_color, 1.1), 0.7)));
+		from (alpha (shade (@bg_color, 0.9), 0.6)),
+		to (alpha (shade (@bg_color, 1.1), 0.7)));
 }
 
 /* inset */
@@ -30,8 +30,8 @@
 .radio {
 	-unico-outer-stroke-style: custom;
 	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (shade (@theme_bg_color, 0.9), 0.6)),
-		to (alpha (shade (@theme_bg_color, 1.05), 0.6)));
+		from (alpha (shade (@bg_color, 0.9), 0.6)),
+		to (alpha (shade (@bg_color, 1.05), 0.6)));
 }
 
 /* shadow */
@@ -44,8 +44,8 @@
 .radio:active {
 	-unico-outer-stroke-style: custom;
 	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (shade (@theme_bg_color, 0.05), 0.05)),
-		to (alpha (shade (@theme_bg_color, 0.05), 0.09)));
+		from (alpha (shade (@bg_color, 0.05), 0.05)),
+		to (alpha (shade (@bg_color, 0.05), 0.09)));
 }
 
 /* frame */
@@ -59,25 +59,25 @@
  ****************/
 .entry,
 .toolbar.entry {
-	background-color: @theme_base_color;
+	background-color: @base_color;
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@theme_base_color, 0.82)),
-		color-stop (0.12, shade (@theme_base_color, 0.98)),
-		color-stop (0.16, shade (@theme_base_color, 1.0)),
-		to (@theme_base_color));
+		from (shade (@base_color, 0.82)),
+		color-stop (0.12, shade (@base_color, 0.98)),
+		color-stop (0.16, shade (@base_color, 1.0)),
+		to (@base_color));
 	border-radius: 2;
 	border-width: 1;
 	border-style: solid;
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@theme_border_color_b, 1.00)),
-		to (shade (@theme_border_color_a, 1.00)));
+		from (shade (@border_color_b, 1.00)),
+		to (shade (@border_color_a, 1.00)));
 	padding: 2;
 }
 
 .entry:focused {
-	border-color: @theme_selected_bg_color;
+	border-color: @selected_bg_color;
 	-unico-border-gradient: none;
 }
 
@@ -91,8 +91,8 @@
 }
 
 .entry.progressbar {
-	background-color: @theme_selected_bg_color;
-	color: @theme_selected_fg_color;
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
 	border-width: 1;
 	border-radius: 1;
 	border-color: @progressbar_border;

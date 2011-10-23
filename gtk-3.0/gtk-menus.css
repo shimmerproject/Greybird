@@ -23,8 +23,8 @@
 
 	-unico-bullet-color: @selected_fg_color;
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (@theme_selected_bg_color, 0.0)),
-		to (alpha (@theme_selected_bg_color, 0.0)));
+		from (alpha (@selected_bg_color, 0.0)),
+		to (alpha (@selected_bg_color, 0.0)));
 	-unico-inner-stroke-style: none;
 }
 
@@ -34,8 +34,8 @@
 
 .menuitem:prelight {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_dark_bg_color, 0.50)),
-		to (shade (@theme_dark_bg_color, 0.40)));
+		from (shade (@dark_bg_color, 0.50)),
+		to (shade (@dark_bg_color, 0.40)));
 	background-color: shade (@bg_color_dark,0.5);
 	border-style: solid;
 	border-width: 1; /* Keep at 1. Menu gets bumpy otherwise. */
@@ -52,7 +52,7 @@
 
 .menuitem:insensitive,
 .menuitem *:insensitive {
-	color: mix (@theme_fg_color, @theme_bg_color, 0.5);
+	color: mix (@fg_color, @bg_color, 0.5);
 }
 
 .menuitem.check:active,
@@ -70,14 +70,14 @@
 /* menubar */
 .menubar {
 	-GtkWidget-window-dragging: true;
-	color: @theme_fg_color;
+	color: @fg_color;
 	background-image: -gtk-gradient (linear,
 		left top,
 		left bottom,
 		from (@toolbar_gradient_base),
 		to (@toolbar_gradient_final));
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (@theme_bg_color, 1.0)),
+		from (alpha (@bg_color, 1.0)),
 		to (alpha (@toolbar_border, 1.0)));
 	border-style: solid;
 	border-width: 1;
@@ -93,7 +93,7 @@
 }
 
 .menubar.menuitem:prelight {
-	color: @theme_fg_color;
+	color: @fg_color;
 	text-shadow: none;
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@dark_bg_color, 0.70)),
