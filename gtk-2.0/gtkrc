@@ -558,26 +558,17 @@ style "xfdesktop-windowlist" #= "murrine-menu"
 	text[INSENSITIVE]   = shade (0.95, @base_color)
 }
 
-
-style "murrine-borderless"
+style "murrine-calendar" = "murrine-dark"
 {
-#	GtkPaned::border_width = 0
-#	base[NORMAL] = @base_color
-#	base[NORMAL] = @base_color
-#	base[ACTIVE] = @base_color
-#	base[SELECTED]	= @base_color
-#	base[INSENSITIVE] = @base_color
-	bg[NORMAL] = @base_color
-#	bg[ACTIVE] = @base_color
-#	bg[SELECTED]	= @base_color
-#	bg[INSENSITIVE] = @base_color
-#	fg[INSENSITIVE] = @base_color
-#	text[INSENSITIVE] = @base_color
-	engine "murrine"
-	{
-	#	roundness	= 0
-	#	contrast	= 0.0
-	}
+	GtkWindow	::resize-grip-height			= 0
+        GtkWindow	::resize-grip-width			= 0
+	GtkWindow	::border-width	= 0
+	GtkFrame	::border-width	= 0
+	base[NORMAL]	= @bg_color_dark
+	base[SELECTED]    = shade (0.65, @bg_color_dark)
+	base[ACTIVE]    = shade (0.65, @bg_color_dark)
+	fg[ACTIVE]	= "#FFFFFF"
+	bg[NORMAL]   = shade (0.2, @text_color_dark)
 }
 
 ###############################################################################
@@ -641,6 +632,8 @@ widget_class "*<GtkMenuItem>.*.<GtkScale>" style "murrine-scale"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        style "murrine-treeview"
+
+widget_class "*GtkCalendar*"	style "murrine-calendar"
 
 widget_class "*GtkHPaned" style "murrine-paned"
 widget_class "*GtkVPaned" style "murrine-paned"
