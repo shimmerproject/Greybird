@@ -19,7 +19,7 @@
 
 GtkComboBox.combobox-entry .button:insensitive,
 .notebook .button:insensitive,
-.inline-toolbar.toolbar .button:insensitive {
+.button:insensitive {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@bg_color, 1.04)),
                                      to (shade (@bg_color, 0.96)));
@@ -54,12 +54,11 @@ GtkScale.slider:hover,
 }
 
 .button {
-	border-radius: 3;
+	border-radius: 2;
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
 		from (@button_gradient_color_a),
 		to (@button_gradient_color_b));
-	transition: 200ms ease-in-out;
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
 		from (shade(@border_color_a,1.4)),
@@ -69,8 +68,7 @@ GtkScale.slider:hover,
 	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.0);
 }
 
-.button:hover, 
-.toolbar.button:hover {
+.button:hover {
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
 		from (@button_hover_gradient_color_a),
@@ -83,9 +81,7 @@ GtkScale.slider:hover,
 }
 
 .button:active,
-.toolbar .button:active,
-.button:hover:active,
-.toolbar.button:hover:active {
+.button:hover:active {
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
 		from (shade (@button_active_gradient_color_b, 1.00)),
@@ -142,10 +138,6 @@ GtkComboBox.combobox-entry .button,
 /******************
  * combobox entry *
  ******************/
-.primary-toolbar GtkComboBox.combobox-entry .entry,
-.primary-toolbar GtkComboBox.combobox-entry .entry:active,
-.primary-toolbar GtkComboBox.combobox-entry .entry:focused,
-.primary-toolbar GtkComboBox.combobox-entry .entry:insensitive,
 GtkComboBox.combobox-entry .entry,
 GtkComboBox.combobox-entry .entry:active,
 GtkComboBox.combobox-entry .entry:focused,
@@ -157,10 +149,6 @@ GtkComboBox.combobox-entry .entry:insensitive {
     -unico-outer-stroke-width: 1 0 1 1;
 }
 
-.primary-toolbar GtkComboBox.combobox-entry .button,
-.primary-toolbar GtkComboBox.combobox-entry .button:hover,
-.primary-toolbar GtkComboBox.combobox-entry .button:active,
-.primary-toolbar GtkComboBox.combobox-entry .button:insensitive,
 GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button:hover,
 GtkComboBox.combobox-entry .button:active,
@@ -526,12 +514,24 @@ GtkSwitch.trough:active {
 	border-radius: 4;
 	padding: 2 3 0;
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.85)),
-		to (shade (@bg_color, 0.78)));
+		from (shade (@bg_color, 0.87)),
+		to (shade (@bg_color, 0.8)));
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@bg_color, 0.75)),
+                                           to (shade (@bg_color, 0.7)));
+	-unico-inner-stroke-color: alpha (shade (@bg_color, 0.8), 0.3);
+	-unico-inner-stroke-gradient: none;
+	-unico-inner-stroke-width: 1;
 }
 
 .notebook tab:active {
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@bg_color, 1.05)),
 		to (shade (@bg_color, 1.1)));
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@bg_color, 0.7)),
+                                           to (shade (@bg_color, 0.66)));
+	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.3);
+	-unico-inner-stroke-gradient: none;
+	-unico-inner-stroke-width: 1;
 }
