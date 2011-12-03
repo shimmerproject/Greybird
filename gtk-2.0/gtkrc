@@ -224,8 +224,12 @@ style "murrine-wide-dark" = "murrine-dark"
 }
 
 style "tabwin-dark" = "murrine-dark" {
-	bg[NORMAL]	= "#646e7b"
-	bg[SELECTED]	= "#75808f"
+	bg[NORMAL]	= "#424242"
+	bg[SELECTED]	= @panel_bg
+	engine "murrine"
+	{
+		focusstyle = 0
+	}
 }
 
 style "murrine-wide"
