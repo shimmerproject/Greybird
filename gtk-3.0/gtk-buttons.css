@@ -201,13 +201,6 @@ row:insensitive {
 }
 
 row:selected:focused {
-	border-width: 0;
-	border-style: none;
-	background-image: -gtk-gradient (linear,
-		left top, left bottom,
-		from (shade (@menuitem_background_a, 1.00)),
-		to (shade (@menuitem_background_b, 1.00)));
-	background-color: shade(@selected_bg_color,1.1);
 }
 
 row:selected {
@@ -349,7 +342,7 @@ row:selected {
 }
 
 /************
- * Treeviews *
+ * Columns *
  ************/
 
 column-header .button,
@@ -400,8 +393,12 @@ column-header .button:hover,
 }
 
 column-header:nth-child(last) .button {
-    border-width: 0 0 1 0;
+    border-width: 0 1 1 0;
 }
+
+/************
+ * Treeviews *
+ ************/
 
 GtkTreeView .entry {
     background-image: none;
@@ -411,11 +408,14 @@ GtkTreeView .entry {
     -unico-inner-stroke-width: 1;
 }
 
-GtkTreeView.frame {
-	border-radius: 0;
-	border-width: 0;
-	-unico-inner-stroke-width: 0;
-	-unico-outer-stroke-width: 0;
+GtkTreeView row:nth-child(even),
+GtkTreeView row:nth-child(even):hover {
+	background-color: shade (@base_color, 0.95);
+}
+
+GtkTreeView row:nth-child(odd),
+GtkTreeView row:nth-child(odd):hover {
+	background-color: shade (@base_color, 0.86);
 }
 
 /************
