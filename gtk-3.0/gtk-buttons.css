@@ -65,7 +65,7 @@ GtkScale.slider:hover,
 		to (shade(@border_color_b,1.1)));
 
 	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.0);
+	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.3);
 }
 
 .button:hover {
@@ -73,11 +73,6 @@ GtkScale.slider:hover,
 		left top, left bottom,
 		from (@button_hover_gradient_color_a),
 		to (@button_hover_gradient_color_b));
-
-	-unico-border-gradient: -gtk-gradient (linear,
-		left top, left bottom,
-		from (shade (@border_color_a, 0.90)),
-		to (shade (@border_color_b, 0.90)));
 }
 
 .button:active,
@@ -88,9 +83,6 @@ GtkScale.slider:hover,
 		to (shade (@button_active_gradient_color_a, 1.00)));
 	-unico-glow-color: shade(@bg_color,0.9);
 	-unico-glow-radius: 0;
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@border_color_b, 1.00)),
-		to (shade (@border_color_a, 0.90)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
