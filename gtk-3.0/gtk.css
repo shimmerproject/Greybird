@@ -73,8 +73,8 @@
 /* End user defined for this theme */
 
 @import url("gtk-widgets.css");
-@import url("gtk-buttons.css");
+/*@import url("gtk-buttons.css");
 @import url("gtk-frames.css");
 @import url("gtk-bars.css");
 @import url("gtk-menus.css");
-@import url("gtk-misc.css");
+@import url("gtk-misc.css");*/
