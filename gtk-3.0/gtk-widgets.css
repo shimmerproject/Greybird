@@ -631,7 +631,8 @@ column-header .button,
 .notebook column-header .button {
     background-image: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@listview_header_gradient_a,1.05)),
+		from (shade (@listview_header_gradient_a,0.99)),
+		color-stop (0.2,shade (@listview_header_gradient_a,1.02)),
 		to (shade (@listview_header_gradient_b,1.45)));
 
     text-shadow: 0 1 alpha (shade (@bg_color, 1.25), 0.4);
@@ -989,7 +990,7 @@ GtkIconView.view.cell:selected:focused {
 .notebook {
 	padding: 2;
 	border-radius: 4;
-	background-color: shade (@bg_color, 1.1);
+	background-color: shade (@bg_color, 1.05);
 }
 
 .notebook tab {
@@ -997,7 +998,7 @@ GtkIconView.view.cell:selected:focused {
 	padding: 2 3 0;
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@bg_color, 0.87)),
-		to (shade (@bg_color, 0.8)));
+		to (shade (@bg_color, 0.82)));
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
                                            from (shade (@bg_color, 0.75)),
                                            to (shade (@bg_color, 0.7)));
@@ -1008,8 +1009,8 @@ GtkIconView.view.cell:selected:focused {
 
 .notebook tab:active {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 1.05)),
-		to (shade (@bg_color, 1.1)));
+		from (shade (@bg_color, 1.1)),
+		to (shade (@bg_color, 1.05)));
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
                                            from (shade (@bg_color, 0.7)),
                                            to (shade (@bg_color, 0.66)));
