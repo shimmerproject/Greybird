@@ -1,0 +1,130 @@
+/********
+ * Misc *
+ ********/
+/* gnome-terminal */
+TerminalScreen {
+	background-color: @base_color;
+	color: @fg_color;
+	-TerminalScreen-background-darkness: 0.95;
+}
+
+/* Calendars */
+GtkCalendar.view {
+	border-radius: 2;
+	border-style: solid;
+	border-width: 1;
+	padding: 2;
+}
+
+GtkCalendar.header {
+	border-radius: 0;
+	background-image: -gtk-gradient (linear,
+		left top,
+		left bottom,
+		from (shade (@bg_color, 1.04)),
+		to (shade (@bg_color, 0.89)));
+	border-width: 0;
+}
+
+GtkCalendar.button {
+	background-image: -gtk-gradient (linear,
+		left top,
+		left bottom,
+		from (rgba (0, 0, 0, 0)),
+		to (rgba (0, 0, 0, 0)));
+}
+
+.highlight,
+GtkCalendar.highlight {
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
+	border-radius: 0;
+	padding: 0;
+	border-width: 0;
+}
+
+/**********************
+ * Fallback Mode Panel
+ **********************/
+PanelWidget,
+PanelApplet,
+PanelToplevel {
+	background-color: @dark_bg_color;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@dark_bg_color, 1.05)),
+		to (shade (@dark_bg_color, 1.05)));
+	color: @dark_fg_color;
+	border-radius: 0;
+	-unico-inner-stroke-style: none;
+	-unico-outer-stroke-style: none;
+	text-shadow: none;
+	padding: 0;
+	border-width:0;
+}
+
+PanelApplet > GtkMenuBar.menubar,
+.gnome-panel-menu-bar,
+PanelMenuBar.menubar,
+PanelApplet > GtkMenuBar.menubar.menuitem,
+PanelMenuBar.menubar.menuitem {
+	background-color: @dark_bg_color;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@dark_bg_color, 1.05)),
+		to (shade (@dark_bg_color, 1.05)));
+	color: @dark_fg_color;
+	text-shadow: none;/*0 -1 shade (@fg_color, 1.0);*/
+}
+
+ClockBox {
+	color: @dark_fg_color;
+	text-shadow: 0 -1 shade (@fg_color, 1.0);
+}
+
+PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
+.gnome-panel-menu-bar.menuitem:prelight {
+}
+
+PanelAppletFrame { 
+	background-color: @dark_bg_color;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@dark_bg_color, 1.05)),
+		to (shade (@dark_bg_color, 1.05)));
+}
+
+PanelApplet .button {
+	background-color: @dark_bg_color;
+	background-image: none;
+	color: @dark_fg_color;
+	border-radius: 0;
+	-unico-inner-stroke-style: none;
+	-unico-outer-stroke-style: none;
+	text-shadow: none;
+	border-width:0;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@dark_bg_color, 1.05)),
+		to (shade (@dark_bg_color, 1.05)));
+}
+
+PanelApplet .button:prelight:active,
+PanelApplet .button:active {
+	background-color: shade (@dark_bg_color, 0.85);
+	background-image: none;
+	color: @dark_fg_color;
+}
+
+PanelApplet .button :prelight {
+	background-color: shade (@dark_bg_color, 1.2);
+	background-image: none;
+	color: @dark_fg_color;
+}
+
+NaTrayApplet {
+}
+
+WnckPager, WnckTasklist {
+	background-color: @dark_bg_color;
+}
+
+GsmFailWhaleDialog,
+GsmFailWhaleDialog * {
+}

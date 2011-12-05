@@ -984,265 +984,6 @@ GtkIconView.view.cell:selected:focused {
 	-unico-centroid-texture:  url("../gtk-2.0/resize_grip.png");
 }
 
-/******************
- * pane separator *
- ******************/
-.sidebar .pane-separator,
-.pane-separator {
-    background-color: @transparent;
-    border-color: shade (@bg_color, 0.8);
-
-    -unico-border-gradient: none;
-    -unico-inner-stroke-color: @bg_color;
-    -unico-inner-stroke-gradient: none;
-    -unico-inner-stroke-width: 1;
-}
-
-GtkStatusbar {
-	padding: 5;
-	color: @fg_color;
-	-GtkStatusbar-shadow-type: none;
-}
-
-GtkStatusbar .frame {
-	border-width: 0;
-}
-
-/********
- * Misc *
- ********/
-/* gnome-terminal */
-TerminalScreen {
-	background-color: @base_color;
-	color: @fg_color;
-	-TerminalScreen-background-darkness: 0.95;
-}
-
-/* Sidebar */
-/* Using color-stops as borders aren't a good idea. Replace with border-right when it's supported. */
-.sidebar,
-.sidebar.view {
-	background-color: shade (@sidebar_color, 1.00);
-}
-
-.sidebar.view:selected {
-	background-color: shade (@selected_bg_color, 0.8);
-	color: @selected_fg_color;
-}
-
-/* Calendars */
-GtkCalendar.view {
-	border-radius: 2;
-	border-style: solid;
-	border-width: 1;
-	padding: 2;
-}
-
-GtkCalendar.header {
-	border-radius: 0;
-	background-image: -gtk-gradient (linear,
-		left top,
-		left bottom,
-		from (shade (@bg_color, 1.04)),
-		to (shade (@bg_color, 0.89)));
-	border-width: 0;
-}
-
-GtkCalendar.button {
-	background-image: -gtk-gradient (linear,
-		left top,
-		left bottom,
-		from (rgba (0, 0, 0, 0)),
-		to (rgba (0, 0, 0, 0)));
-}
-
-.highlight,
-GtkCalendar.highlight {
-	background-color: @selected_bg_color;
-	color: @selected_fg_color;
-	border-radius: 0;
-	padding: 0;
-	border-width: 0;
-}
-
-/**********************
- * Fallback Mode Panel
- **********************/
-PanelWidget,
-PanelApplet,
-PanelToplevel {
-	background-color: @dark_bg_color;
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@dark_bg_color, 1.05)),
-		to (shade (@dark_bg_color, 1.05)));
-	color: @dark_fg_color;
-	border-radius: 0;
-	-unico-inner-stroke-style: none;
-	-unico-outer-stroke-style: none;
-	text-shadow: none;
-	padding: 0;
-	border-width:0;
-}
-
-PanelApplet > GtkMenuBar.menubar,
-.gnome-panel-menu-bar,
-PanelMenuBar.menubar,
-PanelApplet > GtkMenuBar.menubar.menuitem,
-PanelMenuBar.menubar.menuitem {
-	background-color: @dark_bg_color;
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@dark_bg_color, 1.05)),
-		to (shade (@dark_bg_color, 1.05)));
-	color: @dark_fg_color;
-	text-shadow: none;/*0 -1 shade (@fg_color, 1.0);*/
-}
-
-ClockBox {
-	color: @dark_fg_color;
-	text-shadow: 0 -1 shade (@fg_color, 1.0);
-}
-
-PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
-.gnome-panel-menu-bar.menuitem:prelight {
-}
-
-PanelAppletFrame { 
-	background-color: @dark_bg_color;
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@dark_bg_color, 1.05)),
-		to (shade (@dark_bg_color, 1.05)));
-}
-
-PanelApplet .button {
-	background-color: @dark_bg_color;
-	background-image: none;
-	color: @dark_fg_color;
-	border-radius: 0;
-	-unico-inner-stroke-style: none;
-	-unico-outer-stroke-style: none;
-	text-shadow: none;
-	border-width:0;
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@dark_bg_color, 1.05)),
-		to (shade (@dark_bg_color, 1.05)));
-}
-
-PanelApplet .button:prelight:active,
-PanelApplet .button:active {
-	background-color: shade (@dark_bg_color, 0.85);
-	background-image: none;
-	color: @dark_fg_color;
-}
-
-PanelApplet .button :prelight {
-	background-color: shade (@dark_bg_color, 1.2);
-	background-image: none;
-	color: @dark_fg_color;
-}
-
-NaTrayApplet {
-}
-
-WnckPager, WnckTasklist {
-	background-color: @dark_bg_color;
-}
-
-GsmFailWhaleDialog,
-GsmFailWhaleDialog * {
-}
-
-/************
- * GtkScale *
- ************/
-GtkScale {
-	-GtkScale-slider-length: 13;
-	-GtkRange-slider-width: 13;
-	-GtkRange-trough-border: 1;
-	-GtkRange-show-fill-level: 1;
-	background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@button_bg_color, 1.1)),
-                                     to (shade (@button_bg_color, 0.9)));
-	border-style: solid;
-
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@button_bg_color, 0.85)),
-                                           to (shade (@button_bg_color, 0.67)));
-
-	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (shade (@button_bg_color, 1.16)),
-                                                 to (shade (@button_bg_color, 1.015)));
-	-unico-inner-stroke-width: 0;
-	border-radius: 12;
-}
-
-GtkScale:hover {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@button_bg_color, 1.2)),
-                                     to (shade (@button_bg_color, 0.98)));
-    
-    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@button_bg_color, 0.89)),
-                                           to (shade (@button_bg_color, 0.7)));
-    -unico-glow-color: shade (@selected_bg_color, 0.85);
-    -unico-glow-radius: 12;
-    -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (shade (@button_bg_color, 1.2)),
-                                                 to (shade (@button_bg_color, 1.06)));
-}
-
-GtkScale.progressbar {
-	background-color: @dark_bg_color;
-}
-
-GtkScale.trough {
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.92)),
-		to (shade (@bg_color, 0.96)));
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.8)),
-		to (shade (@bg_color, 0.8)));
-	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (alpha (shade (@bg_color, 0.85), 0.2)),
-                                                 to (alpha (shade (@bg_color, 1.25), 0.6)));
-	-unico-outer-stroke-width: 1;
-}
-
-GtkScale.trough.vertical {
-	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.92)),
-		to (shade (@bg_color, 0.96)));
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@bg_color, 0.8)),
-		to (shade (@bg_color, 0.8)));
-	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (alpha (shade (@bg_color, 0.85), 0.2)),
-                                                 to (alpha (shade (@bg_color, 1.0), 0.6)));
-	-unico-outer-stroke-width: 1;
-}
-
-/***************
- * Spinbuttons *
- ***************/
-GtkSpinButton.button,
-GtkSpinButton.button:prelight,
-GtkSpinButton.button:active {
-	background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@bg_color, 1.05)),
-                                     to (shade (@bg_color, 0.98)));
-	border-width: 0 0 0 1;
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@bg_color, 0.65)),
-                                           to (shade (@bg_color, 0.7)));
-}
-
-GtkSpinButton.button:insensitive {
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@bg_color, 0.8)),
-                                           to (shade (@bg_color, 0.8)));
-	border-width: 1;
-	-unico-outer-stroke-width: 1 1 1 0;
-}
-
 /*******************
  * Notebook & Tabs *
  *******************/
@@ -1278,8 +1019,22 @@ GtkSpinButton.button:insensitive {
 	-unico-inner-stroke-width: 1;
 }
 
+/******************
+ * pane separator *
+ ******************/
+.sidebar .pane-separator,
+.pane-separator {
+    background-color: @transparent;
+    border-color: shade (@bg_color, 0.8);
+
+    -unico-border-gradient: none;
+    -unico-inner-stroke-color: @bg_color;
+    -unico-inner-stroke-gradient: none;
+    -unico-inner-stroke-width: 1;
+}
+
 /***************
- * Progressbar *
+ * progressbar *
  ***************/
 /* progress component */
 .progressbar,
@@ -1378,8 +1133,77 @@ GtkProgressBar.trough.vertical,
 		to (mix (@trough_bg_color_b, @selected_bg_color, 0.25)));
 }
 
+/************
+ * scale *
+ ************/
+GtkScale {
+	-GtkScale-slider-length: 13;
+	-GtkRange-slider-width: 13;
+	-GtkRange-trough-border: 1;
+	-GtkRange-show-fill-level: 1;
+	background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@button_bg_color, 1.1)),
+                                     to (shade (@button_bg_color, 0.9)));
+	border-style: solid;
+
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@button_bg_color, 0.85)),
+                                           to (shade (@button_bg_color, 0.67)));
+
+	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (shade (@button_bg_color, 1.16)),
+                                                 to (shade (@button_bg_color, 1.015)));
+	-unico-inner-stroke-width: 0;
+	border-radius: 12;
+}
+
+GtkScale:hover {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@button_bg_color, 1.2)),
+                                     to (shade (@button_bg_color, 0.98)));
+    
+    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@button_bg_color, 0.89)),
+                                           to (shade (@button_bg_color, 0.7)));
+    -unico-glow-color: shade (@selected_bg_color, 0.85);
+    -unico-glow-radius: 12;
+    -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (shade (@button_bg_color, 1.2)),
+                                                 to (shade (@button_bg_color, 1.06)));
+}
+
+GtkScale.progressbar {
+	background-color: @dark_bg_color;
+}
+
+GtkScale.trough {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@bg_color, 0.92)),
+		to (shade (@bg_color, 0.96)));
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@bg_color, 0.8)),
+		to (shade (@bg_color, 0.8)));
+	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (alpha (shade (@bg_color, 0.85), 0.2)),
+                                                 to (alpha (shade (@bg_color, 1.25), 0.6)));
+	-unico-outer-stroke-width: 1;
+}
+
+GtkScale.trough.vertical {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@bg_color, 0.92)),
+		to (shade (@bg_color, 0.96)));
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@bg_color, 0.8)),
+		to (shade (@bg_color, 0.8)));
+	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (alpha (shade (@bg_color, 0.85), 0.2)),
+                                                 to (alpha (shade (@bg_color, 1.0), 0.6)));
+	-unico-outer-stroke-width: 1;
+}
+
 /*************
- * Scrollbar *
+ * scrollbar *
  *************/
 .scrollbar {
 	background-image: none;
@@ -1486,7 +1310,25 @@ GtkProgressBar.trough.vertical,
 	background-color: shade (@bg_color, 0.882);
 }
 
-/* GtkScrolledWindow */
+/* overlay scrollbar */
+OsThumb:selected,
+OsScrollbar:selected {
+    background-color: @selected_bg_color;
+}
+
+OsThumb:active,
+OsScrollbar:active {
+    background-color: shade (@bg_color, 0.6);
+}
+
+OsThumb:insensitive,
+OsScrollbar:insensitive {
+    background-color: shade (@bg_color, 0.85);
+}
+
+/*******************
+ * scrolled window *
+ *******************/
 GtkScrolledWindow.frame {
     border-top-color: shade (@bg_color, 0.84);
     border-right-color: shade (@bg_color, 0.76);
@@ -1500,9 +1342,9 @@ GtkScrolledWindow.frame {
     -unico-outer-stroke-width: 0;
 }
 
-/**************
- * Separators *
- **************/
+/*************
+ * separator *
+ *************/
 .separator {
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
@@ -1549,6 +1391,64 @@ GtkScrolledWindow.frame {
     border-color: shade (@dark_bg_color, 0.96);
 
     -unico-inner-stroke-color: alpha (shade (@dark_bg_color, 1.26), 0.5);
+}
+
+/***********
+ * sidebar *
+ ***********/
+.sidebar,
+.sidebar.view {
+	background-color: shade (@sidebar_color, 1.00);
+}
+
+.sidebar.view:selected {
+	background-color: shade (@selected_bg_color, 0.8);
+	color: @selected_fg_color;
+}
+
+/***************
+ * Spinbuttons *
+ ***************/
+GtkSpinButton.button,
+GtkSpinButton.button:prelight,
+GtkSpinButton.button:active {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@bg_color, 1.05)),
+                                     to (shade (@bg_color, 0.98)));
+	border-width: 0 0 0 1;
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@bg_color, 0.65)),
+                                           to (shade (@bg_color, 0.7)));
+}
+
+GtkSpinButton.button:insensitive {
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@bg_color, 0.8)),
+                                           to (shade (@bg_color, 0.8)));
+	border-width: 1;
+	-unico-outer-stroke-width: 1 1 1 0;
+}
+
+/***********
+ * spinner *
+ ***********/
+.menu.spinner,
+.primary-toolbar .toolbar .spinner,
+.primary-toolbar.toolbar .spinner {
+    color: @selected_bg_color;
+}
+
+/*************
+ * statusbar *
+ *************/
+GtkStatusbar {
+	padding: 5;
+	color: @fg_color;
+	-GtkStatusbar-shadow-type: none;
+}
+
+GtkStatusbar .frame {
+	border-width: 0;
 }
 
 /************
