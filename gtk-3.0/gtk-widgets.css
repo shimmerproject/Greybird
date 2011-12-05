@@ -1513,6 +1513,17 @@ GtkSwitch.trough:active {
 	border-style: none;
 }
 
+/* handlebox */
+GtkHandleBox {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@toolbar_gradient_base,0.95)),
+		to (shade (@toolbar_gradient_final,0.9)));
+	border-style: solid;
+	border-color: shade (@bg_color,0.51);
+	border-width: 0 0 1 0;
+	-unico-inner-stroke-color: shade (@bg_color, 0.6);
+}
+
 /* primary-toolbar */
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
@@ -1521,8 +1532,8 @@ GtkSwitch.trough:active {
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@toolbar_gradient_base,0.95)),
 		to (shade (@toolbar_gradient_final,0.9)));
-	border-bottom-color: shade (@dark_bg_color, 1.1);
 	border-style: solid;
+	border-color: shade (@bg_color,0.7);
 	border-width: 0 0 1 0;
 	padding: 2;
 
@@ -1530,7 +1541,7 @@ GtkSwitch.trough:active {
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (alpha (@toolbar_border, 0.0)),
-		to (alpha (@dark_bg_color, 0.7)));
+		to (alpha (@dark_bg_color, 1.2)));
 	-unico-inner-stroke-color: shade (@bg_color, 1.1);
 	-unico-inner-stroke-width: 0;
 }
