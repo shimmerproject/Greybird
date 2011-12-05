@@ -61,7 +61,7 @@
 
 	-unico-focus-border-color: alpha (@selected_bg_color, 0.6);
 	-unico-focus-border-radius: 2;
-	-unico-focus-fill-color: alpha (@selected_bg_color, 0.25);
+	-unico-focus-fill-color: alpha (@selected_bg_color, 0.1);
 	-unico-focus-outer-stroke-color: @transparent;
 
 	-unico-inner-stroke-color: shade (@bg_color, 1.1);
@@ -1519,7 +1519,7 @@ GtkHandleBox {
 		from (shade (@toolbar_gradient_base,0.95)),
 		to (shade (@toolbar_gradient_final,0.9)));
 	border-style: solid;
-	border-color: shade (@bg_color,0.51);
+	border-bottom-color: shade (@bg_color,0.51);
 	border-width: 0 0 1 0;
 	-unico-inner-stroke-color: shade (@bg_color, 0.6);
 }
@@ -1555,17 +1555,19 @@ GtkHandleBox {
 .primary-toolbar.toolbar GtkComboBox,
 .primary-toolbar .toolbar .button,
 .primary-toolbar.toolbar .button {
-	border-radius: 2;
+	border-radius: 3;
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
 		from (@button_gradient_color_a),
 		to (@button_gradient_color_b));
 
+	-unico-focus-border-radius: 4;
+	-unico-focus-border-color: alpha (@selected_bg_color, 0.5);
+	-unico-focus-fill-color: alpha (@selected_bg_color, 0.2);
 	-unico-focus-outer-stroke-color: @transparent;
-
+	
 	-unico-inner-stroke-width: 0;
 	-unico-outer-stroke-width: 0;
-
 }
 
 .primary-toolbar .toolbar .raised .button,
@@ -1597,13 +1599,20 @@ GtkHandleBox {
 .primary-toolbar.toolbar .button:hover {
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
-		from (@button_hover_gradient_color_a),
-		to (@button_hover_gradient_color_b));
+		from (shade (@button_hover_gradient_color_a,1.05)),
+		to (shade (@button_hover_gradient_color_b,0.95)));
+
+	-unico-outer-stroke-style: custom;
+	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (alpha (shade (@bg_color, 0.05), 0.05)),
+		to (alpha (shade (@bg_color, 0.05), 0.09)));
+	-unico-outer-stroke-width: 1;
+	-unico-glow-color:alpha (@selected_bg_color,0.2);
 
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (shade (@border_color_a, 0.90)),
-		to (shade (@border_color_b, 0.90)));
+		from (alpha (@border_color_a, 0.70)),
+		to (alpha (@border_color_b, 0.70)));
 }
 
 .primary-toolbar .toolbar .raised .button:hover,
@@ -1644,7 +1653,7 @@ GtkHandleBox {
 		from (shade (@bg_color, 0.95)),
 		to (shade (@bg_color, 0.9)));
 	color: @fg_color;
-
+	-unico-glow-color: shade (@selected_bg_color,0.7);
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@bg_color, 0.6)),
 		to (shade (@bg_color, 0.6)));
