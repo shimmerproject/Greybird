@@ -1196,9 +1196,9 @@ GtkScale.trough.vertical {
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@bg_color, 0.8)),
 		to (shade (@bg_color, 0.8)));
-	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, right top,
                                                  from (alpha (shade (@bg_color, 0.85), 0.2)),
-                                                 to (alpha (shade (@bg_color, 1.0), 0.6)));
+                                                 to (alpha (shade (@bg_color, 1.2), 0.6)));
 	-unico-outer-stroke-width: 1;
 }
 
