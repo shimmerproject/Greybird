@@ -53,9 +53,9 @@
 @define-color progressbar_through_a #c7c7c7;
 @define-color progressbar_through_b #d7d7d7;
 @define-color progressbar_through_border #a3a3a3;
-@define-color progressbar_background_a #a2b8cb;
-@define-color progressbar_background_b #b5c8d7;
-@define-color progressbar_border #8298aa;
+@define-color progressbar_background_a #c0cdd8;
+@define-color progressbar_background_b #9badbe;
+@define-color progressbar_border #647482;
 
 @define-color menuitem_background_a #8ba4b8;
 @define-color menuitem_background_b #7a94a9;

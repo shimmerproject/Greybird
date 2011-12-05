@@ -1289,13 +1289,15 @@ GtkSpinButton.button:insensitive {
 .progressbar row:selected:focused {
 	background-image: -gtk-gradient (linear,
 		left top, left bottom,
-		from (@progressbar_background_b),
-		to (@progressbar_background_a));
+		from (shade (@progressbar_background_a,1.04)),
+		to (shade (@progressbar_background_b,0.98)));
 	-unico-background-texture: url("progressbar.png");
 	border-radius: 4;
 	border-style: solid;
 	border-width: 1;
-	border-color: shade(@progressbar_border,0.9);
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@progressbar_border, 1.25)),
+                                           to (shade (@progressbar_border, 1.0)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
@@ -1310,13 +1312,15 @@ GtkSpinButton.button:insensitive {
 .progressbar.vertical row:selected:focused {
 	background-image: -gtk-gradient (linear,
 		left top, right top,
-		from (@progressbar_background_b),
-		to (@progressbar_background_a));
+		from (shade (@progressbar_background_a,1.04)),
+		to (shade (@progressbar_background_b,0.98)));
 
 	border-radius: 4;
 	border-style: solid;
 	border-width: 1;
-	border-color: shade(@progressbar_border,0.9);
+	-unico-border-gradient: -gtk-gradient (linear, left top, right top,
+                                           from (shade (@progressbar_border, 1.25)),
+                                           to (shade (@progressbar_border, 1.0)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, right top,
