@@ -1856,12 +1856,7 @@ GtkHandleBox {
  * tooltip *
  ***********/
 .tooltip {
-	padding: 4 4;
-	border-style: none;
-	border-width: 0;
-	border-color: shade (@tooltip_bg_color, 0.80);
-	background-color: @tooltip_bg_color;
-	color: @tooltip_fg_color;
+	border-color: @tooltip_bg_color;
 }
 
 /************
