@@ -26,10 +26,7 @@
 	-GtkRange-stepper-size: 9;
 	-GtkRange-trough-under-steppers: 1;
 	-GtkRange-stepper-spacing: 0;
-	-GtkRange-show-fill-level: 1;
-	-GtkScale-slider-length: 11;
 	-GtkScale-trough-border: 0;
-	-GtkScale-trough-side-details: 1;
 	-GtkScrollbar-activate-slider: 1;
 	-GtkScrollbar-trough-border: 0;
 	-GtkScrollbar-slider-width: 11;
@@ -41,6 +38,7 @@
 	-GtkScrolledWindow-scrollbar-spacing: 0;
 	-GtkScrolledWindow-scrollbars-within-bevel: 1;
 	-GtkSeparatorMenuItem-horizontal-padding: 0;
+	-GtkStatusbar-shadow-type: none;
 	-GtkTextView-error-underline-color: @error_color;
 	-GtkToolButton-icon-spacing: 6;
 	-GtkToolItemGroup-expander-size: 11;
@@ -65,7 +63,8 @@
 	-unico-focus-border-radius: 2;
 	-unico-focus-fill-color: alpha (@selected_bg_color, 0.25);
 	-unico-focus-outer-stroke-color: @transparent;
-	-unico-inner-stroke-color: none;
+
+	-unico-inner-stroke-color: shade (@bg_color, 1.1);
 	-unico-inner-stroke-width: 0;
 }
 
