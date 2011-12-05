@@ -1240,10 +1240,7 @@ GtkSpinButton.button:insensitive {
                                            from (shade (@bg_color, 0.8)),
                                            to (shade (@bg_color, 0.8)));
 	border-width: 1;
-/*	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (alpha (shade (@bg_color, 0.7), 0.9)),
-                                                 to (alpha (shade (@bg_color, 0.7), 0.9)));
-    -unico-outer-stroke-width: 1;*/
+	-unico-outer-stroke-width: 1 1 1 0;
 }
 
 /*******************
@@ -1507,7 +1504,7 @@ GtkScrolledWindow.frame {
     border-style: solid;
 
     -unico-border-gradient: none;
-    -unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.6);
+    -unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.4);
     -unico-inner-stroke-gradient: none;
 }
 
@@ -1515,7 +1512,7 @@ GtkScrolledWindow.frame {
 .button.separator {
     border-color: shade (@button_bg_color, 0.84);
 
-    -unico-inner-stroke-color: alpha (shade (@button_bg_color, 1.26), 0.5);
+    -unico-inner-stroke-color: alpha (shade (@button_bg_color, 1.26), 0.4);
     -unico-inner-stroke-gradient: none;
 }
 
@@ -1523,7 +1520,7 @@ GtkScrolledWindow.frame {
 .notebook .button.separator {
     border-color: shade (@bg_color, 0.9);
 
-    -unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.6);
+    -unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.4);
     -unico-inner-stroke-gradient: none;
 }
 
