@@ -1847,11 +1847,11 @@ GtkSwitch.trough:active {
 .primary-toolbar.toolbar .separator,
 .primary-toolbar .toolbar .separator:insensitive,
 .primary-toolbar.toolbar .separator:insensitive {
-	border-color: alpha (shade (@bg_color, 0.94), 0.5);
+	border-color: alpha (shade (@bg_color, 0.7), 0.8);
 	border-style: solid;
 
 	-unico-border-gradient: none;
-	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.5), 0.4);
+	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.5), 0.2);
 	-unico-inner-stroke-gradient: none;
 }
 
