@@ -186,7 +186,7 @@ GtkComboBox,
 .button {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@button_bg_color, 1.1)),
-                                     to (shade (@button_bg_color, 0.9)));
+                                     to (shade (@button_bg_color, 0.96)));
     border-radius: 3;
     border-style: solid;
 
