@@ -202,14 +202,12 @@ GtkComboBox,
 
 .button:hover {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@button_bg_color, 1.2)),
-                                     to (shade (@button_bg_color, 0.98)));
+                                     from (mix (shade (@button_bg_color, 1.2),shade (@selected_bg_color, 1.35),0.5)),
+                                     to (mix (shade (@button_bg_color, 0.98),shade (@selected_bg_color, 1.2),0.5)));
     
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
                                            from (shade (@button_bg_color, 0.89)),
                                            to (shade (@button_bg_color, 0.7)));
-    -unico-glow-color: shade (@selected_bg_color, 0.85);
-    -unico-glow-radius: 12;
     -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
                                                  from (shade (@button_bg_color, 1.2)),
                                                  to (shade (@button_bg_color, 1.06)));
@@ -921,7 +919,8 @@ GtkIconView.view.cell:selected:focused {
 
 .menuitem:insensitive,
 .menuitem *:insensitive {
-	color: mix (@fg_color, @bg_color, 0.5);
+	color: mix (@fg_color, @bg_color, 0.6);
+	text-shadow: none;
 }
 
 .menuitem.check:active,
