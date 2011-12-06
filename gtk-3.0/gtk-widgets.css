@@ -709,7 +709,7 @@ GtkComboBox.combobox-entry .button:insensitive {
 		color-stop (0.12, shade (@base_color, 0.98)),
 		color-stop (0.16, shade (@base_color, 1.0)),
 		to (@base_color));
-	border-radius: 2;
+	border-radius: 3;
 	border-width: 1;
 	border-style: solid;
 	-unico-border-gradient: -gtk-gradient (linear,
@@ -719,9 +719,19 @@ GtkComboBox.combobox-entry .button:insensitive {
 	padding: 2;
 }
 
+.entry:selected,
+.entry:selected:focused {
+    background-color: @selected_bg_color;
+
+    color: @selected_fg_color;
+}
+
 .entry:focused {
-	border-color: shade (@selected_bg_color,0.8);
-	-unico-border-gradient: none;
+    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@selected_bg_color, 0.75)),
+                                           to (shade (@selected_bg_color, 0.8)));
+    -unico-inner-stroke-color: alpha (@selected_bg_color, 0.3);
+    -unico-inner-stroke-gradient: none;
 }
 
 .entry:insensitive {
@@ -737,6 +747,8 @@ GtkComboBox.combobox-entry .button:insensitive {
     -unico-outer-stroke-width: 1;
 }
 
+.primary-toolbar .toolbar .entry.progressbar,
+.primary-toolbar.toolbar .entry.progressbar,
 .entry.progressbar {
 	background-color: @selected_bg_color;
 	color: @selected_fg_color;
