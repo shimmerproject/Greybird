@@ -92,9 +92,13 @@
 }
 
 *:selected {
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
 }
 
 *:selected:focused {
+	background-color: @selected_bg_color;
+	color: @selected_fg_color;
 }
 
 /***********
