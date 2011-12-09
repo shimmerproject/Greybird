@@ -1534,7 +1534,7 @@ GtkHandleBox {
 		from (shade (@toolbar_gradient_base,0.95)),
 		to (shade (@toolbar_gradient_final,0.9)));
 	border-style: solid;
-	border-bottom-color: shade (@bg_color,0.51);
+	border-bottom-color: shade (@bg_color,0.71);
 	border-width: 0 0 1 0;
 	-unico-inner-stroke-color: shade (@bg_color, 0.6);
 }
@@ -1547,8 +1547,8 @@ GtkHandleBox {
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@toolbar_gradient_base,0.95)),
 		to (shade (@toolbar_gradient_final,0.9)));
+
 	border-style: solid;
-	border-color: shade (@bg_color,0.7);
 	border-width: 0 0 1 0;
 	padding: 2;
 
@@ -1556,7 +1556,7 @@ GtkHandleBox {
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (alpha (@toolbar_border, 0.0)),
-		to (alpha (@dark_bg_color, 1.2)));
+		to (shade (@bg_color,0.71)));
 	-unico-inner-stroke-color: shade (@bg_color, 1.1);
 	-unico-inner-stroke-width: 0;
 }
