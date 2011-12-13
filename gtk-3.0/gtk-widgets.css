@@ -982,13 +982,11 @@ GtkIconView.view.cell:selected:focused {
 	border-width: 1;
 }
 
-.menubar.menuitem {
+.menubar.menuitem,
+.menubar .menuitem {
 	border-radius: 0;
 	border-width: 1;
-}
-
-.menubar.menuitem {
-	color: @text_color;
+	padding: 1 6 1 6;
 }
 
 .menubar.menuitem:prelight {
