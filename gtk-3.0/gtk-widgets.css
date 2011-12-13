@@ -903,47 +903,40 @@ GtkIconView.view.cell:selected:focused {
 	padding: 0;
 	background-image: none;
 	background-color: @dark_bg_color;
-	border-color: shade (@dark_bg_color,0.5);
+	border-color: shade (@dark_bg_color,0.6);
 	color: @selected_fg_color;
-	border-width: 1 1 1 1;
+	border-width: 1;
 	border-style: solid;
 }
 
 /* menuitem */
 .menuitem {
-	padding: 2;
+	padding: 4 0 4 0;
 	border-width: 1;
 	border-radius: 0;
 	border-style: solid;
+	border-color: shade (@dark_bg_color,0.3);
+	color: @selected_fg_color;
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@menuitem_background_a, 1.0)),
 		to (shade (@menuitem_background_b, 1.0)));
 
 	-unico-bullet-color: @selected_fg_color;
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (@selected_bg_color, 0.0)),
-		to (alpha (@selected_bg_color, 0.0)));
 	-unico-inner-stroke-style: none;
 }
 
-.menuitem:active {
-	color: @selected_fg_color;
-}
-
-.menuitem:prelight {
+.menuitem:hover,
+.menuitem *:hover {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@dark_bg_color, 0.50)),
-		to (shade (@dark_bg_color, 0.40)));
-	background-color: shade (@bg_color_dark,0.5);
+		from (shade (@dark_bg_color, 0.75)),
+		to (shade (@dark_bg_color, 0.5)));
 	border-style: solid;
-	border-width: 1; /* Keep at 1. Menu gets bumpy otherwise. */
+	border-width: 0;
 	border-radius: 0;
-	border-color: shade (@dark_bg_color,0.3);
-}
-
-
-
-.menuitem *:prelight {
+	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (shade (@dark_bg_color,0.48)),
+                                                 to (shade (@dark_bg_color,0.48)));
+	-unico-inner-stroke-width: 1;
 	color: @selected_fg_color;
 	text-shadow: none;
 }
@@ -987,10 +980,12 @@ GtkIconView.view.cell:selected:focused {
 	border-radius: 0;
 	border-width: 1;
 	padding: 2 6 2 6;
+	color: @fg_color;
 }
 
-.menubar.menuitem:prelight {
-	color: @fg_color;
+.menubar.menuitem:hover,
+.menubar .menuitem *:hover {
+	color: @selected_fg_color;
 	text-shadow: none;
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@dark_bg_color, 0.70)),
