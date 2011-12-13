@@ -1,6 +1,6 @@
 style "theme-panel" = "murrine-dark"
 {
-	xthickness	= 1
+	xthickness	= 0
 	ythickness	= 0
 	
 	bg[NORMAL]	= shade (0.7, @bg_color_dark)
