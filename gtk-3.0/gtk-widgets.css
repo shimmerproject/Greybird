@@ -1418,7 +1418,7 @@ GtkScrolledWindow.frame {
 
 .menuitem.separator {
     -GtkMenuItem-horizontal-padding: 0;
-    border-color: shade (@dark_bg_color, 0.96);
+    border-color: shade (@dark_bg_color, 0.86);
 
     -unico-inner-stroke-color: alpha (shade (@dark_bg_color, 1.26), 0.5);
 }
