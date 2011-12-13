@@ -377,21 +377,19 @@ GtkComboBox.combobox-entry .button:insensitive,
 /* default button */
 .button.default {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (mix (shade (@selected_bg_color, 1.04), @bg_color, 0.3)),
-                                     to (mix (shade (@selected_bg_color, 0.96), @bg_color, 0.3)));
-
-    text-shadow: 0 1 alpha (shade (@selected_bg_color, 1.26), 0.4);
-
-    -unico-focus-border-color: @transparent;
-    -unico-focus-outer-stroke-color: alpha (@selected_bg_color, 0.2);
-
+                                     from (mix (shade (@bg_color, 1.1), shade (@selected_bg_color, 0.65),0.17)),
+                                     to (mix (shade (@bg_color, 0.9), shade (@selected_bg_color, 0.65),0.17)));
+    -unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (alpha (mix (shade (@button_bg_color, 0.78), shade (@selected_bg_color, 0.35),0.3), 0.15)),
+                                                 to (alpha (mix (shade (@button_bg_color, 0.78), shade (@selected_bg_color, 0.35),0.3), 0.15)));
+    -unico-outer-stroke-width: 1;
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (mix (shade (@selected_bg_color, 0.85), @bg_color, 0.3)),
-                                           to (mix (shade (@selected_bg_color, 0.7), @bg_color, 0.3)));
-    
+                                           from (alpha (shade (@selected_bg_color, 0.4),0.4)),
+                                           to (alpha (shade (@selected_bg_color, 0.3),0.6)));
+					   
     -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (mix (shade (@selected_bg_color, 1.42), @bg_color, 0.3)),
-                                                 to (mix (shade (@selected_bg_color, 1.12), @bg_color, 0.3)));
+                                                 from (shade (@button_bg_color, 1.2)),
+                                                 to (shade (@button_bg_color, 1.06)));
 }
 
 .button.default:hover {
@@ -433,6 +431,23 @@ GtkComboBox.combobox-entry .button:insensitive,
                                            to (shade (@button_bg_color, 0.7)));
     -unico-glow-color: shade (@selected_bg_color, 0.85);
     -unico-glow-radius: 12;
+    -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (shade (@button_bg_color, 1.2)),
+                                                 to (shade (@button_bg_color, 1.06)));
+}
+
+.button.default:focused {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (mix (shade (@bg_color, 1.12), shade (@selected_bg_color, 0.65),0.2)),
+                                     to (mix (shade (@bg_color, 0.92), shade (@selected_bg_color, 0.65),0.2)));
+    -unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (alpha (mix (shade (@button_bg_color, 0.58), shade (@selected_bg_color, 0.35),0.3), 0.3)),
+                                                 to (alpha (mix (shade (@button_bg_color, 0.58), shade (@selected_bg_color, 0.35),0.3), 0.3)));
+    -unico-outer-stroke-width: 1;
+    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (alpha (shade (@selected_bg_color, 0.4),0.8)),
+                                           to (alpha (shade (@selected_bg_color, 0.3),0.9)));
+					   
     -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
                                                  from (shade (@button_bg_color, 1.2)),
                                                  to (shade (@button_bg_color, 1.06)));
@@ -1789,6 +1804,14 @@ GtkHandleBox {
 	-unico-border-gradient: none;
 	-unico-inner-stroke-color: alpha (shade (@bg_color, 1.5), 0.2);
 	-unico-inner-stroke-gradient: none;
+}
+
+/* secondary toolbar */
+
+.secondary-toolbar.toolbar {
+	border-style: solid;
+	border-bottom-color: shade (@bg_color,0.71);
+	border-width: 0 0 1 0;
 }
 
 /* inline-toolbar */
