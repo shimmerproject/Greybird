@@ -223,15 +223,6 @@ style "murrine-wide-dark" = "murrine-dark"
 	xthickness        = 4
 }
 
-style "tabwin-dark" = "murrine-dark" {
-	bg[NORMAL]	= "#424242"
-	bg[SELECTED]	= @panel_bg
-	engine "murrine"
-	{
-		focusstyle = 0
-	}
-}
-
 style "murrine-wide"
 {
 	xthickness = 2
@@ -549,9 +540,11 @@ style "murrine-toolbar" = "murrine-default"
 
 style "xfce-header"
 {
+	font_name = "Serif"
+	bg[NORMAL]	 = shade (0.9, @bg_color)
 	base[NORMAL]	 = shade (1.18, @bg_color)
 	engine "murrine" {
-		gradient_shades = {0.1,0.5,0.6,1.0}
+		textstyle	= 1
 	}
 }
 
@@ -560,6 +553,16 @@ style "xfdesktop-windowlist" #= "murrine-menu"
 	bg[NORMAL]	= @base_color
 	fg[INSENSITIVE]   = shade (0.95, @base_color)
 	text[INSENSITIVE]   = shade (0.95, @base_color)
+}
+
+
+style "tabwin-dark" = "murrine-dark" {
+	bg[NORMAL]	= "#424242"
+	bg[SELECTED]	= @panel_bg
+	engine "murrine"
+	{
+		focusstyle = 0
+	}
 }
 
 style "murrine-calendar" = "murrine-dark"
