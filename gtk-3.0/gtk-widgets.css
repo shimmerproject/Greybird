@@ -986,7 +986,7 @@ GtkIconView.view.cell:selected:focused {
 .menubar .menuitem {
 	border-radius: 0;
 	border-width: 1;
-	padding: 1 6 1 6;
+	padding: 2 6 2 6;
 }
 
 .menubar.menuitem:prelight {
