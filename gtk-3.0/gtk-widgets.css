@@ -963,14 +963,11 @@ GtkIconView.view.cell:selected:focused {
 .menubar {
 	-GtkWidget-window-dragging: true;
 	color: @fg_color;
-	background-image: -gtk-gradient (linear,
-		left top,
-		left bottom,
-		from (@toolbar_gradient_base),
-		to (@toolbar_gradient_final));
+	background-image: none;
+	background-color: @bg_color;
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (alpha (@bg_color, 1.0)),
-		to (alpha (@toolbar_border, 1.0)));
+		to (alpha (@bg_color, 1.0)));
 	border-style: solid;
 	border-width: 1;
 }
@@ -1540,8 +1537,8 @@ GtkSwitch.trough:active {
 /* handlebox */
 GtkHandleBox {
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@toolbar_gradient_base,0.95)),
-		to (shade (@toolbar_gradient_final,0.9)));
+		from (shade (@bg_color,0.99)),
+		to (shade (@toolbar_gradient_base,0.9)));
 	border-style: solid;
 	border-bottom-color: shade (@bg_color,0.71);
 	border-width: 0 0 1 0;
@@ -1554,8 +1551,8 @@ GtkHandleBox {
 	-GtkWidget-window-dragging: true;
 
 	background-image: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@toolbar_gradient_base,0.95)),
-		to (shade (@toolbar_gradient_final,0.9)));
+		from (shade (@bg_color,1.0)),
+		to (shade (@toolbar_gradient_final,0.85)));
 
 	border-style: solid;
 	border-width: 0 0 1 0;
