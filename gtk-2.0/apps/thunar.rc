@@ -12,25 +12,7 @@ style "sidepane"
 	}
 }
 
-style "sidepane-scrollbar"
-{
-	GtkScrollbar::trough-side-details = 1
-
-	bg[NORMAL]	= mix (0.2, @bg_color,shade (1.03,@selected_bg_color))
-	bg[ACTIVE]	= mix (0.2, @bg_color,shade (1.03,@selected_bg_color))
-	bg[SELECTED]	= shade (1.4, @panel_bg)
-	bg[INSENSITIVE]	= @base_color
-	
-	engine "murrine" {
-		colorize_scrollbar	= TRUE
-		roundness		= 6
-		focus_color		= shade (1.55,@selected_bg_color)
-		border_shades		= { 1.2, 1.2 }
-	}
-}
-
 widget_class "*ThunarShortcutsView*" style "sidepane"
 widget_class "*ThunarTreeView*" style "sidepane"
-#widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarShortcutsPane.GtkVScrollbar" style "sidepane-scrollbar"
-#widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkVScrollbar" style "sidepane-scrollbar"
-#widget_class "ThunarWindow.GtkTable.GtkHPaned.ThunarTreePane.GtkHScrollbar" style "sidepane-scrollbar"
+widget_class "*GtkFileChooserWidget.GtkFileChooserDefault.GtkVBox.GtkHPaned.GtkVBox.GtkScrolledWindow.GtkTreeView*"	style "sidepane"
+widget_class "*.<GtkTreeView>.<GtkButton>" style "murrine-treeview-header"
