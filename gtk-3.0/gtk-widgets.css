@@ -489,9 +489,9 @@ row:selected {
 	background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@selected_bg_color, 1.06)),
                                      to (shade (@selected_bg_color, 0.94)));
-	border-top-color: shade (@selected_bg_color, 0.88);
+	border-color: shade (@selected_bg_color, 0.88);
 	border-style: solid;
-	border-width: 1 0 0 0;
+	border-width: 1;
 	color: @selected_fg_color;
 }
 
