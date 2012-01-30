@@ -6,10 +6,10 @@
 # License: GPL
 # Date: January 2011
 
-active_text_color=#6f6f6f
-active_text_shadow_color=#efefef
-inactive_text_color=#9c9c9c
-inactive_text_shadow_color=#f7f7f7
+active_text_color=#686868
+active_text_shadow_color=#ececec
+inactive_text_color=#bbbbbb
+inactive_text_shadow_color=#ececec
 title_shadow_active=true
 title_shadow_inactive=true
 full_width_title=true
