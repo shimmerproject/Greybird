@@ -2,6 +2,8 @@ Name: Greybird
 Summary: Desktop Suite for Xfce.
 URL: http://shimmerproject.org/projects/greybird/
 
+Copyright 2009– Simon Steinbeiß
+
 Desktop Suite for Xfce.
 Greybird is the default theme in Xubuntu 11.04.
 
@@ -15,5 +17,5 @@ The Greybird desktop suite includes:
 – Xubuntu 11.04 wallpaper (svg and png)
 
 Dependencies:
-- gtk2-engines-murrine (v0.90)
-- gtk3-engines-unico (v1.0.1)
+– gtk2-engines-murrine (v0.90)
+– gtk3-engines-unico (v1.0.1)
