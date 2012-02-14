@@ -185,6 +185,7 @@ GtkAssistant .sidebar {
  * Buttons *
  ***********/
 .button {
+    padding: 1px 2px 1px 2px;
     -unico-focus-border-color: alpha (@selected_bg_color, 0.7);
     -unico-focus-fill-color: @transparent;
     -unico-focus-outer-stroke-color: alpha (@selected_bg_color, 0.2);
@@ -197,7 +198,6 @@ GtkComboBox,
                                      to (shade (@button_bg_color, 0.96)));
     border-radius: 3px;
     border-style: solid;
-
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
                                            from (shade (@button_bg_color, 0.85)),
                                            to (shade (@button_bg_color, 0.67)));
