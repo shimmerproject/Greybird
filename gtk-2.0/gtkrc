@@ -556,9 +556,12 @@ style "xfdesktop-windowlist" #= "murrine-menu"
 }
 
 
-style "tabwin-dark" = "murrine-dark" {
-	bg[NORMAL]	= "#424242"
-	bg[SELECTED]	= @panel_bg
+style "tabwin" = "murrine-dark"
+{
+	Xfwm4TabwinWidget::border-width = 1
+	Xfwm4TabwinWidget::icon-size = 64
+	bg[NORMAL]	= "#222"
+	bg[SELECTED]	= "#424242"
 	engine "murrine"
 	{
 		focusstyle = 0
@@ -659,7 +662,7 @@ widget_class "*GnmSimpleCanvas*"		style "murrine-treeview-header" # Gnumeric tre
 # Xfce specific theming
 widget_class "*XfceHeading*"			style "xfce-header"
 widget_class "*XfceDesktop*"			style "xfdesktop-windowlist"
-widget "xfwm4-tabwin*" style "tabwin-dark"
+widget "xfwm4-tabwin*" style "tabwin"
 
 # Workarounds for Evolution
 widget_class "*.ETable.ECanvas"    style "murrine-treeview-header"
