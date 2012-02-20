@@ -62,6 +62,11 @@ style "theme-main-menu-text" = "theme-panel-text"
 	text[PRELIGHT] = "#ffffff"
 }
 
+style "workspace-switcher" = "theme-panel"
+{
+	bg[SELECTED] = shade (0.8, @selected_bg_color)
+}
+
 widget "*PanelWidget*"              style "theme-panel"
 widget "*PanelApplet*"              style "theme-panel"
 widget "*fast-user-switch*"         style "theme-panel"
@@ -85,6 +90,7 @@ widget_class "*Notif*Brasero*"      style "theme-panel"
 # XFCE panel theming.
 widget "*Xfce*Panel*"               style "theme-panel"
 class "*Xfce*Panel*"                style "theme-panel"
+widget "*WnckPager*"	    style "workspace-switcher"
 
 # Fix gtk-entries in the panel
 class "GtkEntry"		    style "murrine-combo"
