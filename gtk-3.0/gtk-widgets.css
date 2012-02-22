@@ -2057,7 +2057,7 @@ GtkTreeView row:nth-child(even):hover {
 
 GtkTreeView row:nth-child(odd),
 GtkTreeView row:nth-child(odd):hover {
-	background-color: shade (@base_color, 0.9);
+	background-color: shade (@base_color, 0.93);
 }
 
 /************
