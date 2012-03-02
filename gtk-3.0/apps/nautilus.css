@@ -1,0 +1,53 @@
+/* browser window */
+NautilusTrashBar.info,
+NautilusXContentBar.info,
+NautilusSearchBar.info,
+NautilusQueryEditor.info {
+    /* this background-color controls the symbolic icon in the entry */
+    background-color: mix (@fg_color, @base_color, 0.3);
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+}
+
+NautilusSearchBar .entry {
+}
+
+.nautilus-cluebar-label {
+    color: @fg_color;
+    font: bold;
+}
+
+#nautilus-search-button *:active,
+#nautilus-search-button *:active:prelight {
+    color: @dark_fg_color;
+}
+
+NautilusFloatingBar {
+    background-color: @info_bg_color;
+    border-radius: 3px 3px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darker (@info_bg_color);
+
+    -unico-border-gradient: none;
+}
+
+NautilusFloatingBar .button {
+    -GtkButton-image-spacing: 0;
+    -GtkButton-inner-border: 0;
+}
+
+/* sidebar */
+NautilusWindow .sidebar,
+NautilusWindow .sidebar .view {
+    background-color: @sidebar_color;
+}
+
+NautilusWindow .sidebar .frame {
+    border-radius: 0;
+    border-width: 0;
+}
+
+NautilusWindow > GtkTable > .pane-separator {
+}
