@@ -1671,6 +1671,13 @@ GtkSwitch.trough:active {
 	color: @base_color;
 }
 
+/************
+ * textview *
+ ************/
+GtkTextView {
+    background-color: @base_color;
+}
+
 /***********
  * toolbar *
  ***********/
