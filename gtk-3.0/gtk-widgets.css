@@ -72,6 +72,12 @@ GtkWindow {
     color: @fg_color;
 }
 
+* {
+    /* inherit the color from parent by default */
+    color: inherit;
+    background-color: @bg_color;
+}
+
 /**********
  * states *
  **********/
@@ -95,11 +101,7 @@ GtkWindow {
 *:hover:insensitive {
 }
 
-*:selected {
-	background-color: @selected_bg_color;
-	color: @selected_fg_color;
-}
-
+*:selected,
 *:selected:focused {
 	background-color: @selected_bg_color;
 	color: @selected_fg_color;
@@ -112,9 +114,17 @@ GtkWindow {
 .button,
 .frame,
 .notebook {
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+    border-style: solid;
+    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
                                            from (shade (@bg_color, 0.76)),
                                            to (shade (@bg_color, 0.7)));
+}
+
+.frame,
+.notebook {
+    -unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.2);
+    -unico-inner-stroke-gradient: none;
+    -unico-inner-stroke-width: 1px;
 }
 
 .button:insensitive,
