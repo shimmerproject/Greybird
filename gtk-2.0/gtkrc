@@ -540,7 +540,6 @@ style "murrine-toolbar" = "murrine-default"
 
 style "xfce-header"
 {
-	font_name = "Serif"
 	bg[NORMAL]	 = shade (0.9, @bg_color)
 	base[NORMAL]	 = shade (1.18, @bg_color)
 	engine "murrine" {
