@@ -927,6 +927,7 @@ GtkImage:insensitive {
  ********/
 .menu {
     background-image: none;
+    background-color: @dark_bg_color;
     border: solid;
     border-width: 1px;
     border-color: shade (@dark_bg_color, 0.3);
@@ -1022,7 +1023,7 @@ DbusmenuGtkMenu .menu,
     border-width: 1px;
     padding: 2px 6px 2px 6px;
 
-    -unico-inner-stroke-width: 1px;
+    -unico-inner-stroke-width: 0;
 }
 
 Genericmenuitem .menuitem,
