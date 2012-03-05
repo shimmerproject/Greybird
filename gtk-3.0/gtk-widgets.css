@@ -483,8 +483,9 @@ GtkComboBox.combobox-entry .button:insensitive,
  * cell and row *
  ****************/
 .cell {
-	border-radius: 0;
-	border-width: 0;
+    background-color: @base_color;
+    border-radius: 0;
+    border-width: 0;
 }
 
 .cell:selected {
