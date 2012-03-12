@@ -165,6 +165,7 @@ style "resize-grip" #= "murrine-default"
 		image {
 			function	= RESIZE_GRIP
 			recolorable	= FALSE
+			detail		= "statusbar"
 			overlay_file	= "resize_grip.png"
 			overlay_border	= {0,0,0,0 }
 			overlay_stretch	= FALSE
@@ -592,6 +593,7 @@ class "GtkSeparator" style "murrine-wide"
 class "GtkCalendar"  style "murrine-wide"
 class "GtkToolbar"   style "murrine-toolbar"
 class "GtkHandleBox*" style "murrine-toolbar"
+class "GtkStatusbar" style "resize-grip"
 
 class "GtkSpinButton"  style "murrine-combo"
 class "GtkScale"       style "murrine-scale"
