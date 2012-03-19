@@ -1547,6 +1547,15 @@ GtkScrolledWindow.frame {
     -unico-inner-stroke-gradient: none;
 }
 
+GtkComboBox .separator {
+    border-color: @transparent;
+
+    -unico-border-gradient: none;
+    -unico-inner-stroke-color: @transparent;
+    -unico-inner-stroke-gradient: none;
+}
+
+/*
 .button .separator,
 .button.separator {
     border-color: shade (@button_bg_color, 0.84);
@@ -1578,6 +1587,7 @@ GtkScrolledWindow.frame {
     -unico-inner-stroke-color: alpha (shade (@bg_color, 1.26), 0.4);
     -unico-inner-stroke-gradient: none;
 }
+*/
 
 .menuitem.separator {
     -GtkMenuItem-horizontal-padding: 0;
