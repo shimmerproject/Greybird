@@ -1665,24 +1665,81 @@ GtkComboBox .separator {
 /***************
  * Spinbuttons *
  ***************/
-GtkSpinButton.button,
-GtkSpinButton.button:prelight,
-GtkSpinButton.button:active {
-	background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@bg_color, 1.05)),
-                                     to (shade (@bg_color, 0.98)));
-	border-width: 0 0 0 1px;
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@bg_color, 0.65)),
-                                           to (shade (@bg_color, 0.7)));
+.spinbutton.button:active,
+.spinbutton.button:insensitive,
+.notebook .spinbutton.button:active,
+.notebook .spinbutton.button:insensitive,
+.spinbutton.button,
+.notebook .spinbutton.button {
+    border-radius: 0;
+    border-width: 0 1px 0 1px;
+
+    -unico-outer-stroke-width: 0;
 }
 
-GtkSpinButton.button:insensitive {
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@bg_color, 0.8)),
-                                           to (shade (@bg_color, 0.8)));
-	border-width: 1px;
-	-unico-outer-stroke-width: 1px 1px 1px 0;
+.spinbutton.button:active:nth-child(last),
+.notebook .spinbutton.button:active:nth-child(last) {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@bg_color, 1.05)),
+                                     to (shade (@bg_color, 0.85)));
+    border-radius: 0 2px 2px 0;
+    border-width: 0;
+}
+
+.spinbutton.button,
+.notebook .spinbutton.button {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@bg_color, 1.1)),
+                                     to (shade (@bg_color, 0.9)));
+    border-top-color: shade (@bg_color, 0.64);
+    border-right-color: shade (@bg_color, 0.76);
+    border-bottom-color: shade (@bg_color, 0.82);
+    border-left-color: shade (@bg_color, 0.76);
+    border-width: 0 1px 0 1px;
+
+    -unico-border-gradient: none;
+}
+
+.spinbutton.button:nth-child(last),
+.notebook .spinbutton.button:nth-child(last) {
+    border-width: 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.spinbutton.button:insensitive,
+.notebook .spinbutton.button:insensitive {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@bg_color, 1.15)),
+                                     to (shade (@bg_color, 1.08)));
+    border-top-color: shade (@bg_color, 0.64);
+    border-right-color: shade (@bg_color, 0.76);
+    border-bottom-color: shade (@bg_color, 0.82);
+    border-left-color: shade (@bg_color, 0.76);
+    border-width: 0 1px 0 1px;
+
+    color: shade (@bg_color, 0.66);
+
+    -unico-border-gradient: none;
+}
+
+.spinbutton.button:insensitive:nth-child(last),
+.notebook .spinbutton.button:insensitive:nth-child(last) {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@bg_color, 1.15)),
+                                     to (shade (@bg_color, 1.08)));
+    border-top-color: shade (@bg_color, 0.64);
+    border-right-color: shade (@bg_color, 0.76);
+    border-bottom-color: shade (@bg_color, 0.82);
+    border-left-color: shade (@bg_color, 0.76);
+    border-width: 0;
+    border-radius: 0 2px 2px 0;
+
+    color: shade (@bg_color, 0.66);
+}
+
+.spinbutton,
+.spinbutton:hover {
+    color: @fg_color;
 }
 
 /***********
