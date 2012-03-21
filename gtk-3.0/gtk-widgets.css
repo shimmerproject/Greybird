@@ -1848,7 +1848,7 @@ GtkHandleBox {
 /* primary-toolbar */
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
-	-GtkWidget-window-dragging: true;
+	-GtkWidget-window-dragging: false;
 
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@bg_color,1.0)),
