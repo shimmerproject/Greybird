@@ -929,7 +929,7 @@ GtkImage:insensitive {
     background-color: @dark_bg_color;
     border: solid;
     border-width: 1px;
-    border-color: shade (@dark_bg_color, 0.3);
+    border-color: shade (@dark_bg_color, 0.69);
     padding: 0;
 
     color: @fg_color;
@@ -1004,7 +1004,7 @@ DbusmenuGtkMenu .menu,
 
     color: @selected_fg_color;
 
-    border-color: shade (@dark_bg_color, 0.3);
+    border-color: shade (@dark_bg_color, 0.69);
     -unico-glow-radius: 0;
     -unico-inner-stroke-width: 0;
 }
