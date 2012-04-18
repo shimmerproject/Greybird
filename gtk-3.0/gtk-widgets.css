@@ -1137,13 +1137,30 @@ DbusmenuGtkMenu .menuitem.radio:active,
                                                  to (shade (@dark_bg_color, 1.1)));;
 }
 
+.menubar .menuitem GtkScale.slider {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@bg_color, 1.1)),
+                                     to (shade (@bg_color, 0.9)));
+	border-style: solid;
+
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@bg_color, 0.85)),
+                                           to (shade (@bg_color, 0.67)));
+
+	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (shade (@bg_color, 1.16)),
+                                                 to (shade (@bg_color, 1.015)));
+	-unico-inner-stroke-width: 1;
+	border-radius: 12px;
+}
+
 .menubar .menuitem GtkScale.trough {
     background-color: @dark_bg_color;
     background-image: none;
 
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@dark_bg_color, 0.75)),
-                                           to (shade (@dark_bg_color, 1.15)));
+                                           from (shade (@bg_color, 0.75)),
+                                           to (shade (@bg_color, 1.15)));
 }
 
 Genericmenuitem .menuitem .accelerator,
