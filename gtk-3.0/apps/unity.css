@@ -35,7 +35,9 @@ UnityPanelWidget,
 }
 
 .unity-panel.menubar.menuitem.scale.highlight.left,
-.unity-panel.menubar .menuitem .scale.highlight.left {
+.unity-panel.menubar .menuitem .scale.highlight.left,
+.unity-panel.menubar .menuitem GtkScale.trough,
+.unity-panel.menubar .menuitem GtkScale.slider {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@bg_color, 1.13)),
                                      to (shade (@bg_color, 0.9)));
