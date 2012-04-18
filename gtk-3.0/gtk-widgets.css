@@ -1154,13 +1154,33 @@ DbusmenuGtkMenu .menuitem.radio:active,
 	border-radius: 12px;
 }
 
+.menubar .menuitem .scale.highlight.left {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@bg_color, 1.13)),
+                                     to (shade (@bg_color, 0.9)));
+	border-style: solid;
+	border-width: 1px;
+	
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (shade (@bg_color, 0.75)),
+                                           to (shade (@bg_color, 0.75)));
+
+	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (shade (@bg_color, 1.22)),
+                                                 to (shade (@bg_color, 1.0)));
+	-unico-inner-stroke-width: 1px;
+	-unico-outer-stroke-color: @transparent;
+	-unico-outer-stroke-gradient: none;
+	-unico-outer-stroke-width: 0;
+}
+
 .menubar .menuitem GtkScale.trough {
     background-color: @dark_bg_color;
     background-image: none;
 
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@bg_color, 0.75)),
-                                           to (shade (@bg_color, 1.15)));
+                                           from (shade (@dark_bg_color, 0.75)),
+                                           to (shade (@dark_bg_color, 1.15)));
 }
 
 Genericmenuitem .menuitem .accelerator,
