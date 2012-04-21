@@ -16,7 +16,11 @@ The Greybird desktop suite includes:
 – emerald theme
 – metacity theme
 – Xubuntu 11.04 wallpaper (svg and png)
+- Unity support
 
-Dependencies:
+Dependencies of master (for Gtk3.2)
 – gtk2-engines-murrine (v0.90)
 – gtk3-engines-unico (v1.0.1)
+
+Dependencies of gtk3.3 (for Gtk3>=Gtk3.3)
+- gtk3-engines-unico (v1.0.2)
