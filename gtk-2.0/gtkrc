@@ -157,11 +157,10 @@ style "murrine-default"
 		trough_border_shades = { 0.9, 0.7 }	}
 }
 
-### RESIZE GRIP PIXMAP Proof of concept ###
-
 style "resize-grip" #= "murrine-default"
 {
-	engine "pixmap"	{
+	engine "pixmap"
+	{
 		image {
 			function	= RESIZE_GRIP
 			recolorable	= FALSE
@@ -399,7 +398,8 @@ style "murrine-progressbar"
 	bg[NORMAL]   = shade (1.05, @bg_color)
 	bg[SELECTED]	= mix (0.4, @bg_color, shade (0.9, @selected_bg_color))
 
-	engine "murrine" {
+	engine "murrine"
+	{
 		gradient_shades = {1.15,1.05,1.0,0.95}
 		trough_shades	= {0.95, 1.15}
 		trough_border_shades	= { 0.8, 0.7 }
@@ -423,7 +423,8 @@ style "murrine-scrollbar" {
 	bg[PRELIGHT]	= shade (0.55, @bg_color)
 	bg[INSENSITIVE]	= shade (0.75, @bg_color)
 	
-	engine "murrine" {
+	engine "murrine"
+	{
 		#arrowstyle	= 0
 		colorize_scrollbar = TRUE
 		roundness	= 10
@@ -531,7 +532,8 @@ style "murrine-radiocheck"
 style "murrine-toolbar" = "murrine-default"
 {
 	bg[NORMAL] = @bg_color
-	engine "murrine" {
+	engine "murrine"
+	{
 		contrast			= 1.13
 		toolbarstyle			= 1
 		lightborder_shade		= 1.0
@@ -543,7 +545,8 @@ style "xfce-header"
 {
 	bg[NORMAL]	 = shade (0.9, @bg_color)
 	base[NORMAL]	 = shade (1.18, @bg_color)
-	engine "murrine" {
+	engine "murrine"
+	{
 		textstyle	= 1
 	}
 }
@@ -682,7 +685,7 @@ widget_class "*GnmSimpleCanvas*"		style "murrine-treeview-header" # Gnumeric tre
 # Xfce specific theming
 widget_class "*XfceHeading*"			style "xfce-header"
 widget_class "*XfceDesktop*"			style "xfdesktop-windowlist"
-widget "xfwm4-tabwin*" style "tabwin"
+widget "xfwm4-tabwin*"				style "tabwin"
 widget_class "*XfdesktopIconView*"		style "xfdesktop-icon-view"
 
 # Workarounds for Evolution
