@@ -568,6 +568,25 @@ style "tabwin" = "murrine-dark"
 	}
 }
 
+style "xfdesktop-icon-view" {
+    font_name = "bold"
+    XfdesktopIconView::label-alpha = 0
+    XfdesktopIconView::selected-label-alpha = 60
+    XfdesktopIconView::shadow-color = shade (1.05, @panel_bg)
+    XfdesktopIconView::selected-shadow-color = @panel_bg
+    XfdesktopIconView::shadow-x-offset = -1
+    XfdesktopIconView::selected-shadow-x-offset = -1
+    XfdesktopIconView::shadow-y-offset = -1
+    XfdesktopIconView::selected-shadow-y-offset = -1
+    fg[NORMAL] = shade (0.92, @selected_fg_color)
+    fg[ACTIVE] = @selected_fg_color
+    engine "murrine"
+    {
+	textstyle = 3
+	text_shade = 0.05
+    }
+}
+
 style "murrine-calendar" = "murrine-dark"
 {
 	base[NORMAL]	= @bg_color_dark
@@ -664,6 +683,7 @@ widget_class "*GnmSimpleCanvas*"		style "murrine-treeview-header" # Gnumeric tre
 widget_class "*XfceHeading*"			style "xfce-header"
 widget_class "*XfceDesktop*"			style "xfdesktop-windowlist"
 widget "xfwm4-tabwin*" style "tabwin"
+widget_class "*XfdesktopIconView*"		style "xfdesktop-icon-view"
 
 # Workarounds for Evolution
 widget_class "*.ETable.ECanvas"    style "murrine-treeview-header"
