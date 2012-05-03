@@ -38,6 +38,7 @@
 	-GtkScrolledWindow-scrollbars-within-bevel: 1;
 	-GtkSeparatorMenuItem-horizontal-padding: 0;
 	-GtkStatusbar-shadow-type: none;
+	-GtkSwitch-slider-width: 36px;
 	-GtkTextView-error-underline-color: @error_color;
 	-GtkToolButton-icon-spacing: 6;
 	-GtkToolItemGroup-expander-size: 11;
@@ -1810,17 +1811,32 @@ GtkSwitch {
 		left top, left bottom,
 		from (@button_gradient_color_a),
 		to (@button_gradient_color_b));
-
+	border-width: 1px;
+	border-style: solid;
 	-unico-border-gradient: -gtk-gradient (linear,
 		left top, left bottom,
-		from (@border_color_a),
-		to (@border_color_b));
+		from (shade (@bg_color, 0.76)),
+		to (shade (@bg_color, 0.7)));
 
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
 		from (alpha (@base_color, 0.9)),
 		to (alpha (shade (@button_bg_color, 1.26), 0.0)));
+}
+
+GtkSwitch.slider {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@button_bg_color, 1.1)),
+		to (shade (@button_bg_color, 0.95)));
+	border-radius: 2px;
+	border-width: 1px;
+	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@bg_color, 0.7)),
+		to (shade (@bg_color, 0.6)));
+	-unico-inner-stroke-color: shade (@bg_color, 0.6);
+	-unico-inner-stroke-width: 1px;
+	-unico-outer-stroke-width: 0;
 }
 
 GtkSwitch.trough {
@@ -1830,8 +1846,8 @@ GtkSwitch.trough {
 		to (shade (@progressbar_through_b, 1.0)));
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@border_color_b, 1.00)),
-		to (shade (@border_color_a, 1.00)));
+		from (shade (@bg_color, 0.76)),
+		to (shade (@bg_color, 0.7)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
@@ -1846,8 +1862,8 @@ GtkSwitch.trough:active {
 		to (shade (@selected_bg_color, 1.0)));
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@border_color_b, 1.00)),
-		to (shade (@border_color_a, 1.00)));
+		from (shade (@bg_color, 0.76)),
+		to (shade (@bg_color, 0.7)));
 	-unico-inner-stroke-style: custom;
 	-unico-inner-stroke-gradient: -gtk-gradient (linear,
 		left top, left bottom,
