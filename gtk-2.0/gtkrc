@@ -687,6 +687,7 @@ widget_class "*XfceHeading*"			style "xfce-header"
 widget_class "*XfceDesktop*"			style "xfdesktop-windowlist"
 widget "xfwm4-tabwin*"				style "tabwin"
 widget_class "*XfdesktopIconView*"		style "xfdesktop-icon-view"
+widget_class "*XfsmLogoutDialog*"		style "murrine-dark"
 
 # Workarounds for Evolution
 widget_class "*.ETable.ECanvas"    style "murrine-treeview-header"
