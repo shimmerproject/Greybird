@@ -1,0 +1,62 @@
+.lightdm.menu {
+    background-image: none;
+    background-color: alpha (black, 0.6);
+    border-color: alpha (white, 0.2);
+    border-radius: 4px;
+    padding: 1px;
+
+    color: white;
+
+    -unico-border-gradient: none;
+    -unico-inner-stroke-width: 0;
+    -unico-glow-radius: 0;
+    -unico-outer-stroke-width: 0;
+    -unico-outer-stroke-width: 0;
+}
+
+.lightdm.menu .menuitem *,
+.lightdm.menu .menuitem.check:active,
+.lightdm.menu .menuitem.radio:active {
+    color: white;
+
+    -unico-bullet-color: white;
+}
+
+.lightdm.menubar {
+    background-image: none;
+    background-color: alpha (black, 0.5);
+}
+
+.lightdm.button,
+.lightdm.entry {
+    background-image: none;
+    background-color: alpha (black, 0.3);
+    border-color: alpha (white, 0.6);
+    border-radius: 4px;
+    padding: 7px;
+
+    color: white;
+    text-shadow: none;
+
+    -unico-border-gradient: none;
+    -unico-inner-stroke-gradient: none;
+    -unico-inner-stroke-width: 0;
+    -unico-glow-radius: 0;
+    -unico-outer-stroke-color: alpha (white, 0.1);
+    -unico-outer-stroke-gradient: none;
+    -unico-outer-stroke-width: 1px;
+    -unico-focus-border-color: alpha (white, 0.5);
+}
+
+.lightdm.button:focused *,
+.lightdm.button:selected *,
+.lightdm.button:selected:focused *,
+.lightdm.entry:focused *,
+.lightdm.entry:selected *,
+.lightdm.entry:selected:focused * {
+    border-color: alpha (white, 0.9);
+
+    color: white;
+
+    -unico-outer-stroke-color: alpha (white, 0.15);
+}

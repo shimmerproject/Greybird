@@ -2,7 +2,7 @@
 <metacity_theme>
 <info>
   <name>elementary</name>
-  <author>elementart Art Team (modified by ochosi to work with Greybird gtk)</author>
+  <author>elementart Art Team (modified by Simon Steinbeiß to work with Greybird gtk)</author>
   <copyright>GPL</copyright>
   <date>November 2009 (modified July 2011)</date>
   <description>A pleasant theme built to adapt to many color schemes as well as be optimal for both high and low resolution displays.</description>
@@ -135,13 +135,13 @@
 
 <!-- ::: TITLES ::: -->
 <draw_ops name="title">
-	<title color="shade/gtk:bg[NORMAL]/1.30" x="((width - title_width) / 2) -36 `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
-	<title color="shade/gtk:bg[NORMAL]/0.50" x="((width - title_width) / 2) -36 `max` 0" y="0 `max` ((height-title_height)/2)"/>
+	<title color="shade/gtk:bg[NORMAL]/1.30" x="((width - title_width) / 2) 0 `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/gtk:bg[NORMAL]/0.50" x="((width - title_width) / 2) 0 `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <draw_ops name="title_unfocused">
-	<title color="shade/gtk:bg[NORMAL]/1.15" x="((width - title_width) / 2) -36 `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
-	<title color="shade/gtk:bg[NORMAL]/0.70" x="((width - title_width) / 2) -36 `max` 0" y="0 `max` ((height-title_height)/2)"/>
+	<title color="shade/gtk:bg[NORMAL]/1.15" x="((width - title_width) / 2) 0 `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/gtk:bg[NORMAL]/0.70" x="((width - title_width) / 2) 0 `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <!-- menu icon -->

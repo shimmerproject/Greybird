@@ -157,14 +157,14 @@ style "murrine-default"
 		trough_border_shades = { 0.9, 0.7 }	}
 }
 
-### RESIZE GRIP PIXMAP Proof of concept ###
-
 style "resize-grip" #= "murrine-default"
 {
-	engine "pixmap"	{
+	engine "pixmap"
+	{
 		image {
 			function	= RESIZE_GRIP
 			recolorable	= FALSE
+			detail		= "statusbar"
 			overlay_file	= "resize_grip.png"
 			overlay_border	= {0,0,0,0 }
 			overlay_stretch	= FALSE
@@ -300,7 +300,7 @@ style "murrine-menu"
 	bg[PRELIGHT]      = shade (0.85, @selected_bg_color)
 	bg[ACTIVE]        = @bg_color
 	bg[INSENSITIVE]   = @bg_color
-	fg[NORMAL]        = @text_color # Color for normal text.
+	fg[NORMAL]        = @fg_color # Color for normal text.
 	fg[PRELIGHT]      = @base_color
 	fg[SELECTED]      = @base_color
 	fg[ACTIVE]        = @base_color
@@ -309,7 +309,7 @@ style "murrine-menu"
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
 	text[PRELIGHT]    = @base_color
 	text[SELECTED]    = @base_color
-	text[ACTIVE]      =@base_color
+	text[ACTIVE]      = @base_color
 	text[INSENSITIVE] = @text_color
 	
 	engine "murrine" 
@@ -398,7 +398,8 @@ style "murrine-progressbar"
 	bg[NORMAL]   = shade (1.05, @bg_color)
 	bg[SELECTED]	= mix (0.4, @bg_color, shade (0.9, @selected_bg_color))
 
-	engine "murrine" {
+	engine "murrine"
+	{
 		gradient_shades = {1.15,1.05,1.0,0.95}
 		trough_shades	= {0.95, 1.15}
 		trough_border_shades	= { 0.8, 0.7 }
@@ -422,7 +423,8 @@ style "murrine-scrollbar" {
 	bg[PRELIGHT]	= shade (0.55, @bg_color)
 	bg[INSENSITIVE]	= shade (0.75, @bg_color)
 	
-	engine "murrine" {
+	engine "murrine"
+	{
 		#arrowstyle	= 0
 		colorize_scrollbar = TRUE
 		roundness	= 10
@@ -530,7 +532,8 @@ style "murrine-radiocheck"
 style "murrine-toolbar" = "murrine-default"
 {
 	bg[NORMAL] = @bg_color
-	engine "murrine" {
+	engine "murrine"
+	{
 		contrast			= 1.13
 		toolbarstyle			= 1
 		lightborder_shade		= 1.0
@@ -540,10 +543,10 @@ style "murrine-toolbar" = "murrine-default"
 
 style "xfce-header"
 {
-	font_name = "Serif"
 	bg[NORMAL]	 = shade (0.9, @bg_color)
 	base[NORMAL]	 = shade (1.18, @bg_color)
-	engine "murrine" {
+	engine "murrine"
+	{
 		textstyle	= 1
 	}
 }
@@ -556,13 +559,51 @@ style "xfdesktop-windowlist" #= "murrine-menu"
 }
 
 
-style "tabwin-dark" = "murrine-dark" {
-	bg[NORMAL]	= "#424242"
-	bg[SELECTED]	= @panel_bg
+style "tabwin" = "murrine-dark"
+{
+	Xfwm4TabwinWidget::border-width = 1
+	Xfwm4TabwinWidget::icon-size = 64
+	bg[NORMAL]	= "#222"
+	bg[SELECTED]	= "#424242"
 	engine "murrine"
 	{
 		focusstyle = 0
 	}
+}
+
+style "xfdesktop-icon-view" {
+    font_name = "bold"
+    XfdesktopIconView::label-alpha = 0
+    XfdesktopIconView::selected-label-alpha = 60
+    XfdesktopIconView::shadow-color = shade (1.05, @panel_bg)
+    XfdesktopIconView::selected-shadow-color = @panel_bg
+    XfdesktopIconView::shadow-x-offset = -1
+    XfdesktopIconView::selected-shadow-x-offset = -1
+    XfdesktopIconView::shadow-y-offset = -1
+    XfdesktopIconView::selected-shadow-y-offset = -1
+    fg[NORMAL] = shade (0.92, @selected_fg_color)
+    fg[ACTIVE] = @selected_fg_color
+    engine "murrine"
+    {
+	textstyle = 3
+	text_shade = 0.05
+    }
+}
+
+style "xfsm-logout" = "murrine-dark"
+{
+	bg[NORMAL]	= "#2a2a2a"
+	bg[SELECTED]	= "#2a2a2a"	# Borderline around the dialog
+	engine "murrine"
+        {
+		contrast            = 1.2
+		highlight_shade     = 1.00
+		lightborder_shade   = 1.95  
+		gradient_shades     = {1.2,1.1,0.95,0.93} 
+		border_shades       = { 1.2,0.95 }
+		reliefstyle         = 2
+		shadow_shades = { 1.3, 1.7 }
+        }	
 }
 
 style "murrine-calendar" = "murrine-dark"
@@ -590,6 +631,7 @@ class "GtkSeparator" style "murrine-wide"
 class "GtkCalendar"  style "murrine-wide"
 class "GtkToolbar"   style "murrine-toolbar"
 class "GtkHandleBox*" style "murrine-toolbar"
+class "GtkStatusbar" style "resize-grip"
 
 class "GtkSpinButton"  style "murrine-combo"
 class "GtkScale"       style "murrine-scale"
@@ -659,7 +701,9 @@ widget_class "*GnmSimpleCanvas*"		style "murrine-treeview-header" # Gnumeric tre
 # Xfce specific theming
 widget_class "*XfceHeading*"			style "xfce-header"
 widget_class "*XfceDesktop*"			style "xfdesktop-windowlist"
-widget "xfwm4-tabwin*" style "tabwin-dark"
+widget "xfwm4-tabwin*"				style "tabwin"
+widget_class "*XfdesktopIconView*"		style "xfdesktop-icon-view"
+widget_class "*XfsmLogoutDialog*"		style "xfsm-logout"
 
 # Workarounds for Evolution
 widget_class "*.ETable.ECanvas"    style "murrine-treeview-header"
