@@ -6,7 +6,7 @@ Copyright 2009–2012 Simon Steinbeiß
 Greybird is dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later.
 
 Desktop Suite for Xfce.
-Greybird is the default theme in Xubuntu 11.04.
+Greybird is the default theme in Xubuntu 11.04, 11.10 and 12.04.
 
 The Greybird desktop suite includes:
 – GTK2 theme
@@ -18,9 +18,10 @@ The Greybird desktop suite includes:
 – Xubuntu 11.04 wallpaper (svg and png)
 - Unity support
 
-Dependencies of master (for Gtk3.2)
+Dependencies of master-branch (for Gtk3>=Gtk3.3)
 – gtk2-engines-murrine (v0.90)
-– gtk3-engines-unico (v1.0.1)
+– gtk3-engines-unico (v1.0.2)
 
-Dependencies of gtk3.3 (for Gtk3>=Gtk3.3)
-- gtk3-engines-unico (v1.0.2)
+Dependencies of gtk3.2-branch (for Gtk3.2)
+– gtk2-engines-murrine (v0.90)
+- gtk3-engines-unico (v1.0.1)
