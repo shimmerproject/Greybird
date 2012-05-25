@@ -2066,9 +2066,13 @@ GtkHandleBox {
 
 	text-shadow: 0 1 alpha (shade (@button_bg_color, 1.25), 0.4);
 
-	border-width: 0;
+	border-width: 1px;
+        border-color: shade (@button_insensitive_bg_color, 0.73);
+        -unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (alpha (shade (@bg_color, 0.85), 0.2)),
+                                                 to (alpha (shade (@bg_color, 1.25), 0.6)));
 	-unico-inner-stroke-width: 0;
-	-unico-outer-stroke-width: 0;
+	-unico-outer-stroke-width: 1px;
 	-unico-border-gradient: none;
 	-unico-inner-stroke-gradient: none;
 }
