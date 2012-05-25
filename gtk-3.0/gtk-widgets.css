@@ -2274,6 +2274,22 @@ GtkTreeView row:nth-child(odd):hover {
 }
 
 /************
+ * calendar *
+ ***********/
+
+GtkCalendar {
+    background-color: @base_color;
+    background-image: none;
+    border-radius: 0;
+    border-color: shade (@bg_color, 0.8);
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+
+    color: @fg_color;
+}
+
+/************
  * viewport *
  ************/
 GtkViewport.frame {
