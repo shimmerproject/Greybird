@@ -3,10 +3,10 @@ style "theme-panel" = "murrine-dark"
 	xthickness	= 0
 	ythickness	= 0
 	
-	bg[NORMAL]	= shade (0.7, @bg_color_dark)
-	bg[ACTIVE]	= shade (0.5, @bg_color_dark)
-	bg[PRELIGHT]	= shade (0.35, @bg_color_dark)
-	bg[SELECTED]	= shade (0.5, @bg_color_dark)
+	bg[NORMAL]	= shade (0.2, @bg_color_dark)
+	bg[ACTIVE]	= shade (0.85, @selected_bg_color)
+	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
+	bg[SELECTED]	= shade (0.85, @selected_bg_color)
 	
 	fg[NORMAL]	= shade (0.9, @base_color)
 	fg[PRELIGHT]	= @base_color
@@ -110,7 +110,7 @@ widget "*PanelApplet*"              style "theme-panel-text"
 #widget_class "*<GtkMenuItem>.*.<GtkEntry>"	style "panel-entry"
 #widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale-dark"
 #widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
-widget "*.gtk-combobox-popup-menu.*"   		style "murrine-wide-dark"
+#widget "*.gtk-combobox-popup-menu.*"   		style "murrine-wide-dark"
 
 # dark bg and black text for gdm's panel
 widget_class "*GdmGreeterPanel*" style "panel-entry"
