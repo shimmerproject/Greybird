@@ -142,7 +142,7 @@ style "murrine-default"
 		menuitemstyle       = 0                 # 0 = flat, 1 = glassy, 2 = striped
 		menustyle           = 0                 # 0 = no vertical menu stripe, 1 = display vertical menu stripe
 		prelight_shade      = .95               # shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors		
-		progressbarstyle    = 1                 # 0 = nothing, 1 = stripes, 2 = lines
+		progressbarstyle    = 0                 # 0 = nothing, 1 = stripes, 2 = lines
 		reliefstyle         = 3                 # 0 = flat, 1 = inset, 2 = shadow
 		rgba                = FALSE             # FALSE = disabled, TRUE = enabled
 		roundness           = 3                 # 0 = squared, 1 = old default, more will increase roundness
@@ -292,8 +292,8 @@ style "murrine-notebook"
 
 style "murrine-menu"
 {
-	#ythickness        = 2
-	#xthickness        = 4
+	ythickness        = 3
+	xthickness        = 0
 	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
 	
 	bg[SELECTED]      = shade (0.85, @selected_bg_color)
@@ -323,6 +323,8 @@ style "murrine-menu"
 
 
 style "murrine-menubar" = "murrine-menu" {
+	xthickness	= 3
+	ythickness	= 2
 	bg[NORMAL]	= @bg_color
 	#bg[SELECTED]	= shade (0.7, @bg_color_dark)
 	engine "murrine"
@@ -334,8 +336,8 @@ style "murrine-menubar" = "murrine-menu" {
 
 style "menubar-menuitem"
 {
-	ythickness        = 2
-	#xthickness        = 4
+	ythickness        = 4
+	xthickness        = 2
 	bg[PRELIGHT]   = @selected_bg_color
 	bg[SELECTED]   = @selected_bg_color
 	fg[NORMAL]     = @base_color
@@ -350,9 +352,15 @@ style "menubar-menuitem"
         }
 }
 
-style "menubar-menuitem-prelight"
-{
-	fg[PRELIGHT] = @base_color
+style "separator-menu-item" {
+	xthickness = 1
+	ythickness = 0
+
+	GtkSeparatorMenuItem::horizontal-padding = 4
+
+	GtkWidget::wide-separators = 1
+	GtkWidget::separator-width = 1
+	GtkWidget::separator-height = 7
 }
 
 style "murrine-treeview"
@@ -667,6 +675,7 @@ widget_class "*<GtkCombo>*"         style "murrine-combo"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
 widget_class "*<GtkMenu>*"              style "murrine-menu"
 widget_class "*<GtkMenuBar>*"		style "murrine-menubar"
+widget_class "*<GtkSeparatorMenuItem>*" style "separator-menu-item"
 # Scale widget in menus (e.g. ubuntu's sound indicator)
 widget_class "*<GtkMenuItem>.*.<GtkScale>" style "murrine-scale"
 
