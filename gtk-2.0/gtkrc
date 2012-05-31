@@ -3,7 +3,7 @@
 # based on "Bluebird" by Simon Steinbeiß and Pasi Lallinaho
 # Description: As is the original theme, this theme is 100% free and open source.
 
-gtk_color_scheme	= "bg_color:#CECECE\nselected_bg_color:#9db6cd\nbase_color:#fcfcfc" # Background, base.
+gtk_color_scheme	= "bg_color:#CECECE\nselected_bg_color:#398ee7\nbase_color:#fcfcfc" # Background, base.
 gtk_color_scheme	= "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text. 
 gtk_color_scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
 gtk_color_scheme	= "link_color:#74a0c6" # Hyperlinks
@@ -157,10 +157,11 @@ style "murrine-default"
 		trough_border_shades = { 0.9, 0.7 }	}
 }
 
+### RESIZE GRIP PIXMAP Proof of concept ###
+
 style "resize-grip" #= "murrine-default"
 {
-	engine "pixmap"
-	{
+	engine "pixmap"	{
 		image {
 			function	= RESIZE_GRIP
 			recolorable	= FALSE
@@ -296,10 +297,10 @@ style "murrine-menu"
 	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
 	
 	bg[SELECTED]      = shade (0.85, @selected_bg_color)
-	bg[NORMAL]        = @bg_color
+	bg[NORMAL]        = @base_color
 	bg[PRELIGHT]      = shade (0.85, @selected_bg_color)
-	bg[ACTIVE]        = @bg_color
-	bg[INSENSITIVE]   = @bg_color
+	bg[ACTIVE]        = @base_color
+	bg[INSENSITIVE]   = @base_color
 	fg[NORMAL]        = @fg_color # Color for normal text.
 	fg[PRELIGHT]      = @base_color
 	fg[SELECTED]      = @base_color
@@ -315,18 +316,25 @@ style "murrine-menu"
 	engine "murrine" 
 	{
 		roundness = 0 # Roundness of menu items.
-		contrast = 0.9
+		gradient_shades = {1.3,1.2,1.2,1.1}
+		#contrast = 0.9
 	}
 }
 
 
 style "murrine-menubar" = "murrine-menu" {
-	bg[SELECTED]	= shade (0.7, @bg_color_dark)
+	bg[NORMAL]	= @bg_color
+	#bg[SELECTED]	= shade (0.7, @bg_color_dark)
+	engine "murrine"
+	{
+		#gradient_shades = {1.3,1.2,1.2,1.1}
+		roundness = 0
+	}
 }
 
 style "menubar-menuitem"
 {
-	#ythickness        = 2
+	ythickness        = 2
 	#xthickness        = 4
 	bg[PRELIGHT]   = @selected_bg_color
 	bg[SELECTED]   = @selected_bg_color
@@ -336,6 +344,10 @@ style "menubar-menuitem"
 	text[NORMAL]   = @base_color
 	text[PRELIGHT] = @base_color
 	text[SELECTED] = @base_color
+	engine "murrine"
+        {
+                gradient_shades = {1.3,1.2,1.2,1.1}
+        }
 }
 
 style "menubar-menuitem-prelight"
@@ -398,8 +410,7 @@ style "murrine-progressbar"
 	bg[NORMAL]   = shade (1.05, @bg_color)
 	bg[SELECTED]	= mix (0.4, @bg_color, shade (0.9, @selected_bg_color))
 
-	engine "murrine"
-	{
+	engine "murrine" {
 		gradient_shades = {1.15,1.05,1.0,0.95}
 		trough_shades	= {0.95, 1.15}
 		trough_border_shades	= { 0.8, 0.7 }
@@ -423,8 +434,7 @@ style "murrine-scrollbar" {
 	bg[PRELIGHT]	= shade (0.55, @bg_color)
 	bg[INSENSITIVE]	= shade (0.75, @bg_color)
 	
-	engine "murrine"
-	{
+	engine "murrine" {
 		#arrowstyle	= 0
 		colorize_scrollbar = TRUE
 		roundness	= 10
@@ -532,8 +542,7 @@ style "murrine-radiocheck"
 style "murrine-toolbar" = "murrine-default"
 {
 	bg[NORMAL] = @bg_color
-	engine "murrine"
-	{
+	engine "murrine" {
 		contrast			= 1.13
 		toolbarstyle			= 1
 		lightborder_shade		= 1.0
@@ -545,8 +554,7 @@ style "xfce-header"
 {
 	bg[NORMAL]	 = shade (0.9, @bg_color)
 	base[NORMAL]	 = shade (1.18, @bg_color)
-	engine "murrine"
-	{
+	engine "murrine" {
 		textstyle	= 1
 	}
 }
@@ -557,7 +565,6 @@ style "xfdesktop-windowlist" #= "murrine-menu"
 	fg[INSENSITIVE]   = shade (0.95, @base_color)
 	text[INSENSITIVE]   = shade (0.95, @base_color)
 }
-
 
 style "tabwin" = "murrine-dark"
 {
@@ -571,28 +578,10 @@ style "tabwin" = "murrine-dark"
 	}
 }
 
-style "xfdesktop-icon-view" {
-    font_name = "bold"
-    XfdesktopIconView::label-alpha = 0
-    XfdesktopIconView::selected-label-alpha = 60
-    XfdesktopIconView::shadow-color = shade (1.05, @panel_bg)
-    XfdesktopIconView::selected-shadow-color = @panel_bg
-    XfdesktopIconView::shadow-x-offset = -1
-    XfdesktopIconView::selected-shadow-x-offset = -1
-    XfdesktopIconView::shadow-y-offset = -1
-    XfdesktopIconView::selected-shadow-y-offset = -1
-    fg[NORMAL] = shade (0.92, @selected_fg_color)
-    fg[ACTIVE] = @selected_fg_color
-    engine "murrine"
-    {
-	textstyle = 3
-	text_shade = 0.05
-    }
-}
-
 style "xfsm-logout" = "murrine-dark"
 {
 	bg[NORMAL]	= "#2a2a2a"
+#	bg[PRELIGHT]	= "#222"
 	bg[SELECTED]	= "#2a2a2a"	# Borderline around the dialog
 	engine "murrine"
         {
@@ -603,6 +592,12 @@ style "xfsm-logout" = "murrine-dark"
 		border_shades       = { 1.2,0.95 }
 		reliefstyle         = 2
 		shadow_shades = { 1.3, 1.7 }
+#		contrast = 2.7
+#		focus_color = shade (0.9, @selected_fg_color)
+ #               focusstyle = 3
+#		shadow_shades = { 1.3, 1.7 }
+#		border_shades = { 1.5, 1.8 }
+#		#border_colors = { shade (0.4, @bg_color) , shade (0.6, @bg_color) }
         }	
 }
 
@@ -671,7 +666,7 @@ widget_class "*<GtkCombo>*"         style "murrine-combo"
 
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
 widget_class "*<GtkMenu>*"              style "murrine-menu"
-widget_class "*<GtkMenuBar>*"		style "murrine-menu"
+widget_class "*<GtkMenuBar>*"		style "murrine-menubar"
 # Scale widget in menus (e.g. ubuntu's sound indicator)
 widget_class "*<GtkMenuItem>.*.<GtkScale>" style "murrine-scale"
 
@@ -701,9 +696,8 @@ widget_class "*GnmSimpleCanvas*"		style "murrine-treeview-header" # Gnumeric tre
 # Xfce specific theming
 widget_class "*XfceHeading*"			style "xfce-header"
 widget_class "*XfceDesktop*"			style "xfdesktop-windowlist"
-widget "xfwm4-tabwin*"				style "tabwin"
-widget_class "*XfdesktopIconView*"		style "xfdesktop-icon-view"
-widget_class "*XfsmLogoutDialog*"		style "xfsm-logout"
+widget "xfwm4-tabwin*" style "tabwin"
+widget_class "*XfsmLogoutDialog*"	style "xfsm-logout"
 
 # Workarounds for Evolution
 widget_class "*.ETable.ECanvas"    style "murrine-treeview-header"

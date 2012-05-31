@@ -104,12 +104,12 @@ widget "*.clock-applet-button.*"    style "theme-panel-text"
 widget "*PanelApplet*"              style "theme-panel-text"
 
 # dark menus
-widget_class "*<GtkMenu>*"              	style "murrine-dark"
-widget_class "*<GtkMenuItem>*"          	style "murrine-wide-dark"
-widget_class "*<GtkMenuItem>.*.<GtkCalendar>"	style "murrine-dark"
-widget_class "*<GtkMenuItem>.*.<GtkEntry>"	style "panel-entry"
-widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale-dark"
-widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
+#widget_class "*<GtkMenu>*"              	style "murrine-dark"
+#widget_class "*<GtkMenuItem>*"          	style "murrine-wide-dark"
+#widget_class "*<GtkMenuItem>.*.<GtkCalendar>"	style "murrine-dark"
+#widget_class "*<GtkMenuItem>.*.<GtkEntry>"	style "panel-entry"
+#widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale-dark"
+#widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget "*.gtk-combobox-popup-menu.*"   		style "murrine-wide-dark"
 
 # dark bg and black text for gdm's panel
