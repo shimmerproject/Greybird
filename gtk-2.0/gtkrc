@@ -147,7 +147,7 @@ style "murrine-default"
 		rgba                = FALSE             # FALSE = disabled, TRUE = enabled
 		roundness           = 3                 # 0 = squared, 1 = old default, more will increase roundness
 		scrollbarstyle      = 0                 # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
-		separatorstyle      = 1                 # 0 = Hard seperators 1 = Smooth seperators
+		separatorstyle      = 0                 # 0 = Hard seperators 1 = Smooth seperators
 		sliderstyle         = 0                 # 0 = nothing added, 1 = handles
 		stepperstyle        = 1                 # 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		shadow_shades       = { 0.8, 2.2 }      # gradient for shadows.		
@@ -282,7 +282,8 @@ style "murrine-button" = "murrine-wider"
 style "murrine-notebook"
 {
 	bg[NORMAL]	= shade (1.05, @bg_color) # Tab background.
-	bg[ACTIVE]	= shade (0.85, @bg_color) # Unfocused tab background.
+	bg[ACTIVE]	= shade (0.9, @bg_color) # Unfocused tab background.
+	fg[ACTIVE]	= shade (1.4, @fg_color)
 	#bg[NORMAL]	= @base_color
 	engine "murrine" 
 	{
@@ -297,9 +298,9 @@ style "murrine-menu"
 	xthickness        = 0
 	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
 	
-	bg[SELECTED]      = shade (0.85, @selected_bg_color)
+	bg[SELECTED]      = @selected_bg_color
 	bg[NORMAL]        = shade (0.98, @base_color)
-	bg[PRELIGHT]      = shade (0.85, @selected_bg_color)
+	bg[PRELIGHT]      = @selected_bg_color
 	bg[ACTIVE]        = shade (0.98, @base_color)
 	bg[INSENSITIVE]   = shade (0.98, @base_color)
 	fg[NORMAL]        = @fg_color # Color for normal text.
@@ -317,7 +318,7 @@ style "murrine-menu"
 	engine "murrine" 
 	{
 		roundness = 0 # Roundness of menu items.
-		gradient_shades = {1.45,1.3,1.3,1.1}
+		gradient_shades = {1.25,1.1,1.1,1.0}
 		contrast = 0.9
 		lightborder_shade = 1.5
 	}
@@ -350,7 +351,7 @@ style "menubar-menuitem"
 	text[SELECTED] = @base_color
 	engine "murrine"
         {
-                gradient_shades = {1.4,1.25,1.25,1.1}
+                #gradient_shades = {1.4,1.25,1.25,1.1}
 		lightborder_shade = 1.5
         }
 }
@@ -359,7 +360,7 @@ style "separator-menu-item" {
 	xthickness = 1
 	ythickness = 0
 
-	GtkSeparatorMenuItem::horizontal-padding = 4
+	GtkSeparatorMenuItem::horizontal-padding = 2
 
 	GtkWidget::wide-separators = 1
 	GtkWidget::separator-width = 1
