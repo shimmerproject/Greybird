@@ -152,7 +152,7 @@ style "murrine-default"
 		stepperstyle        = 1                 # 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		shadow_shades       = { 0.8, 2.2 }      # gradient for shadows.		
 		textstyle           = 0                 # 0 = normal text, 1 = inset		
-		toolbarstyle        = 2                 # 0 = flat, 1 = glassy, 2 = gradient		
+		toolbarstyle        = 1                 # 0 = flat, 1 = glassy, 2 = gradient		
 		trough_shades	    = { 0.75, 0.9 }	# draw gradient on trough of GtkScrollbar and GtkProgressbar
 		trough_border_shades = { 0.9, 0.7 }	}
 }
@@ -556,7 +556,6 @@ style "murrine-toolbar" = "murrine-default"
 	bg[NORMAL] = @bg_color
 	engine "murrine" {
 		contrast			= 1.13
-		toolbarstyle			= 1
 		lightborder_shade		= 1.0
 		gradient_shades     		= {1.0,0.94,0.94,0.88}
 	}
