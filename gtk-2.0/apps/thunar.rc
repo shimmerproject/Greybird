@@ -2,9 +2,9 @@
 
 style "sidepane"
 {
-	base[NORMAL]	= shade (0.92,@base_color)
+	base[NORMAL]	= mix (0.1, shade (1.35,@selected_bg_color), shade (0.9,@base_color))
 	base[INSENSITIVE]	= shade (1.03,@selected_bg_color)
-	bg[NORMAL]	= shade (0.92,@base_color)
+	bg[NORMAL]	= mix (0.1, shade (1.35,@selected_bg_color), shade (0.9,@base_color)) #shade (0.92,@base_color)
 	bg[PRELIGHT]	= shade (1.5,@selected_bg_color)
 	engine "murrine"
 	{
