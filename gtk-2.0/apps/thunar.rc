@@ -14,12 +14,56 @@ style "sidepane"
 
 style "breadcrumbs" 
 {
+	xthickness = 12
 	ythickness = 4
 	ThunarLocationButtons::spacing = 1
+engine "pixmap"
+  {
+    image
+    {
+      function			= BOX
+      detail				= "buttondefault"
+      recolorable		= TRUE
+      file				= "thunar/breadcrumb_default.png"
+      border			= {4, 10, 4, 12}
+      stretch			= TRUE
+    }
+    image
+    {
+      function			= BOX
+      state				= PRELIGHT
+      recolorable		= TRUE
+      file				= "thunar/breadcrumb_prelight.png"
+      border			= { 4, 4, 4, 4 }
+      stretch			= TRUE
+    }
+    image
+    {
+      function			= BOX
+      state				= ACTIVE
+      file				= "thunar/breadcrumb_active.png"
+      border			= { 4, 10, 4, 12 }
+      stretch			= TRUE
+    }	
+    image 
+   {
+     function			= BOX
+     state				= INSENSITIVE
+     file					= "thunar/breadcrumb_default.png"
+     border			= { 4, 4, 4, 4 }
+     stretch			= TRUE
+    }
+    image 
+    {
+      function			= BOX
+      file				= "thunar/breadcrumb_default.png"		
+      border			= { 4, 10, 4, 12 }
+      stretch			= TRUE
+     }	
+  }
 }
 
 widget_class "*ThunarLocationButtons*" style "breadcrumbs"
-
 widget_class "*ThunarShortcutsView*" style "sidepane"
 widget_class "*ThunarTreeView*" style "sidepane"
 widget_class "*GtkFileChooserWidget.GtkFileChooserDefault.GtkVBox.GtkHPaned.GtkVBox.GtkScrolledWindow.GtkTreeView*"	style "sidepane"
