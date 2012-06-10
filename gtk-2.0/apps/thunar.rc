@@ -34,7 +34,7 @@ engine "pixmap"
       state				= PRELIGHT
       recolorable		= TRUE
       file				= "thunar/breadcrumb_prelight.png"
-      border			= { 4, 4, 4, 4 }
+      border			= { 4, 10, 4, 12 }
       stretch			= TRUE
     }
     image
