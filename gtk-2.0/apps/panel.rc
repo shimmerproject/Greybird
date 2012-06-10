@@ -1,7 +1,7 @@
 style "theme-panel" = "murrine-dark"
 {
-	xthickness	= 0
-	ythickness	= 0
+	xthickness	= 2
+	ythickness	= 2
 	
 	bg[NORMAL]	= shade (0.35, @bg_color_dark)
 	bg[ACTIVE]	= mix (0.7,shade(0.2, @bg_color_dark),shade(0.85, @selected_bg_color))
@@ -27,7 +27,6 @@ style "theme-panel" = "murrine-dark"
 		glowstyle	= 0
 		lightborder_shade = 1.1
 		glow_shade	= 1.4
-		glowstyle	= 5
 		glazestyle	= 1
 		#trough_border_shades	= { 3.0, 2.5 } # improve visibility in panel-plugins using the progressbar (xfce4-timer-plugin)
 	}
