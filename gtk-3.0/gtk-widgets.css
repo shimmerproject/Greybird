@@ -116,8 +116,8 @@ GtkWindow {
 .notebook {
     border-style: solid;
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@bg_color, 0.76)),
-                                           to (shade (@bg_color, 0.7)));
+                                           from (shade (@bg_color, 0.6)),
+                                           to (shade (@bg_color, 0.5)));
 }
 
 .frame,
@@ -152,8 +152,7 @@ GtkComboBox.combobox-entry .button,
 		to (alpha (shade (@bg_color, 1.05), 0.6)));
 }
 
-/* shadow */
-.button,
+/* shadow 
 .check:active,
 .frame,
 .notebook .button,
@@ -164,7 +163,7 @@ GtkComboBox.combobox-entry .button,
 		from (alpha (shade (@bg_color, 0.05), 0.05)),
 		to (alpha (shade (@bg_color, 0.05), 0.09)));
 	-unico-outer-stroke-width: 1px;
-}
+}*/
 
 /* GtkAssistant */
 GtkAssistant .sidebar .highlight {
@@ -204,18 +203,18 @@ GtkAssistant .sidebar {
 GtkComboBox,
 .button {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@button_bg_color, 1.1)),
-                                     to (shade (@button_bg_color, 0.96)));
-    border-radius: 3px;
+                                     from (shade (@button_bg_color, 1.05)),
+                                     to (shade (@button_bg_color, 0.97)));
+    border-radius: 2px;
     border-style: solid;
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-                                           from (shade (@button_bg_color, 0.85)),
-                                           to (shade (@button_bg_color, 0.67)));
+                                           from (shade (@button_bg_color, 0.78)),
+                                           to (shade (@button_bg_color, 0.68)));
 
     -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-                                                 from (shade (@button_bg_color, 1.16)),
-                                                 to (shade (@button_bg_color, 1.015)));
-    -unico-inner-stroke-width: 0;
+                                                 from (shade (@button_bg_color, 1.2)),
+                                                 to (shade (@button_bg_color, 1.02)));
+    -unico-inner-stroke-width: 1px;
 }
 
 .button:hover {
