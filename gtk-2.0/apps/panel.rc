@@ -77,18 +77,19 @@ style "window-buttons" = "theme-panel"
 	bg[PRELIGHT]	= shade (0.15, @bg_color_dark)
 	fg[NORMAL]	= shade (0.7, @base_color)
 	fg[ACTIVE]	= @base_color
-	fg[PRELIGHT]	= shade (0.85, @selected_bg_color)
+	fg[PRELIGHT]	= mix (0.5,@base_color,shade (0.65, @selected_bg_color))
 	
 	font_name = "8"
-	xthickness = 4
-	ythickness = 4
+	xthickness = 3
+	ythickness = 3
 	engine "murrine" {
-		border_colors = { "#4c4c4c", "#4c4c4c" }
+		border_colors = { shade(0.6,@bg_color_dark),shade(0.6,@bg_color_dark) }
+		gradient_shades = { 1.0, 1.0, 1.2, 3.2 }
 		roundness = 1
 		reliefstyle	= 0
+		textstyle = 1
 	}
 }
-
 
 widget "*PanelWidget*"              style "theme-panel"
 widget "*PanelApplet*"              style "theme-panel"
