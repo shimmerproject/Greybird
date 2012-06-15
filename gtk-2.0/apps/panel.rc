@@ -1,11 +1,11 @@
 style "theme-panel" = "murrine-dark"
 {
-	xthickness	= 2
-	ythickness	= 2
+	xthickness	= 1
+	ythickness	= 1
 	
 	bg[NORMAL]	= shade (0.35, @bg_color_dark)
-	bg[ACTIVE]	= mix (0.7,shade(0.2, @bg_color_dark),shade(0.85, @selected_bg_color))
-	bg[PRELIGHT]	= shade (0.65, @selected_bg_color)
+	bg[ACTIVE]	= shade (0.65, @bg_color_dark) #mix (0.7,shade(0.2, @bg_color_dark),shade(0.85, @selected_bg_color))
+	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
 	bg[SELECTED]	= shade (0.65, @selected_bg_color)
 	
 	fg[NORMAL]	= shade (0.9, @base_color)
@@ -19,15 +19,16 @@ style "theme-panel" = "murrine-dark"
 	text[SELECTED]   = shade (0.9, @base_color)
 
 	engine "murrine" {
-		#border_colors	= {"#888","#888"}
-		border_shades	= { 1.2, 1.2 }
-		#gradient_colors = {"#333","#fff","#fff","#333"}
-		contrast	= 0.0
+		#border_colors	= {shade (0.25, @bg_color_dark),shade (0.45, @bg_color_dark)}
+		#border_shades	= { 0.4, 0.1 }
+		#gradient_shades = {1.15,1.35,1.4,1.55}
+		#gradient_colors = {"#424241","#4d5158","#41495a","#2c3d66"}
+		#contrast	= 0.0
 		roundness	= 0
 		glowstyle	= 0
-		lightborder_shade = 1.1
-		glow_shade	= 1.4
-		glazestyle	= 1
+		#lightborder_shade = 1.1
+		#glow_shade	= 1.0
+		glazestyle	= 0
 		#trough_border_shades	= { 3.0, 2.5 } # improve visibility in panel-plugins using the progressbar (xfce4-timer-plugin)
 	}
 }
@@ -70,6 +71,25 @@ style "workspace-switcher" = "theme-panel"
 	bg[SELECTED] = shade (0.8, @selected_bg_color)
 }
 
+style "window-buttons" = "theme-panel"
+{
+	bg[ACTIVE]	= shade (0.15, @bg_color_dark)
+	bg[PRELIGHT]	= shade (0.15, @bg_color_dark)
+	fg[NORMAL]	= shade (0.7, @base_color)
+	fg[ACTIVE]	= @base_color
+	fg[PRELIGHT]	= shade (0.85, @selected_bg_color)
+	
+	font_name = "8"
+	xthickness = 4
+	ythickness = 4
+	engine "murrine" {
+		border_colors = { "#4c4c4c", "#4c4c4c" }
+		roundness = 1
+		reliefstyle	= 0
+	}
+}
+
+
 widget "*PanelWidget*"              style "theme-panel"
 widget "*PanelApplet*"              style "theme-panel"
 widget "*fast-user-switch*"         style "theme-panel"
@@ -95,6 +115,8 @@ widget "*Xfce*Panel*"               style "theme-panel"
 class "*Xfce*Panel*"                style "theme-panel"
 widget "*WnckPager*"	    style "workspace-switcher"
 
+
+
 # Fix gtk-entries in the panel
 class "GtkEntry"		    style "murrine-combo"
 class "*SexyIconEntry*"		    style:highest "murrine-combo"	# fixes dict-plugin
@@ -114,6 +136,8 @@ widget "*PanelApplet*"              style "theme-panel-text"
 #widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale-dark"
 #widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 #widget "*.gtk-combobox-popup-menu.*"   		style "murrine-wide-dark"
+
+widget "*XfceTasklist*"		style "window-buttons"
 
 # dark bg and black text for gdm's panel
 widget_class "*GdmGreeterPanel*" style "panel-entry"
