@@ -594,6 +594,7 @@ style "xfsm-logout" = "murrine-dark"
 	bg[NORMAL]	= "#2a2a2a"
 #	bg[PRELIGHT]	= "#222"
 	bg[SELECTED]	= "#2a2a2a"	# Borderline around the dialog
+	bg[INSENSITIVE]	= @bg_color_dark
 	engine "murrine"
         {
 		contrast            = 1.2
