@@ -4,4 +4,3 @@ style "gmusicbrowser-handle"
 }
 
 widget "Shimmer Desktop.VBMain.HPMain"	style "gmusicbrowser-handle"
-widget_class "Shimmer Desktop.VBMain.VBTop.HBTop.*" style "murrine-toolbar"
