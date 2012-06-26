@@ -1,4 +1,4 @@
-style "theme-panel" = "murrine-dark"
+style "theme-panel" = "dark"
 {
 	xthickness	= 1
 	ythickness	= 1
@@ -36,7 +36,7 @@ style "theme-panel-text"
 	text[ACTIVE]	= @base_color
 }
 
-style "panel-entry" = "murrine-dark"
+style "panel-entry" = "dark"
 {
 	fg[NORMAL]	= @text_color
 	fg[PRELIGHT]	= @text_color
@@ -113,9 +113,9 @@ class "*Xfce*Panel*"			style "theme-panel"
 widget "*WnckPager*"			style "workspace-switcher"
 
 # Fix gtk-entries in the panel
-class "GtkEntry"			style "murrine-combo"
-class "*SexyIconEntry*"			style:highest "murrine-combo"	# fixes dict-plugin
-widget "*xfce4-verve-plugin*GtkEntry"	style:highest "murrine-combo"	# fixes verve-plugin
+class "GtkEntry"			style "combo"
+class "*SexyIconEntry*"			style:highest "combo"	# fixes dict-plugin
+widget "*xfce4-verve-plugin*GtkEntry"	style:highest "combo"	# fixes verve-plugin
 
 # Make sure panel text color doesn't change
 widget_class "*Panel*MenuBar*"		style "theme-main-menu-text"

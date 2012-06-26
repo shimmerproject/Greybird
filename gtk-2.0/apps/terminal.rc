@@ -23,7 +23,7 @@ style "terminal-scrollbar"
 	}
 }
 
-style "terminal-notebook" = "murrine-dark"
+style "terminal-notebook" = "dark"
 {
 	bg[NORMAL]	= @bg_color # Tab background.
 	bg[ACTIVE]	= shade (0.7, @bg_color) # Unfocused tab background.
