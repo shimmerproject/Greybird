@@ -273,29 +273,6 @@ style "notebook"
 	}
 }
 
-style "scrolledwindow" #= "scrollbar"
-{
-	#bg[NORMAL]	= @bg_color
-	engine "murrine" {
-		#border_shades	= {0.75, 0.75}
-		trough_shades	= {1.08, 1.18}
-		#roundness	= 0
-		contrast	= 0.4
-		#gradient_shades	= {1.2,1.2,1.15,1.15}
-	}
-}
-
-style "scrolledwindow-fix"
-{
-	engine "murrine" {
-		#border_shades	= {0.75, 0.75}
-		trough_shades	= {1.15, 1.25}
-		#roundness	= 0
-		#contrast	= 0.1
-		#gradient_shades	= {1.2,1.2,1.15,1.15}
-	}
-}
-
 style "notebook-button" = "button"
 {
 	bg[NORMAL]	= shade (1.1, @bg_color)
@@ -447,6 +424,18 @@ style "progressbar"
 		lightborder_shade   = 1.1
 		glowstyle	= 0
 		glow_shade	= 1.0
+	}
+}
+
+style "scrolledwindow" #= "scrollbar"
+{
+	#bg[NORMAL]	= @bg_color
+	engine "murrine" {
+		border_shades	= {0.75, 0.75}
+		trough_shades	= {1.08, 1.18}
+		#roundness	= 0
+		contrast	= 0.4
+		#gradient_shades	= {1.2,1.2,1.15,1.15}
 	}
 }
 
@@ -671,10 +660,9 @@ widget_class "*<GtkToolbar>*"			style "toolbar"
 widget_class "*<GtkHandleBox>*"		style "toolbar"
 widget_class "*<GtkScrolledWindow>*"		style "scrolledwindow"
 #widget_class "*<GtkNotebook>.<GtkScrolledWindow>*"	style "notebook-bg"
-#widget_class "*MozContainer*GtkScrollbar*"	style "scrollbar"
-#widget_class "*<GtkVBox>.<GtkScrolledWindow>*"		style "scrolledwindow-fix"
-#widget_class "*<SHBox>.<GtkScrolledWindow>*"		style "scrolledwindow-fix"
-widget_class "*<GtkNotebook>.<GtkScrolledWindow>.<GtkViewport>*"	style "notebook-bg" # Claws-Mail compose-window workaround
+widget_class "*MozContainer*GtkScrollbar*"	style "scrolledwindow"
+
+
 #widget_class "*<GtkNotebook>*<GtkScrolledWindow>.<GtkTreeview>" style "notebook-bg"
 
 widget_class "*<GtkButton>"		style "button"
@@ -718,8 +706,6 @@ widget_class "*.<GtkTreeView>.<GtkButton>"	style "treeview-header"
 widget_class "*.<GtkCTree>.<GtkButton>"	style "treeview-header"
 widget_class "*.<GtkList>.<GtkButton>"		style "treeview-header"
 widget_class "*.<GtkCList>.<GtkButton>"	style "treeview-header"
-widget_class "*.<GtkCMCTree>.<GtkButton>"	style "treeview-header" # Claws-Mail treeview-headers
-widget_class "*.<GtkCMCList>.<GtkButton>"	style "treeview-header" # Claws-Mail treeview-headers
 widget_class "*GnmSimpleCanvas*"		style "treeview-header" # Gnumeric treeview-headers
 
 # Xfce specific theming
@@ -785,9 +771,10 @@ widget_class "*<GtkCList>"		style "fg-is-text-color-workaround"
 widget_class "*<EelEditableLabel>"	style "fg-is-text-color-workaround"
 
 # panel theming
-include "apps/panel.rc"
+include "apps/xfce-panel.rc"
 # application specific theming
 include "apps/chromium.rc"
+include "apps/claws-mail.rc"
+include "apps/gmusicbrowser.rc"
 include "apps/terminal.rc"
 include "apps/thunar.rc"
-include "apps/gmusicbrowser.rc"
