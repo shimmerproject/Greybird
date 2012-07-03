@@ -83,7 +83,7 @@ GtkWindow {
  **********/
 *:insensitive {
     color: shade (@bg_color, 0.6);
-    text-shadow: 0 1 alpha (shade (@bg_color, 1.25), 0.5);
+    text-shadow: 0 1px alpha (shade (@bg_color, 1.25), 0.5);
 }
 
 *:active {
@@ -265,7 +265,7 @@ GtkComboBox,
                                      from (shade (@button_insensitive_bg_color, 1.04)),
                                      to (shade (@button_insensitive_bg_color, 0.96)));
 
-    text-shadow: 0 1 alpha (shade (@button_bg_color, 1.25), 0.4);
+    text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
 
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
                                            from (shade (@button_insensitive_bg_color, 0.8)),
@@ -305,7 +305,7 @@ GtkComboBox.combobox-entry .button,
     border-left-color: shade (@bg_color, 0.78);
     padding: 1px;
 
-    text-shadow: 0 1 alpha (shade (@bg_color, 1.26), 0.5);
+    text-shadow: 0 1px alpha (shade (@bg_color, 1.26), 0.5);
     -unico-border-gradient: none;
     -unico-glow-color: shade (@bg_color, 1.02);
     -unico-glow-radius: 4;
@@ -666,7 +666,7 @@ column-header .button,
 		color-stop (0.2,shade (@listview_header_gradient_a,1.02)),
 		to (shade (@listview_header_gradient_b,1.45)));
 
-    text-shadow: 0 1 alpha (shade (@bg_color, 1.25), 0.4);
+    text-shadow: 0 1px alpha (shade (@bg_color, 1.25), 0.4);
 
     -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
                                            from (shade (@bg_color, 0.9)),
@@ -919,6 +919,15 @@ GtkImage:insensitive {
                                                  from (shade (@error_bg_color, 1.1)),
                                                  to (shade (@error_bg_color, 1.04)));
     -unico-inner-stroke-width: 1px;
+}
+
+
+/*********
+ * label *
+*********/
+GtkLabel,
+GtkLabel:insensitive {
+    background-color: transparent;
 }
 
 /********
@@ -1921,7 +1930,7 @@ GtkHandleBox {
 
 .primary-toolbar .toolbar :insensitive,
 .primary-toolbar.toolbar :insensitive {
-	text-shadow: 0 1 alpha (shade (@button_bg_color, 1.25), 0.4);
+	text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
 }
 
 .primary-toolbar .toolbar GtkComboBox,
@@ -2047,7 +2056,7 @@ GtkHandleBox {
 		from (shade (@button_insensitive_bg_color, 1.04)),
 		to (shade (@button_insensitive_bg_color, 0.96)));
 
-	text-shadow: 0 1 alpha (shade (@button_bg_color, 1.25), 0.4);
+	text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
 
 	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@button_insensitive_bg_color, 0.8)),
@@ -2063,7 +2072,7 @@ GtkHandleBox {
 		from (alpha (@button_insensitive_bg_color, 0.00)),
 		to (alpha (@button_insensitive_bg_color, 0.00)));
 
-	text-shadow: 0 1 alpha (shade (@button_bg_color, 1.25), 0.4);
+	text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
 
 	border-width: 1px;
         border-color: shade (@button_insensitive_bg_color, 0.73);
