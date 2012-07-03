@@ -2199,7 +2199,7 @@ GtkHandleBox {
 	border-width: 1px 0 1px 1px;
 	padding: 1px;
 
-	icon-shadow: 0 1 shade (@bg_color, 1.16);
+	icon-shadow: 0 1px shade (@bg_color, 1.16);
 
 	-unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@bg_color, 1.16)),

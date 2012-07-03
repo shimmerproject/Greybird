@@ -77,7 +77,7 @@ PanelMenuBar.menubar.menuitem {
 
 ClockBox {
 	color: @dark_fg_color;
-	text-shadow: 0 -1 shade (@fg_color, 1.0);
+	text-shadow: 0 -1px shade (@fg_color, 1.0);
 }
 
 PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
