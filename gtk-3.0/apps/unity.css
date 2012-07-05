@@ -20,7 +20,7 @@ UnityPanelWidget,
 .unity-panel .menuitem {
     border-width: 1px 1px 0 1px;
 
-    icon-shadow: 0 -1 shade (@dark_bg_color, 0.7);
+    icon-shadow: 0 -1px shade (@dark_bg_color, 0.7);
 }
 
 .unity-panel.menubar.menuitem:hover,

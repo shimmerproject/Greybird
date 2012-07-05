@@ -1,18 +1,64 @@
-## Some additional thunar-specific theming
-
-style "sidepane"
+style "thunar"
 {
-	base[NORMAL]	= mix (0.3, @bg_color,shade (1.35,@selected_bg_color))
-	base[INSENSITIVE]	= shade (1.03,@selected_bg_color)
-	bg[NORMAL]	= mix (0.3, @bg_color,shade (1.35,@selected_bg_color))
-	bg[PRELIGHT]	= shade (1.2,@selected_bg_color)
 	engine "murrine"
 	{
-		gradient_shades	= {1.1,1.1,1.1,1.1}
+		contrast = 0.5
 	}
 }
 
-widget_class "*ThunarShortcutsView*" style "sidepane"
-widget_class "*ThunarTreeView*" style "sidepane"
+style "sidepane"
+{
+	base[NORMAL]		= mix (0.1, shade (1.35,@selected_bg_color), shade (0.9,@base_color))
+	base[INSENSITIVE]	= mix (0.4, shade (1.35,@selected_bg_color), shade (0.9,@base_color))
+	
+	bg[NORMAL]		= mix (0.1, shade (1.35,@selected_bg_color), shade (0.9,@base_color)) #shade (0.92,@base_color)
+	bg[PRELIGHT]		= shade (1.5,@selected_bg_color)
+}
+
+style "breadcrumbs" 
+{
+	xthickness = 9
+	ythickness = 4
+	ThunarLocationButtons::spacing = 0
+
+	engine "pixmap"	 {
+	image {
+		function	= BOX
+		state		= PRELIGHT
+		recolorable	= TRUE
+		file		= "thunar/breadcrumb_prelight.png"
+		border		= { 4, 10, 0, 0 }
+		stretch		= TRUE
+	}
+	image {
+		function	= BOX
+		state		= ACTIVE
+		file		= "thunar/breadcrumb_active.png"
+		border		= { 4, 10, 0, 0 }
+		stretch		= TRUE
+	}
+	image {
+		function	= BOX
+		state		= INSENSITIVE
+		file		= ""
+		border		= { 0, 10, 0, 0 }
+		stretch		= TRUE
+	}
+	image {
+		function	= BOX
+		file		= "thunar/breadcrumb_default.png"		
+		border		= { 4, 10, 0, 10 }
+		stretch		= TRUE
+        }
+	}
+}
+
+widget_class "*Thunar*"				style "thunar"
+widget_class "*ThunarLocationButtons*"		style "breadcrumbs"
+widget_class "*ThunarShortcutsView*"		style "sidepane"
+widget_class "*ThunarTreeView*"			style "sidepane"
+widget_class "*ThunarPathEntry*"		style "entry"
+
+# Gtk2 Open-File Dialog
 widget_class "*GtkFileChooserWidget.GtkFileChooserDefault.GtkVBox.GtkHPaned.GtkVBox.GtkScrolledWindow.GtkTreeView*"	style "sidepane"
-widget_class "*.<GtkTreeView>.<GtkButton>" style "murrine-treeview-header"
+widget_class "*GtkFileChooserWidget.GtkFileChooserDefault.GtkVBox.GtkHPaned.GtkVBox.GtkScrolledWindow.<GtkTreeView>.<GtkButton>"	style "treeview-header"

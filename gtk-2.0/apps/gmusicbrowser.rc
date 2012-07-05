@@ -1,7 +1,19 @@
+style "scrolledwindow-fix"
+{
+	engine "murrine" {
+		#border_shades	= {0.75, 0.75}
+		trough_shades	= {1.15, 1.25}
+		#roundness	= 0
+		#contrast	= 0.1
+		#gradient_shades	= {1.2,1.2,1.15,1.15}
+	}
+}
+
 style "gmusicbrowser-handle"
 {
 	GtkPaned::handle-size	= 1
 }
 
 widget "Shimmer Desktop.VBMain.HPMain"	style "gmusicbrowser-handle"
-widget_class "Shimmer Desktop.VBMain.VBTop.HBTop.*" style "murrine-toolbar"
+widget_class "*<GtkVBox>.<GtkScrolledWindow>*"		style "scrolledwindow-fix"
+widget_class "*<SHBox>.<GtkScrolledWindow>*"		style "scrolledwindow-fix"
