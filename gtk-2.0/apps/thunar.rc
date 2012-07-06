@@ -58,6 +58,7 @@ widget_class "*ThunarLocationButtons*"		style "breadcrumbs"
 widget_class "*ThunarShortcutsView*"		style "sidepane"
 widget_class "*ThunarTreeView*"			style "sidepane"
 widget_class "*ThunarPathEntry*"		style "entry"
+widget_class "*ThunarStatusbar*"		style "resize-grip"
 
 # Gtk2 Open-File Dialog
 widget_class "*GtkFileChooserWidget.GtkFileChooserDefault.GtkVBox.GtkHPaned.GtkVBox.GtkScrolledWindow.GtkTreeView*"	style "sidepane"
