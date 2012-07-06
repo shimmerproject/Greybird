@@ -26,14 +26,14 @@ style "terminal-scrollbar"
 style "terminal-notebook" = "dark"
 {
 	bg[NORMAL]	= @bg_color # Tab background.
-	bg[ACTIVE]	= shade (0.7, @bg_color) # Unfocused tab background.
-	bg[PRELIGHT]	= shade (0.1, @selected_fg_color)
+	bg[ACTIVE]	= shade (1.03, @bg_color) # Unfocused tab background.
+	fg[ACTIVE]	= shade (0.86, @bg_color)
 	base[NORMAL]	= @text_color
 	engine "murrine"
 	{
-		highlight_shade     = 1.08
+		highlight_shade     = 1.0
 		roundness       = 3
-		contrast        = 0.0
+		contrast        = 0.6
 		
 		
 		## things that don't work:
