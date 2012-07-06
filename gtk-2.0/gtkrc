@@ -427,14 +427,6 @@ style "progressbar"
 	}
 }
 
-style "scrolledwindow"
-{
-	engine "murrine"
-	{
-		trough_shades	= {1.15, 1.2}
-	}
-}
-
 style "scrollbar"
 {
 	GtkScrollbar::stepper-size	= 0
