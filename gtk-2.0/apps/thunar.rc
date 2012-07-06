@@ -3,6 +3,7 @@ style "thunar"
 	engine "murrine"
 	{
 		contrast = 0.5
+		trough_shades	= {1.15, 1.3}
 	}
 }
 

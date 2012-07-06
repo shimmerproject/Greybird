@@ -138,7 +138,7 @@ style "default"
 		menubarstyle        = 2                 # 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
 		menuitemstyle       = 0                 # 0 = flat, 1 = glassy, 2 = striped
 		menustyle           = 0                 # 0 = no vertical menu stripe, 1 = display vertical menu stripe
-		prelight_shade      = .95               # shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors		
+		prelight_shade      = .9               # shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors		
 		progressbarstyle    = 0                 # 0 = nothing, 1 = stripes, 2 = lines
 		reliefstyle         = 3                 # 0 = flat, 1 = inset, 2 = shadow
 		rgba                = FALSE             # FALSE = disabled, TRUE = enabled
@@ -150,7 +150,7 @@ style "default"
 		shadow_shades       = { 0.8, 2.2 }      # gradient for shadows.		
 		textstyle           = 0                 # 0 = normal text, 1 = inset		
 		toolbarstyle        = 1                 # 0 = flat, 1 = glassy, 2 = gradient		
-		#trough_shades	    = { 0.75, 0.9 }	# draw gradient on trough of GtkScrollbar and GtkProgressbar
+		trough_shades	    = { 0.75, 0.9 }	# draw gradient on trough of GtkScrollbar and GtkProgressbar
 		#trough_border_shades = { 0.9, 0.7 }
 	}
 }
@@ -256,7 +256,6 @@ style "notebook-bg"
 {
 	bg[NORMAL]	= shade (1.05, @bg_color) # Tab background.
 	bg[ACTIVE]	= shade (1.03, @bg_color) # Unfocused tab background.
-	bg[SELECTED]	= shade (0.95, @bg_color)
 	fg[ACTIVE]	= shade (0.6, @bg_color)
 }
 
@@ -275,8 +274,9 @@ style "notebook"
 
 style "notebook-button" = "button"
 {
-	bg[NORMAL]	= shade (1.1, @bg_color)
-	bg[PRELIGHT]      = shade (0.95, @base_color)
+	bg[NORMAL]	= shade (1.05, @bg_color)
+	bg[PRELIGHT]	= shade (0.95, @base_color)
+	bg[INSENSITIVE]	= @bg_color
 }
 
 style "menu"
@@ -357,7 +357,7 @@ style "separator-menu-item"
 	GtkWidget::separator-height	= 7
 }
 
-style "treeview" = "scrollbar"
+style "treeview"
 {
 	bg[NORMAL]	= @bg_color
   	engine "murrine" 
@@ -427,15 +427,11 @@ style "progressbar"
 	}
 }
 
-style "scrolledwindow" #= "scrollbar"
+style "scrolledwindow"
 {
-	#bg[NORMAL]	= @bg_color
-	engine "murrine" {
-		border_shades	= {0.75, 0.75}
-		trough_shades	= {1.08, 1.18}
-		#roundness	= 0
-		contrast	= 0.4
-		#gradient_shades	= {1.2,1.2,1.15,1.15}
+	engine "murrine"
+	{
+		trough_shades	= {1.15, 1.2}
 	}
 }
 
@@ -444,17 +440,17 @@ style "scrollbar"
 	GtkScrollbar::stepper-size	= 0
 	GtkScrollbar::arrow-scaling	= 0.0
 	
-	bg[NORMAL]	= shade (1.3, @base_color)
+	bg[NORMAL]	= @bg_color
 	bg[SELECTED]	= shade (0.90, @bg_color)
 	bg[ACTIVE]	= shade (1.75, @base_color)
-	bg[PRELIGHT]	= shade (0.55, @bg_color)
+	bg[PRELIGHT]	= shade (0.8, @bg_color)
 	bg[INSENSITIVE]	= shade (0.75, @bg_color)
-	
+
 	engine "murrine"
 	{
 		roundness	= 10
 		border_shades	= {0.75, 0.75}
-		trough_shades	= {1.1, 1.2}
+		trough_shades	= {1.1, 1.3}
 		contrast	= 0.05
 		gradient_shades	= {1.2,1.2,1.15,1.15}
 	}
@@ -535,8 +531,6 @@ style "radiocheck"
 
 style "toolbar" = "default"
 {
-	bg[NORMAL] = @bg_color
-
 	engine "murrine"
 	{
 		contrast = 1.13
@@ -661,7 +655,7 @@ class "GtkVScrollbar"	style "vscrollbar"
 class "GtkHScrollbar"	style "hscrollbar"
 class "GtkCalendar"	style "calendar"
 class "GtkInfoBar"	style "infobar"
-class "GtkScrolledWindow"	style "scrolledwindow"
+class "GtkStatusbar"	style "resize-grip"
 
 # General matching following, the order is chosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
 widget_class "*<GtkNotebook>"			style "notebook-bg"
@@ -672,14 +666,10 @@ widget_class "*<GtkNotebook>*<GtkLabel>"	style "notebook-bg"
 
 widget_class "*<GtkToolbar>*"			style "toolbar"
 widget_class "*<GtkHandleBox>*"		style "toolbar"
-widget_class "*<GtkScrolledWindow>*"		style "scrolledwindow"
-#widget_class "*<GtkNotebook>.<GtkScrolledWindow>*"	style "notebook-bg"
-widget_class "*MozContainer*GtkScrollbar*"	style "scrolledwindow"
-
-#widget_class "*<GtkNotebook>*<GtkScrolledWindow>.<GtkTreeview>" style "notebook-bg"
 
 widget_class "*<GtkButton>"		style "button"
 widget_class "*<GtkButton>*<GtkLabel>"	style "button"
+widget_class "*<GtkToolbar>.*.<GtkButton>*"	style "notebook-button"
 widget_class "*<GtkNotebook>"		style "notebook"
 widget_class "*<GtkStatusbar>*"	style "statusbar"
 widget_class "*<GtkSpinButton>*"	style "combo"
@@ -688,10 +678,6 @@ widget_class "*<GtkNotebook>*<GtkButton>*<GtkLabel>"	style "notebook-button"
 widget_class "*<GtkNotebook>*<GtkToolbar>"	style "notebook-bg"
 widget_class "*<GtkRadioButton>*" style "radiocheck"
 widget_class "*<GtkCheckButton>*" style "radiocheck"
-
-
-#widget_class "*<GtkVBox>.<GtkVBox>.<GtkVPaned>.<GtkNotebook>.<GtkScrolledWindow>"		style "notebook"
-#widget_class "*<GtkNotebook>*<GtkScrolledWindow>*"	style "scrollbar"
 #widget_class "*MooNotebook"		style "medit-notebook"
 
 
