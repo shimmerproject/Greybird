@@ -596,6 +596,20 @@ style "xfwm-tabwin"
 	}
 }
 
+style "xfdesktop-icon-view"
+{
+	font_name = "bold"
+	XfdesktopIconView::label-alpha = 0
+	XfdesktopIconView::selected-label-alpha = 60
+	fg[NORMAL] = shade (0.9, @selected_fg_color)
+	fg[ACTIVE] = @selected_fg_color
+	engine "murrine"
+	{
+		textstyle = 5
+		text_shade = 0.05
+	}
+}
+
 style "xfsm-logout" = "dark"
 {
 	bg[NORMAL]	= "#2a2a2a"
@@ -647,7 +661,7 @@ class "GtkVScrollbar"	style "vscrollbar"
 class "GtkHScrollbar"	style "hscrollbar"
 class "GtkCalendar"	style "calendar"
 class "GtkInfoBar"	style "infobar"
-class "GtkScrolledWindow"		style "scrolledwindow"
+class "GtkScrolledWindow"	style "scrolledwindow"
 
 # General matching following, the order is chosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
 widget_class "*<GtkNotebook>"			style "notebook-bg"
@@ -661,7 +675,6 @@ widget_class "*<GtkHandleBox>*"		style "toolbar"
 widget_class "*<GtkScrolledWindow>*"		style "scrolledwindow"
 #widget_class "*<GtkNotebook>.<GtkScrolledWindow>*"	style "notebook-bg"
 widget_class "*MozContainer*GtkScrollbar*"	style "scrolledwindow"
-
 
 #widget_class "*<GtkNotebook>*<GtkScrolledWindow>.<GtkTreeview>" style "notebook-bg"
 
@@ -712,6 +725,7 @@ widget_class "*GnmSimpleCanvas*"		style "treeview-header" # Gnumeric treeview-he
 widget_class "*XfceHeading*"		style "xfce-header"
 widget "xfwm4-tabwin*"			style "xfwm-tabwin"
 widget_class "*XfsmLogoutDialog*"	style "xfsm-logout"
+widget_class "*XfdesktopIconView*"	style "xfdesktop-icon-view"
 
 # The window of the tooltip is called "gtk-tooltip"
 ################################
