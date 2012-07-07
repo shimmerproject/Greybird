@@ -69,17 +69,17 @@ style "window-buttons" = "theme-panel"
 	xthickness	= 3
 	ythickness	= 3
 
-	bg[ACTIVE]	= shade (0.15, @bg_color_dark)
-	bg[PRELIGHT]	= shade (0.15, @bg_color_dark)
-	bg[SELECTED]	= shade (0.15, @bg_color_dark)
+	bg[ACTIVE]	= shade (0.65, @selected_bg_color)
+	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
+	bg[SELECTED]	= shade (0.85, @selected_bg_color)
 	
 	fg[NORMAL]	= shade (0.7, @base_color)
 	fg[ACTIVE]	= @base_color
-	fg[PRELIGHT]	= mix (0.5,@base_color,shade (0.65, @selected_bg_color))
+	fg[PRELIGHT]	= @base_color
 	
 	engine "murrine" {
-		border_colors	= { shade(0.6,@bg_color_dark),shade(0.6,@bg_color_dark) }
-		gradient_shades	= { 1.0, 1.0, 1.2, 3.2 }
+		contrast = 0.0
+		gradient_shades	= { 1.0, 0.9, 0.8, 0.7 }
 		roundness	= 1
 		reliefstyle	= 0
 		textstyle	= 1
