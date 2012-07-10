@@ -809,6 +809,10 @@ GtkComboBox.combobox-entry .button:insensitive {
 /************
  * iconview *
  ************/
+GtkIconView {
+	background-color: @base_color;
+}
+
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focused {
     background-image: -gtk-gradient (linear, left top, left bottom,
