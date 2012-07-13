@@ -115,8 +115,8 @@ GtkSwitch.slider:insensitive {
 }
 
 .button:active {
-    box-shadow: inset 1 1 alpha (@theme_fg_color, 0.04),
-                inset -1 -1 alpha (@theme_fg_color, 0.04);
+    box-shadow: inset 1 1 alpha (@theme_fg_color, 0.06),
+                inset -1 -1 alpha (@theme_fg_color, 0.06);
 }
 
 .entry:focus {
@@ -212,6 +212,7 @@ GtkComboBox,
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (shade (@theme_bg_color, 0.85), 1.05)),
                                      to (shade (shade (@theme_bg_color, 0.85), 0.97)));
+    border-color: shade (@theme_bg_color, 0.6);
 }
 
 .button:hover,
@@ -250,6 +251,7 @@ GtkComboBox.combobox-entry .button:active,
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (shade (@theme_bg_color, 0.85), 1.05)),
                                      to (shade (shade (@theme_bg_color, 0.85), 0.97)));
+    border-color: shade (@theme_bg_color, 0.6);
 }
 
 GtkComboBox.combobox-entry .button:hover,
@@ -1441,16 +1443,16 @@ GtkTextView {
 .primary-toolbar .raised.button,
 .primary-toolbar .button:hover {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.4)),
-                                     to (shade (@theme_bg_color, 1.1)));
+                                     from (shade (shade (@theme_base_color, 0.9), 1.05)),
+                                     to (shade (shade (@theme_base_color, 0.9), 0.97)));
     border-color: shade (@theme_bg_color, 0.7);
 }
 
 .primary-toolbar .button:active {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.08)),
-                                     to (shade (@theme_bg_color, 0.95)));
-    border-color: shade (@theme_bg_color, 0.8);
+                                     from (shade (shade (@theme_bg_color, 0.85), 1.05)),
+                                     to (shade (shade (@theme_bg_color, 0.85), 0.97)));
+    border-color: shade (@theme_bg_color, 0.6);
 }
 
 .primary-toolbar .button:active:hover {
@@ -1511,8 +1513,8 @@ GtkTextView {
 
 .inline-toolbar.toolbar .button {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.12)),
-                                     to (shade (@theme_bg_color, 0.88)));
+                                     from (shade (shade (@theme_bg_color, 1.02), 1.05)),
+                                     to (shade (shade (@theme_bg_color, 1.02), 0.97)));
     border-radius: 0;
     border-style: solid;
     border-width: 1px 0 1px 1px;
