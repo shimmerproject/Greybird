@@ -813,7 +813,7 @@ GtkLabel:insensitive {
 .menubar .menuitem:hover {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@theme_selected_bg_color, 1.2)),
-                                     to (shade (@theme_selected_bg_color, 0.9)));
+                                     to (shade (@theme_selected_bg_color, 1.0)));
 
     color: @theme_selected_fg_color;
     border-color: shade (@theme_selected_bg_color, 0.8);
@@ -859,8 +859,8 @@ GtkComboBox .menuitem *:hover {
 .menuitem:hover,
 .menu .menuitem:hover {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_selected_bg_color, 1.1)),
-                                     to (shade (@theme_selected_bg_color, 0.9)));
+                                     from (shade (@theme_selected_bg_color, 1.2)),
+                                     to (shade (@theme_selected_bg_color, 1.0)));
 
     color: @theme_selected_fg_color;
     border-color: shade (@theme_selected_bg_color, 0.8);
@@ -903,11 +903,11 @@ GtkComboBox .menuitem *:hover {
  * notebook *
  ************/
 .notebook {
-    background-color: shade (@theme_bg_color, 1.12);
+    background-color: shade (@theme_bg_color, 1.05);
     background-image: none;
     border-radius: 0;
     border-style: solid;
-    border-color: shade (@theme_bg_color, 0.7);
+    border-color: shade (@theme_bg_color, 0.8);
     padding: 0;
 }
 
@@ -916,21 +916,21 @@ GtkComboBox .menuitem *:hover {
 }
 
 .notebook GtkViewport {
-    background-color: shade (@theme_bg_color, 1.12);
+    background-color: shade (@theme_bg_color, 1.05);
 }
 
 .notebook tab {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 0.97)),
-                                     to (shade (@theme_bg_color, 0.92)));
+                                     from (shade (@theme_bg_color, 1.05)),
+                                     to (shade (@theme_bg_color, 0.97)));
     border-color: shade (@theme_bg_color, 0.7);
     padding: 3px;
 }
 
 .notebook tab:active {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.12)),
-                                     to (shade (@theme_bg_color, 1.12)));
+                                     from (shade (@theme_bg_color, 1.05)),
+                                     to (shade (@theme_bg_color, 1.05)));
 }
 
 .notebook tab.top {
@@ -954,7 +954,7 @@ GtkComboBox .menuitem *:hover {
 .notebook tab.left:active,
 .notebook tab.right:active {
     background-image: none;
-    background-color: shade (@theme_bg_color, 1.12);
+    background-color: shade (@theme_bg_color, 1.05);
 }
 
 /******************
