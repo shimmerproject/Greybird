@@ -125,6 +125,13 @@ GtkSwitch.slider:insensitive {
 }
 
 /* draw borders using box shadow */
+.menu {
+    box-shadow: inset 1 0 shade (@theme_bg_color, 0.8),
+                inset 0 1 shade (@theme_bg_color, 0.8),
+                inset -1 0 shade (@theme_bg_color, 0.8),
+                inset 0 -1 shade (@theme_bg_color, 0.8);
+}
+
 GtkScale.slider,
 GtkScale.trough {
     box-shadow: inset 1 0 shade (@theme_bg_color, 0.7),
@@ -535,7 +542,7 @@ GtkCalendar.highlight {
 }
 
 .entry:insensitive {
-    background-color: shade (@theme_bg_color, 0.96);
+    background-color: shade (@theme_base_color, 0.85);
     background-image: none;
 
     color: mix (@theme_text_color, @theme_base_color, 0.4);
