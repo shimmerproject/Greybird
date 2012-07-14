@@ -55,8 +55,8 @@ style "default"
 	GtkRange		::stepper-size				= 13
 	GtkRange		::stepper_spacing			= 0
  
-	GtkScale		::slider-length				= 13
-	GtkScale		::slider-width				= 13
+	GtkScale		::slider-length				= 15
+	GtkScale		::slider-width				= 15
 	GtkScale		::trough-side-details			= 1
 
 	GtkScrollbar		::min-slider-length			= 50
@@ -147,7 +147,7 @@ style "default"
 		separatorstyle      = 0                 # 0 = Hard seperators 1 = Smooth seperators
 		sliderstyle         = 0                 # 0 = nothing added, 1 = handles
 		stepperstyle        = 1                 # 0 = standard, 1 = integrated stepper handles, 2 = unknown
-		shadow_shades       = { 0.8, 2.2 }      # gradient for shadows.		
+		shadow_shades       = { 1.0, 1.0 }      # gradient for shadows.		
 		textstyle           = 0                 # 0 = normal text, 1 = inset		
 		toolbarstyle        = 1                 # 0 = flat, 1 = glassy, 2 = gradient		
 		trough_shades	    = { 0.75, 0.9 }	# draw gradient on trough of GtkScrollbar and GtkProgressbar
@@ -225,9 +225,8 @@ style "entry" = "wider"
 	engine "murrine"
 	{
 		contrast      = 0.4
-		reliefstyle   = 4
+		reliefstyle   = 0
 		border_shades = {1.03,0.8}
-		shadow_shades = {0.5,0.0}
 	}
 }
 
@@ -487,9 +486,9 @@ style "scale" = "button"
 	GtkWidget	::focus-padding		= 0
 
 	bg[ACTIVE]		= shade (0.86, @bg_color)
-	bg[NORMAL]		= shade (0.8, @bg_color_dark) # shade (1.30, @bg_color)
+	bg[NORMAL]		= shade (1.30, @bg_color)
 	bg[PRELIGHT]		= mix (0.4, shade (0.9, @selected_bg_color), shade (1.05, @bg_color))
-	bg[SELECTED]		= shade (0.8, @bg_color_dark) # shade (0.9, @selected_bg_color)
+	bg[SELECTED]		= shade (0.9, @selected_bg_color)
 	bg[INSENSITIVE]		= shade (0.98, @bg_color)
 
 	engine "murrine"
