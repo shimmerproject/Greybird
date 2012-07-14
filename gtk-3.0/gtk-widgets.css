@@ -623,7 +623,8 @@ GtkIconView.view.cell:selected:focus {
  * image *
  *********/
 GtkImage,
-GtkImage:insensitive {
+GtkImage:insensitive,
+GtkImage:active {
     background-color: transparent;
 }
 
@@ -631,7 +632,8 @@ GtkImage:insensitive {
  * label *
  *********/
 GtkLabel,
-GtkLabel:insensitive {
+GtkLabel:insensitive,
+GtkLabel:active {
     background-color: transparent;
 }
 
