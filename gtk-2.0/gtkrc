@@ -469,7 +469,7 @@ style "comboboxentry"
 	engine "murrine"
 	{
 		contrast      = 0.4
-		reliefstyle   = 4
+		reliefstyle   = 0
 		border_shades = {1.03,0.8}
 		shadow_shades = {0.5,0.0}
 	}
