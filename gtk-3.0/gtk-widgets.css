@@ -125,6 +125,10 @@ GtkSwitch.slider:insensitive {
                 inset -1 -1 alpha (@theme_fg_color, 0.06);
 }
 
+.entry {
+    box-shadow: inset 1 1 alpha (@theme_fg_color, 0.1);
+}
+
 .entry:focus {
     box-shadow: inset 1 1 alpha (@theme_selected_bg_color, 0.4),
                 inset -1 -1 alpha (@theme_selected_bg_color, 0.4);
@@ -486,10 +490,10 @@ GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button:hover,
 GtkComboBox.combobox-entry .button:active,
 GtkComboBox.combobox-entry .button:insensitive {
-    border-top-color: shade (@theme_bg_color, 0.7);
-    border-right-color: shade (@theme_bg_color, 0.72);
-    border-bottom-color: shade (@theme_bg_color, 0.8);
-    border-left-color: shade (@theme_bg_color, 0.72);
+    border-top-color: shade (@theme_bg_color, 0.6);
+    border-right-color: shade (@theme_bg_color, 0.7);
+    border-bottom-color: shade (@theme_bg_color, 0.72);
+    border-left-color: shade (@theme_bg_color, 0.7);
 }
 
 /****************
@@ -529,10 +533,10 @@ GtkCalendar.highlight {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@theme_base_color, 0.97)),
                                      to (@theme_base_color));
-    border-top-color: shade (@theme_bg_color, 0.7);
-    border-right-color: shade (@theme_bg_color, 0.72);
-    border-bottom-color: shade (@theme_bg_color, 0.8);
-    border-left-color: shade (@theme_bg_color, 0.72);
+    border-top-color: shade (@theme_bg_color, 0.6);
+    border-right-color: shade (@theme_bg_color, 0.7);
+    border-bottom-color: shade (@theme_bg_color, 0.72);
+    border-left-color: shade (@theme_bg_color, 0.7);
     border-radius: 3px;
     border-style: solid;
     padding: 3px 5px 3px 5px;
@@ -1316,10 +1320,10 @@ GtkScrolledWindow.frame {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@theme_bg_color, 1.1)),
                                      to (shade (@theme_bg_color, 0.9)));
-    border-top-color: shade (@theme_bg_color, 0.64);
-    border-right-color: shade (@theme_bg_color, 0.76);
-    border-bottom-color: shade (@theme_bg_color, 0.82);
-    border-left-color: shade (@theme_bg_color, 0.76);
+    border-top-color: shade (@theme_bg_color, 0.6);
+    border-right-color: shade (@theme_bg_color, 0.7);
+    border-bottom-color: shade (@theme_bg_color, 0.72);
+    border-left-color: shade (@theme_bg_color, 0.7);
 }
 
 .spinbutton.button:insensitive,
