@@ -1083,8 +1083,8 @@ GtkScale.mark {
 
 GtkScale.trough {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade ( (@theme_bg_color, 0.9)),
-                                     to (shade (@theme_bg_color, 1.1)));
+                                     from (shade (shade (@theme_bg_color, 0.8), 0.9)),
+                                     to (shade (shade (@theme_bg_color, 0.8), 1.1)));
     border-color: transparent;
     border-width: 5px 0;
     border-radius: 7px;
@@ -1092,8 +1092,8 @@ GtkScale.trough {
 
 GtkScale.trough.vertical {
     background-image: -gtk-gradient (linear, left top, right top,
-                                     from (shade (@theme_bg_color, 1.1)),
-                                     to (shade (@theme_bg_color, 1.12)));
+                                     from (shade (shade (@theme_bg_color, 0.8), 0.9)),
+                                     to (shade (shade (@theme_bg_color, 0.8), 1.1))); 1.12)));
     border-color: transparent;
     border-width: 0 5px;
     border-radius: 7px;
