@@ -58,7 +58,7 @@ widget_class "*Thunar*"				style "thunar"
 widget_class "*ThunarLocationButtons*"		style "breadcrumbs"
 widget_class "*ThunarShortcutsView*"		style "sidepane"
 widget_class "*ThunarTreeView*"			style "sidepane"
-widget_class "*ThunarLocationEntry*"		style "comboboxentry"
+widget_class "*ThunarLocationEntry*"		style "combo"
 widget_class "*<ThunarLocationEntry>.<GtkToggleButton>*"		style "button"
 widget_class "*ThunarStatusbar*"		style "resize-grip"
 

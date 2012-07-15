@@ -458,24 +458,7 @@ style "statusbar"
 	xthickness = 2
 }
 
-style "comboboxentry" = "button"
-{
-	text[NORMAL]	= @text_color
-	text[PRELIGHT]	= @text_color
-	
-	fg[NORMAL]	= @text_color
-	fg[PRELIGHT]	= @text_color
-	
-	engine "murrine"
-	{
-		#contrast      = 0.4
-		#reliefstyle   = 0
-		#border_shades = {1.03,0.8}
-		#shadow_shades = {0.5,0.0}
-	}
-}
-
-style "combo"
+style "combo" = "button"
 {
 	text[NORMAL]	= @text_color
 	text[PRELIGHT]	= @text_color
@@ -486,7 +469,15 @@ style "combo"
 	bg[ACTIVE]	= shade (0.85, @bg_color) # Color for pressed-spinbuttons.
 	engine "murrine"
 	{
-		border_shades 		= {0.8, 0.6}
+		border_shades 		= {0.98, 0.7}
+	}
+}
+
+style "spin" = "combo"
+{
+	engine "murrine"
+	{
+		border_shades 		= {0.7, 0.8}
 	}
 }
 
@@ -647,7 +638,7 @@ class "GtkEntry"	style "entry"
 class "GtkSeparator"	style "wide"
 class "GtkCalendar"	style "wide"
 
-class "GtkSpinButton"	style "combo"
+class "GtkSpinButton"	style "spin"
 class "GtkScale"	style "scale"
 class "GtkVScale"	style "scale"
 class "GtkHScale"	style "scale"
