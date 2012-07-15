@@ -181,10 +181,10 @@ GraniteWidgetsStatusBar {
     padding: 1px;
 
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.2)),
-                                     to (shade (@theme_bg_color, 0.97)));
+                                     from (shade (@theme_bg_color, 1.0)),
+                                     to (shade (@theme_bg_color, 0.88)));
     
-    box-shadow: 0 1 inset shade (@theme_bg_color, 0.9);
+    box-shadow: 0 1 inset shade (@theme_bg_color, 0.7);
 }
 
 /***********
