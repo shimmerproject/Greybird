@@ -2,7 +2,8 @@ GTK2
  * Fix some notebook oddities (gmusicbrowser-settings-dialog, maybe more?)
 
 GTK3
- * Add basic gtk-calendar theming
+ * Scrollbars
+ * Add basic gtk-calendar theming (set bg-color)
  * Styling of inactive tabs
  * Rounder gtk-switch buttons (if possible)
  * slightly brighter combobox-arrows (if possible, especially on insensitive state)
