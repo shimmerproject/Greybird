@@ -615,13 +615,12 @@ style "xfsm-logout" = "dark"
         }	
 }
 
-style "calendar" = "dark"
+style "calendar"
 {
-	base[NORMAL]	= @bg_color_dark
-	base[SELECTED]	= shade (0.65, @bg_color_dark)
-	base[ACTIVE]	= shade (0.65, @bg_color_dark)
-	fg[ACTIVE]	= "#FFFFFF"
-	bg[NORMAL]	= shade (0.2, @text_color_dark)
+	fg[NORMAL]	= "#FFFFFF"
+	fg[PRELIGHT]	= "#FFFFFF"
+	bg[NORMAL]	= shade (0.6, @bg_color_dark)
+	bg[PRELIGHT]	= shade (0.8, @selected_bg_color)
 }
 
 ###############################################################################
