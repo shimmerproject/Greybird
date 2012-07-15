@@ -130,8 +130,10 @@ GtkSwitch.slider:insensitive {
 }
 
 .entry:focus {
-    box-shadow: inset 1 1 alpha (@theme_selected_bg_color, 0.4),
-                inset -1 -1 alpha (@theme_selected_bg_color, 0.4);
+    box-shadow: inset 1 0 alpha (@theme_selected_bg_color, 0.6),
+                inset 0 1 alpha (@theme_selected_bg_color, 0.6),
+                inset -1 0 alpha (@theme_selected_bg_color, 0.6),
+                inset 0 -1 alpha (@theme_selected_bg_color, 0.6);
 }
 
 /* draw borders using box shadow */
