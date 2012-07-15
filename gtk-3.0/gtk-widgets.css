@@ -1552,10 +1552,8 @@ GtkTextView {
  * tooltip *
  ***********/
 .tooltip {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (alpha (shade (@theme_tooltip_bg_color, 1.2), 0.7)),
-                                     to (alpha (shade (@theme_tooltip_bg_color, 0.9), 0.7)));
-    border-color: shade (@theme_tooltip_bg_color, 0.7);
+    background-color: alpha (@theme_tooltip_bg_color, 0.9);
+    border-color: @theme_tooltip_bg_color;
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
