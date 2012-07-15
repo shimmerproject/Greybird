@@ -1271,8 +1271,8 @@ GtkScrolledWindow.frame {
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
 
-    color: shade (@theme_bg_color, 1.12);
-    border-color: shade (@theme_bg_color, 1.12);
+    color: @theme_bg_color;
+    border-color: @theme_bg_color;
 }
 
 /***********
