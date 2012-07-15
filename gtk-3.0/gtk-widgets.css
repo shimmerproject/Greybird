@@ -272,7 +272,6 @@ GtkComboBox.combobox-entry .button,
                                      from (shade (shade (@theme_bg_color, 1.02), 1.05)),
                                      to (shade (shade (@theme_bg_color, 1.02), 0.97)));
     border-color: shade (@theme_bg_color, 0.7);
-    padding: 1px;
 }
 
 GtkComboBox.combobox-entry .button:active,
