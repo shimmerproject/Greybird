@@ -1,12 +1,3 @@
-style "thunar"
-{
-	engine "murrine"
-	{
-		contrast = 0.5
-		trough_shades	= {1.15, 1.3}
-	}
-}
-
 style "sidepane"
 {
 	base[NORMAL]		= mix (0.1, shade (1.35,@selected_bg_color), shade (0.9,@base_color))
@@ -54,12 +45,10 @@ style "breadcrumbs"
 	}
 }
 
-widget_class "*Thunar*"				style "thunar"
 widget_class "*ThunarLocationButtons*"		style "breadcrumbs"
 widget_class "*ThunarShortcutsView*"		style "sidepane"
 widget_class "*ThunarTreeView*"			style "sidepane"
-widget_class "*ThunarLocationEntry*"		style "combo"
-widget_class "*<ThunarLocationEntry>.<GtkToggleButton>*"		style "button"
+widget_class "*ThunarLocationEntry*"		style "entry"
 widget_class "*ThunarStatusbar*"		style "resize-grip"
 
 # Gtk2 Open-File Dialog
