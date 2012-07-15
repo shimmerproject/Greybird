@@ -1,3 +1,6 @@
-* Scrollbar style
-* Correct images in buttons
 * Add stylesheet for lightdm
+* Add hover styles for check and radio boxes
+* Infobar
+* Treeview
+* Tooltip
+* Scrollbar
