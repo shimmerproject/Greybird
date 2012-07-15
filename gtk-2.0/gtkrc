@@ -218,15 +218,16 @@ style "wider"
 
 style "entry" = "wider"
 {
-	bg[SELECTED] = mix (0.4, @selected_bg_color, @base_color)
-	base[INSENSITIVE] = shade (1.06, @bg_color)
-	fg[SELECTED] = @text_color
+	bg[SELECTED]		= mix (0.4, @selected_bg_color, @base_color)
+	base[INSENSITIVE]	= shade (1.06, @bg_color)
+	fg[SELECTED]		= @text_color
 	
 	engine "murrine"
 	{
-		contrast      = 0.4
-		reliefstyle   = 0
-		border_shades = {1.03,0.8}
+		contrast	= 0.4
+		focus_color	= mix (0.1, @bg_color, shade (0.8, @selected_bg_color))
+		reliefstyle	= 0
+		border_shades	= {1.03,0.8}
 	}
 }
 
