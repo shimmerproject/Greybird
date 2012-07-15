@@ -20,10 +20,15 @@
     background-image: url("assets/checkbox-checked.png");
 }
 
+.check:active:hover,
+.check row:selected:active:hover,
+.check row:selected:focus:active:hover {
+    background-image: url("assets/checkbox-checked-hover.png");
+}
+
 .check:active:insensitive,
 .check row:selected:active:insensitive,
-.check row:selected:focus:active:insensitive
-{
+.check row:selected:focus:active:insensitive {
     background-image: url("assets/checkbox-checked-insensitive.png");
 }
 
@@ -31,6 +36,12 @@
 .check row:selected:inconsistent,
 .check row:selected:focus:inconsistent {
     background-image: url("assets/checkbox-mixed.png");
+}
+
+.check:inconsistent:hover,
+.check row:selected:inconsistent:hover,
+.check row:selected:focus:inconsistent:hover {
+    background-image: url("assets/checkbox-mixed-hover.png");
 }
 
 .check:inconsistent:insensitive,
@@ -57,6 +68,12 @@
     background-image: url("assets/radio-selected.png");
 }
 
+.radio:active:hover,
+.radio row:selected:active:hover,
+.radio row:selected:focus:active:hover {
+    background-image: url("assets/radio-selected-hover.png");
+}
+
 .radio:active:insensitive,
 .radio row:selected:active:insensitive,
 .radio row:selected:focus:active:insensitive {
@@ -67,6 +84,12 @@
 .radio row:selected:inconsistent,
 .radio row:selected:focus:inconsistent {
     background-image: url("assets/radio-mixed.png");
+}
+
+.radio:inconsistent:hover,
+.radio row:selected:inconsistent:hover,
+.radio row:selected:focus:inconsistent:hover {
+    background-image: url("assets/radio-mixed-hover.png");
 }
 
 .radio:inconsistent:insensitive,
