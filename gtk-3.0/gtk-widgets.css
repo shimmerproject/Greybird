@@ -149,6 +149,13 @@ GtkScale.slider {
                 inset 0 -1 shade (@theme_bg_color, 0.6);
 }
 
+GtkScale.slider:hover {
+    box-shadow: inset 1 0 shade (@theme_bg_color, 0.5),
+                inset 0 1 shade (@theme_bg_color, 0.5),
+                inset -1 0 shade (@theme_bg_color, 0.5),
+                inset 0 -1 shade (@theme_bg_color, 0.5);
+}
+
 GtkScale.trough {
     box-shadow: inset 1 0 shade (@theme_bg_color, 0.7),
                 inset 0 1 shade (@theme_bg_color, 0.7),
@@ -1061,30 +1068,12 @@ GtkScale.slider {
 
 GtkScale.slider:hover {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (shade (@theme_bg_color, 1.30), 1.4)),
-                                     to (shade (shade (@theme_bg_color, 1.30), 1.1)));
+                                     from (shade (mix (@theme_bg_color, shade (@theme_selected_bg_color, 0.9), 0.4), 1.2)),
+                                     to (shade (mix (@theme_bg_color, shade (@theme_selected_bg_color, 0.9), 0.4),0.97)));
 }
 
 GtkScale.slider:insensitive {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 0.99)),
-                                     to (shade (@theme_bg_color, 0.95)));
-}
-
-GtkScale.slider.vertical {
-    background-image: -gtk-gradient (linear, left top, right top,
-                                     from (shade (shade (@theme_bg_color, 1.30), 1.2)),
-                                     to (shade (shade (@theme_bg_color, 1.30), 0.97)));
-}
-
-GtkScale.slider.vertical:hover {
-    background-image: -gtk-gradient (linear, left top, right top,
-                                     from (shade (shade (@theme_bg_color, 1.30), 1.4)),
-                                     to (shade (shade (@theme_bg_color, 1.30), 1.1)));
-}
-
-GtkScale.slider.vertical:insensitive {
-    background-image: -gtk-gradient (linear, left top, right top,
                                      from (shade (@theme_bg_color, 0.99)),
                                      to (shade (@theme_bg_color, 0.95)));
 }
