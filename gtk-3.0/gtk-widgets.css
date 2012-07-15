@@ -166,10 +166,10 @@ GtkScale.trough {
 .menubar .menuitem .scale.highlight.left,
 .scale.highlight.left,
 .scale.highlight.bottom {
-    box-shadow: inset 1 0 shade (@theme_selected_bg_color, 0.9),
-                inset 0 1 shade (@theme_selected_bg_color, 0.9),
-                inset -1 0 shade (@theme_selected_bg_color, 0.9),
-                inset 0 -1 shade (@theme_selected_bg_color, 0.9);
+    box-shadow: inset 1 0 shade (@theme_selected_bg_color, 0.7),
+                inset 0 1 shade (@theme_selected_bg_color, 0.7),
+                inset -1 0 shade (@theme_selected_bg_color, 0.7),
+                inset 0 -1 shade (@theme_selected_bg_color, 0.7);
 }
 
 GtkScale.slider:insensitive,
