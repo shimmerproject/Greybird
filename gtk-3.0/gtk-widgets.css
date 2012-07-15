@@ -220,7 +220,7 @@ GtkAssistant .sidebar {
  * button *
  **********/
 .button {
-    padding: 2px 3px;
+    padding: 2px;
 }
 
 GtkComboBox,
