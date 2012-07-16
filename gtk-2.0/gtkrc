@@ -142,7 +142,7 @@ style "default"
 		progressbarstyle    = 0                 # 0 = nothing, 1 = stripes, 2 = lines
 		reliefstyle         = 3                 # 0 = flat, 1 = inset, 2 = shadow
 		rgba                = FALSE             # FALSE = disabled, TRUE = enabled
-		roundness           = 3                 # 0 = squared, 1 = old default, more will increase roundness
+		roundness           = 2                 # 0 = squared, 1 = old default, more will increase roundness
 		scrollbarstyle      = 0                 # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
 		separatorstyle      = 0                 # 0 = Hard seperators 1 = Smooth seperators
 		sliderstyle         = 0                 # 0 = nothing added, 1 = handles
@@ -252,34 +252,29 @@ style "button" = "wider"
 	}
 }
 
-style "notebook"
+style "notebook-button" = "notebook-bg"
 {
-	bg[NORMAL]	= shade (1.05, @bg_color) # Tab background.
-	bg[ACTIVE]	= shade (1.03, @bg_color) # Unfocused tab background.
-	fg[ACTIVE]	= shade (0.6, @bg_color)
-	xthickness	= 2
-
-	engine "murrine" 
-	{
-		roundness       = 3
-		contrast        = 0.85
-		lightborder_shade   = 1.0
-		gradient_shades     = {1.05,1.0,0.97,0.97}
-	}
+	xthickness = 3 # Width of tabs and notebook borders.
+	ythickness = 3
 }
 
-style "notebook-button" = "button"
+style "notebook-bg"
 {
-	bg[NORMAL]	= shade (1.05, @bg_color)
-	bg[PRELIGHT]	= shade (0.95, @base_color)
-	bg[INSENSITIVE]	= @bg_color
+	bg[NORMAL] = shade (1.05, @bg_color)
+	bg[ACTIVE] = shade (0.97, @bg_color)
+	fg[ACTIVE] = mix (0.8, @fg_color, shade (0.97, @bg_color))
+}
 
-	engine "murrine" 
-	{
-		contrast            = 0.9
-		border_shades       = { 1.1, 0.9 }
-		reliefstyle         = 0
-		roundness	    = 2
+style "notebook" = "notebook-bg"
+{
+	xthickness = 3 # Width of tabs and notebook borders.
+	ythickness = 3 # Height of tabs and notebook borders.
+
+	engine "murrine" {
+		contrast		= .6
+		gradient_shades		= {1.1,1.05,1.05,1.0}
+		#focusstyle		= 2
+		#lightborder_shade	= 1.16
 	}
 }
 
@@ -463,19 +458,27 @@ style "statusbar"
 	xthickness = 2
 }
 
-style "combo" = "button"
+style "comboboxentry"
 {
-	text[NORMAL]	= @text_color
-	text[PRELIGHT]	= @text_color
-	
-	fg[NORMAL]	= @text_color
-	fg[PRELIGHT]	= @text_color
+	xthickness = 4
+	text[NORMAL] = @text_color
+	text[PRELIGHT] = @text_color
 
-	bg[ACTIVE]	= shade (0.85, @bg_color) # Color for pressed-spinbuttons.
+	fg[NORMAL] = @text_color
+	fg[PRELIGHT] = @text_color
+
 	engine "murrine"
 	{
-		border_shades 		= {0.98, 0.7}
+		contrast = 0.4
+		reliefstyle = 0
+		border_shades = {1.03,0.8}
+		shadow_shades = {0.5,0.0}
 	}
+}
+
+style "combo" = "comboboxentry"
+{
+	bg[ACTIVE] = shade (0.85, @bg_color) # Color for pressed-spinbuttons.
 }
 
 style "spin" = "combo"
@@ -653,7 +656,7 @@ class "GtkToolbar"   style "toolbar"
 class "GtkHandleBox*" style "toolbar"
 class "GtkStatusbar" style "resize-grip"
 
-class "GtkSpinButton"  style "combo"
+class "GtkSpinButton"  style "spin"
 class "GtkScale"       style "scale"
 class "GtkVScale"      style "vscale"
 class "GtkHScale"      style "hscale"
@@ -666,17 +669,30 @@ class "GtkRadio*"	style "radiocheck"
 class "GtkCheck*"	style "radiocheck"
 
 # General matching following, the order is choosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
-widget_class "*<GtkNotebook>*<GtkEventBox>"     style "notebook"
-widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "notebook"
-widget_class "*<GtkNotebook>*<GtkLayout>"       style "notebook"
-widget_class "*<GtkNotebook>*<GtkLabel>"	style "notebook"
+#widget_class "*<GtkNotebook>*<GtkEventBox>"     style "notebook"
+#widget_class "*<GtkNotebook>*<GtkScrolledWindow>"     style "notebook"
+#widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "notebook"
+#widget_class "*<GtkNotebook>*<GtkLayout>"       style "notebook"
+#widget_class "*<GtkNotebook>*<GtkLabel>"	style "notebook-button"
+widget_class "*<GtkNotebook>*<GtkEventBox>"		style "notebook-bg"
+widget_class "*<GtkNotebook>*<GtkDrawingArea>"		style "notebook-bg"
+widget_class "*<GtkNotebook>*<GtkLayout>"		style "notebook-bg"
+widget_class "*<GtkNotebook>*<GtkViewport>"		style "notebook-bg"
+widget_class "*<GtkNotebook>*<GtkScrolledWindow>"	style "notebook-bg"
+widget_class "*<GtkNotebook>*<GtkToolbar>"	style "notebook-bg"
+widget_class "*<GtkNotebook>*<GtkLabel>"		style "notebook-bg"
 
 widget_class "*<GtkButton>"      style "button"
 widget_class "*<GtkNotebook>"    style "notebook"
 widget_class "*<GtkStatusbar>*"  style "statusbar"
 
-widget_class "*<GtkComboBoxEntry>*" style "combo"
-widget_class "*<GtkCombo>*"         style "combo"
+widget_class "*<GtkNotebook>*<GtkButton>" style "notebook-button"
+widget_class "*<GtkNotebook>*<GtkButton>*<GtkLabel>" style "notebook-button"
+
+widget_class "*<GtkComboBoxEntry>*"	style "comboboxentry"
+widget_class "*<GtkCombo>*"		style "combo"
+widget_class "*<GtkViewport>*"		style "wider"
+widget_class "*<GtkEntry>*"		style "wider"
 
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
 widget_class "*<GtkMenu>*"              style "menu"
