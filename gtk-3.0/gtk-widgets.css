@@ -3,7 +3,6 @@
     engine: none;
 
     border-width: 1px;
-    
     background-clip: padding-box;
 
     -GtkArrow-arrow-scaling: 0.5;
@@ -524,22 +523,40 @@ GtkDrawingArea {
 * calendar *
 ************/
 GtkCalendar {
-    padding: 2px;
+    padding: 0;
 }
 
-GtkCalendar.view,
-GtkCalendar.header,
+GtkCalendar.view {
+    background-image: none;
+    background-color: @theme_base_color;
+    border-radius: 0;
+    border-color: shade (@bg_color, 0.8);
+ 	border-style: solid;
+ 	border-width: 1px;
+}
+
+GtkCalendar.header {
+    border-radius: 0;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (shade (@theme_bg_color, 1.02), 1.05)),
+                                     to (shade (shade (@theme_bg_color, 1.02), 0.97)));
+    border-color: shade (@bg_color, 0.8);
+ 	border-style: solid;
+ 	border-width: 1px;
+}
+
 GtkCalendar.button,
 GtkCalendar.button:insensitive {
     background-image: none;
     background-color: transparent;
-    border-width: 0;
 }
 
 .highlight,
 GtkCalendar.highlight {
     background-color: transparent;
     color: shade (@theme_fg_color, 0.6);
+    border-radius: 0;
+    padding: 0;
     border-width: 0;
 }
 
@@ -843,9 +860,8 @@ GtkLabel:active {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@theme_selected_bg_color, 1.2)),
                                      to (shade (@theme_selected_bg_color, 1.0)));
-
     color: @theme_selected_fg_color;
-    border-color: shade (@theme_selected_bg_color, 0.8);
+    border-color: shade (@theme_selected_bg_color, 1.1);
 }
 
 /************
@@ -906,6 +922,7 @@ GtkComboBox .menuitem *:hover {
 .menuitem GtkCalendar.view {
 	background-color: transparent;
 	background-image: none;
+    border: 0;
 }
 
 .menuitem .entry {
