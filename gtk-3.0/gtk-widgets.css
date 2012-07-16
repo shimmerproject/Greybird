@@ -3,7 +3,6 @@
     engine: none;
 
     border-width: 1px;
-    
     background-clip: padding-box;
 
     -GtkArrow-arrow-scaling: 0.5;
@@ -843,9 +842,8 @@ GtkLabel:active {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@theme_selected_bg_color, 1.2)),
                                      to (shade (@theme_selected_bg_color, 1.0)));
-
     color: @theme_selected_fg_color;
-    border-color: shade (@theme_selected_bg_color, 0.8);
+    border-color: shade (@theme_selected_bg_color, 1.1);
 }
 
 /************
