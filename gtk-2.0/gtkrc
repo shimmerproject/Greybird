@@ -252,15 +252,11 @@ style "button" = "wider"
 	}
 }
 
-style "notebook-bg"
+style "notebook"
 {
 	bg[NORMAL]	= shade (1.05, @bg_color) # Tab background.
 	bg[ACTIVE]	= shade (1.03, @bg_color) # Unfocused tab background.
 	fg[ACTIVE]	= shade (0.6, @bg_color)
-}
-
-style "notebook"
-{
 	xthickness	= 2
 
 	engine "murrine" 
@@ -277,6 +273,14 @@ style "notebook-button" = "button"
 	bg[NORMAL]	= shade (1.05, @bg_color)
 	bg[PRELIGHT]	= shade (0.95, @base_color)
 	bg[INSENSITIVE]	= @bg_color
+
+	engine "murrine" 
+	{
+		contrast            = 0.9
+		border_shades       = { 1.1, 0.9 }
+		reliefstyle         = 0
+		roundness	    = 2
+	}
 }
 
 style "menu"
@@ -503,6 +507,14 @@ style "scale" = "button"
 	}
 }
 
+style "vscale" = "scale"
+{
+}
+
+style "hscale" = "scale"
+{
+}
+
 style "radiocheck"
 {
 	bg[NORMAL]	= shade (1.06, @bg_color) 
@@ -627,70 +639,65 @@ style "calendar"
 # The following part of the gtkrc applies the different styles to the widgets.
 ###############################################################################
 
-class "GtkWindow*"	style "resize-grip"
+class "GtkWindow*" style "resize-grip"
 
 # Murrine default style is applied to every widget.
-class "GtkWidget"	style "default"
+class "GtkWidget"    style "default"
 
 # Increase the x/ythickness in some widgets.
-class "GtkFrame"	style "wide"
-class "GtkEntry"	style "entry"
-class "GtkSeparator"	style "wide"
-class "GtkCalendar"	style "wide"
+class "GtkFrame"     style "wide"
+class "GtkEntry"     style "entry"
+class "GtkSeparator" style "wide"
+class "GtkCalendar"  style "wide"
+class "GtkToolbar"   style "toolbar"
+class "GtkHandleBox*" style "toolbar"
+class "GtkStatusbar" style "resize-grip"
 
-class "GtkSpinButton"	style "spin"
-class "GtkScale"	style "scale"
-class "GtkVScale"	style "scale"
-class "GtkHScale"	style "scale"
-class "GtkScrollbar"	style "scrollbar"
-class "GtkVScrollbar"	style "vscrollbar"
-class "GtkHScrollbar"	style "hscrollbar"
-class "GtkCalendar"	style "calendar"
-class "GtkInfoBar"	style "infobar"
-class "GtkStatusbar"	style "resize-grip"
+class "GtkSpinButton"  style "combo"
+class "GtkScale"       style "scale"
+class "GtkVScale"      style "vscale"
+class "GtkHScale"      style "hscale"
 
-# General matching following, the order is chosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
-widget_class "*<GtkNotebook>"			style "notebook-bg"
-widget_class "*<GtkNotebook>*<GtkEventBox>"	style "notebook-bg"
-widget_class "*<GtkNotebook>*<GtkDrawingArea>"	style "notebook-bg"
-widget_class "*<GtkNotebook>*<GtkLayout>"	style "notebook-bg"
-widget_class "*<GtkNotebook>*<GtkLabel>"	style "notebook-bg"
+class "GtkScrollbar"   style "scrollbar"
+class "GtkVScrollbar"  style "scrollbar"
+class "GtkHScrollbar"  style "scrollbar"
 
-widget_class "*<GtkToolbar>*"			style "toolbar"
-widget_class "*<GtkHandleBox>*"		style "toolbar"
+class "GtkRadio*"	style "radiocheck"
+class "GtkCheck*"	style "radiocheck"
 
-widget_class "*<GtkButton>"		style "button"
-widget_class "*<GtkButton>*<GtkLabel>"	style "button"
-widget_class "*<GtkToolbar>.*.<GtkButton>*"	style "notebook-button"
-widget_class "*<GtkNotebook>"		style "notebook"
-widget_class "*<GtkStatusbar>*"	style "statusbar"
-widget_class "*<GtkSpinButton>*"	style "combo"
-widget_class "*<GtkNotebook>*<GtkButton>"	style "notebook-button"
-widget_class "*<GtkNotebook>*<GtkButton>*<GtkLabel>"	style "notebook-button"
-widget_class "*<GtkNotebook>*<GtkToolbar>"	style "notebook-bg"
-widget_class "*<GtkRadioButton>*" style "radiocheck"
-widget_class "*<GtkCheckButton>*" style "radiocheck"
-#widget_class "*MooNotebook"		style "medit-notebook"
+# General matching following, the order is choosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
+widget_class "*<GtkNotebook>*<GtkEventBox>"     style "notebook"
+widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "notebook"
+widget_class "*<GtkNotebook>*<GtkLayout>"       style "notebook"
+widget_class "*<GtkNotebook>*<GtkLabel>"	style "notebook"
 
+widget_class "*<GtkButton>"      style "button"
+widget_class "*<GtkNotebook>"    style "notebook"
+widget_class "*<GtkStatusbar>*"  style "statusbar"
 
-widget_class "*<GtkComboBoxEntry>*"	style "combo"
-widget_class "*<GtkCombo>*"		style "combo"
+widget_class "*<GtkComboBoxEntry>*" style "combo"
+widget_class "*<GtkCombo>*"         style "combo"
 
-widget_class "*<GtkMenuBar>.<GtkMenuItem>*"	style "menubar-menuitem"
-widget_class "*<GtkMenu>*"			style "menu"
-widget_class "*<GtkMenuBar>*"			style "menubar"
-widget_class "*<GtkSeparatorMenuItem>*"	style "separator-menu-item"
-widget_class "*<GtkSeparatorToolItem>*"	style "toolbar-separator"
-widget_class "*<GtkMenuItem>.*.<GtkScale>"	style "scale" # Scale widget in menus (e.g. ubuntu's sound indicator)
+widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
+widget_class "*<GtkMenu>*"              style "menu"
+widget_class "*<GtkMenuBar>*"		style "menubar"
+widget_class "*<GtkSeparatorMenuItem>*" style "separator-menu-item"
+# Scale widget in menus (e.g. ubuntu's sound indicator)
+widget_class "*<GtkMenuItem>.*.<GtkScale>" style "scale"
 
-widget_class "*.<GtkFrame>.<GtkLabel>"	style "frame-title"
-widget_class "*.<GtkTreeView>*"	style "treeview"
+widget_class "*.<GtkFrame>.<GtkLabel>" style "frame-title"
+widget_class "*.<GtkTreeView>*"        style "treeview"
 
-widget_class "*GtkHPaned"		style "paned"
-widget_class "*GtkVPaned"		style "paned"
+widget_class "*GtkCalendar*"	style "calendar"
 
-widget_class "*<GtkProgress>"		style "progressbar"
-widget_class "*<GtkProgressBar>"	style "progressbar"
+widget_class "*GtkHPaned" style "paned"
+widget_class "*GtkVPaned" style "paned"
+
+widget_class "*<GtkProgress>"	       style "progressbar"
+widget_class "*<GtkProgressBar>"       style "progressbar"
+
+widget_class "*<GtkRadioButton>*"		style "radiocheck"
+widget_class "*<GtkCheckButton>*"		style "radiocheck"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>"	style "treeview-header"
