@@ -254,6 +254,10 @@ GtkComboBox,
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (shade (@theme_base_color, 0.9), 1.05)),
                                      to (shade (shade (@theme_base_color, 0.9), 0.97)));
+    border-top-color: shade (@theme_bg_color, 0.8);
+    border-right-color: shade (@theme_bg_color, 0.72);
+    border-bottom-color: shade (@theme_bg_color, 0.7);
+    border-left-color: shade (@theme_bg_color, 0.72);
 }
 
 .button:insensitive {
@@ -296,6 +300,10 @@ GtkComboBox.combobox-entry .button:active:hover,
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (shade (@theme_base_color, 0.9), 1.05)),
                                      to (shade (shade (@theme_base_color, 0.9), 0.97)));
+    border-top-color: shade (@theme_bg_color, 0.8);
+    border-right-color: shade (@theme_bg_color, 0.72);
+    border-bottom-color: shade (@theme_bg_color, 0.7);
+    border-left-color: shade (@theme_bg_color, 0.72);
 }
 
 GtkComboBox.combobox-entry .button:insensitive,
@@ -1485,6 +1493,10 @@ GtkTextView {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (shade (@theme_base_color, 0.9), 1.05)),
                                      to (shade (shade (@theme_base_color, 0.9), 0.97)));
+    border-top-color: shade (@theme_bg_color, 0.8);
+    border-right-color: shade (@theme_bg_color, 0.72);
+    border-bottom-color: shade (@theme_bg_color, 0.7);
+    border-left-color: shade (@theme_bg_color, 0.72);
 }
 
 .primary-toolbar .button:active:insensitive,
