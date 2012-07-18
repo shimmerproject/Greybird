@@ -979,7 +979,7 @@ GtkComboBox .menuitem *:hover {
                                      from (shade (@theme_bg_color, 1.05)),
                                      to (shade (@theme_bg_color, 0.97)));
     border-color: shade (@theme_bg_color, 0.9);
-    padding: 2px;
+    padding: 4px;
 }
 
 .notebook tab:active {
@@ -987,7 +987,7 @@ GtkComboBox .menuitem *:hover {
                                      from (shade (@theme_bg_color, 1.05)),
                                      to (shade (@theme_bg_color, 1.05)));
     border-color: shade (@theme_bg_color, 0.8);
-    padding: 3px;
+    padding: 5px 4px;
 }
 
 .notebook tab.top {
