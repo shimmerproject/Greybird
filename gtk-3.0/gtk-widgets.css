@@ -687,8 +687,8 @@ GtkLabel:active {
  ***********/
 .info {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@info_bg_color, 1.2)),
-                                     to (shade (@info_bg_color, 0.9)));
+                                     from (shade (@info_bg_color, 1.1)),
+                                     to (shade (@info_bg_color, 1.0)));
     border-style: solid;
     border-width: 1px;
 
@@ -698,8 +698,8 @@ GtkLabel:active {
 
 .warning {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@warning_bg_color, 1.2)),
-                                     to (shade (@warning_bg_color, 0.9)));
+                                     from (shade (@warning_bg_color, 1.1)),
+                                     to (shade (@warning_bg_color, 1.0)));
     border-style: solid;
     border-width: 1px;
 
@@ -709,8 +709,8 @@ GtkLabel:active {
 
 .question {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@question_bg_color, 1.2)),
-                                     to (shade (@question_bg_color, 0.9)));
+                                     from (shade (@question_bg_color, 1.1)),
+                                     to (shade (@question_bg_color, 1.0)));
     border-style: solid;
     border-width: 1px;
 
@@ -720,8 +720,8 @@ GtkLabel:active {
 
 .error {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@error_bg_color, 1.2)),
-                                     to (shade (@error_bg_color, 0.9)));
+                                     from (shade (@error_bg_color, 1.1)),
+                                     to (shade (@error_bg_color, 1.0)));
     border-style: solid;
     border-width: 1px;
 
