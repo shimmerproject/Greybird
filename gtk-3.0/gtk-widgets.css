@@ -424,7 +424,8 @@ GtkComboBox.combobox-entry .button:insensitive,
 row:selected,
 row:selected:focus {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_selected_bg_color, 1.2)),\n                                     to (shade (@theme_selected_bg_color, 1.0)));
+                                     from (shade (@theme_selected_bg_color, 1.2)),
+				     to (shade (@theme_selected_bg_color, 1.0)));
     border-color: shade (@theme_selected_bg_color, 0.8);
     border-style: solid;
     border-width: 1px 0;
@@ -646,7 +647,8 @@ GtkIconView {
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_selected_bg_color, 1.2)),\n                                     to (shade (@theme_selected_bg_color, 1.0)));
+                                     from (shade (@theme_selected_bg_color, 1.2)),
+				     to (shade (@theme_selected_bg_color, 1.0)));
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
