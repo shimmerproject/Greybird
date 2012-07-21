@@ -871,11 +871,12 @@ GtkLabel:insensitive {
 /***************
  * menubaritem *
  ***************/
-.menubar.menuitem {
+.menubar.menuitem,
+.menubar > .menuitem {
     background-color: @theme_base_color;
     border-radius: 0;
     border-width: 1px 1px 0 1px;
-
+    padding: 3px 5px 3px 5px;
     color: @theme_fg_color;
 }
 
@@ -896,7 +897,7 @@ GtkLabel:insensitive {
     border-radius: 0;
     border-style: solid;
     border-width: 1px;
-    padding: 3px;
+    padding: 3px 2px 3px 2px;
 }
 
 /* Workaround for lp:949368 */
