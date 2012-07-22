@@ -252,19 +252,25 @@ GraniteWidgetsPopOver .entry {
 /*************
  * wingpanel *
  *************/
+.panel {
+    padding: 0;
+    background-color: rgba (0, 0, 0, 0.7);
+    color: #fff;
+}
+
 .shadow {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
                      left top, left bottom,
-                     from (rgba(0,0,0,0.3)),
-                     to (alpha (rgba(0,0,0,0.3), 0.0)));
+                     from (rgba (0, 0, 0, 0.3)),
+                     to (transparent));
 }
 
 .composited-indicator,
 .wingpanel-app-button, 
 .wingpanel-indicator-button {
     background-color: transparent;
-    color: @theme_fg_color;
+    color: #fff;
 }
 
 /**********
