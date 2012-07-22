@@ -1,6 +1,3 @@
-GTK2
- * Fix some notebook oddities (gmusicbrowser-settings-dialog, maybe more?)
-
 GTK3
  * Add Wingpanel support (Bugs blocking the theming have been fixed upstream)
  * Freeze for GTK3.4 and prepare for GTK3.5
