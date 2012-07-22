@@ -65,7 +65,7 @@ style "workspace-switcher" = "theme-panel"
 
 style "window-buttons" = "theme-panel"
 {
-	font_name	= "8"
+	font_name	= "9"
 	xthickness	= 3
 	ythickness	= 3
 
