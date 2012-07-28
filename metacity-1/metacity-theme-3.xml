@@ -11,10 +11,10 @@
 <!-- ::: CONSTANTS ::: -->
 <constant name="C_border_focused" value="gtk:custom(wm_border_focused,shade/gtk:custom(wm_bg,gtk:bg[NORMAL])/0.7)" />
 <constant name="C_border_unfocused" value="gtk:custom(wm_border_unfocused,shade/gtk:custom(wm_bg,gtk:bg[NORMAL])/0.8)" />
-<constant name="C_title_focused" value="gtk:custom(wm_title_focused,blend/gtk:fg[NORMAL]/gtk:custom(wm_bg,gtk:bg[NORMAL])/0.1)" />
-<constant name="C_title_focused_shadow" value="blend/gtk:fg[NORMAL]/gtk:custom(wm_bg,gtk:bg[NORMAL])/1.4" />
-<constant name="C_title_unfocused" value="gtk:custom(wm_title_unfocused,blend/gtk:fg[NORMAL]/gtk:custom(wm_bg,gtk:bg[NORMAL])/0.6)" />
-<constant name="C_title_unfocused_shadow" value="blend/gtk:fg[NORMAL]/gtk:custom(wm_bg,gtk:bg[NORMAL])/1.2" />
+<constant name="C_title_focused" value="gtk:custom(wm_title_focused,shade/gtk:fg[NORMAL]/1.2)" />
+<constant name="C_title_focused_shadow" value="shade/gtk:bg[NORMAL]/1.4" />
+<constant name="C_title_unfocused" value="gtk:custom(wm_title_unfocused,shade/gtk:fg[NORMAL]/2.0)" />
+<constant name="C_title_unfocused_shadow" value="shade/gtk:bg[NORMAL]/1.2" />
 
 <!-- ::: GEOMETRY ::: -->
 <frame_geometry name="normal" title_scale="medium" rounded_top_left="5" rounded_top_right="5">

@@ -152,19 +152,19 @@
 <draw_ops name="title">
 	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(1 `max` ((height - title_height) / 2)) + 1"
-               color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/1.4" />
+               color="shade/gtk:bg[NORMAL]/1.4" />
 	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2))"
-               color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
+               color="shade/gtk:fg[NORMAL]/1.2" />
 </draw_ops>
 
 <draw_ops name="title_unfocused">
 	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(1 `max` ((height - title_height) / 2)) + 1"
-               color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/1.2" />
+               color="shade/gtk:bg[NORMAL]/1.2" />
 	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2))"
-               color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.6" />
+               color="shade/gtk:fg[NORMAL]/2.0" />
 </draw_ops>
 
 <!-- ::: BUTTON ICONS ::: -->
