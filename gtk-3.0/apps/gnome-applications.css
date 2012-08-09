@@ -81,7 +81,7 @@ PanelApplet .button:prelight {
 }
 
 ClockBox {
-    text-shadow: 0 -1 shade (@theme_bg_color, 0.6);
+    text-shadow: 0 -1px shade (@theme_bg_color, 0.6);
 }
 
 WnckPager, WnckTasklist {
@@ -102,7 +102,7 @@ NautilusWindow * {
 /* desktop mode */
 .nautilus-desktop.nautilus-canvas-item {
     color: #ffffff;
-    text-shadow: 1 1 #000000;
+    text-shadow: 1px 1px #000000;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {

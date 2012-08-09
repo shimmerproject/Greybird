@@ -184,7 +184,7 @@ GraniteWidgetsStatusBar {
                                      from (shade (@theme_bg_color, 1.0)),
                                      to (shade (@theme_bg_color, 0.88)));
     
-    box-shadow: 0 1 inset shade (@theme_bg_color, 0.7);
+    box-shadow: 0 1px inset shade (@theme_bg_color, 0.7);
 }
 
 /***********
