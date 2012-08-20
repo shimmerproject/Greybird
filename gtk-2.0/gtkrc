@@ -638,6 +638,13 @@ style "calendar"
 	bg[PRELIGHT]	= shade (0.8, @selected_bg_color)
 }
 
+style "overlay-scrollbar"
+{
+	bg[SELECTED] = shade (1.0, @selected_bg_color)
+	bg[INSENSITIVE] = shade (0.85, @bg_color)
+	bg[ACTIVE] = shade (0.6, @bg_color)
+}
+
 ###############################################################################
 # The following part of the gtkrc applies the different styles to the widgets.
 ###############################################################################
@@ -727,6 +734,9 @@ widget_class "*XfceHeading*"		style "xfce-header"
 widget "xfwm4-tabwin*"			style "xfwm-tabwin"
 widget_class "*XfsmLogoutDialog*"	style "xfsm-logout"
 widget_class "*XfdesktopIconView*"	style "xfdesktop-icon-view"
+
+widget_class "*<OsScrollbar>"		style "overlay-scrollbar"
+widget_class "*<OsThumb>"		style "overlay-scrollbar"
 
 # The window of the tooltip is called "gtk-tooltip"
 ################################
