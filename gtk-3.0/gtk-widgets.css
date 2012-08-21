@@ -695,6 +695,7 @@ GtkImage:insensitive {
  * label *
  *********/
 GtkLabel,
+GtkLabel:active,
 GtkLabel:insensitive {
     background-color: transparent;
 }
