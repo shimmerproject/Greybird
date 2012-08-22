@@ -38,7 +38,7 @@
     border-color: shade (@theme_bg_color, 0.7);
 
     color: @theme_fg_color;
-    border-radius: 2px;
+    border-radius: 3px;
 
     border-width: 1px;
 }
@@ -55,22 +55,22 @@
     background-color: transparent;
 }
 
+.dynamic-notebook tab {
+    border-radius: 0;
+}
+
 /****************
  * content view *
  ****************/
 .content-view,
+.content-view *,
 .content-view GtkViewport {
-    background-color: @theme_base_color;
-}
-
-.content-view * {
-    background-image: none;
-    background-color: transparent;
+    background-color: shade (@theme_base_color, 0.98);
 }
 
 .content-view-window {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (@theme_base_color),
+                                     from (shade (@theme_base_color, 0.98)),
                                      to (shade (@theme_base_color, 0.97)));
     
     border-radius: 5px;
@@ -100,7 +100,7 @@
     color: @theme_text_color;
 
     border-style: solid;
-    border-radius: 2px;
+    border-radius: 3px;
 
     background-color: alpha (@theme_base_color, 0.0);
 
@@ -140,17 +140,12 @@
 /*******************
  * album list view *
  *******************/
-.album-list-view {
+.album-list-view,
+.album-list-view * {
     background-color: @theme_base_color;
     color: @theme_fg_color;
-    border-radius: 5px;
-    border-color: shade (@theme_bg_color, 0.7);
-}
- 
-.album-list-view * {    
-    background-image: none;
-    background-color: transparent;
     border-radius: 0;
+    border-color: shade (@theme_bg_color, 0.7);
 }
 
 .album-list-view GtkTreeView {
@@ -158,7 +153,7 @@
                     
     color: @theme_fg_color;
     
-    -GtkTreeView-vertical-separator: 3;
+    -GtkTreeView-vertical-separator: 1;
     -GtkTreeView-grid-line-width: 0;
 }
 
@@ -204,11 +199,9 @@ GraniteWidgetsPopOver {
 
 .popover_bg {
     background-color: transparent;
-    background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (shade (@theme_base_color, 0.97)),
-			         to (shade (@theme_base_color, 0.92)));
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@theme_base_color, 0.98)),
+                                     to (shade (@theme_base_color, 0.97)));
 }
 
 GraniteWidgetsPopOver .sidebar.view,
@@ -237,7 +230,7 @@ GraniteWidgetsPopOver .entry {
 
 .button.app {
     border-width: 0;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .app:hover,
@@ -283,7 +276,7 @@ GraniteWidgetsPopOver .entry {
 
     border-color: shade (@theme_bg_color, 0.7);
 
-    background-color: alpha (@theme_base_color, 0.97);
+    background-color: alpha (@theme_base_color, 0.98);
 }
 
 .notify .low {
