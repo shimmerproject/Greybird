@@ -461,7 +461,7 @@ GtkDrawingArea {
 * gucharmap *
 *************/
 GucharmapChartable {
-    background-color: background-color: shade (@theme_base_color, 0.98);
+    background-color: shade (@theme_base_color, 0.98);
 }
 
 GucharmapChartable:active,
