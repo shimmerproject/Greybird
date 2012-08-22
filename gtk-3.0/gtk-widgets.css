@@ -229,6 +229,9 @@ GtkAssistant .sidebar {
  * button *
  **********/
 .button {
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
+
     padding: 2px;
 }
 
