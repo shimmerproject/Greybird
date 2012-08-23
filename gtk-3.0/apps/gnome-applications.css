@@ -99,6 +99,36 @@ NautilusWindow * {
     -GtkPaned-handle-size: 1;
 }
 
+.nautilus-canvas-item {
+    border-radius: 3px;
+}
+
+/* desktop mode */
+.nautilus-desktop.nautilus-canvas-item {
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+    background-image: none;
+    background-color: alpha (@theme_bg_color, 0.84);
+
+    color: @theme_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    background-image: none;
+    background-color: alpha (@theme_selected_bg_color, 0.84);
+
+    color: @theme_selected_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: none;
+}
+
 /******************
  * gnome terminal *
  ******************/
