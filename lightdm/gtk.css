@@ -1,77 +1,34 @@
-/* 
-	AUTHOR: Simon Steinbeiß
-	BASED ON zukitwo BY lassekongo83
-	LICENSE: GPL
-	DESCRIPTION: A port of Greybird to gtk3.
-*/
-
 /* default color scheme */
-@define-color bg_color #444444;
+@define-color bg_color #444;
 @define-color fg_color #efefef;
 @define-color base_color #686868;
 @define-color text_color #efefef;
-@define-color selected_bg_color #9db6cd;
-@define-color selected_fg_color #ffffff;
-@define-color tooltip_bg_color #fffde0;
-@define-color tooltip_fg_color #333333;
+@define-color selected_bg_color #398ee7;
+@define-color selected_fg_color #fff;
+@define-color tooltip_bg_color #000;
+@define-color tooltip_fg_color #e1e1e1;
+
+/* colormap actually used by the theme, to be overridden in other css files */
+@define-color theme_bg_color @bg_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_base_color @base_color;
+@define-color theme_text_color @text_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color theme_tooltip_bg_color @tooltip_bg_color;
+@define-color theme_tooltip_fg_color @tooltip_fg_color;
 
 /* misc colors used by gtk+ */
-@define-color link_color #74a0c6;
-@define-color warning_color #f57900;
-@define-color error_color #cc0000;
+@define-color info_fg_color rgb (80, 80, 80);
+@define-color info_bg_color rgb (250, 250, 130);
+@define-color warning_fg_color rgb (255, 255, 255);
+@define-color warning_bg_color rgb (255, 150, 80);
+@define-color question_fg_color rgb (80, 80, 80);
+@define-color question_bg_color rgb (150, 180, 230);
+@define-color error_fg_color rgb (255, 255, 255);
+@define-color error_bg_color rgb (200, 70, 50);
+@define-color link_color #2c82dd;
 @define-color success_color #4e9a06;
+@define-color error_color #cc0000;
 
-/* theme common colors */
-@define-color button_bg_color shade (@bg_color,1.02);
-@define-color button_insensitive_bg_color mix (@button_bg_color, @bg_color, 0.6);
-@define-color dark_bg_color #686868;
-@define-color dark_fg_color #FFF;
-@define-color transparent rgba (0, 0, 0, 0);
-
-@define-color internal_element_color #afafaf;
-@define-color insensitive_bg_color #f5f5f5;
-@define-color insensitive_fg_color #a7a7a7;
-@define-color insensitive_border_color shade (@internal_element_color, 1.37);
-@define-color inactive_frame_color #c8c8c8;
-@define-color inactive_frame_border_a #8b8b8b;
-@define-color inactive_frame_border_b #c6c6c6;
-
-@define-color trough_bg_color_a #efefef;
-@define-color trough_bg_color_b #e0e0e0;
-
-@define-color toolbar_gradient_base #cecece;
-@define-color toolbar_gradient_final #c4c4c4;
-@define-color toolbar_border #c4c4c4;
-
-@define-color button_gradient_color_a shade (@button_bg_color,1.1);
-@define-color button_gradient_color_b shade (@button_bg_color,0.95);
-@define-color button_hover_gradient_color_a mix (@bg_color, shade (@selected_bg_color,1.4),0.7);
-@define-color button_hover_gradient_color_b mix (@bg_color, shade (@selected_bg_color,1.25),0.5);
-@define-color button_active_gradient_color_a shade (@button_gradient_color_b, 0.80);
-@define-color button_active_gradient_color_b shade (@button_gradient_color_a, 0.80);
-
-@define-color progressbar_through_a #c7c7c7;
-@define-color progressbar_through_b #d7d7d7;
-@define-color progressbar_through_border #a3a3a3;
-@define-color progressbar_background_a #c0cdd8;
-@define-color progressbar_background_b #9badbe;
-@define-color progressbar_border #647482;
-
-@define-color menuitem_background_a #8ba4b8;
-@define-color menuitem_background_b #7a94a9;
-
-/* User defined for this theme */
-@define-color border_color_a #afafaf;
-@define-color border_color_b #7a7a7a;
-@define-color scrollslider_gradient_a #d8d8d8;
-@define-color scrollslider_gradient_b #bdbdbd;
-@define-color scrollslider_border #9a9a9a;
-@define-color listview_header_gradient_a #ececec;
-@define-color listview_header_gradient_b #d8d8d8;
-@define-color listview_border #cbcbcb;
-@define-color sidebar_color mix (shade(@bg_color,1.02),shade (@selected_bg_color,1.34),0.7);
-/* End user defined for this theme */
-
-@import url("gtk-widgets.css");
-@import url("apps/misc.css");
-@import url("apps/nautilus.css");
+@import url("../gtk-3.0/gtk-widgets.css");
