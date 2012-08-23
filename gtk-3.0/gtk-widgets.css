@@ -960,8 +960,8 @@ GtkComboBox .menuitem *:hover {
 
 .notebook tab {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.05)),
-                                     to (shade (@theme_bg_color, 0.97)));
+                                     from (shade (@theme_bg_color, 0.99)),
+                                     to (shade (@theme_bg_color, 0.99)));
     border-color: shade (@theme_bg_color, 0.9);
 }
 
