@@ -733,6 +733,34 @@ GtkLabel:insensitive {
     border-color: shade (@error_bg_color, 0.7);
 }
 
+/************
+ * gtkstyle *
+ ************/
+.gtkstyle-fallback {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+.gtkstyle-fallback:prelight {
+    background-color: shade(@theme_bg_color, 1.10);
+    color: @theme_fg_color;
+}
+
+.gtkstyle-fallback:active {
+    background-color: shade(@theme_bg_color, 0.90);
+    color: @theme_fg_color;
+}
+
+.gtkstyle-fallback:insensitive {
+    background-color: @insensitive_bg_color;
+    color: @insensitive_fg_color;
+}
+
+.gtkstyle-fallback:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
 /*******************
  * symbolic images *
  *******************/
@@ -1030,7 +1058,6 @@ GtkComboBox .menuitem *:hover {
 .pane-separator {
     color: shade (@theme_bg_color, 0.8);
     background-color: @theme_bg_color;
-    border-width: 0;
 }
 
 /*************************
