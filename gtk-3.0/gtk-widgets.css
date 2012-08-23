@@ -118,7 +118,6 @@ GtkSwitch.slider:insensitive {
     box-shadow: inset 1px 1px alpha (@theme_base_color, 0.2),
                 inset -1px 0 alpha (@theme_base_color, 0.2);
 }
-
 .button.default {
     box-shadow: inset 1px 1px alpha (@theme_base_color, 0.2),
                 inset -1px 0 alpha (@theme_base_color, 0.2);
@@ -128,6 +127,14 @@ GtkSwitch.slider:insensitive {
 .primary-toolbar .button:active {
     box-shadow: inset 1px 1px alpha (@theme_fg_color, 0.06),
                 inset -1px -1px alpha (@theme_fg_color, 0.06);
+}
+
+.button:focus,
+.button:active:focus {
+    box-shadow: inset 1px 0 alpha (@theme_selected_bg_color, 0.6),
+                inset 0 1px alpha (@theme_selected_bg_color, 0.6),
+                inset -1px 0 alpha (@theme_selected_bg_color, 0.6),
+                inset 0 -1px alpha (@theme_selected_bg_color, 0.6);
 }
 
 .entry {
@@ -249,6 +256,13 @@ GtkComboBox.combobox-entry .button,
     border-style: solid;
 
     color: @theme_fg_color;
+}
+
+GtkComboBox.combobox-entry .button:focus,
+GtkComboBox.combobox-entry .button:active:focus,
+.button:focus,
+.button:active:focus {
+    border-color: shade (@theme_selected_bg_color, 0.8);
 }
 
 GtkComboBox.combobox-entry .button:active,
