@@ -28,6 +28,7 @@
 @define-color error_fg_color rgb (255, 255, 255);
 @define-color error_bg_color rgb (200, 70, 50);
 @define-color link_color #2c82dd;
+@define-color success_color #4e9a06;
 @define-color error_color #cc0000;
 
 /* window manager colors */
