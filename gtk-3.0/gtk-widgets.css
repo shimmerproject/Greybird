@@ -983,7 +983,7 @@ GtkComboBox .menuitem *:hover {
 
 .notebook tab.top:active {
     padding: 4px 3px;
-    border-width: 1px 1px 0px 1px;
+    border-width: 1px 1px 0 1px;
 }
 
 .notebook tab.right {
@@ -996,6 +996,7 @@ GtkComboBox .menuitem *:hover {
     padding: 3px 4px;
     background-image: none;
     background-color: shade (@theme_bg_color, 1.05);
+    border-width: 1px 1px 1px 0;
 }
 
 .notebook tab.bottom {
@@ -1005,6 +1006,7 @@ GtkComboBox .menuitem *:hover {
 
 .notebook tab.bottom:active {
     padding: 4px 3px;
+    border-width: 0 1px 1px 1px;
 }
 
 .notebook tab.left {
@@ -1017,6 +1019,7 @@ GtkComboBox .menuitem *:hover {
     padding: 3px 4px;
     background-image: none;
     background-color: shade (@theme_bg_color, 1.05);
+    border-width: 1px 0 1px 1px;
 }
 
 /******************
