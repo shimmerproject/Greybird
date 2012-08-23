@@ -29,7 +29,7 @@
     -GtkMenuItem-arrow-scaling: 0.4;
     -GtkNotebook-initial-gap: 0;
     -GtkNotebook-tab-overlap: -2;
-    -GtkPaned-handle-size: 1;
+    -GtkPaned-handle-size: 3;
     -GtkProgressBar-min-horizontal-bar-height: 10;
     -GtkProgressBar-min-vertical-bar-width: 10;
     -GtkRange-slider-width: 9;
@@ -1025,10 +1025,9 @@ GtkComboBox .menuitem *:hover {
 /******************
  * pane separator *
  ******************/
-.sidebar .pane-separator,
 .pane-separator {
     color: shade (@theme_bg_color, 0.8);
-    background-color: shade (@theme_bg_color, 0.8);
+    background-color: @theme_bg_color;
     border-width: 0;
 }
 
