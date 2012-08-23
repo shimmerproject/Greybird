@@ -100,7 +100,7 @@ NautilusWindow * {
 }
 
 .nautilus-canvas-item {
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 /* desktop mode */
@@ -129,46 +129,58 @@ NautilusWindow * {
     text-shadow: none;
 }
 
-/* browser window */
-NautilusTrashBar.info,
-NautilusXContentBar.info,
-NautilusSearchBar.info,
-NautilusQueryEditor.info {
-    border-radius: 0;
-    border-style: solid;
-    border-width: 0 0 1px 0;
-}
-
-.nautilus-cluebar-label {
-    font: bold;
-    color: @info_fg_color;
-}
-
-NautilusLocationEntry.entry {
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-NautilusSearchBar .entry,
-NautilusSearchBar .entry:focus {
-    border-color: darker (@info_bg_color);
-    border-style: solid;
-    border-width: 1px;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-/* inactive pane */
-.nautilus-inactive-pane .view,
-.nautilus-inactive-pane .notebook {
-    background-color: shade (@theme_base_color, 0.97);
-}
-
-/* sidebar */
 NautilusWindow .sidebar .frame {
-    border-color: shade (@theme_bg_color, 0.8);
     border-width: 1px 0 0 0;
     border-style: solid;
+    border-color: shade (@theme_bg_color, 0.8);
+    border-radius: 0;
+}
+
+NautilusWindow > GtkGrid > .pane-separator {
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    border-color: shade (@theme_bg_color, 0.8);
+    color: shade (@theme_bg_color, 0.8);
+}
+
+NautilusView.frame,
+NautilusNotebook.notebook {
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+}
+
+NautilusNotebook .frame {
+    border-width: 1px 0 0 0;
+}
+
+NautilusQueryEditor .primary-toolbar.toolbar {
+    border-bottom-width: 0;
+    padding: 3px;
+}
+
+NautilusQueryEditor .toolbar {
+    padding: 4px 4px 3px 4px;
+
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: @theme_bg_color;
+    
+    background-color: mix (@theme_bg_color, @theme_base_color, 0.5);
+}
+
+NautilusQueryEditor .toolbar:nth-child(2) {
+    border-color: shade (@theme_bg_color, 0.8);
+}
+
+NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar {
+    border-top-width: 0;
+}
+
+NautilusNotebook.notebook NautilusQueryEditor .toolbar:last-child,
+NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    border-bottom-width: 1px;
+    border-bottom-color: shade (@theme_bg_color, 0.8);
 }
 
 /******************
