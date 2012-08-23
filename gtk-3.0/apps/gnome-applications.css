@@ -133,8 +133,8 @@ NautilusWindow * {
  * gnome terminal *
  ******************/
 TerminalScreen {
-    background-color: #000;
-    color: #fff;
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
 
     -TerminalScreen-background-darkness: 0.9;
 }
