@@ -132,10 +132,10 @@ GtkSwitch.slider:insensitive {
 .button:focus,
 .button:hover:focus,
 .button:active:focus {
-    box-shadow: inset 1px 0 alpha (@theme_selected_bg_color, 0.6),
-                inset 0 1px alpha (@theme_selected_bg_color, 0.6),
-                inset -1px 0 alpha (@theme_selected_bg_color, 0.6),
-                inset 0 -1px alpha (@theme_selected_bg_color, 0.6);
+    box-shadow: inset 1px 0 alpha (@theme_selected_bg_color, 0.4),
+                inset 0 1px alpha (@theme_selected_bg_color, 0.4),
+                inset -1px 0 alpha (@theme_selected_bg_color, 0.4),
+                inset 0 -1px alpha (@theme_selected_bg_color, 0.4);
 }
 
 .entry {
@@ -143,10 +143,10 @@ GtkSwitch.slider:insensitive {
 }
 
 .entry:focus {
-    box-shadow: inset 1px 0 alpha (@theme_selected_bg_color, 0.6),
-                inset 0 1px alpha (@theme_selected_bg_color, 0.6),
-                inset -1px 0 alpha (@theme_selected_bg_color, 0.6),
-                inset 0 -1px alpha (@theme_selected_bg_color, 0.6);
+    box-shadow: inset 1px 0 alpha (@theme_selected_bg_color, 0.4),
+                inset 0 1px alpha (@theme_selected_bg_color, 0.4),
+                inset -1px 0 alpha (@theme_selected_bg_color, 0.4),
+                inset 0 -1px alpha (@theme_selected_bg_color, 0.4);
 }
 
 /* draw borders using box shadow */
@@ -591,6 +591,10 @@ GtkComboBox.combobox-entry .button:insensitive {
     padding: 3px 5px 3px 5px;
 
     color: @theme_text_color;
+}
+
+.entry:focus {
+    border-color: shade (@theme_selected_bg_color, 0.8);
 }
 
 .entry:selected,
