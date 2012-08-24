@@ -2,7 +2,7 @@
  * dynamic notebooks *
  *********************/
 .dynamic-notebook {
-    background-color: shade (@theme_bg_color, 1.05);
+    background-color: shade(@theme_bg_color, 1.05);
     background-image: none;
 }
 
@@ -26,7 +26,7 @@
     background-color: transparent;
 
     border-width: 0 1px 0 0;
-    border-color: shade (@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
 }
 
 .dynamic-notebook .notebook tab:nth-child(first) {
@@ -34,8 +34,8 @@
 }
 
 .dynamic-notebook .notebook tab:active {
-    background-color: shade (@theme_bg_color, 1.12);
-    border-color: shade (@theme_bg_color, 0.7);
+    background-color: shade(@theme_bg_color, 1.12);
+    border-color: shade(@theme_bg_color, 0.7);
 
     color: @theme_fg_color;
     border-radius: 3px;
@@ -65,24 +65,24 @@
 .content-view,
 .content-view *,
 .content-view GtkViewport {
-    background-color: shade (@theme_base_color, 0.98);
+    background-color: shade(@theme_base_color, 0.98);
 }
 
 .content-view-window {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_base_color, 0.98)),
-                                     to (shade (@theme_base_color, 0.97)));
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_base_color, 0.98)),
+                                     to (shade(@theme_base_color, 0.97)));
     
     border-radius: 5px;
     
     border-width: 1px;
     border-style: solid;
-    border-color: shade (@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
 }
 
 .content-view .entry {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_base_color, 1.1)),
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_base_color, 1.1)),
                                      to (@theme_base_color));
 }
 
@@ -93,7 +93,7 @@
 
 .content-view .subtitle,
 .content-view .option-description {
-    color: alpha (@theme_text_color, 0.5);
+    color: alpha(@theme_text_color, 0.5);
 }
 
 .content-view .button {
@@ -102,20 +102,20 @@
     border-style: solid;
     border-radius: 3px;
 
-    background-color: alpha (@theme_base_color, 0.0);
+    background-color: alpha(@theme_base_color, 0.0);
 
     background-image: none;
 }
 
 .content-view .button:active,
 .content-view .button:active:hover {
-    background-color: alpha (@theme_bg_color, 0.5);
+    background-color: alpha(@theme_bg_color, 0.5);
     background-image: none;
 }
 
 .content-view .button:insensitive {
     background-image: none;
-    background-color: alpha (@theme_base_color, 0.0);
+    background-color: alpha(@theme_base_color, 0.0);
 }
 
 .content-view .help_button * {
@@ -130,11 +130,11 @@
     border-style: solid;
     border-width: 0 0 1px 0;
 
-    border-color: shade (@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
 
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.2)),
-                                     to (shade (@theme_bg_color, 0.97)));
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.2)),
+                                     to (shade(@theme_bg_color, 0.97)));
 }
 
 /*******************
@@ -145,7 +145,7 @@
     background-color: @theme_base_color;
     color: @theme_fg_color;
     border-radius: 0;
-    border-color: shade (@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
 }
 
 .album-list-view GtkTreeView {
@@ -158,13 +158,13 @@
 }
 
 .album-list-view GtkTreeView row:nth-child(even) {
-    background-color: shade (@theme_base_color, 0.95);
+    background-color: shade(@theme_base_color, 0.95);
     border-width: 0;
     border-style: none;
 }
 
 .album-list-view GtkTreeView row:nth-child(odd) {
-    background-color: shade (@theme_base_color, 1.0);
+    background-color: shade(@theme_base_color, 1.0);
     border-width: 0;
     border-style: none;
 }
@@ -175,11 +175,11 @@
 GraniteWidgetsStatusBar {
     padding: 1px;
 
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.0)),
-                                     to (shade (@theme_bg_color, 0.88)));
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.0)),
+                                     to (shade(@theme_bg_color, 0.88)));
     
-    box-shadow: inset 0 1px shade (@theme_bg_color, 0.7);
+    box-shadow: inset 0 1px shade(@theme_bg_color, 0.7);
 }
 
 /***********
@@ -193,15 +193,15 @@ GraniteWidgetsPopOver {
     -GraniteWidgetsPopOver-shadow-size: 15;
     
     border-style: solid;
-    border-color: shade (@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
     margin: 0;
 }
 
 .popover_bg {
     background-color: transparent;
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_base_color, 0.98)),
-                                     to (shade (@theme_base_color, 0.97)));
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_base_color, 0.98)),
+                                     to (shade(@theme_base_color, 0.97)));
 }
 
 GraniteWidgetsPopOver .sidebar.view,
@@ -221,8 +221,8 @@ GraniteWidgetsPopOver .button:hover:active {
 }
 
 GraniteWidgetsPopOver .entry {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_base_color, 0.97)),
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_base_color, 0.97)),
                                      to (@theme_base_color));
 
     color: @theme_text_color;
@@ -235,9 +235,9 @@ GraniteWidgetsPopOver .entry {
 
 .app:hover,
 .app:focus {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@theme_selected_bg_color, 1.0)),
-                                     to (shade (@theme_selected_bg_color, 0.9)));
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_selected_bg_color, 1.0)),
+                                     to (shade(@theme_selected_bg_color, 0.9)));
 
     color: @theme_selected_fg_color;
 }
@@ -253,7 +253,7 @@ GraniteWidgetsPopOver .entry {
 
 .shadow {
     background-color: transparent;
-    background-image: -gtk-gradient (linear,
+    background-image: -gtk-gradient(linear,
                      left top, left bottom,
                      from (rgba (0, 0, 0, 0.3)),
                      to (transparent));
@@ -274,9 +274,9 @@ GraniteWidgetsPopOver .entry {
     border-width: 1px;
     border-style: solid;
 
-    border-color: shade (@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
 
-    background-color: alpha (@theme_base_color, 0.98);
+    background-color: alpha(@theme_base_color, 0.98);
 }
 
 .notify .low {
