@@ -1,5 +1,5 @@
 /* default color scheme */
-@define-color bg_color #444;
+@define-color bg_color #3c3c3c;
 @define-color fg_color #efefef;
 @define-color base_color #686868;
 @define-color text_color #efefef;
@@ -32,3 +32,4 @@
 @define-color error_color #cc0000;
 
 @import url("../gtk-3.0/gtk-widgets.css");
+@import url("../gtk-3.0/gtk-widgets-assets.css");
