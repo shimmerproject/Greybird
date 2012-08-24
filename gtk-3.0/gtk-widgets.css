@@ -1701,7 +1701,7 @@ GtkTextView {
 .inline-toolbar.toolbar GtkToolButton .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton .button:insensitive {
     border-right-width: 0;
-    border-left-width: 0;
+    border-left-width: 1px;
     border-radius: 0;
 }
 
@@ -1727,7 +1727,7 @@ GtkTextView {
 .inline-toolbar.toolbar GtkToolButton:first-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:insensitive {
     border-left-width: 1px;
-    border-right-width: 0;
+    border-right-width: 1px;
     border-radius: 3px 0 0 3px;
 }
 
