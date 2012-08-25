@@ -992,16 +992,13 @@ GtkComboBox .menuitem *:hover {
 }
 
 .notebook tab {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 0.99)),
-                                     to (shade(@theme_bg_color, 0.99)));
+    background-image: none;
+    background-color: @theme_bg_color;
     border-color: shade(@theme_bg_color, 0.9);
 }
 
 .notebook tab:active {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.05)),
-                                     to (shade(@theme_bg_color, 1.05)));
+    background-color: shade(@theme_bg_color, 1.05);
     border-color: shade(@theme_bg_color, 0.8);
 }
 
@@ -1021,14 +1018,12 @@ GtkComboBox .menuitem *:hover {
 
 .notebook tab.right {
     padding: 3px;
-    background-color: @theme_bg_color;
     border-radius: 0 3px 3px 0;
 }
 
 .notebook tab.right:active {
     padding: 3px 4px;
     background-image: none;
-    background-color: shade(@theme_bg_color, 1.05);
     border-width: 1px 1px 1px 0;
 }
 
@@ -1044,14 +1039,12 @@ GtkComboBox .menuitem *:hover {
 
 .notebook tab.left {
     padding: 3px;
-    background-color: @theme_bg_color;
     border-radius: 3px 0 0 3px;
 }
 
 .notebook tab.left:active {
     padding: 3px 4px;
     background-image: none;
-    background-color: shade(@theme_bg_color, 1.05);
     border-width: 1px 0 1px 1px;
 }
 
