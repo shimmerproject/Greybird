@@ -1109,7 +1109,6 @@ GtkProgressBar {
 }
 
 /* level bars as used for password quality or remaining power */
-
 GtkLevelBar {
     -GtkLevelBar-min-block-width: 34;
     -GtkLevelBar-min-block-height: 3;
@@ -1136,7 +1135,7 @@ GtkLevelBar.vertical {
 
 .level-bar.indicator-continuous.fill-block {
     padding: 2px;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .level-bar.indicator-discrete.fill-block.horizontal {
@@ -1152,19 +1151,19 @@ GtkLevelBar.vertical {
    on the widget
 
 .level-bar.indicator-discrete.fill-block.horizontal:first-child {
-    border-radius: 2px 0 0 2px;
+    border-radius: 3px 0 0 3px;
 }
 
 .level-bar.indicator-discrete.fill-block.horizontal:last-child {
-    border-radius: 0 2px 2px 0;
+    border-radius: 0 3px 3px 0;
 }
 
 .level-bar.indicator-discrete.fill-block.vertical:first-child {
-    border-radius: 2px 2px 0 0;
+    border-radius: 3px 3px 0 0;
 }
 
 .level-bar.indicator-discrete.fill-block.vertical:last-child {
-    border-radius: 0 0 2px 2px;
+    border-radius: 0 0 3px 3px;
 }
 
 */

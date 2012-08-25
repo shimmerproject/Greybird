@@ -1,6 +1,6 @@
 UnityPanelWidget,
 .unity-panel {
-		background-image: -gtk-gradient(linear, left top, left bottom,
+    background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.2)),
                                      to (shade(@theme_bg_color, 1.0)));
     border-color: shade(@theme_bg_color, 1.0);
