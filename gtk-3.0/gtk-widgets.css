@@ -35,9 +35,8 @@
     -GtkRange-slider-width: 9;
     -GtkRange-stepper-size: 0;
     -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-border: 3;
+    -GtkRange-trough-border: 1;
     -GtkRange-trough-under-steppers: 1;
-    -GtkScale-trough-border: 1;
     -GtkScrollbar-activate-slider: 1;
     -GtkScrollbar-min-slider-length: 50;
     -GtkScrollbar-slider-width: 15;
