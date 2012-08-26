@@ -4,7 +4,6 @@
 PanelWidget,
 PanelApplet,
 PanelToplevel {
-    border-image: none;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.5)),
                                      to (shade(@theme_bg_color, 1.05)));
