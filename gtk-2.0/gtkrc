@@ -614,8 +614,8 @@ style "xfdesktop-icon-view"
 
 style "xfsm-logout" = "dark"
 {
-	bg[NORMAL]	= "#2a2a2a"
-	bg[SELECTED]	= shade (0.9, "#2a2a2a")	# Borderline around the dialog
+	bg[NORMAL]	= shade (0.35, @bg_color_dark)
+	bg[SELECTED]	= shade (0.25, @bg_color_dark)	# Borderline around the dialog
 	bg[INSENSITIVE]	= shade (0.6, @bg_color_dark)
 
 	engine "murrine"
