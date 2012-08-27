@@ -107,24 +107,24 @@ GtkWindow {
  ******************/
 .button,
 GtkSwitch.slider {
-    box-shadow: inset 1px 1px alpha(@theme_base_color, 0.4),
-                inset -1px 0 alpha(@theme_base_color, 0.4);
+    box-shadow: inset 1px 1px alpha(@light_shadow, 0.4),
+                inset -1px 0 alpha(@light_shadow, 0.4);
 }
 
 .button:insensitive,
 GtkSwitch.slider:insensitive {
-    box-shadow: inset 1px 1px alpha(@theme_base_color, 0.2),
-                inset -1px 0 alpha(@theme_base_color, 0.2);
+    box-shadow: inset 1px 1px alpha(@light_shadow, 0.2),
+                inset -1px 0 alpha(@light_shadow, 0.2);
 }
 .button.default {
-    box-shadow: inset 1px 1px alpha(@theme_base_color, 0.2),
-                inset -1px 0 alpha(@theme_base_color, 0.2);
+    box-shadow: inset 1px 1px alpha(@light_shadow, 0.2),
+                inset -1px 0 alpha(@light_shadow, 0.2);
 }
 
 .button:active,
 .primary-toolbar .button:active {
-    box-shadow: inset 1px 1px alpha(@theme_fg_color, 0.06),
-                inset -1px -1px alpha(@theme_fg_color, 0.06);
+    box-shadow: inset 1px 1px alpha(@dark_shadow, 0.06),
+                inset -1px -1px alpha(@dark_shadow, 0.06);
 }
 
 .button:focus,
@@ -137,7 +137,7 @@ GtkSwitch.slider:insensitive {
 }
 
 .entry {
-    box-shadow: inset 1px 1px alpha(@theme_fg_color, 0.1);
+    box-shadow: inset 1px 1px alpha(@dark_shadow, 0.1);
 }
 
 .entry:focus {

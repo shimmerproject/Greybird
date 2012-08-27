@@ -18,6 +18,10 @@
 @define-color theme_tooltip_bg_color @tooltip_bg_color;
 @define-color theme_tooltip_fg_color @tooltip_fg_color;
 
+/* shadow effects */
+@define-color light_shadow #fff;
+@define-color dark_shadow #000;
+
 /* misc colors used by gtk+ */
 @define-color info_fg_color rgb(80, 80, 80);
 @define-color info_bg_color rgb(250, 250, 130);
