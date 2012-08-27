@@ -38,9 +38,14 @@
 @define-color wm_border_focused shade(@theme_bg_color, 0.7);
 @define-color wm_border_unfocused shade(@theme_bg_color, 0.8);
 
+/* lightdm greeter color scheme */
+@define-color lightdm_bg_color #242424;
+@define-color lightdm_fg_color #efefef;
+
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");
 @import url("apps/gnome-applications.css");
 @import url("apps/granite-widgets.css");
+@import url("apps/lightdm-gtk-greeter.css");
 @import url("apps/unity.css");
 @import url("apps/unity-greeter.css");
