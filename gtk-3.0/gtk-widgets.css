@@ -208,7 +208,7 @@ GtkCalendar.button {
  * assistant *
  *************/
 GtkAssistant .sidebar .highlight {
-    color: @theme_fg_color;
+    color: @theme_text_color;
     font: bold;
 }
 
@@ -418,8 +418,6 @@ GtkComboBox .button {
     background-color: @theme_base_color;
     border-radius: 0;
     border-width: 0;
-
-    color: @theme_text_color;
 }
 
 row:selected,
