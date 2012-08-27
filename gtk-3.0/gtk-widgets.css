@@ -888,6 +888,11 @@ GtkLabel:insensitive {
 /***************
  * menubaritem *
  ***************/
+.menubar.menuitem,
+.menubar .menuitem {
+    padding: 3px 5px 3px 5px;
+}
+
 .menubar.menuitem:hover,
 .menubar .menuitem:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
