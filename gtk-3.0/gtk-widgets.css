@@ -242,7 +242,6 @@ GtkAssistant .sidebar {
 }
 
 GtkSwitch.slider,
-GtkComboBox.combobox-entry .button,
 .button {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_bg_color, 1.02), 1.05)),
@@ -257,7 +256,6 @@ GtkComboBox.combobox-entry .button,
     color: @theme_fg_color;
 }
 
-GtkComboBox.combobox-entry .button:active,
 .button:active {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_bg_color, 0.85), 1.05)),
@@ -265,8 +263,6 @@ GtkComboBox.combobox-entry .button:active,
     border-color: shade(@theme_bg_color, 0.6);
 }
 
-GtkComboBox.combobox-entry .button:hover,
-GtkComboBox.combobox-entry .button:active:hover,
 .button:hover,
 .button:active:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
@@ -278,16 +274,12 @@ GtkComboBox.combobox-entry .button:active:hover,
     border-left-color: shade(@theme_bg_color, 0.78);
 }
 
-GtkComboBox.combobox-entry .button:focus,
-GtkComboBox.combobox-entry .button:active:focus,
 .button:focus,
 .button:hover:focus,
 .button:active:focus {
     border-color: shade(@theme_selected_bg_color, 0.8);
 }
 
-GtkSwitch.slider:insensitive,
-GtkComboBox.combobox-entry .button:insensitive,
 .button:insensitive {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_bg_color, 0.95), 1.05)),
@@ -396,6 +388,27 @@ GtkComboBox.combobox-entry .button:insensitive,
     border-width: 1px;
 
     border-radius: 3px;
+}
+
+/**************
+ * comboboxes *
+ **************/
+GtkComboBox {
+    padding: 0;
+
+    -GtkComboBox-arrow-scaling: 0.5;
+    -GtkComboBox-shadow-type: none;
+}
+
+GtkComboBox .separator {
+    /* always disable separators */
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-horizontal-separator: 0;
+    -GtkWidget-vertical-separator: 0;
+}
+
+GtkComboBox .button {
+    color: @theme_fg_color;
 }
 
 /****************
