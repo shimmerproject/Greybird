@@ -3,6 +3,7 @@ UnityPanelWidget,
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.2)),
                                      to (shade(@theme_bg_color, 1.0)));
+
     border-color: shade(@theme_bg_color, 1.0);
     border-style: solid;
     border-width: 0px 0 1px 0px;
@@ -23,7 +24,6 @@ UnityPanelWidget,
                                      from (shade(@theme_bg_color, 1.2)),
                                      to (shade(@theme_bg_color, 1.0)));
 
-    color: @theme_fg_color;
-
     border-color: shade(@theme_bg_color, 0.85);
+    color: @theme_fg_color;
 }

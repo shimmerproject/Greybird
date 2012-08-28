@@ -1,44 +1,48 @@
 #panel_window #menubar,
 #login_notebook {
-	background-image: none;
-	background-color: @lightdm_bg_color;
-	color: @lightdm_fg_color;
+    background-color: @lightdm_bg_color;
+    background-image: none;
+    color: @lightdm_fg_color;
 }
 
 #login_notebook .button,
 #cancel_button,
 #login_button {
-	background-image: -gtk-gradient(linear, left top, left bottom,
+    background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@lightdm_bg_color, 1.15)),
                                      to (shade(@lightdm_bg_color, 0.92)));
-	border-color: shade (@lightdm_bg_color, 0.6);
-	box-shadow: inset 1px 0 alpha(shade (@lightdm_fg_color, 0.9), 0.2),
-                inset 0 1px alpha(shade (@lightdm_fg_color, 0.9), 0.2),
-                inset -1px 0 alpha(shade (@lightdm_fg_color, 0.9), 0.2),
-                inset 0 -1px alpha(shade (@lightdm_fg_color, 0.7), 0.1);
-	color: @lightdm_fg_color;
+
+    border-color: shade(@lightdm_bg_color, 0.6);
+    color: @lightdm_fg_color;
+
+    box-shadow: inset 1px 0 alpha(shade(@lightdm_fg_color, 0.9), 0.2),
+                inset 0 1px alpha(shade(@lightdm_fg_color, 0.9), 0.2),
+                inset -1px 0 alpha(shade(@lightdm_fg_color, 0.9), 0.2),
+                inset 0 -1px alpha(shade(@lightdm_fg_color, 0.7), 0.1);
 }
 
 #login_notebook .button:hover {
-	background-image: -gtk-gradient(linear, left top, left bottom,
+    background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@lightdm_bg_color, 1.45)),
                                      to (shade(@lightdm_bg_color, 1.25)));
 }
 
 #login_button.button {
-	background-image: -gtk-gradient(linear, left top, left bottom,
+    background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_selected_bg_color, 0.85)),
                                      to (shade(@theme_selected_bg_color, 0.75)));
-	border-color: shade(@theme_selected_bg_color, 0.65);
-	box-shadow: inset 1px 0 alpha(shade (@lightdm_fg_color, 0.9), 0.3),
-                inset 0 1px alpha(shade (@lightdm_fg_color, 0.9), 0.3),
-                inset -1px 0 alpha(shade (@lightdm_fg_color, 0.9), 0.3),
-                inset 0 -1px alpha(shade (@lightdm_fg_color, 0.7), 0.15);
-	color: @lightdm_fg_color;
+
+    border-color: shade(@theme_selected_bg_color, 0.65);
+    color: @lightdm_fg_color;
+
+    box-shadow: inset 1px 0 alpha(shade(@lightdm_fg_color, 0.9), 0.3),
+                inset 0 1px alpha(shade(@lightdm_fg_color, 0.9), 0.3),
+                inset -1px 0 alpha(shade(@lightdm_fg_color, 0.9), 0.3),
+                inset 0 -1px alpha(shade(@lightdm_fg_color, 0.7), 0.15);
 }
 
 #login_button.button:hover {
-	background-image: -gtk-gradient(linear, left top, left bottom,
+    background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_selected_bg_color, 1.05)),
                                      to (shade(@theme_selected_bg_color, 0.95)));
 }
@@ -49,6 +53,7 @@
 #login_notebook .button:hover:focus,
 #login_notebook .button:active:focus {
     border-color: alpha(@theme_selected_bg_color, 0.4);
+
     box-shadow: inset 1px 0 alpha(@theme_selected_bg_color, 0.4),
                 inset 0 1px alpha(@theme_selected_bg_color, 0.4),
                 inset -1px 0 alpha(@theme_selected_bg_color, 0.4),
