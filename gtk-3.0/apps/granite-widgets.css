@@ -88,21 +88,21 @@
 
 .content-view .title,
 .content-view .option-title {
-    color: @theme_text_color;
+    color: @theme_fg_color;
 }
 
 .content-view .subtitle,
 .content-view .option-description {
-    color: alpha(@theme_text_color, 0.5);
+    color: alpha(@theme_fg_color, 0.5);
 }
 
 .content-view .button {
-    color: @theme_text_color;
+    color: @theme_fg_color;
 
     border-style: solid;
     border-radius: 3px;
 
-    background-color: alpha(@theme_base_color, 0.0);
+    background-color: alpha(@theme_fg_color, 0.0);
 
     background-image: none;
 }
@@ -119,7 +119,7 @@
 }
 
 .content-view .help_button * {
-    color: @theme_text_color;
+    color: @theme_fg_color;
 }   
 
 .content-view .toolbar {

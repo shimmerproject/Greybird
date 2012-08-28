@@ -212,14 +212,14 @@ GtkAssistant .sidebar .highlight {
 }
 
 GtkAssistant .sidebar {
-    background-color: mix(shade(@theme_bg_color, 1.1), shade(@theme_selected_bg_color, 1.35), 0.1);
+    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
     border-right-color: shade(@theme_bg_color, 0.9);
     border-radius: 0;
     border-style: solid;
     border-width: 0 1px 0 0;
     padding: 12px;
 
-    color: @theme_fg_color;
+    color: @theme_text_color;
 }
 
 /**************
@@ -594,7 +594,7 @@ GtkComboBox.combobox-entry .button:insensitive {
 }
 
 .entry:insensitive {
-    background-color: shade(@theme_base_color, 0.6);
+    background-color: alpha(@theme_base_color, 0.6);
     background-image: none;
 
     color: mix(@theme_text_color, @theme_base_color, 0.4);
@@ -839,6 +839,8 @@ GtkLabel:insensitive {
 /********
  * menu *
  ********/
+GtkTreeMenu.menu,
+GtkMenuToolButton.menu,
 .menu {
     background-color: shade(@theme_bg_color, 1.18);
     border-width: 0;
@@ -1374,6 +1376,7 @@ GtkScrolledWindow.frame {
 /*************
  * separator *
  *************/
+.view.separator,
 .separator {
     color: shade(@theme_bg_color, 0.8);
     border-color: shade(@theme_bg_color, 0.8);
@@ -1411,7 +1414,7 @@ GtkComboBox .separator {
 .sidebar,
 .sidebar.view,
 .sidebar .view {
-    background-color: mix(shade(@theme_bg_color, 1.1), shade(@theme_selected_bg_color, 1.35), 0.1);
+    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
 }
 
 .sidebar .frame {
@@ -1809,6 +1812,7 @@ GtkViewport.frame {
 
 .view {
     background-color: @theme_base_color;
+    color: @theme_text_color;
 }
 
 .view:selected,
