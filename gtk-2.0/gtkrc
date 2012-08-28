@@ -91,7 +91,7 @@ style "default"
 	fg[PRELIGHT]      = @fg_color
 	fg[SELECTED]      = @selected_fg_color
 	fg[ACTIVE]        = @fg_color
-	fg[INSENSITIVE]   = darker (@bg_color)
+	fg[INSENSITIVE]   = mix (0.4, @fg_color, @bg_color)
 
 	bg[NORMAL]        = @bg_color
 	bg[PRELIGHT]      = shade (1.02, @bg_color)
@@ -234,7 +234,7 @@ style "entry" = "wider"
 style "button" = "wider"
 {	
 	bg[NORMAL]        = shade (1.02, @bg_color) 
-	bg[PRELIGHT]      = shade (0.9, @base_color)
+	bg[PRELIGHT]      = shade (1.07, @bg_color)
 	bg[ACTIVE]        = shade (0.85, @bg_color)
 	bg[SELECTED]      = shade (0.5, @selected_bg_color)  
 	bg[INSENSITIVE]   = shade (0.95, @bg_color)
@@ -285,15 +285,15 @@ style "menu"
 	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
 	
 	bg[SELECTED]      = @selected_bg_color
-	bg[NORMAL]        = shade (0.98, @base_color)
+	bg[NORMAL]        = shade (1.18, @bg_color)
 	bg[PRELIGHT]      = @selected_bg_color
-	bg[ACTIVE]        = shade (0.98, @base_color)
-	bg[INSENSITIVE]   = shade (0.98, @base_color)
+	bg[ACTIVE]        = shade (1.18, @bg_color)
+	bg[INSENSITIVE]   = shade (1.18, @bg_color)
 	fg[NORMAL]        = @fg_color # Color for normal text.
 	fg[PRELIGHT]      = @base_color
 	fg[SELECTED]      = @base_color
 	fg[ACTIVE]        = @base_color
-	fg[INSENSITIVE]   = shade (0.75, @bg_color) # Text color for non-interactive menu items
+	fg[INSENSITIVE]   = mix (0.4, @fg_color, @bg_color) # Text color for non-interactive menu items
 	text[NORMAL]      = @text_color # Color for menu-item radio/checks.
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
 	text[PRELIGHT]    = @base_color
@@ -527,7 +527,7 @@ style "radiocheck"
 	bg[INSENSITIVE]	= shade (0.95, @bg_color)
 	text[PRELIGHT]	= shade (0.8, @selected_bg_color)
 	fg[ACTIVE]	= @fg_color
-	fg[INSENSITIVE] = shade (0.55, @bg_color)
+	fg[INSENSITIVE] = mix (0.4, @fg_color, @bg_color)
 
   	engine "murrine" 
 	{
@@ -787,7 +787,7 @@ style "fg-is-text-color-workaround"
 	fg[PRELIGHT]    = @text_color
 	fg[ACTIVE]      = @selected_fg_color
 	fg[SELECTED]    = @selected_fg_color
-	fg[INSENSITIVE] = darker (@bg_color)
+	fg[INSENSITIVE] = mix (0.4, @text_color, @bg_color)
 }
 widget_class "*<GtkListItem>*"		style "fg-is-text-color-workaround"
 # The same problem also exists for GtkCList and GtkCTree.

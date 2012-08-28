@@ -65,13 +65,13 @@
 .content-view,
 .content-view *,
 .content-view GtkViewport {
-    background-color: shade(@theme_base_color, 0.98);
+    background-color: shade(@theme_bg_color, 1.18);
 }
 
 .content-view-window {
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_base_color, 0.98)),
-                                     to (shade(@theme_base_color, 0.97)));
+                                     from (shade(@theme_bg_color, 1.18)),
+                                     to (shade(@theme_bg_color, 1.17)));
     
     border-radius: 5px;
     
@@ -200,8 +200,8 @@ GraniteWidgetsPopOver {
 .popover_bg {
     background-color: transparent;
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_base_color, 0.98)),
-                                     to (shade(@theme_base_color, 0.97)));
+                                     from (shade(@theme_bg_color, 1.18)),
+                                     to (shade(@theme_bg_color, 1.17)));
 }
 
 GraniteWidgetsPopOver .sidebar.view,
@@ -222,7 +222,7 @@ GraniteWidgetsPopOver .button:hover:active {
 
 GraniteWidgetsPopOver .entry {
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_base_color, 0.97)),
+                                     from (shade(@theme_bg_color, 1.17)),
                                      to (@theme_base_color));
 
     color: @theme_text_color;
