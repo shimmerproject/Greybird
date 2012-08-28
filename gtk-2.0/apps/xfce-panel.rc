@@ -65,7 +65,6 @@ style "workspace-switcher" = "theme-panel"
 
 style "window-buttons" = "theme-panel"
 {
-	font_name	= "9"
 	xthickness	= 3
 	ythickness	= 3
 
@@ -87,11 +86,16 @@ style "window-buttons" = "theme-panel"
 	}
 }
 
+style "indicator" = "theme-panel"
+{
+	xthickness	= 0
+	ythickness	= 0
+}
+
 widget "*PanelWidget*"			style "theme-panel"
 widget "*PanelApplet*"			style "theme-panel"
 widget "*fast-user-switch*"		style "theme-panel"
 widget "*CPUFreq*Applet*"		style "theme-panel"
-widget "*indicator-applet*"		style "theme-panel"
 class "PanelApp*"			style "theme-panel"
 class "PanelToplevel*"			style "theme-panel"
 widget_class "*PanelToplevel*"		style "theme-panel"
@@ -123,4 +127,7 @@ widget_class "*Panel*<GtkMenuBar>*"	style "theme-main-menu-text"
 widget "*.clock-applet-button.*"	style "theme-panel-text"
 widget "*PanelApplet*"			style "theme-panel-text"
 
+# Override general panel-style with specific plugin-styles
+widget "*indicator-applet*"		style "indicator"
+widget "*indicator-button*"		style "indicator"
 widget "*XfceTasklist*"			style "window-buttons"
