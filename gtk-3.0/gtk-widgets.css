@@ -899,7 +899,6 @@ GtkMenuToolButton.menu,
  * menuitem *
  ************/
 .menuitem {
-    color: @theme_fg_color;
     border-radius: 0;
     border-style: solid;
     border-width: 1px;
