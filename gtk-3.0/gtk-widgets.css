@@ -841,6 +841,7 @@ GtkLabel:insensitive {
  ********/
 GtkTreeMenu.menu,
 GtkMenuToolButton.menu,
+.toolbar .menu,
 .menu {
     background-color: shade(@theme_bg_color, 1.18);
     border-width: 0;
