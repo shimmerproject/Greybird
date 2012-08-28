@@ -208,19 +208,18 @@ GtkCalendar.button {
  * assistant *
  *************/
 GtkAssistant .sidebar .highlight {
-    color: @theme_text_color;
     font: bold;
 }
 
 GtkAssistant .sidebar {
-    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
+    background-color: mix(shade(@theme_bg_color, 1.1), shade(@theme_selected_bg_color, 1.35), 0.1);
     border-right-color: shade(@theme_bg_color, 0.9);
     border-radius: 0;
     border-style: solid;
     border-width: 0 1px 0 0;
     padding: 12px;
 
-    color: @theme_text_color;
+    color: @theme_fg_color;
 }
 
 /**************
@@ -388,27 +387,6 @@ GtkSwitch.slider,
     border-width: 1px;
 
     border-radius: 3px;
-}
-
-/**************
- * comboboxes *
- **************/
-GtkComboBox {
-    padding: 0;
-
-    -GtkComboBox-arrow-scaling: 0.5;
-    -GtkComboBox-shadow-type: none;
-}
-
-GtkComboBox .separator {
-    /* always disable separators */
-    -GtkWidget-wide-separators: true;
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0;
-}
-
-GtkComboBox .button {
-    color: @theme_fg_color;
 }
 
 /****************
@@ -608,14 +586,15 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-color: shade(@theme_selected_bg_color, 0.8);
 }
 
-.entry:selected {
+.entry:selected,
+.entry:selected:focus {
     background-color: @theme_selected_bg_color;
 
     color: @theme_selected_fg_color;
 }
 
 .entry:insensitive {
-    background-color: shade(@theme_base_color, 0.85);
+    background-color: shade(@theme_base_color, 0.6);
     background-image: none;
 
     color: mix(@theme_text_color, @theme_base_color, 0.4);
@@ -754,12 +733,12 @@ GtkLabel:insensitive {
 }
 
 .gtkstyle-fallback:prelight {
-    background-color: shade(@theme_bg_color, 1.10);
+    background-color: shade(@theme_bg_color, 1.1);
     color: @theme_fg_color;
 }
 
 .gtkstyle-fallback:active {
-    background-color: shade(@theme_bg_color, 0.90);
+    background-color: shade(@theme_bg_color, 0.9);
     color: @theme_fg_color;
 }
 
@@ -1018,7 +997,6 @@ GtkComboBox .menuitem *:hover {
 
 .notebook tab GtkLabel {
     padding: 1px 1px 2px 1px;
-    color: @theme_fg_color;
 }
 
 .notebook tab.top {
@@ -1065,8 +1043,8 @@ GtkComboBox .menuitem *:hover {
  * pane separator *
  ******************/
 .pane-separator {
-    color: shade(@theme_bg_color, 0.8);
-    background-color: @theme_bg_color;
+    color: transparent;
+    background-color: shade(@theme_bg_color, 0.8);
 }
 
 /*************************
@@ -1420,14 +1398,20 @@ GtkScrolledWindow.frame {
     border-color: @theme_bg_color;
 }
 
+GtkComboBox .separator {
+    /* always disable separators */
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-horizontal-separator: 0;
+    -GtkWidget-vertical-separator: 0;
+}
+
 /***********
  * sidebar *
  ***********/
 .sidebar,
 .sidebar.view,
 .sidebar .view {
-    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
-    color: @theme_text_color;
+    background-color: mix(shade(@theme_bg_color, 1.1), shade(@theme_selected_bg_color, 1.35), 0.1);
 }
 
 .sidebar .frame {
@@ -1486,8 +1470,6 @@ GtkScrolledWindow.frame {
  * statusbar *
  *************/
 GtkStatusbar {
-    -GtkStatusbar-shadow-type: none;
-
     padding: 3px;
     color: @theme_fg_color;
 }
@@ -1827,7 +1809,6 @@ GtkViewport.frame {
 
 .view {
     background-color: @theme_base_color;
-    color: @theme_text_color;
 }
 
 .view:selected,
