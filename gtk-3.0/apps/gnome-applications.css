@@ -7,8 +7,8 @@ PanelToplevel {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.5)),
                                      to (shade(@theme_bg_color, 1.05)));
-    padding: 0;
 
+    padding: 0;
     color: @theme_fg_color;
 }
 
@@ -17,11 +17,11 @@ PanelApplet {
 }
 
 PanelSeparator {
-    border-width: 0;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.5)),
                                      to (shade(@theme_bg_color, 1.05)));
 
+    border-width: 0;
     color: @theme_fg_color;
 }
 
@@ -38,17 +38,17 @@ PanelMenuBar.menubar.menuitem {
 }
 
 PanelAppletFrame { 
-    background-color: @theme_bg_color;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.5)),
                                      to (shade(@theme_bg_color, 1.05)));
+
+    background-color: @theme_bg_color;
     border-width: 0;
 }
 
 PanelApplet .button {
     -GtkButton-inner-border: 2;
 
-    border-image: none;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.5)),
                                      to (shade(@theme_bg_color, 1.05)));
@@ -56,7 +56,6 @@ PanelApplet .button {
     border-color: shade(@theme_bg_color, 0.7);
     border-radius: 0;
     border-width: 0 1px 0 1px;
-
     color: @theme_fg_color;
     text-shadow: none;
     box-shadow: none;
@@ -64,20 +63,20 @@ PanelApplet .button {
 
 PanelApplet .button:prelight:active,
 PanelApplet .button:active {
-    border-image: none;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 0.85)),
                                      to (shade(@theme_bg_color, 1.0))); 
+
     border-color: shade(@theme_bg_color, 0.7);
     border-radius: 0;
     border-width: 0 1px 0 1px;
 }
 
 PanelApplet .button:prelight {
-    border-image: none;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.7)),
                                      to (shade(@theme_bg_color, 1.25)));
+
     border-color: shade(@theme_bg_color, 0.7);
     border-radius: 0;
     border-width: 0 1px 0 1px;
@@ -109,16 +108,14 @@ NautilusWindow * {
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {
+    background-color: alpha(@theme_bg_color, 0.8);
     background-image: none;
-    background-color: alpha(@theme_bg_color, 0.84);
-
     color: @theme_fg_color;
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected {
+    background-color: alpha(@theme_selected_bg_color, 0.8);
     background-image: none;
-    background-color: alpha(@theme_selected_bg_color, 0.84);
-
     color: @theme_selected_fg_color;
 }
 
@@ -132,10 +129,10 @@ NautilusWindow * {
  * gnome terminal *
  ******************/
 TerminalScreen {
+    -TerminalScreen-background-darkness: 0.9;
+
     background-color: @theme_bg_color;
     color: @theme_fg_color;
-
-    -TerminalScreen-background-darkness: 0.9;
 }
 
 TerminalWindow GtkNotebook.notebook {

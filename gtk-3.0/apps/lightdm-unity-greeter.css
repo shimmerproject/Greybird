@@ -4,7 +4,6 @@
     border-color: alpha(white, 0.2);
     border-radius: 4px;
     padding: 1px;
-
     color: white;
 }
 
@@ -26,7 +25,6 @@
     border-color: alpha(white, 0.6);
     border-radius: 4px;
     padding: 7px;
-
     color: white;
     text-shadow: none;
 }
@@ -38,6 +36,5 @@
 .lightdm.entry:selected *,
 .lightdm.entry:selected:focused * {
     border-color: alpha(white, 0.9);
-
     color: white;
 }
