@@ -914,6 +914,11 @@ GtkComboBox .menuitem *:hover {
     color: @theme_selected_fg_color;
 }
 
+GtkTreeMenu.menu .menuitem:hover,
+GtkMenuToolButton.menu .menuitem:hover,
+.primary-toolbar .button .menu .menuitem:hover,
+.toolbar .menu .menuitem:hover,
+.toolbar .primary-toolbar .menu .menuitem:hover,
 .menuitem:hover,
 .menu .menuitem:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
