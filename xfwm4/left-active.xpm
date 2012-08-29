@@ -1,6 +1,7 @@
 /* XPM */
-static char * right_active_xpm[] = {
-"1 1 2 1",
+static char * left_active_xpm[] = {
+"2 2 2 1",
 " 	c None",
 ".	c #939393",
-"."};
+" .",
+" ."};

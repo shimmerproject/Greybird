@@ -222,6 +222,11 @@ GtkAssistant .sidebar {
     color: @theme_text_color;
 }
 
+GtkFileChooser .pane-separator {
+    color: transparent;
+    background-color: @theme_bg_color;
+}
+
 /**************
  * background *
  **************/
