@@ -58,6 +58,7 @@ PanelApplet .button {
     border-width: 0 1px 0 1px;
     color: @theme_fg_color;
     text-shadow: none;
+
     box-shadow: none;
 }
 
