@@ -557,16 +557,6 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-width: 1px 1px 1px 1px;
 }
 
-GtkComboBox.combobox-entry .button,
-GtkComboBox.combobox-entry .button:hover,
-GtkComboBox.combobox-entry .button:active,
-GtkComboBox.combobox-entry .button:insensitive {
-    border-top-color: shade(@theme_bg_color, 0.6);
-    border-right-color: shade(@theme_bg_color, 0.7);
-    border-bottom-color: shade(@theme_bg_color, 0.72);
-    border-left-color: shade(@theme_bg_color, 0.7);
-}
-
 /*********
  * entry *
  *********/
@@ -841,6 +831,7 @@ GtkLabel:insensitive {
  ********/
 GtkTreeMenu.menu,
 GtkMenuToolButton.menu,
+GtkComboBox .menu
 .primary-toolbar .button .menu,
 .toolbar .menu,
 .toolbar .primary-toolbar .menu,
@@ -905,7 +896,6 @@ GtkMenuToolButton.menu,
     padding: 3px 2px 3px 2px;
 }
 
-/* Workaround for lp:949368 */
 GtkComboBox .menuitem * {
     color: @theme_fg_color;
 }
@@ -914,11 +904,6 @@ GtkComboBox .menuitem *:hover {
     color: @theme_selected_fg_color;
 }
 
-GtkTreeMenu.menu .menuitem:hover,
-GtkMenuToolButton.menu .menuitem:hover,
-.primary-toolbar .button .menu .menuitem:hover,
-.toolbar .menu .menuitem:hover,
-.toolbar .primary-toolbar .menu .menuitem:hover,
 .menuitem:hover,
 .menu .menuitem:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
