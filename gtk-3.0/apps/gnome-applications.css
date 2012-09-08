@@ -94,18 +94,13 @@ WnckPager, WnckTasklist {
 /************
  * nautilus *
  ************/
-NautilusWindow * {
-    -GtkPaned-handle-size: 1;
-}
-
 .nautilus-canvas-item {
     border-radius: 3px;
 }
 
-/* desktop mode */
 .nautilus-desktop.nautilus-canvas-item {
-    color: #ffffff;
-    text-shadow: 1px 1px #000000;
+    color: #fff;
+    text-shadow: 1px 1px #000;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {
@@ -124,6 +119,67 @@ NautilusWindow * {
 .nautilus-desktop.nautilus-canvas-item:prelight,
 .nautilus-desktop.nautilus-canvas-item:selected {
     text-shadow: none;
+}
+
+NautilusWindow .sidebar .frame {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
+    border-radius: 0;
+}
+
+NautilusWindow > GtkGrid > .pane-separator {
+    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+NautilusView.frame,
+NautilusNotebook.notebook {
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+}
+
+NautilusNotebook .frame {
+    border-width: 1px 0 0 0;
+}
+
+NautilusQueryEditor .primary-toolbar.toolbar {
+    border-top-width: 1px;
+    border-bottom-width: 0;
+    padding: 4px;
+}
+
+NautilusQueryEditor .primary-toolbar.toolbar .button {
+    padding: 0;
+}
+
+NautilusQueryEditor .toolbar {
+    background-color: mix(@theme_bg_color, @theme_base_color, 0.5);
+    padding: 4px 4px 3px 4px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: @theme_bg_color;
+}
+
+NautilusQueryEditor .toolbar:nth-child(2) {
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar {
+    border-top-width: 0;
+}
+
+NautilusNotebook.notebook NautilusQueryEditor .toolbar:last-child,
+NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    border-bottom-width: 1px;
+    border-bottom-color: shade(@theme_bg_color, 0.8);
+}
+
+.toolbar NautilusPathBar .button {
+    padding: 1px 4px;
 }
 
 /******************

@@ -19,7 +19,7 @@
     -GtkButton-interior-focus: true;
     -GtkCheckButton-indicator-size: 15;
     -GtkCheckMenuItem-indicator-size: 12;
-    -GtkEntry-inner-border: 1;
+    -GtkEntry-inner-border: 2;
     -GtkEntry-progress-border: 0;
     -GtkExpander-expander-size: 12;
     -GtkHTML-link-color: @link_color;
@@ -1542,6 +1542,7 @@ GtkTextView {
  ***********/
 .toolbar {
     border-style: none;
+    padding: 2px;
 }
 
 /* primary-toolbar */
