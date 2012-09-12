@@ -1642,6 +1642,7 @@ GtkTextView {
                                      from (shade(@theme_bg_color, 0.93)),
                                      to (@theme_bg_color));
 
+    border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
     border-style: solid;
     border-width: 1px;
