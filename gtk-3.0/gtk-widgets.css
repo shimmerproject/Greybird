@@ -843,7 +843,7 @@ GtkComboBox .menu {
 .toolbar .primary-toolbar .menu,
 .menu {
     background-color: shade(@theme_bg_color, 1.18);
-    border-style: none;
+    border-width: 0;
     border-radius: 0;
     padding: 0;
     color: @theme_fg_color;
@@ -856,7 +856,7 @@ GtkComboBox .menu {
 .menu.button {
     background-color: shade(@theme_bg_color, 1.18);
     background-image: none;
-    border-style: none;
+    border-width: 0;
 }
 
 /***********
@@ -865,7 +865,8 @@ GtkComboBox .menu {
 .menubar {
     -GtkWidget-window-dragging: true;
 
-    border-style: none;
+    border-width: 0;
+    color: @theme_fg_color;
 }
 
 /***************
@@ -873,7 +874,7 @@ GtkComboBox .menu {
  ***************/
 .menubar.menuitem,
 .menubar .menuitem {
-    border-style: none;
+    border-width: 0;
     padding: 3px 5px 3px 5px;
 }
 
@@ -895,14 +896,14 @@ GtkComboBox .menu {
  ************/
 GtkTreeMenu .menuitem {
     padding: 0;
-
-    border-style: none;
+    border-width: 0;
 }
 
 GtkTreeMenu .menuitem * {
     color: @theme_fg_color;
 }
 
+.menuitem,
 .menu .menuitem {
     border-radius: 0;
     border-style: solid;
