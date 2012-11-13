@@ -712,6 +712,7 @@ GtkLabel:insensitive {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@error_bg_color, 1.1)),
                                      to (shade(@error_bg_color, 1.0)));
+
     border-style: solid;
     border-width: 1px;
     color: @error_fg_color;
@@ -876,7 +877,7 @@ GtkComboBox .menu {
 .menubar.menuitem,
 .menubar .menuitem {
     border-width: 0;
-    padding: 3px 5px 3px 5px;
+    padding: 3px 5px;
 }
 
 .menubar.menuitem:hover,
@@ -909,7 +910,7 @@ GtkTreeMenu .menuitem * {
     border-radius: 0;
     border-style: solid;
     border-width: 1px;
-    padding: 3px 2px 3px 2px;
+    padding: 3px 2px;
 }
 
 .menu .menuitem:active,
@@ -963,7 +964,7 @@ GtkTreeMenu .menuitem * {
 .menuitem .entry {
     background-color: shade(@theme_base_color, 0.98);
     background-image: none;
-    color: @theme_fg_color;
+    color: @theme_text_color;
     border-color: shade(@theme_bg_color, 0.7);
 }
 
@@ -1585,6 +1586,27 @@ GtkComboBox .separator {
     animation: spinner 1s infinite linear;
 }
 
+/*******
+ * osd *
+ *******/
+GtkWindow.osd {
+    background-color: @osd_bg;
+    color: @osd_fg;
+}
+
+GtkOverlay.osd {
+    background-color: transparent;
+}
+
+/* used by gnome-settings-daemon's media-keys OSD */
+.osd.trough {
+    background-color: shade(@osd_bg, 0.8);
+}
+
+.osd.progressbar {
+    background-color: @osd_fg;
+}
+
 /*************
  * statusbar *
  *************/
@@ -1676,9 +1698,7 @@ GtkTextView {
 
 .primary-toolbar .raised .button,
 .primary-toolbar .raised.button,
-.primary-toolbar .button:hover,
-.primary-toolbar .button:active,
-.primary-toolbar .button:insensitive {
+.primary-toolbar .button:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.15)),
                                      to (shade(@theme_bg_color, 1.07)));
