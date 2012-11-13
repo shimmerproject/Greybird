@@ -24,10 +24,10 @@
     -GtkExpander-expander-size: 12;
     -GtkHTML-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
-    -GtkMenuBar-internal-padding: 0;
     -GtkMenu-horizontal-padding: 0;
-    -GtkMenuItem-arrow-scaling: 0.4;
     -GtkMenu-vertical-padding: 0;
+    -GtkMenuBar-internal-padding: 0;
+    -GtkMenuItem-arrow-scaling: 0.4;
     -GtkNotebook-initial-gap: 0;
     -GtkNotebook-tab-overlap: -2;
     -GtkPaned-handle-size: 3;
@@ -528,6 +528,10 @@ GtkCalendar {
     padding: 0;
 }
 
+GtkCalendar:inconsistent {
+    color: alpha(@theme_fg_color, 0.6);
+}
+
 GtkCalendar.view {
     border-width: 1px;
     border-style: solid;
@@ -984,6 +988,10 @@ GtkTreeMenu .menuitem * {
     background-color: transparent;
 }
 
+.menuitem GtkCalendar:inconsistent {
+    color: alpha(@theme_fg_color, 0.6);
+}
+
 .menuitem GtkCalendar,
 .menuitem GtkCalendar.button,
 .menuitem GtkCalendar.header,
@@ -1193,7 +1201,6 @@ GtkLevelBar.vertical {
 .level-bar.indicator-discrete.fill-block.vertical:last-child {
     border-radius: 0 0 3px 3px;
 }
-
 */
 
 .level-bar.fill-block.level-high {
