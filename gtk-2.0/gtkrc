@@ -297,7 +297,7 @@ style "menu"
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
 	text[PRELIGHT]    = @base_color
 	text[SELECTED]    = @base_color
-	text[ACTIVE]      = @base_color
+	text[ACTIVE]      = @fg_color
 	text[INSENSITIVE] = @text_color
 	
 	engine "murrine" 
