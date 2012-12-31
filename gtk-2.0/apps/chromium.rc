@@ -9,7 +9,7 @@ style "chrome-gtk-frame"
     ChromeGtkFrame::inactive-frame-gradient-color = shade (1.08,@bg_color)
 
     ChromeGtkFrame::scrollbar-trough-color = @base_color
-    ChromeGtkFrame::scrollbar-slider-prelight-color = @panel_bg
-    ChromeGtkFrame::scrollbar-slider-normal-color = shade (1.4, @panel_bg)
+    ChromeGtkFrame::scrollbar-slider-prelight-color = shade(0.92, @bg_color)
+    ChromeGtkFrame::scrollbar-slider-normal-color = @bg_color
 }
 class "ChromeGtkFrame"		style "chrome-gtk-frame"
