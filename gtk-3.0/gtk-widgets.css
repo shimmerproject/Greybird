@@ -951,13 +951,10 @@ GtkMenuToolButton.menu .menuitem:hover,
     border-style: none;
 }
 
-.menuitem GtkCalendar,
-.menuitem GtkCalendar.button,
-.menuitem GtkCalendar.header,
-.menuitem GtkCalendar.view {
+.menuitem GtkCalendar.button {
     background-color: transparent;
     background-image: none;
-    border: 0;
+    border-style: none;
 }
 
 .menuitem .entry {
