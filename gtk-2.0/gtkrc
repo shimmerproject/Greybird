@@ -297,7 +297,7 @@ style "menu"
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
 	text[PRELIGHT]    = @base_color
 	text[SELECTED]    = @base_color
-	text[ACTIVE]      = @base_color
+	text[ACTIVE]      = @fg_color
 	text[INSENSITIVE] = @text_color
 	
 	engine "murrine" 
@@ -501,11 +501,12 @@ style "scale" = "button"
 
 	engine "murrine"
 	{
-		border_shades 			= {0.8, 0.6}
-		contrast			= 0.6
+		border_shades 			= {1.0, 0.75}
+		contrast			= 1.10
 		lightborderstyle		= 1
 		roundness			= 7
 		trough_shades			= {0.9, 1.1}
+		trough_border_shades		= {1.20, 1.20}
 	}
 }
 
