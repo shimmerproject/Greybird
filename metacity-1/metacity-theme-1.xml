@@ -13,12 +13,12 @@
 	<distance name="left_width" value="1"/>
 	<distance name="right_width" value="1"/>
 	<distance name="bottom_height" value="1"/>
-	<distance name="left_titlebar_edge" value="5"/>
-	<distance name="right_titlebar_edge" value="5"/>
-	<distance name="title_vertical_pad" value="3"/>
+	<distance name="left_titlebar_edge" value="4"/>
+	<distance name="right_titlebar_edge" value="4"/>
+	<distance name="title_vertical_pad" value="0"/>
 	<aspect_ratio name="button" value="1.0"/>
-	<border name="title_border" left="2" right="2" top="5" bottom="0"/>
-	<border name="button_border" left="2" right="2" top="3" bottom="0"/>
+	<border name="title_border" left="10" right="10" top="2" bottom="2"/>
+	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
 
 <frame_geometry name="shaded" parent="normal" rounded_top_left="true" rounded_top_right="true" rounded_bottom_left="false" rounded_bottom_right="false"/>
@@ -34,23 +34,23 @@
 	<distance name="left_width" value="2"/>
 	<distance name="right_width" value="2"/>
 	<distance name="bottom_height" value="2"/>
-	<distance name="left_titlebar_edge" value="3"/>
-	<distance name="right_titlebar_edge" value="3"/>
+	<distance name="left_titlebar_edge" value="2"/>
+	<distance name="right_titlebar_edge" value="2"/>
 	<distance name="title_vertical_pad" value="0"/>
-	<border name="title_border" left="2" right="2" top="4" bottom="3"/>
-	<border name="button_border" left="0" right="0" top="2" bottom="2"/>
-	<aspect_ratio name="button" value="1"/>
+	<aspect_ratio name="button" value="1.0"/>
+	<border name="title_border" left="10" right="10" top="0" bottom="0"/>
+	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
 
 <frame_geometry name="border" has_title="false">
-	<distance name="left_width" value="2"/>
-	<distance name="right_width" value="2"/>
-	<distance name="bottom_height" value="2"/>
+	<distance name="left_width" value="1"/>
+	<distance name="right_width" value="1"/>
+	<distance name="bottom_height" value="1"/>
 	<distance name="left_titlebar_edge" value="0"/>
 	<distance name="right_titlebar_edge" value="0"/>
 	<distance name="button_width" value="0"/>
 	<distance name="button_height" value="0"/>
-	<distance name="title_vertical_pad" value="4"/>
+	<distance name="title_vertical_pad" value="0"/>
 	<border name="title_border" left="0" right="0" top="0" bottom="0"/>
 	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
@@ -155,7 +155,7 @@
                color="shade/gtk:bg[NORMAL]/1.4" />
 	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2))"
-               color="shade/gtk:fg[NORMAL]/1.2" />
+               color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
 </draw_ops>
 
 <draw_ops name="title_unfocused">
@@ -164,7 +164,7 @@
                color="shade/gtk:bg[NORMAL]/1.2" />
 	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2))"
-               color="shade/gtk:fg[NORMAL]/2.0" />
+               color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.6" />
 </draw_ops>
 
 <!-- ::: BUTTON ICONS ::: -->
