@@ -22,6 +22,8 @@ style "theme-panel" = "dark"
 		roundness	= 0
 		glowstyle	= 0
 		glazestyle	= 0
+		textstyle	= 1
+		text_shade	= 0.2
 	}
 }
 
@@ -34,6 +36,11 @@ style "theme-panel-text"
 	text[NORMAL]	= @base_color
 	text[PRELIGHT]	= "#ffffff"
 	text[ACTIVE]	= @base_color
+
+	engine "murrine" {
+		textstyle	= 1
+		text_shade	= 0.2
+	}
 }
 
 style "panel-entry" = "dark"
