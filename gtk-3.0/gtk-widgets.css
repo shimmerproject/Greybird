@@ -10,7 +10,7 @@
     background-clip: padding-box;
     background-origin: border-box;
 
-    -GtkArrow-arrow-scaling: 0.5;
+    -GtkArrow-arrow-scaling: 0.6;
     -GtkButton-child-displacement-x: 1;
     -GtkButton-child-displacement-y: 1;
     -GtkButton-default-border: 0;
