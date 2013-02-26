@@ -81,7 +81,8 @@ GtkWindow {
     color: inherit;
 }
 
-*:insensitive {
+*:insensitive,
+*:insensitive:insensitive {
     color: mix(@theme_fg_color, @theme_bg_color, 0.4);
     text-shadow: 1px 1px alpha(@light_shadow, 0.4);
 }
