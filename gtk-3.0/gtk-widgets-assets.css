@@ -144,9 +144,15 @@
     background-image: url("assets/resize-grip.png");
 }
 
-.pane-separator,
-.separator {
+.pane-separator.horizontal,
+.separator.horizontal {
     background-image: url("assets/pane-separator.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.pane-separator.vertical,
+.separator.vertical {
+    background-image: url("assets/pane-separator-vertical.png");
     background-repeat: no-repeat;
     background-position: center center;
 }
