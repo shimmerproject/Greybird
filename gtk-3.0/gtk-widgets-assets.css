@@ -143,3 +143,10 @@
 .grip {
     background-image: url("assets/resize-grip.png");
 }
+
+.pane-separator,
+.separator {
+    background-image: url("assets/pane-separator.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
