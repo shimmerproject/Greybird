@@ -519,6 +519,10 @@ GtkDrawingArea {
     background-color: transparent;
 }
 
+GtkDrawingArea:insensitive {
+    background-color: @theme_bg_color;
+}
+
 /************
 * gucharmap *
 *************/
