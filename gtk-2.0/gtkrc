@@ -63,8 +63,8 @@ style "default"
 	GtkScrollbar		::slider-width				= 9
 	#GtkScrollbar		::activate-slider			= 1
 	GtkScrollbar		::trough-border				= 3
-	GtkScrollbar		::has-backward-stepper 			= 0
-	GtkScrollbar		::has-forward-stepper			= 0 
+	GtkScrollbar		::has-backward-stepper 			= 1
+	GtkScrollbar		::has-forward-stepper			= 1 
 
 	GtkScrolledWindow	::scrollbar-spacing			= 0
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
