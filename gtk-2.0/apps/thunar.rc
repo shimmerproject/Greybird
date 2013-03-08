@@ -5,6 +5,7 @@ style "sidepane"
 	
 	bg[NORMAL]		= mix (0.1, shade (1.35,@selected_bg_color), shade (0.9,@base_color)) #shade (0.92,@base_color)
 	bg[PRELIGHT]		= shade (1.5,@selected_bg_color)
+	text[NORMAL]		= mix(0.3, @base_color, @text_color)
 }
 
 style "breadcrumbs" 
