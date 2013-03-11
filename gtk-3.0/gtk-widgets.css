@@ -18,7 +18,7 @@
     -GtkButton-inner-border: 1;
     -GtkButton-interior-focus: true;
     -GtkCheckButton-indicator-size: 15;
-    -GtkCheckMenuItem-indicator-size: 12;
+    -GtkCheckMenuItem-indicator-size: 14;
     -GtkEntry-inner-border: 2;
     -GtkEntry-progress-border: 0;
     -GtkExpander-expander-size: 12;
@@ -1875,6 +1875,17 @@ GtkTextView {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@toolbar_bg_color, 1.15)),
                                      to (shade(@toolbar_bg_color, 1.07)));
+}
+
+.primary-toolbar .button:focus,
+.primary-toolbar .button:hover:focus,
+.primary-toolbar .button:active:focus,
+.primary-toolbar .button:active:hover:focus,
+.toolbar .button:focus,
+.toolbar .button:hover:focus,
+.toolbar .button:active:focus,
+.toolbar .button:active:hover:focus {
+    border-color: shade(@toolbar_bg_color, 0.8);
 }
 
 .primary-toolbar .button:insensitive,
