@@ -286,7 +286,10 @@ GtkAssistant .sidebar {
                                      to (shade(@theme_bg_color, 1.07)));
 }
 
-.button:focus {
+.button:focus,
+.button:hover:focus,
+.button:active:focus,
+.button:active:hover:focus {
     border-color: shade(@theme_selected_bg_color, 0.8);
 }
 
@@ -553,7 +556,7 @@ GtkCalendar {
 }
 
 GtkCalendar:inconsistent {
-    color: alpha(@theme_fg_color, 0.6);
+    color: mix(@theme_fg_color, @theme_bg_color, 0.5);
 }
 
 GtkCalendar.view {
@@ -576,6 +579,7 @@ GtkCalendar.header {
 }
 
 GtkCalendar.button,
+GtkCalendar.button:hover,
 GtkCalendar.button:insensitive {
     border-width: 0;
     background-color: transparent;
@@ -586,7 +590,6 @@ GtkCalendar.button:insensitive {
 GtkCalendar.highlight {
     border-width: 0;
     background-color: transparent;
-    color: shade(@theme_fg_color, 0.6);
 }
 
 /******************
@@ -636,6 +639,7 @@ GtkComboBox.combobox-entry .button:insensitive {
     color: @theme_text_color;
 }
 
+.entry:active,
 .entry:focus {
     border-color: shade(@theme_selected_bg_color, 0.8);
 }
@@ -1017,6 +1021,10 @@ GtkTreeMenu .menuitem * {
 .menuitem.radio:active {
     border-style: none;
     background-color: transparent;
+}
+
+.menuitem GtkCalendar:inconsistent {
+    color: mix(@menu_fg_color, @menu_bg_color, 0.5);
 }
 
 .menuitem GtkCalendar.button {
@@ -1480,9 +1488,28 @@ GtkScrolledWindow GtkViewport.frame {
     border-color: transparent;
 }
 
+.toolbar .button .separator,
+.toolbar .button.separator,
+.primary-toolbar .button .separator,
+.primary-toolbar .button.separator {
+    border-color: transparent;
+}
+
+.toolbar .button .separator:insensitive,
+.toolbar .button.separator:insensitive,
+.primary-toolbar .button .separator:insensitive,
+.primary-toolbar .button.separator:insensitive {
+    border-color: transparent;
+}
+
 .menuitem.separator {
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
+
+    border-image: -gtk-gradient(linear,
+                     left top, left bottom,
+                     from (transparent),
+                     to (transparent)) 1;
 
     border-color: @menu_bg_color;
     color: @menu_bg_color;
@@ -1793,6 +1820,7 @@ GtkTextView {
 }
 
 .primary-toolbar GtkComboBox,
+.primary-toolbar GtkComboBox .cell 
 .primary-toolbar .button *,
 .primary-toolbar .button {
     padding: 2px;
@@ -1819,7 +1847,8 @@ GtkTextView {
 }
 
 .primary-toolbar .button:hover,
-.toolbar .button:hover {
+.toolbar .button:hover,
+.toolbar GtkComboBox .cell:hover {
     border-top-color: shade(@toolbar_bg_color, 0.85);
     border-right-color: shade(@toolbar_bg_color, 0.78);
     border-left-color: shade(@toolbar_bg_color, 0.78);
@@ -1871,6 +1900,11 @@ GtkTextView {
     border-bottom-color: shade(@toolbar_bg_color, 0.72);
 }
 
+.primary-toolbar .entry:active,
+.primary-toolbar .entry:focus {
+    border-color: shade(@theme_selected_bg_color, 0.8);
+}
+
 .primary-toolbar GtkSeparatorToolItem,
 .primary-toolbar .separator,
 .primary-toolbar .separator:insensitive {
@@ -1881,7 +1915,7 @@ GtkTextView {
 .inline-toolbar.toolbar {
     -GtkToolbar-button-relief: normal;
 
-    padding: 2px;
+    padding: 1px;
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
@@ -1902,6 +1936,7 @@ GtkTextView {
     padding: 1px;
     border-width: 1px 0 1px 1px;
     border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_bg_color, 1.02), 1.05)),
