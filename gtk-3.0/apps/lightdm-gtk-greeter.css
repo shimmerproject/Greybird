@@ -1,3 +1,73 @@
+#login_window {
+    background-color: shade (@lightdm_bg_color, 0.9);
+
+    color: @lightdm_fg_color;
+    border-width: 0px;
+    border-style: solid;
+    border-color: @dark_shadow;
+    box-shadow: inset 1px 0px alpha(@light_shadow,0.2),
+		inset -1px 0px alpha(@light_shadow,0.2),
+		inset 0px 1px alpha(@light_shadow,0.2),
+                inset 0px -1px alpha(@light_shadow,0.2);
+    border-radius: 10px;
+}
+
+#panel_window,
+#menubar {
+    background-color: @lightdm_bg_color;
+    background-image: none;
+    color: @lightdm_fg_color;
+    border-bottom-color: alpha(@light_shadow,0.2);
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+}
+
+#menubar.menuitem:hover,
+#menubar .menuitem:hover  {
+    background-color: shade(@selected_bg_color, 0.9);
+}
+
+#message_label {
+    color: #d20f0f;
+}
+
+#cancel_button,
+#login_button,
+#login_window .button {
+    background-color: shade(@lightdm_bg_color, 0.9);
+    background-image: none;
+
+    border-top-color: alpha(@dark_shadow, 0.9);
+    border-bottom-color: alpha(@dark_shadow, 0.9);
+    border-left-color: alpha (@dark_shadow, 0.9);
+    border-right-color: alpha (@dark_shadow, 0.9);
+    color: @lightdm_fg_color;
+    padding: 4px 16px 4px 16px;
+    border-radius: 4px;
+
+    box-shadow: inset 1px 0px alpha(@light_shadow, 0.2),
+                inset -1px 0px alpha(@light_shadow, 0.2),
+                inset 0px 1px alpha(@light_shadow, 0.3),
+                inset 0px -1px alpha(@light_shadow, 0.1);
+}
+
+#login_window GtkComboBox .button {
+    padding: 2px 6px 2px 2px;
+}
+
+#logo {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: alpha(@dark_shadow,0.9);
+    padding: 3px;
+    box-shadow: inset 1px 0px alpha(@light_shadow, 0.2),
+                inset -1px 0px alpha(@light_shadow, 0.2),
+                inset 0px 1px alpha(@light_shadow, 0.3),
+                inset 0px -1px alpha(@light_shadow, 0.1);
+}
+
+/* Code for lightdm-gtk-greeter <= 1.6
 #panel_window #menubar,
 #login_notebook {
     background-color: @lightdm_bg_color;
@@ -59,3 +129,4 @@
                 inset -1px 0 alpha(@theme_selected_bg_color, 0.4),
                 inset 0 -1px alpha(@theme_selected_bg_color, 0.4);
 }
+*/
