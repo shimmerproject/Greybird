@@ -1,7 +1,6 @@
 #login_window {
     background-color: shade (@lightdm_bg_color, 0.9);
 
-    color: @lightdm_fg_color;
     border-width: 0px;
     border-style: solid;
     border-color: @dark_shadow;
@@ -12,19 +11,32 @@
     border-radius: 10px;
 }
 
+#login_window * {
+    color: @lightdm_fg_color;
+}
+
+#prompt_entry {
+    color: @lightdm_bg_color;
+}
+
 #panel_window,
 #menubar {
     background-color: @lightdm_bg_color;
     background-image: none;
     color: @lightdm_fg_color;
-    border-bottom-color: alpha(@light_shadow,0.2);
+    /*border-bottom-color: alpha(@light_shadow,0.2);*/
     border-style: solid;
-    border-width: 0px 0px 1px 0px;
+    border-width: 0px 0px 0px 0px;
 }
 
-#menubar.menuitem:hover,
-#menubar .menuitem:hover  {
+#panel_window.menubar.menuitem:hover,
+#panel_window.menubar .menuitem:hover,
+#panel_window .menubar.menuitem:hover {
     background-color: shade(@selected_bg_color, 0.9);
+    border-color: shade(@theme_selected_bg_color, 1.1);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_selected_bg_color, 1.2)),
+                                     to (shade(@theme_selected_bg_color, 1.0)));
 }
 
 #message_label {
@@ -41,7 +53,6 @@
     border-bottom-color: alpha(@dark_shadow, 0.9);
     border-left-color: alpha (@dark_shadow, 0.9);
     border-right-color: alpha (@dark_shadow, 0.9);
-    color: @lightdm_fg_color;
     padding: 4px 16px 4px 16px;
     border-radius: 4px;
 
@@ -55,6 +66,14 @@
     padding: 2px 6px 2px 2px;
 }
 
+#user_combobox .menu * {
+    color: shade (@lightdm_fg_color, 0.2);
+}
+
+#user_combobox .menu *:hover {
+    color: @lightdm_fg_color;
+}
+
 #logo {
     border-width: 1px;
     border-style: solid;
@@ -65,6 +84,15 @@
                 inset -1px 0px alpha(@light_shadow, 0.2),
                 inset 0px 1px alpha(@light_shadow, 0.3),
                 inset 0px -1px alpha(@light_shadow, 0.1);
+}
+
+#login_window .button:hover {
+    background-color: shade(@lightdm_bg_color, 1.05);
+    color: @lightdm_fg_color;
+}
+
+#login_button:hover {
+    background-color: shade(@selected_bg_color, 0.8);
 }
 
 /* Code for lightdm-gtk-greeter <= 1.6
