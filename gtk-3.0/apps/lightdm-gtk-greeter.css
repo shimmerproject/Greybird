@@ -25,8 +25,17 @@
     background-image: none;
     color: @lightdm_fg_color;
     /*border-bottom-color: alpha(@light_shadow,0.2);*/
+    text-shadow: 0px 1px alpha(@dark_shadow, 0.8);
     border-style: solid;
     border-width: 0px 0px 0px 0px;
+}
+
+#menubar * {
+    text-shadow: none;
+}
+
+#menubar *:hover {
+    text-shadow: 0px 1px alpha(@dark_shadow, 0.8);
 }
 
 #panel_window.menubar.menuitem:hover,
@@ -55,7 +64,7 @@
     border-right-color: alpha (@dark_shadow, 0.9);
     padding: 4px 16px 4px 16px;
     border-radius: 4px;
-
+    text-shadow: 0px 1px alpha(@dark_shadow, 1.0);
     box-shadow: inset 1px 0px alpha(@light_shadow, 0.2),
                 inset -1px 0px alpha(@light_shadow, 0.2),
                 inset 0px 1px alpha(@light_shadow, 0.3),
@@ -68,10 +77,12 @@
 
 #user_combobox .menu * {
     color: shade (@lightdm_fg_color, 0.2);
+    text-shadow: none;
 }
 
 #user_combobox .menu *:hover {
     color: @lightdm_fg_color;
+    text-shadow: 0px 1px alpha(@dark_shadow, 0.4);
 }
 
 #logo {
@@ -86,8 +97,9 @@
                 inset 0px -1px alpha(@light_shadow, 0.1);
 }
 
+
 #login_window .button:hover {
-    background-color: shade(@lightdm_bg_color, 1.05);
+    background-color: shade(@lightdm_bg_color, 1.15);
     color: @lightdm_fg_color;
 }
 
