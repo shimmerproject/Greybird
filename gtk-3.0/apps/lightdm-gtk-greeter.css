@@ -71,6 +71,10 @@
                 inset 0px -1px alpha(@light_shadow, 0.1);
 }
 
+#login_window .button:focus {
+    border-color: @theme_selected_bg_color;
+}
+
 #login_window GtkComboBox .button {
     padding: 2px 6px 2px 2px;
 }
