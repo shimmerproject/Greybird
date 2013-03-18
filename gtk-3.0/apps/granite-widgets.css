@@ -203,11 +203,15 @@ GraniteWidgetsPopOver .button:hover:active {
 }
 
 GraniteWidgetsPopOver .entry {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_base_color, 0.99)),
-                                     to (@theme_base_color));
+    border-color: shade(@menu_bg_color, 0.7);
+    background-color: @menu_bg_color;
+    background-image: none;
+    color: @menu_fg_color;
+}
 
-    color: @theme_text_color;
+GraniteWidgetsPopOver .entry:active,
+GraniteWidgetsPopOver .entry:focus {
+    border-color: shade(@theme_selected_bg_color, 0.8);
 }
 
 .button.app {
