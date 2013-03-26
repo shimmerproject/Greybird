@@ -1,4 +1,5 @@
-#login_window {
+#login_window,
+#login_notebook {
     background-color: shade (@lightdm_bg_color, 0.9);
 
     border-width: 0px;
@@ -9,6 +10,10 @@
 		inset 0px 1px alpha(@light_shadow,0.2),
                 inset 0px -1px alpha(@light_shadow,0.2);
     border-radius: 10px;
+}
+
+#login_notebook {
+    border-radius: 0px;
 }
 
 #login_window * {
@@ -75,6 +80,11 @@
     border-color: @theme_selected_bg_color;
 }
 
+#language_combobox .button:insensitive,
+#session_combobox .button:insensitive {
+    background-color: shade (@lightdm_bg_color, 1.5);
+}
+
 #login_window GtkComboBox .button {
     padding: 2px 6px 2px 2px;
 }
@@ -110,67 +120,3 @@
 #login_button:hover {
     background-color: shade(@selected_bg_color, 0.8);
 }
-
-/* Code for lightdm-gtk-greeter <= 1.6
-#panel_window #menubar,
-#login_notebook {
-    background-color: @lightdm_bg_color;
-    background-image: none;
-    color: @lightdm_fg_color;
-}
-
-#login_notebook .button,
-#cancel_button,
-#login_button {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@lightdm_bg_color, 1.15)),
-                                     to (shade(@lightdm_bg_color, 0.92)));
-
-    border-color: shade(@lightdm_bg_color, 0.6);
-    color: @lightdm_fg_color;
-
-    box-shadow: inset 1px 0 alpha(shade(@lightdm_fg_color, 0.9), 0.2),
-                inset 0 1px alpha(shade(@lightdm_fg_color, 0.9), 0.2),
-                inset -1px 0 alpha(shade(@lightdm_fg_color, 0.9), 0.2),
-                inset 0 -1px alpha(shade(@lightdm_fg_color, 0.7), 0.1);
-}
-
-#login_notebook .button:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@lightdm_bg_color, 1.45)),
-                                     to (shade(@lightdm_bg_color, 1.25)));
-}
-
-#login_button.button {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_selected_bg_color, 0.85)),
-                                     to (shade(@theme_selected_bg_color, 0.75)));
-
-    border-color: shade(@theme_selected_bg_color, 0.65);
-    color: @lightdm_fg_color;
-
-    box-shadow: inset 1px 0 alpha(shade(@lightdm_fg_color, 0.9), 0.3),
-                inset 0 1px alpha(shade(@lightdm_fg_color, 0.9), 0.3),
-                inset -1px 0 alpha(shade(@lightdm_fg_color, 0.9), 0.3),
-                inset 0 -1px alpha(shade(@lightdm_fg_color, 0.7), 0.15);
-}
-
-#login_button.button:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_selected_bg_color, 1.05)),
-                                     to (shade(@theme_selected_bg_color, 0.95)));
-}
-
-#panel_window .menubar.menuitem:focus,
-#panel_window .menubar .menuitem:focus,
-#login_notebook .button:focus,
-#login_notebook .button:hover:focus,
-#login_notebook .button:active:focus {
-    border-color: alpha(@theme_selected_bg_color, 0.4);
-
-    box-shadow: inset 1px 0 alpha(@theme_selected_bg_color, 0.4),
-                inset 0 1px alpha(@theme_selected_bg_color, 0.4),
-                inset -1px 0 alpha(@theme_selected_bg_color, 0.4),
-                inset 0 -1px alpha(@theme_selected_bg_color, 0.4);
-}
-*/
