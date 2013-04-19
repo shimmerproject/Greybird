@@ -1,0 +1,56 @@
+XfcePanelWindow *,
+WrapperPlug * {
+    background-color: shade(#686868, 0.35);
+    background-image: none;
+    color: @lightdm_fg_color;
+    transition: none;
+    box-shadow: none;
+    border-style: none;
+    border-radius: none;
+}
+
+XfcePanelWindow .button,
+XfceTasklist .button {
+    background-color: shade(#686868, 0.35);
+    background-image: none;
+    color: @lightdm_fg_color;
+    transition: none;
+    border-color: shade(#686868, 0.35); /* make the panel-buttons flat */
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 2px;
+}
+
+XfcePanelWindow .button:active,
+XfceTasklist .button:active,
+XfceIndicatorBox .button:active {
+    background-color: shade(@selected_bg_color, 0.6);
+    background-image: none;
+    border-color: shade(@lightdm_bg_color, 1.4);
+    border-radius: 0px;
+    box-shadow: inset 0px -1px alpha(#fff, 0.15),
+                inset 0px 1px alpha(#000, 0.25);
+    transition: none;
+}
+
+XfcePanelWindow *:hover,
+XfcePanelWindow .button:active:hover,
+XfcePanelWindow .button:hover,
+XfceIndicatorBox .button:hover,
+XfceTasklist .button:hover,
+WrapperPlug *:hover,
+XfceIndicatorBox *:hover {
+    background-color: shade(@selected_bg_color, 0.9);
+    background-image: none;
+    color: @lightdm_fg_color;
+    transition: none;
+    border-color: shade(@selected_bg_color, 1.1);
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+/* Workaround to fix size of indicator-icons */
+XfceIndicatorBox .button {
+    border: 1px;
+    padding: 0px;
+}
