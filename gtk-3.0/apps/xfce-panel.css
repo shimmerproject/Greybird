@@ -57,7 +57,11 @@ XfceIndicatorBox .button {
 
 /* More workarounds to fix the labels and icon-backgrounds in the indicator-menus */
 XfceIndicatorButton GtkLabel,
-XfceIndicatorButton .menu GtkImage {
+XfceIndicatorButton .menu GtkImage,
+XfcePanelWindow .menu GtkLabel,
+XfcePanelWindow .menu GtkImage,
+WrapperPlug  .menu GtkLabel,
+WrapperPlug  .menu GtkImage {
     padding: 0;
     border-width: 0;
     border-radius: 0;
@@ -66,8 +70,11 @@ XfceIndicatorButton .menu GtkImage {
 }
 
 XfceIndicatorButton GtkLabel:hover,
-XfceIndicatorButton .menu GtkImage:hover
- {
+XfceIndicatorButton .menu GtkImage:hover,
+XfcePanelWindow .menu GtkLabel:hover,
+XfcePanelWindow .menu GtkImage:hover,
+WrapperPlug  .menu GtkLabel:hover,
+WrapperPlug  .menu GtkImage:hover {
     border-color: shade(@theme_selected_bg_color, 1.1);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_selected_bg_color, 1.2)),
