@@ -25,7 +25,9 @@ XfcePanelWindow .button:active,
 XfceTasklist .button:active,
 XfceIndicatorBox .button:active {
     background-color: shade(@selected_bg_color, 0.6);
-    background-image: none;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@selected_bg_color, 0.6)),
+                                     to (shade(@selected_bg_color, 0.68)));
     border-color: shade(@lightdm_bg_color, 1.4);
     border-radius: 0px;
     box-shadow: inset 0px -1px alpha(#fff, 0.15),
@@ -41,10 +43,12 @@ XfceTasklist .button:hover,
 WrapperPlug *:hover,
 XfceIndicatorBox *:hover {
     background-color: shade(@selected_bg_color, 0.9);
-    background-image: none;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@selected_bg_color, 0.8)),
+                                     to (shade(@selected_bg_color, 0.88)));
     color: @lightdm_fg_color;
     transition: none;
-    border-color: shade(@selected_bg_color, 1.1);
+    border-color: shade(@selected_bg_color, 0.95);
     border-radius: 0px;
     box-shadow: none;
 }
