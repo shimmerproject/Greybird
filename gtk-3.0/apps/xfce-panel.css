@@ -60,8 +60,6 @@ XfceIndicatorBox .button {
 }
 
 /* More workarounds to fix the labels and icon-backgrounds in the indicator-menus */
-XfceIndicatorButton GtkLabel,
-XfceIndicatorButton .menu GtkImage,
 XfcePanelWindow .menu GtkLabel,
 XfcePanelWindow .menu GtkImage,
 WrapperPlug  .menu GtkLabel,
@@ -73,8 +71,6 @@ WrapperPlug  .menu GtkImage {
     color: @menu_fg_color;
 }
 
-XfceIndicatorButton GtkLabel:hover,
-XfceIndicatorButton .menu GtkImage:hover,
 XfcePanelWindow .menu GtkLabel:hover,
 XfcePanelWindow .menu GtkImage:hover,
 WrapperPlug  .menu GtkLabel:hover,
@@ -83,4 +79,9 @@ WrapperPlug  .menu GtkImage:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_selected_bg_color, 1.2)),
                                      to (shade(@theme_selected_bg_color, 1.0)));
+}
+
+/* Workaround for sound-indicator's volume-slider */
+WrapperPlug .menu GtkScale.slider:hover {
+    border-radius: 7px;
 }
