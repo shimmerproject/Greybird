@@ -6,7 +6,7 @@ WrapperPlug * {
     transition: none;
     box-shadow: none;
     border-style: none;
-    border-radius: none;
+    border-radius: 0px;
 }
 
 XfcePanelWindow .button,
