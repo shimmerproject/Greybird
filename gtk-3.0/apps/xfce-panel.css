@@ -1,5 +1,11 @@
-XfcePanelWindow *,
-WrapperPlug * {
+XfceHeading {
+    background-color: @theme_base_color;
+    background-image: none;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.panel * {
     background-color: shade(#686868, 0.35);
     background-image: none;
     color: @lightdm_fg_color;
@@ -9,8 +15,7 @@ WrapperPlug * {
     border-radius: 0px;
 }
 
-XfcePanelWindow .button,
-XfceTasklist .button {
+.panel .button {
     background-color: shade(#686868, 0.35);
     background-image: none;
     color: @lightdm_fg_color;
@@ -21,9 +26,7 @@ XfceTasklist .button {
     padding: 2px;
 }
 
-XfcePanelWindow .button:active,
-XfceTasklist .button:active,
-XfceIndicatorBox .button:active {
+.panel .button:active {
     background-color: shade(@selected_bg_color, 0.6);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@selected_bg_color, 0.6)),
@@ -35,13 +38,7 @@ XfceIndicatorBox .button:active {
     transition: none;
 }
 
-XfcePanelWindow *:hover,
-XfcePanelWindow .button:active:hover,
-XfcePanelWindow .button:hover,
-XfceIndicatorBox .button:hover,
-XfceTasklist .button:hover,
-WrapperPlug *:hover,
-XfceIndicatorBox *:hover {
+.panel *:hover {
     background-color: shade(@selected_bg_color, 0.9);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@selected_bg_color, 0.8)),
@@ -53,17 +50,10 @@ XfceIndicatorBox *:hover {
     box-shadow: none;
 }
 
-/* Workaround to fix size of indicator-icons */
-XfceIndicatorBox .button {
-    border: 1px;
-    padding: 0px;
-}
-
-/* More workarounds to fix the labels and icon-backgrounds in the indicator-menus */
-XfcePanelWindow .menu GtkLabel,
-XfcePanelWindow .menu GtkImage,
-WrapperPlug  .menu GtkLabel,
-WrapperPlug  .menu GtkImage {
+/* Override dark panel style in menus */
+.panel .menu,
+.panel .menu GtkLabel,
+.panel .menu GtkImage {
     padding: 0;
     border-width: 0;
     border-radius: 0;
@@ -71,10 +61,8 @@ WrapperPlug  .menu GtkImage {
     color: @menu_fg_color;
 }
 
-XfcePanelWindow .menu GtkLabel:hover,
-XfcePanelWindow .menu GtkImage:hover,
-WrapperPlug  .menu GtkLabel:hover,
-WrapperPlug  .menu GtkImage:hover {
+.panel .menu GtkLabel:hover,
+.panel .menu GtkImage:hover {
     border-color: shade(@theme_selected_bg_color, 1.1);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_selected_bg_color, 1.2)),
@@ -82,6 +70,12 @@ WrapperPlug  .menu GtkImage:hover {
 }
 
 /* Workaround for sound-indicator's volume-slider */
-WrapperPlug .menu GtkScale.slider:hover {
+.panel .menu GtkScale.slider:hover {
     border-radius: 7px;
+}
+
+/* Workaround to fix size of indicator-icons */
+XfceIndicatorButton .button {
+    border: 1px;
+    padding: 0px;
 }
