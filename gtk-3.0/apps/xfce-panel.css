@@ -24,7 +24,8 @@ XfceHeading {
                 inset 0px 1px alpha(#000, 0.25);
 }
 
-.panel *:hover {
+.panel *:hover,
+.panel *:active:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@selected_bg_color, 0.8)),
                                      to (shade(@selected_bg_color, 0.88)));
