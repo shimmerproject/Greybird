@@ -30,6 +30,7 @@ XfceHeading {
                                      from (shade(@selected_bg_color, 0.8)),
                                      to (shade(@selected_bg_color, 0.88)));
     border-color: shade(@selected_bg_color, 0.95);
+    transition: background 0.12s ease-in-out;
 }
 
 /* Override dark panel style in menus */
@@ -40,9 +41,11 @@ XfceHeading {
     color: @menu_fg_color;
 }
 
+.panel .menu *:hover,
 .panel .menu GtkLabel:hover,
 .panel .menu GtkImage:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_selected_bg_color, 1.2)),
                                      to (shade(@theme_selected_bg_color, 1.0)));
+    transition: none;
 }
