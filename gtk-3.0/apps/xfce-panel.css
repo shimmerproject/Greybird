@@ -15,67 +15,33 @@ XfceHeading {
     border-radius: 0px;
 }
 
-.panel .button {
-    background-color: shade(#686868, 0.35);
-    background-image: none;
-    color: @lightdm_fg_color;
-    transition: none;
-    border-color: shade(#686868, 0.35); /* make the panel-buttons flat */
-    border-radius: 0px;
-    box-shadow: none;
-    padding: 2px;
-}
-
 .panel .button:active {
-    background-color: shade(@selected_bg_color, 0.6);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@selected_bg_color, 0.6)),
                                      to (shade(@selected_bg_color, 0.68)));
     border-color: shade(@lightdm_bg_color, 1.4);
-    border-radius: 0px;
     box-shadow: inset 0px -1px alpha(#fff, 0.15),
                 inset 0px 1px alpha(#000, 0.25);
-    transition: none;
 }
 
 .panel *:hover {
-    background-color: shade(@selected_bg_color, 0.9);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@selected_bg_color, 0.8)),
                                      to (shade(@selected_bg_color, 0.88)));
-    color: @lightdm_fg_color;
-    transition: none;
     border-color: shade(@selected_bg_color, 0.95);
-    border-radius: 0px;
-    box-shadow: none;
 }
 
 /* Override dark panel style in menus */
 .panel .menu,
 .panel .menu GtkLabel,
 .panel .menu GtkImage {
-    padding: 0;
-    border-width: 0;
-    border-radius: 0;
     background-color: shade(@menu_bg_color, 1.18);
     color: @menu_fg_color;
 }
 
 .panel .menu GtkLabel:hover,
 .panel .menu GtkImage:hover {
-    border-color: shade(@theme_selected_bg_color, 1.1);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_selected_bg_color, 1.2)),
                                      to (shade(@theme_selected_bg_color, 1.0)));
-}
-
-/* Workaround for sound-indicator's volume-slider */
-.panel .menu GtkScale.slider:hover {
-    border-radius: 7px;
-}
-
-/* Workaround to fix size of indicator-icons */
-XfceIndicatorButton .button {
-    border: 1px;
-    padding: 0px;
 }
