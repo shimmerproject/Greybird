@@ -5,6 +5,10 @@ XfceHeading {
     border-width: 0px;
 }
 
+.panel {
+    background-color: shade(#686868, 0.35);
+}
+
 .panel * {
     background-color: shade(#686868, 0.35);
     background-image: none;
@@ -48,4 +52,10 @@ XfceHeading {
                                      from (shade(@theme_selected_bg_color, 1.2)),
                                      to (shade(@theme_selected_bg_color, 1.0)));
     transition: none;
+}
+
+/* Workaround to fix size of indicator-icons */
+XfceIndicatorBox .button {
+    border: 1px;
+    padding: 0px;
 }
