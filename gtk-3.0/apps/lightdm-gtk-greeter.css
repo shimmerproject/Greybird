@@ -43,6 +43,11 @@
     text-shadow: 0px 1px alpha(@dark_shadow, 0.8);
 }
 
+#panel_window > #menubar > .menuitem {
+    background-color: transparent;
+}
+
+#panel_window > #menubar > .menuitem:active,
 #panel_window.menubar.menuitem:hover,
 #panel_window.menubar .menuitem:hover,
 #panel_window .menubar.menuitem:hover {
