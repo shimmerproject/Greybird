@@ -25,12 +25,13 @@
 }
 
 #panel_window,
+#panel_window #menubar,
 #panel_window > #menubar {
     background-color: @lightdm_bg_color;
     background-image: none;
     color: @lightdm_fg_color;
-    /*border-bottom-color: alpha(@light_shadow,0.2);*/
-    text-shadow: 0px 1px alpha(@dark_shadow, 0.8);
+    /*border-bottom-color: alpha(@light_shadow,0.2);
+    text-shadow: 0px 1px alpha(@dark_shadow, 0.8);*/
     border-style: solid;
     border-width: 0px 0px 0px 0px;
 }
@@ -43,8 +44,10 @@
     text-shadow: 0px 1px alpha(@dark_shadow, 0.8);
 }
 
+#panel_window #menubar > .menuitem,
 #panel_window > #menubar > .menuitem {
     background-color: transparent;
+    color: @lightdm_fg_color;
 }
 
 #panel_window > #menubar > .menuitem:active,
