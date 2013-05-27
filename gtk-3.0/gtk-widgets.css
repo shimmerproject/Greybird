@@ -8,8 +8,8 @@
     background-clip: padding-box;
 
     -GtkArrow-arrow-scaling: 0.6;
-    -GtkButton-child-displacement-x: 1;
-    -GtkButton-child-displacement-y: 1;
+    -GtkButton-child-displacement-x: 0;
+    -GtkButton-child-displacement-y: 0;
     -GtkButton-default-border: 0;
     -GtkButton-image-spacing: 0;
     -GtkButton-inner-border: 1;
@@ -231,6 +231,9 @@ GtkAssistant .sidebar {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_bg_color, 0.85), 1.05)),
                                      to (shade(shade(@theme_bg_color, 0.85), 0.97)));
+    
+    color: shade(@theme_bg_color, 1.18);
+    text-shadow: 1px 1px shade(@theme_fg_color, 1.18);
 }
 
 .button:active:hover {
