@@ -20,7 +20,7 @@
 
 #login_window *,
 #restart_dialog *,
-#shutdown_dialog *, {
+#shutdown_dialog * {
     color: @lightdm_fg_color;
 }
 
