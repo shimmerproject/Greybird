@@ -71,7 +71,9 @@
 
 #cancel_button,
 #login_button,
-#login_window .button {
+#login_window .button,
+#shutdown_button,
+#restart_button {
     background-color: shade(@lightdm_bg_color, 0.9);
     background-image: none;
 
@@ -88,7 +90,9 @@
                 inset 0px -1px alpha(@light_shadow, 0.1);
 }
 
-#login_window .button:focus {
+#login_window .button:focus,
+#shutdown_button:focus,
+#restart_button:focus {
     border-color: @theme_selected_bg_color;
 }
 
