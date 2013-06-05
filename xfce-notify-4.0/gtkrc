@@ -29,6 +29,11 @@ style "notify-text"
     GtkWidget::link-color = "#a7a7a7"
 }
 
+style "notify-summary"
+{
+    font_name = "Bold"
+}
+
 style "notify-progressbar"
 {
     xthickness   = 1
@@ -47,6 +52,7 @@ style "notify-progressbar"
 }
 
 class "XfceNotifyWindow" style "notify-window"
+widget "XfceNotifyWindow.*.summary" style "notify-summary"
 widget_class "XfceNotifyWindow.*<GtkButton>" style "notify-button"
 widget_class "XfceNotifyWindow.*.<GtkLabel>" style "notify-text"
 widget_class "XfceNotifyWindow.*.<GtkProgress>" style "notify-progressbar"
