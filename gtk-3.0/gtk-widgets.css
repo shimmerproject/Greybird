@@ -57,8 +57,8 @@
  * base states *
  ***************/
 .background {
-    color: @theme_fg_color;
     background-color: @theme_bg_color;
+    color: @theme_fg_color;
 }
 
 .background.client-decorated {
@@ -560,6 +560,9 @@ row:selected:focus {
                                      to (shade(@theme_selected_bg_color, 1.0)));
 
     color: @theme_selected_fg_color;
+
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
 }
 
 /*******************
@@ -1204,6 +1207,11 @@ GtkTreeMenu .menuitem * {
     background-color: shade(@theme_bg_color, 1.05);
     background-image: none;
     background-clip: border-box;
+}
+
+.notebook GtkViewport {
+    background-color: @theme_base_color;
+    color: @theme_text_color;
 }
 
 .notebook tab {
@@ -2495,8 +2503,7 @@ GtkColorButton.button {
  ************/
 GtkTreeView {
     -GtkTreeView-vertical-separator: 0;
-
-    -GtkWidget-focus-line-width: 1;
+    -GtkWidget-focus-line-width: 0;
     -GtkWidget-focus-padding: 1;
 }
 
@@ -2531,6 +2538,12 @@ GtkViewport.frame {
 .view {
     background-color: @theme_base_color;
     color: @theme_text_color;
+}
+
+.view:insensitive,
+.view:insensitive:insensitive {
+    background-color: shade(@theme_base_color, 0.9);
+    color: mix(@theme_fg_color, @theme_bg_color, 0.5);
 }
 
 .view:selected,
