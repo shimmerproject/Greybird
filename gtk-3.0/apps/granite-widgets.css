@@ -179,14 +179,12 @@ GraniteWidgetsPopOver {
 .popover_bg {
     background-color: transparent;
     background-image: -gtk-gradient(linear, left top, left bottom,
-			         from (shade(@menu_bg_color, 1.18)),
-			         to (shade(@menu_bg_color, 1.17)));
+			         from (@menu_bg_color),
+			         to (shade(@menu_bg_color, 0.98)));
 }
 
-GraniteWidgetsPopOver .sidebar.view,
-GraniteWidgetsPopOver * {
+GraniteWidgetsPopOver .sidebar.view {
     background-color: transparent;
-    color: @menu_fg_color;
 }
 
 GraniteWidgetsPopOver .button {

@@ -150,8 +150,6 @@ GtkSwitch.slider {
 .primary-toolbar .button:active {
     box-shadow: inset 1px 1px alpha(@dark_shadow, 0.06),
                 inset -1px -1px alpha(@dark_shadow, 0.06);
-
-    text-shadow: 1px 1px alpha(@light_shadow, 0.4);
 }
 
 .button:insensitive,
@@ -1031,7 +1029,7 @@ GtkInfoBar {
 GtkTreeMenu.menu,
 GtkMenuToolButton.menu,
 GtkComboBox .menu {
-    background-color: shade(@menu_bg_color, 1.18);
+    background-color: @menu_bg_color;
 }
 
 .primary-toolbar .button .menu,
@@ -1042,8 +1040,8 @@ GtkComboBox .menu {
     border-radius: 0;
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@menu_bg_color, 0.8);
-    background-color: shade(@menu_bg_color, 1.18);
+    border-color: shade(@menu_bg_color, 0.7);
+    background-color: @menu_bg_color;
     color: @menu_fg_color;
 }
 
@@ -1053,7 +1051,7 @@ GtkComboBox .menu {
 .menu.button:insensitive,
 .menu.button {
     border-width: 0;
-    background-color: shade(@menu_bg_color, 1.18);
+    background-color: @menu_bg_color;
     background-image: none;
 }
 
@@ -1114,7 +1112,7 @@ GtkTreeMenu .menuitem * {
     border-style: solid;
     border-color: transparent;
     border-radius: 0;
-    background-color: shade(@menu_bg_color, 1.18);
+    background-color: @menu_bg_color;
     background-image: none;
     color: @menu_fg_color;
 
@@ -1193,7 +1191,7 @@ GtkTreeMenu .menuitem * {
 }
 
 .menuitem .accelerator:insensitive {
-    color: alpha(mix(@menu_fg_color, @menu_bg_color, 0.5), 0.6);
+    color: alpha(mix(@menu_fg_color, @menu_bg_color, 0.5), 0.7);
 }
 
 /************
@@ -1690,7 +1688,7 @@ GtkScrolledWindow GtkViewport.frame {
 
     background-color: transparent;
     border-style: none;
-    color: @menu_bg_color;
+    color: shade(@menu_bg_color, 0.9);
 }
 
 GtkComboBox .separator {
