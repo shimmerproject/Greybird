@@ -424,20 +424,6 @@ GtkDrawingArea:insensitive {
     background-color: @theme_bg_color;
 }
 
-/************
-* gucharmap *
-*************/
-GucharmapChartable {
-    background-color: shade(@theme_base_color, 0.98);
-}
-
-GucharmapChartable:active,
-GucharmapChartable:focus,
-GucharmapChartable:selected {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
 /***********
  * gtkhtml *
  ***********/
