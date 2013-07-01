@@ -241,13 +241,6 @@ GeditFloatingSlider .not-found {
     color: @error_fg_color;
 }
 
-/***********************
- * gnome control center *
- ***********************/
-CcShellItemView.view {
-    background-color: @theme_bg_color;
-}
-
 /***************
  * font-viewer *
  ***************/
