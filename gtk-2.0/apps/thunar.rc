@@ -1,11 +1,33 @@
 style "sidepane"
 {
+	GtkTreeView::vertical-separator = 4
+
 	base[NORMAL]		= mix (0.1, shade (1.35,@selected_bg_color), shade (0.9,@base_color))
 	base[INSENSITIVE]	= mix (0.4, shade (1.35,@selected_bg_color), shade (0.9,@base_color))
+
+	text[NORMAL]		= mix (0.7, @text_color, @base_color)
+	text[ACTIVE]		= mix (0.7, @text_color, @base_color)
+	text[SELECTED]		= mix (0.7, @text_color, @base_color)
+
+	engine "pixmap" {
+		
+	image {
+		function	= FLAT_BOX
+		state		= SELECTED
+	        recolorable	= TRUE
+		file		= "thunar/sidebar_active.png"		
+		border		= { 0, 0, 0, 0 }
+		stretch		= TRUE
+        	}
 	
-	bg[NORMAL]		= mix (0.1, shade (1.35,@selected_bg_color), shade (0.9,@base_color)) #shade (0.92,@base_color)
-	bg[PRELIGHT]		= shade (1.5,@selected_bg_color)
-	text[NORMAL]		= mix(0.3, @base_color, @text_color)
+	image {
+		function	= FOCUS
+		recolorable	= TRUE
+		file		= "thunar/sidebar_active.png"
+		border		= { 0, 0, 0, 0 }
+		stretch		= TRUE
+		} 
+	}
 }
 
 style "breadcrumbs" 
