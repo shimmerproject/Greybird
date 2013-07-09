@@ -122,14 +122,15 @@ WnckPager, WnckTasklist {
 NautilusWindow .sidebar .frame {
     border-width: 1px 0 0 0;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.7);
     border-radius: 0;
 }
 
-NautilusWindow > GtkGrid > .pane-separator {
+NautilusWindow > GtkGrid > .pane-separator,
+NautilusWindow > GtkGrid > .pane-separator:hover {
     border-width: 1px 1px 0 0;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.7);
     background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
 }
 
@@ -183,9 +184,7 @@ NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar:only-chil
 /******************
  * gnome terminal *
  ******************/
-TerminalScreen {
-    -TerminalScreen-background-darkness: 0.9;
-
+VteTerminal {
     background-color: @theme_base_color;
     color: @theme_text_color;
 }
@@ -212,18 +211,28 @@ GeditPanel.title GtkLabel {
     padding: 5px 0;
 }
 
+GeditPanel.vertical .title {
+    padding: 5px 0 4px 3px;
+    border-style: none;
+}
+
 GeditPanel .toolbar {
     border-style: none;
     background-color: transparent;
 }
 
 GeditDocumentsPanel .view {
-    background-color: shade(@theme_bg_color, 1.02);
+    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
 }
 
-GeditPanel .notebook {
+GeditPanel.vertical .notebook {
     padding: 0;
     border-width: 1px 0;
+}
+
+GeditPanel.horizontal .notebook {
+    padding: 0;
+    border-width: 0 1px 1px 0;
 }
 
 GeditWindow .notebook {
@@ -235,10 +244,47 @@ GeditWindow .notebook tab {
     border-width: 0;
 }
 
-GeditFloatingSlider .not-found {
+GeditStatusComboBox .button,
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    padding: 1px 6px 2px 4px;
+    border-style: solid;
+    border-width: 0 1px;
+    border-radius: 0;
+}
+
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+GeditViewFrame .gedit-search-slider {
+    padding: 4px;
+    border-radius: 0 0 3px 3px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_base_color, 0.8);
+    background-color: @theme_base_color;
+}
+
+GeditViewFrame .gedit-search-slider .not-found {
     background-color: @error_bg_color;
     background-image: none;
     color: @error_fg_color;
+}
+
+GeditViewFrame .gedit-search-slider .not-found:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+GeditFileBrowserWidget .primary-toolbar.toolbar  {
+    padding: 2px;
+    border-top: none;
+    background-color: @theme_bg_color;
+    background-image: none;
 }
 
 /***************
