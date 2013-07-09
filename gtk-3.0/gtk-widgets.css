@@ -1390,8 +1390,8 @@ OsScrollbar:insensitive {
 .separator {
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
-    color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.9);
+    color: shade(@theme_bg_color, 0.9);
 }
 
 .button .separator,
@@ -1455,6 +1455,36 @@ GtkComboBox .separator {
 
 .sidebar .frame {
     border-width: 0;
+}
+
+.sidebar row:selected,
+.sidebar row:selected:hover,
+.sidebar row:selected:focus {
+    border-width: 1px 0;
+    border-style: solid;
+    border-top-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 1.10);
+    background-image: linear-gradient(to bottom,
+                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.87),
+                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.95) 10%,
+                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.99) 92%,
+                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.92)
+                                      );
+
+    color: mix(@theme_text_color, @theme_base_color, 0.3);
+}
+
+.sidebar .view:selected,
+.sidebar .view:selected:hover,
+.sidebar .view:selected:focus {
+    background-image: linear-gradient(to bottom,
+                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.87),
+                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.95) 10%,
+                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.99) 92%,
+                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.92)
+                                      );
+
+    color: mix(@theme_text_color, @theme_base_color, 0.3);
 }
 
 /**************
