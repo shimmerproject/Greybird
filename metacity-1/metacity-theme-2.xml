@@ -4,19 +4,19 @@
 	<name>Greybird</name>
 	<author>Satyajit Sahoo</author>
 	<copyright>GPL-3.0+</copyright>
-	<date>July, 2012</date>
-	<description>Greybird Mutter theme</description>
+	<date>August, 2013</date>
+	<description>Greybird Metacity theme</description>
 </info>
 
 <!-- ::: CONSTANTS ::: -->
-<constant name="C_titlebar_gradient_a" value="gtk:custom(wm_bg_a,shade/gtk:bg[NORMAL]/1.07)" />
-<constant name="C_titlebar_gradient_b" value="gtk:custom(wm_bg_b,gtk:bg[NORMAL])" />
-<constant name="C_border_focused" value="gtk:custom(wm_border_focused,shade/gtk:bg[NORMAL]/0.7)" />
-<constant name="C_border_unfocused" value="gtk:custom(wm_border_unfocused,shade/gtk:bg[NORMAL]/0.8)" />
-<constant name="C_title_focused" value="gtk:custom(wm_title_focused,blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1)" />
-<constant name="C_title_focused_shadow" value="gtk:custom(wm_title_focused_shadow,shade/gtk:bg[NORMAL]/1.4)" />
-<constant name="C_title_unfocused" value="gtk:custom(wm_title_unfocused,blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.6)" />
-<constant name="C_title_unfocused_shadow" value="gtk:custom(wm_title_unfocused_shadow,shade/gtk:bg[NORMAL]/1.2)" />
+<constant name="C_titlebar_gradient_a" value="shade/gtk:bg[NORMAL]/1.07" />
+<constant name="C_titlebar_gradient_b" value="gtk:bg[NORMAL]" />
+<constant name="C_border_focused" value="shade/gtk:bg[NORMAL]/0.7" />
+<constant name="C_border_unfocused" value="shade/gtk:bg[NORMAL]/0.8" />
+<constant name="C_title_focused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
+<constant name="C_title_focused_shadow" value="shade/gtk:bg[NORMAL]/1.4" />
+<constant name="C_title_unfocused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.6" />
+<constant name="C_title_unfocused_shadow" value="shade/gtk:bg[NORMAL]/1.2" />
 
 <!-- ::: GEOMETRY ::: -->
 <frame_geometry name="normal" title_scale="medium" rounded_top_left="4" rounded_top_right="4">
@@ -86,44 +86,20 @@
 
 <!-- ::: TITLES ::: -->
 <draw_ops name="title_focused">
-	<title version="< 3.1"
-               x="(0 `max` ((width - title_width) / 2)) + 2"
+	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2)) + 1"
                color="C_title_focused_shadow" />
-	<title version="< 3.1"
-               x="(0 `max` ((width - title_width) / 2)) + 2"
+	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2))"
-               color="C_title_focused" />
-	<title version=">= 3.1"
-               x="(0 `max` ((frame_x_center - title_width/2) `min` (width - title_width))) + 2"
-               y="(0 `max` ((height - title_height) / 2)) + 1"
-               ellipsize_width="width"
-               color="C_title_focused_shadow" />
-	<title version=">= 3.1"
-               x="(0 `max` ((frame_x_center - title_width/2) `min` (width - title_width))) + 2"
-               y="(0 `max` ((height - title_height) / 2))"
-               ellipsize_width="width"
                color="C_title_focused" />
 </draw_ops>
 
 <draw_ops name="title_unfocused">
-	<title version="< 3.1"
-               x="(0 `max` ((width - title_width) / 2)) + 2"
+	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2)) + 1"
                color="C_title_unfocused_shadow" />
-	<title version="< 3.1"
-               x="(0 `max` ((width - title_width) / 2)) + 2"
+	<title x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2))"
-               color="C_title_unfocused" />
-	<title version=">= 3.1"
-               x="(0 `max` ((frame_x_center - title_width/2) `min` (width - title_width))) + 2"
-               y="(0 `max` ((height - title_height) / 2)) + 1"
-               ellipsize_width="width"
-               color="C_title_unfocused_shadow" />
-	<title version=">= 3.1"
-               x="(0 `max` ((frame_x_center - title_width/2) `min` (width - title_width))) + 2"
-               y="(0 `max` ((height - title_height) / 2))"
-               ellipsize_width="width"
                color="C_title_unfocused" />
 </draw_ops>
 
@@ -1098,14 +1074,6 @@
 	<frame focus="no" state="shaded" style="normal_unfocused" />
 	<frame focus="yes" state="maximized_and_shaded" style="normal_max_shaded_focused" />
 	<frame focus="no" state="maximized_and_shaded" style="normal_max_shaded_unfocused" />
-	<frame version=">= 3.3" focus="yes" state="tiled_left" style="tiled_left_focused" />
-	<frame version=">= 3.3" focus="no" state="tiled_left" style="tiled_left_unfocused" />
-	<frame version=">= 3.3" focus="yes" state="tiled_right" style="tiled_right_focused" />
-	<frame version=">= 3.3" focus="no" state="tiled_right" style="tiled_right_unfocused" />
-	<frame version=">= 3.3" focus="yes" state="tiled_left_and_shaded" style="tiled_left_focused" />
-	<frame version=">= 3.3" focus="no" state="tiled_left_and_shaded" style="tiled_left_unfocused" />
-	<frame version=">= 3.3" focus="yes" state="tiled_right_and_shaded" style="tiled_right_focused" />
-	<frame version=">= 3.3" focus="no" state="tiled_right_and_shaded" style="tiled_right_unfocused" />
 </frame_style_set>
 
 <frame_style_set name="dialog_style_set">
@@ -1152,17 +1120,6 @@
 	<frame focus="no" state="maximized_and_shaded" style="blank" />
 </frame_style_set>
 
-<frame_style_set name="attached_style_set">
-	<frame focus="yes" state="normal" resize="both" style="attached_focused" />
-	<frame focus="no" state="normal" resize="both" style="attached_unfocused" />
-	<frame focus="yes" state="maximized" style="blank" />
-	<frame focus="no" state="maximized" style="blank" />
-	<frame focus="yes" state="shaded" style="blank" />
-	<frame focus="no" state="shaded" style="blank" />
-	<frame focus="yes" state="maximized_and_shaded" style="blank" />
-	<frame focus="no" state="maximized_and_shaded" style="blank" />
-</frame_style_set>
-
 <!-- ::: WINDOWS ::: -->
 <window type="normal" style_set="normal_style_set" />
 <window type="dialog" style_set="dialog_style_set" />
@@ -1170,6 +1127,5 @@
 <window type="menu" style_set="utility_style_set" />
 <window type="utility" style_set="utility_style_set" />
 <window type="border" style_set="border_style_set" />
-<window version=">= 3.2" type="attached" style_set="attached_style_set" />
 
 </metacity_theme>
