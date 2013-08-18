@@ -3,13 +3,13 @@
 # based on "Bluebird" by Simon Steinbeiß and Pasi Lallinaho
 # Description: As is the original theme, this theme is 100% free and open source.
 
-gtk_color_scheme	= "bg_color:#CECECE\nselected_bg_color:#398ee7\nbase_color:#fcfcfc" # Background, base.
-gtk_color_scheme	= "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text. 
-gtk_color_scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
-gtk_color_scheme	= "link_color:#2c82dd" # Hyperlinks
-gtk_color_scheme	= "panel_bg:#686868" # Panel bg color
-gtk_color_scheme	= "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
-gtk_color_scheme	= "bg_color_dark:#686868\ntext_color_dark:#FFF"
+gtk-color-scheme	= "bg_color:#CECECE\nselected_bg_color:#398ee7\nbase_color:#fcfcfc" # Background, base.
+gtk-color-scheme	= "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text. 
+gtk-color-scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
+gtk-color-scheme	= "link_color:#2c82dd" # Hyperlinks
+gtk-color-scheme	= "panel_bg:#686868" # Panel bg color
+gtk-color-scheme	= "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
+gtk-color-scheme	= "bg_color_dark:#686868\ntext_color_dark:#FFF"
 
 gtk-icon-sizes          = "panel-applications-menu=24,24:panel-menu=24,24:panel=16,16:gtk-button=16,16"
 gtk-button-images	= 0					# Disables icons for buttons with text
