@@ -49,4 +49,5 @@ XfceHeading {
 XfceIndicatorBox .button {
     border: 1px;
     padding: 0px;
+    color: #FFFFFF;
 }
