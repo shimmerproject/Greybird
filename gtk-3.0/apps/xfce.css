@@ -1,0 +1,53 @@
+XfceHeading {
+    background-color: @theme_base_color;
+    background-image: none;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.xfce4-panel {
+    background-color: shade(#686868, 0.35);
+}
+
+.xfce4-panel .button:active {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@selected_bg_color, 0.6)),
+                                     to (shade(@selected_bg_color, 0.68)));
+    border-color: shade(@lightdm_bg_color, 1.4);
+    box-shadow: inset 0px -1px alpha(#fff, 0.15),
+                inset 0px 1px alpha(#000, 0.25);
+}
+
+.xfce4-panel *:hover,
+.xfce4-panel *:active:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@selected_bg_color, 0.8)),
+                                     to (shade(@selected_bg_color, 0.88)));
+    border-color: shade(@selected_bg_color, 0.95);
+    border-radius: 0px;
+    transition: none;
+}
+
+/* Menu-styling, e.g. for indicators */
+.xfce4-panel .menu,
+.xfce4-panel .menu GtkLabel,
+.xfce4-panel .menu GtkImage {
+    background-color: shade(@menu_bg_color, 1.18);
+    color: @menu_fg_color;
+}
+
+.xfce4-panel .menu *:hover,
+.xfce4-panel .menu GtkLabel:hover,
+.xfce4-panel .menu GtkImage:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_selected_bg_color, 1.2)),
+                                     to (shade(@theme_selected_bg_color, 1.0)));
+    transition: none;
+}
+
+/* Workaround to fix size of indicator-icons */
+XfceIndicatorBox .button {
+    border: 1px;
+    padding: 0px;
+    color: #FFFFFF;
+}
