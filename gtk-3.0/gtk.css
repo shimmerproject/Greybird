@@ -43,8 +43,8 @@
 @define-color toolbar_fg_color @theme_fg_color;
 @define-color menu_bg_color shade(@theme_bg_color, 1.18);
 @define-color menu_fg_color @theme_fg_color;
-@define-color panel_bg_color @theme_bg_color;
-@define-color panel_fg_color @theme_fg_color;
+@define-color panel_bg_color #686868;
+@define-color panel_fg_color #fcfcfc;
 
 /* osd */
 @define-color osd_base #333;
