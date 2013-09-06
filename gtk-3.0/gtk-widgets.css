@@ -2638,7 +2638,7 @@ GtkColorButton.button {
 .header-bar .raised.linked .button:active:first-child,
 .header-bar .raised.linked .button:insensitive:first-child {
     border-width: 1px;
-    border-radius: 2px;
+    border-radius: 3px;
     border-right-width: 0;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
