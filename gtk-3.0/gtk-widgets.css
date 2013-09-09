@@ -2016,7 +2016,9 @@ GtkColorButton.button {
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.7);
     padding: 0 2px;
-    background-color: @theme_bg_color;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_bg_color, 1.0)),
+                                     to (shade(@toolbar_bg_color, 0.88)));
 }
 
 .header-bar .button.text-button {
@@ -3225,4 +3227,88 @@ GtkBubbleWindow.osd.background {
 
 GtkBubbleWindow .toolbar {
     background-color: transparent;
+}
+
+/*******
+ * CSD *
+ *******/
+.titlebar {
+    border-radius: 4px 4px 0 0;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@wm_bg_a),
+                                     to (shade(@wm_bg_b, 0.88)));
+    text-shadow: none;
+}
+
+/* this is the default titlebar that is added by GTK
+ * when client-side decorations are in use and the application
+ * did not set a custom titlebar.
+ */
+.titlebar.default-decoration {
+    border: none;
+    box-shadow: none;
+}
+
+.titlebar .title {
+    font: bold;
+}
+
+.titlebar:backdrop {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@wm_bg_a, 0.97)),
+                                     to (shade(@wm_bg_b, 0.88)));
+    text-shadow: none;
+}
+
+.titlebar .titlebutton {
+    border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 3px;
+    padding: 5px 5px 6px 5px;
+    background: none;
+    color: @wm_title_focused;
+    icon-shadow: 0 1px @wm_title_focused_shadow;
+}
+
+.titlebar .titlebutton:hover {
+    background: none;
+}
+
+.titlebar .titlebutton:active {
+    background: none;
+}
+
+.titlebar .right .titlebutton:first-child {
+}
+
+.titlebar .right .titlebutton:last-child {
+}
+
+.titlebar .left .titlebutton:last-child {
+}
+
+.titlebar .left .titlebutton:first-child {
+}
+
+.titlebar .titlebutton:backdrop {
+    background-image: none;
+    color: @wm_title_unfocused;
+    icon-shadow: 0 1px @wm_title_unfocused_shadow;
+}
+
+.window-frame {
+    border-width: 1px;
+    border-style: solid;
+    border-color: @wm_border_focused;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 2px 8px 3px alpha(black, 0.7);
+
+    /* this is used for the resize cursor area */
+    margin: 10px;
+}
+
+.window-frame:backdrop {
+    border-color: @wm_border_unfocused;
+    box-shadow: 0 2px 5px 1px alpha(black, 0.7);
 }
