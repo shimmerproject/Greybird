@@ -317,6 +317,7 @@ GtkAssistant .sidebar {
 }
 
 row:selected,
+row:selected:hover,
 row:selected:focus {
     border-width: 1px 0;
     border-style: solid;
@@ -842,7 +843,7 @@ GtkInfoBar {
 
 .view.dim-label,
 .dim-label {
-	color: alpha(currentColor, 0.5);
+    color: alpha(currentColor, 0.5);
 }
 
 .dnd {
@@ -1573,7 +1574,10 @@ GtkComboBox .separator {
 
 .sidebar row:selected,
 .sidebar row:selected:hover,
-.sidebar row:selected:focus {
+.sidebar row:selected:focus,
+.sidebar .view row:selected,
+.sidebar .view row:selected:hover,
+.sidebar .view row:selected:focus {
     border-width: 1px 0;
     border-style: solid;
     border-top-color: shade(@theme_bg_color, 0.85);
@@ -1588,17 +1592,11 @@ GtkComboBox .separator {
     color: mix(@theme_text_color, @theme_base_color, 0.3);
 }
 
-.sidebar .view:selected,
-.sidebar .view:selected:hover,
-.sidebar .view:selected:focus {
-    background-image: linear-gradient(to bottom,
-                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.87),
-                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.95) 10%,
-                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.99) 92%,
-                                      shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.92)
-                                      );
-
-    color: mix(@theme_text_color, @theme_base_color, 0.3);
+.sidebar row:prelight,
+.sidebar .view row:prelight {
+    border-color: alpha(@theme_base_color, 0.5);
+    background-color: alpha(@theme_base_color, 0.5);
+    background-image: none;
 }
 
 /**************
@@ -3327,17 +3325,21 @@ GtkBubbleWindow .toolbar {
     background: none;
 }
 
+/*
 .titlebar .right .titlebutton:first-child {
+    border-left: 1px solid shade(@theme_bg_color, 0.9);
 }
 
 .titlebar .right .titlebutton:last-child {
 }
 
 .titlebar .left .titlebutton:last-child {
+    border-right: 1px solid shade(@theme_bg_color, 0.9);
 }
 
 .titlebar .left .titlebutton:first-child {
 }
+*/
 
 .titlebar .titlebutton:backdrop {
     background-image: none;
