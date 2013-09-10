@@ -42,7 +42,7 @@ XfceHeading {
     color: @menu_fg_color;
 }
 
-.xfce4-panel .menu :hover {
+.xfce4-panel .menu *:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_selected_bg_color, 1.2)),
                                      to (shade(@theme_selected_bg_color, 1.0)));

@@ -89,6 +89,15 @@ GtkClutterOffscreen {
     color: mix(@theme_fg_color, @theme_bg_color, 0.4);
 }
 
+/* apply effects to insensitive and prelit images */
+*:insensitive {
+    -gtk-image-effect: dim;
+}
+
+*:hover {
+    -gtk-image-effect: highlight;
+}
+
 .gtkstyle-fallback {
     background-color: @theme_bg_color;
     color: @theme_fg_color;
@@ -257,7 +266,7 @@ GtkAssistant .sidebar {
                                      to (shade(shade(@theme_bg_color, 0.95), 0.97)));
 }
 
-.button:active:insensitive {
+.button:active *:insensitive {
     border-color: shade(@theme_bg_color, 0.8);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_bg_color, 0.95), 1.05)),
@@ -832,15 +841,8 @@ GtkInfoBar {
 }
 
 .view.dim-label,
-.dim-label,
-.dim-label:hover,
-.dim-label:focus {
-    color: mix(@theme_fg_color, @theme_bg_color, 0.5);
-}
-
-.dim-label:selected,
-.dim-label:selected:focus {
-    color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.5);
+.dim-label {
+	color: alpha(currentColor, 0.5);
 }
 
 .dnd {
@@ -884,7 +886,7 @@ GtkComboBox .menu {
 
 .menu.button:hover,
 .menu.button:active,
-.menu.button:active:insensitive,
+.menu.button:active *:insensitive,
 .menu.button:insensitive,
 .menu.button {
     border-width: 0;
@@ -893,7 +895,7 @@ GtkComboBox .menu {
 }
 
 .context-menu {
-    font: regular;
+    font: initial;
 }
 
 /* ubuntu software center menu */
@@ -2012,10 +2014,10 @@ GtkColorButton.button {
  * header-bar *
  **************/
 .header-bar {
+    padding: 2px;
     border-width: 0 0 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.7);
-    padding: 0 2px;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@toolbar_bg_color, 1.0)),
                                      to (shade(@toolbar_bg_color, 0.88)));
@@ -2027,6 +2029,14 @@ GtkColorButton.button {
 
 .header-bar .button.image-button {
     padding: 4px 3px 3px 4px;
+}
+
+.header-bar .title {
+    font: bold;
+}
+
+.header-bar .subtitle {
+    font: smaller;
 }
 
 /***********
@@ -2166,9 +2176,9 @@ GtkColorButton.button {
                                      to (shade(shade(@toolbar_bg_color, 0.95), 0.97)));
 }
 
-.primary-toolbar .button:active:insensitive,
-.toolbar .button:active:insensitive,
-.header-bar .button:active:insensitive {
+.primary-toolbar .button:active *:insensitive,
+.toolbar .button:active *:insensitive,
+.header-bar .button:active *:insensitive {
     border-color: shade(@toolbar_bg_color, 0.8);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@toolbar_bg_color, 0.95), 1.05)),
@@ -2293,12 +2303,12 @@ GtkColorButton.button {
 }
 
 /* remove box shadow from last-child and only-child */
-.linked .button:active:insensitive:last-child,
-.linked .button:active:insensitive:only-child,
-.inline-toolbar.toolbar .button:active:insensitive:last-child,
-.inline-toolbar.toolbar .button:active:insensitive:only-child,
-.inline-toolbar.toolbar GtkToolButton:last-child > .button:active:insensitive,
-.inline-toolbar.toolbar GtkToolButton:only-child > .button:active:insensitive {
+.linked .button:active *:insensitive:last-child,
+.linked .button:active *:insensitive:only-child,
+.inline-toolbar.toolbar .button:active *:insensitive:last-child,
+.inline-toolbar.toolbar .button:active *:insensitive:only-child,
+.inline-toolbar.toolbar GtkToolButton:last-child > .button:active *:insensitive,
+.inline-toolbar.toolbar GtkToolButton:only-child > .button:active *:insensitive {
     box-shadow: none;
 }
 
@@ -2432,12 +2442,12 @@ GtkColorButton.button {
 }
 
 /* remove box shadow from last-child and only-child */
-.linked.vertical .button:active:insensitive:last-child,
-.linked.vertical .button:active:insensitive:only-child,
-.inline-toolbar.toolbar.vertical .button:active:insensitive:last-child,
-.inline-toolbar.toolbar.vertical .button:active:insensitive:only-child,
-.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:active:insensitive,
-.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:active:insensitive {
+.linked.vertical .button:active *:insensitive:last-child,
+.linked.vertical .button:active *:insensitive:only-child,
+.inline-toolbar.toolbar.vertical .button:active *:insensitive:last-child,
+.inline-toolbar.toolbar.vertical .button:active *:insensitive:only-child,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:active *:insensitive,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:active *:insensitive {
     box-shadow: none;
 }
 
@@ -2553,18 +2563,18 @@ GtkColorButton.button {
 }
 
 /* remove box shadow from last-child and only-child */
-.primary-toolbar .button:active:insensitive.raised.linked:last-child,
-.primary-toolbar .button:active:insensitive.raised.linked:only-child,
-.primary-toolbar .raised.linked .button:active:insensitive:last-child,
-.primary-toolbar .raised.linked .button:active:insensitive:only-child,
-.toolbar .button:active:insensitive.raised.linked:last-child,
-.toolbar .button:active:insensitive.raised.linked:only-child,
-.toolbar .raised.linked .button:active:insensitive:last-child,
-.toolbar .raised.linked .button:active:insensitive:only-child,
-.header-bar .button:active:insensitive.raised.linked:last-child,
-.header-bar .button:active:insensitive.raised.linked:only-child,
-.header-bar .raised.linked .button:active:insensitive:last-child,
-.header-bar .raised.linked .button:active:insensitive:only-child {
+.primary-toolbar .button:active *:insensitive.raised.linked:last-child,
+.primary-toolbar .button:active *:insensitive.raised.linked:only-child,
+.primary-toolbar .raised.linked .button:active *:insensitive:last-child,
+.primary-toolbar .raised.linked .button:active *:insensitive:only-child,
+.toolbar .button:active *:insensitive.raised.linked:last-child,
+.toolbar .button:active *:insensitive.raised.linked:only-child,
+.toolbar .raised.linked .button:active *:insensitive:last-child,
+.toolbar .raised.linked .button:active *:insensitive:only-child,
+.header-bar .button:active *:insensitive.raised.linked:last-child,
+.header-bar .button:active *:insensitive.raised.linked:only-child,
+.header-bar .raised.linked .button:active *:insensitive:last-child,
+.header-bar .raised.linked .button:active *:insensitive:only-child {
     box-shadow: none;
 }
 
@@ -2860,8 +2870,8 @@ GtkOverlay.osd {
     background-image: none;
 }
 
-.osd.button:active:insensitive,
-.osd .button:active:insensitive {
+.osd.button:active *:insensitive,
+.osd .button:active *:insensitive {
     background-color: shade(@osd_bg, 0.80);
     background-image: none;
 }
@@ -2919,7 +2929,7 @@ GtkOverlay.osd {
     background-image: none;
 }
 
-.osd.toolbar .button:active:insensitive {
+.osd.toolbar .button:active *:insensitive {
     border-color: shade(@osd_bg, 0.75);
     background-color: shade(@osd_bg, 0.80);
     background-image: none;
@@ -3074,6 +3084,44 @@ GtkProgressBar.osd.progressbar {
     border-color: shade(@osd_bg, 0.9);
     /* when there's no pixbuf yet */
     background-color: @osd_bg;
+}
+
+/******************************
+ * destructive action buttons *
+ ******************************/
+.destructive-action.button {
+    padding: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@error_color, 0.8);
+    border-radius: 3px;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@error_color, 1.2), 1.05)),
+                                     to (shade(shade(@error_color, 1.2), 0.97)));
+
+    color: @theme_selected_fg_color;
+    box-shadow: none;
+}
+
+.destructive-action.button:hover {
+    border-color: shade(@error_color, 0.8);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(mix(@theme_base_color, @error_color, 0.7), 1.05)),
+                                     to (shade(mix(@theme_base_color, @error_color, 0.7), 0.97)));
+}
+
+.destructive-action.button:active {
+    border-color: shade(@error_color, 0.8);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@error_color, 1.2), 1.05)),
+                                     to (shade(shade(@error_color, 1.2), 0.97)));
+}
+
+.destructive-action.button:hover:active {
+    border-color: shade(@error_color, 0.7);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(mix(@theme_base_color, @error_color, 0.7), 1.05)),
+                                     to (shade(mix(@theme_base_color, @error_color, 0.7), 0.97)));
 }
 
 /******************
