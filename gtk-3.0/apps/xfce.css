@@ -12,7 +12,7 @@ XfceHeading {
 .xfce4-panel .button {
     border-radius: 0;
     padding: 1px;
-    color: shade(@base_color, 0.9);
+    color: @panel_fg_color;
 }
 
 .xfce4-panel .button:active {
