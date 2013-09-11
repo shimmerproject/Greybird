@@ -11,7 +11,7 @@ XfceHeading {
 
 .xfce4-panel .button {
     border-radius: 0;
-    padding: 1;
+    padding: 1px;
 }
 
 .xfce4-panel .button:active {
@@ -28,8 +28,8 @@ XfceHeading {
                                      to (shade(@selected_bg_color, 0.85)));
     border-color: shade(@selected_bg_color, 0.6);
     box-shadow: inset 0px -1px alpha(white, 0.0),
-                inset 1px 0px alpha(white, 0.15);
-                inset -1px 0px alpha(white, 0.15);
+                inset 1px 0px alpha(white, 0.15),
+                inset -1px 0px alpha(white, 0.15),
                 inset 0px 1px alpha(white, 0.15);     
     transition: none;
 }
