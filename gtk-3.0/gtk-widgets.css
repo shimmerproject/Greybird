@@ -1568,6 +1568,12 @@ GtkComboBox .separator {
     color: mix(@theme_text_color, @theme_base_color, 0.3);
 }
 
+.sidebar .scrollbar.trough {
+    background-image: -gtk-gradient(linear, left top, right top,
+                                     from (shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.9)),
+                                     to (shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 1.1)));
+}
+
 .sidebar .frame {
     border-width: 0;
 }
