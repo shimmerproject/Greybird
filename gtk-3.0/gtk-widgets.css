@@ -3285,7 +3285,8 @@ GtkBubbleWindow .toolbar {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (@wm_bg_a),
                                      to (shade(@wm_bg_b, 0.88)));
-    text-shadow: none;
+
+    text-shadow: 0 1px @wm_title_focused_shadow;
 }
 
 /* this is the default titlebar that is added by GTK
@@ -3305,21 +3306,23 @@ GtkBubbleWindow .toolbar {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@wm_bg_a, 0.97)),
                                      to (shade(@wm_bg_b, 0.88)));
-    text-shadow: none;
+
+    text-shadow: 0 1px @wm_title_unfocused_shadow;
 }
 
 .titlebar .titlebutton {
     padding: 4px;
     border-style: none;
     background: none;
-    color: mix(@theme_fg_color, @theme_bg_color, 0.3);
+    color: mix(@wm_title_focused, @wm_bg_a, 0.2);
+    icon-shadow: 0 1px @wm_title_focused_shadow;
     box-shadow: none;
 }
 
 .titlebar .titlebutton:hover,
 .titlebar .titlebutton:hover:focus {
     background: none;
-    color: mix(@theme_fg_color, @theme_bg_color, 0.1);
+    color: @wm_title_focused;
     box-shadow: none;
 }
 
@@ -3332,14 +3335,14 @@ GtkBubbleWindow .toolbar {
 
 /*
 .titlebar .right .titlebutton:first-child {
-    border-left: 1px solid shade(@theme_bg_color, 0.9);
+    border-left: 1px solid shade(@wm_bg_a, 0.9);
 }
 
 .titlebar .right .titlebutton:last-child {
 }
 
 .titlebar .left .titlebutton:last-child {
-    border-right: 1px solid shade(@theme_bg_color, 0.9);
+    border-right: 1px solid shade(@wm_bg_a, 0.9);
 }
 
 .titlebar .left .titlebutton:first-child {
@@ -3348,7 +3351,8 @@ GtkBubbleWindow .toolbar {
 
 .titlebar .titlebutton:backdrop {
     background-image: none;
-    color: mix(@theme_fg_color, @theme_bg_color, 0.5);
+    color: @wm_title_unfocused;
+    icon-shadow: 0 1px @wm_title_unfocused_shadow;
 }
 
 .window-frame {
