@@ -3154,7 +3154,6 @@ GtkProgressBar.osd.progressbar {
                                      to (shade(shade(@error_color, 1.2), 0.97)));
 
     color: @theme_selected_fg_color;
-    text-shadow: none;
     box-shadow: none;
 }
 
@@ -3191,7 +3190,6 @@ GtkProgressBar.osd.progressbar {
                                      to (shade(@theme_selected_bg_color, 1.1)));
 
     color: shade(@theme_selected_bg_color, 0.9);
-    text-shadow: none;
 }
 
 .selection-mode.header-bar {
@@ -3217,7 +3215,6 @@ GtkProgressBar.osd.progressbar {
                                      to (shade(shade(@theme_selected_bg_color, 1.2), 0.97)));
 
     color: @theme_selected_fg_color;
-    text-shadow: none;
     box-shadow: none;
 }
 
@@ -3262,7 +3259,6 @@ GtkProgressBar.osd.progressbar {
                                      to (shade(shade(@theme_bg_color, 1.02), 0.97)));
 
     color: @theme_fg_color;
-    text-shadow: none;
 }
 
 .selection-mode.header-bar .suggested-action.button:hover,
@@ -3299,7 +3295,6 @@ GtkProgressBar.osd.progressbar {
     background-color: transparent;
     background-image: none;
     color: shade(@theme_selected_bg_color, 0.7);
-    text-shadow: none;
 }
 
 .selection-mode.toolbar .dim-label,
@@ -3344,8 +3339,6 @@ GtkBubbleWindow .toolbar {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (@wm_bg_a),
                                      to (shade(@wm_bg_b, 0.88)));
-
-    text-shadow: 0 1px @wm_title_focused_shadow;
 }
 
 /* this is the default titlebar that is added by GTK
@@ -3359,13 +3352,16 @@ GtkBubbleWindow .toolbar {
 
 .titlebar .title {
     font: bold;
+    text-shadow: 0 1px @wm_title_focused_shadow;
 }
 
 .titlebar:backdrop {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@wm_bg_a, 0.97)),
                                      to (shade(@wm_bg_b, 0.88)));
+}
 
+.titlebar .title:backdrop {
     text-shadow: 0 1px @wm_title_unfocused_shadow;
 }
 
