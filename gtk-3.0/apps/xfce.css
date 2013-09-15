@@ -24,9 +24,11 @@ XfceHeading {
 
 .xfce4-panel .button:hover,
 .xfce4-panel .button:active:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@selected_bg_color, 0.88)),
-                                     to (shade(@selected_bg_color, 0.85)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@selected_bg_color, 0.88),
+                                      shade(@selected_bg_color, 0.85)
+                                      );
+
     border-color: shade(@selected_bg_color, 0.6);
     box-shadow: inset 0 -1px alpha(white, 0.0),
                 inset 1px 0 alpha(white, 0.15),
@@ -44,9 +46,10 @@ XfceHeading {
 }
 
 .xfce4-panel .menu *:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_selected_bg_color, 1.2)),
-                                     to (shade(@theme_selected_bg_color, 1.0)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_selected_bg_color, 1.2),
+                                      shade(@theme_selected_bg_color, 1.0)
+                                      );
 
     transition: none;
 }

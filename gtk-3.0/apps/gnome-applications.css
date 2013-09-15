@@ -5,9 +5,10 @@ PanelWidget,
 PanelApplet,
 PanelToplevel {
     padding: 0;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 
     color: @panel_fg_color;
 }
@@ -18,9 +19,10 @@ PanelApplet {
 
 PanelSeparator {
     border-width: 0;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 
     color: @panel_fg_color;
 }
@@ -33,17 +35,19 @@ PanelMenuBar.menubar.menuitem {
     -PanelMenuBar-icon-visible: true;
 
     border-width: 0;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 }
 
 PanelAppletFrame {
     border-width: 0;
-    background-color: @panel_bg_color; 
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-color: @panel_bg_color;
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 }
 
 PanelApplet .button {
@@ -52,9 +56,10 @@ PanelApplet .button {
     border-width: 0 1px;
     border-radius: 0;
     border-color: transparent;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 
     color: @panel_fg_color;
 
@@ -66,27 +71,30 @@ PanelApplet .button:active {
     border-width: 0 1px;
     border-radius: 0;
     border-color: shade(@panel_bg_color, 0.7);
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 0.85)),
-                                     to (shade(@panel_bg_color, 1.0)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 0.85),
+                                      shade(@panel_bg_color, 1.0)
+                                      );
 }
 
 PanelApplet .button:prelight {
     border-width: 0 1px;
     border-radius: 0;
     border-color: shade(@panel_bg_color, 0.7);
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.7)),
-                                     to (shade(@panel_bg_color, 1.25)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.7),
+                                      shade(@panel_bg_color, 1.25)
+                                      );
 }
 
 PanelApplet .button:active:prelight {
     border-width: 0 1px;
     border-radius: 0;
     border-color: shade(@panel_bg_color, 0.7);
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 0.85)),
-                                     to (shade(@panel_bg_color, 1.0)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 0.85),
+                                      shade(@panel_bg_color, 1.0)
+                                      );
 }
 
 WnckPager, WnckTasklist {
