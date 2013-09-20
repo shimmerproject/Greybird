@@ -7,6 +7,7 @@ XfceHeading {
 
 .xfce4-panel {
     background-color: shade(@panel_bg_color, 0.35);
+    font: normal;
 }
 
 .xfce4-panel .button {
