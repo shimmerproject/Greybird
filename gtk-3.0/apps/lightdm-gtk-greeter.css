@@ -1,87 +1,39 @@
+/* General colors for the greeter */
 #login_window,
+#panel_window,
+#panel_window .menubar,
+#panel_window .menubar > .menuitem,
 #restart_dialog,
 #shutdown_dialog,
-#login_notebook {
+#login_window,
+#login_window #user_combobox .arrow {
     background-color: shade (@lightdm_bg_color, 0.9);
+    color: @lightdm_fg_color;
+}
 
+/* Add border-outlines to all the dialogs */
+#restart_dialog,
+#shutdown_dialog,
+#login_window {
     border-width: 0px;
     border-style: solid;
     border-color: @dark_shadow;
     box-shadow: inset 1px 0px alpha(@light_shadow,0.2),
-		inset -1px 0px alpha(@light_shadow,0.2),
-		inset 0px 1px alpha(@light_shadow,0.2),
+                inset -1px 0px alpha(@light_shadow,0.2),
+                inset 0px 1px alpha(@light_shadow,0.2),
                 inset 0px -1px alpha(@light_shadow,0.2);
     border-radius: 10px;
 }
 
-#login_notebook {
-    border-radius: 0px;
-}
-
-#login_window *,
-#restart_dialog *,
-#shutdown_dialog * {
-    color: @lightdm_fg_color;
-}
-
-#prompt_entry {
-    color: @lightdm_bg_color;
-}
-
-#panel_window,
-#panel_window #menubar,
-#panel_window > #menubar {
-    background-color: @lightdm_bg_color;
-    background-image: none;
-    color: @lightdm_fg_color;
-    /*border-bottom-color: alpha(@light_shadow,0.2);
-    text-shadow: 0px 1px alpha(@dark_shadow, 0.8);*/
-    border-style: solid;
-    border-width: 0px 0px 0px 0px;
-}
-
-#panel_window > #menubar * {
-    text-shadow: none;
-}
-
-#panel_window > #menubar *:hover {
-    text-shadow: 0px 1px alpha(@dark_shadow, 0.8);
-}
-
-#panel_window #menubar > .menuitem,
-#panel_window > #menubar > .menuitem {
-    background-color: transparent;
-    color: @lightdm_fg_color;
-}
-
-#panel_window > #menubar > .menuitem:active,
-#panel_window.menubar.menuitem:hover,
-#panel_window.menubar .menuitem:hover,
-#panel_window .menubar.menuitem:hover {
-    background-color: shade(@selected_bg_color, 0.9);
-    border-color: shade(@theme_selected_bg_color, 1.1);
-    background-image: linear-gradient(to bottom,
-                                      shade(@theme_selected_bg_color, 1.2),
-                                      shade(@theme_selected_bg_color, 1.0)
-                                      );
-}
-
-#message_label {
-    color: #d20f0f;
-}
-
-#cancel_button,
-#login_button,
+/* Set all buttons and the user-avatar to a dark style */
 #login_window .button,
-#shutdown_button,
-#restart_button {
+#restart_dialog .button,
+#shutdown_dialog .button,
+#user_image {
     background-color: shade(@lightdm_bg_color, 0.9);
     background-image: none;
-    border-top-color: alpha(@dark_shadow, 0.9);
-    border-bottom-color: alpha(@dark_shadow, 0.9);
-    border-left-color: alpha (@dark_shadow, 0.9);
-    border-right-color: alpha (@dark_shadow, 0.9);
-    padding: 4px 16px 4px 16px;
+    color: @lightdm_fg_color;
+    border-color: alpha(@dark_shadow, 0.9);
     border-radius: 4px;
     text-shadow: 0px 1px alpha(@dark_shadow, 1.0);
     box-shadow: inset 1px 0px alpha(@light_shadow, 0.2),
@@ -90,54 +42,51 @@
                 inset 0px -1px alpha(@light_shadow, 0.1);
 }
 
-#login_window .button:focus,
-#shutdown_button:focus,
-#restart_button:focus {
-    border-color: @theme_selected_bg_color;
+/* Add some padding to the buttons, except the user-combobox */
+#cancel_button,
+#login_button,
+#shutdown_button,
+#restart_button {
+    padding: 4px 16px 4px 16px;
 }
 
-#language_combobox .button:insensitive,
-#session_combobox .button:insensitive {
-    background-color: shade (@lightdm_bg_color, 1.5);
-}
-
-#login_window GtkComboBox .button {
-    padding: 2px 6px 2px 2px;
-}
-
-#user_combobox .menu *,
-#session_combobox .menu *,
-#language_combobox .menu * {
-    color: shade (@lightdm_fg_color, 0.2);
-    text-shadow: none;
-}
-
-#user_combobox .menu *:hover,
-#session_combobox .menu *:hover,
-#language_combobox .menu *:hover {
-    color: @lightdm_fg_color;
-    text-shadow: 0px 1px alpha(@dark_shadow, 0.4);
-}
-
-#logo,
+/* Add more padding to the user-avatar */
 #user_image {
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 4px;
-    border-color: alpha(@dark_shadow,0.9);
-    padding: 3px;
-    box-shadow: inset 1px 0px alpha(@light_shadow, 0.2),
-                inset -1px 0px alpha(@light_shadow, 0.2),
-                inset 0px 1px alpha(@light_shadow, 0.3),
-                inset 0px -1px alpha(@light_shadow, 0.1);
+    padding: 4px;
 }
 
-
-#login_window .button:hover {
-    background-color: shade(@lightdm_bg_color, 1.15);
-    color: @lightdm_fg_color;
+/* Highlight for default-buttons and focus for better keyboard-navigation */
+#login_window .button.default,
+#restart_dialog .button.default,
+#shutdown_dialog .button.default,
+#login_window .button:focus,
+#restart_dialog .button:focus,
+#shutdown_dialog .button:focus {
+    background-color: shade(@lightdm_bg_color, 1.25);
+    box-shadow: inset 1px 0px alpha(@light_shadow, 0.3),
+                inset -1px 0px alpha(@light_shadow, 0.3),
+                inset 0px 1px alpha(@light_shadow, 0.4),
+                inset 0px -1px alpha(@light_shadow, 0.2);
 }
 
-#login_button:hover {
-    background-color: shade(@selected_bg_color, 0.8);
+/* General button hover-effect */
+#login_window .button:hover,
+#restart_dialog .button:hover,
+#shutdown_dialog .button:hover {
+    background-color: shade(@lightdm_bg_color, 1.35);
+}
+
+/* Login/Unlock button is blue on hover */
+#login_button.button:hover {
+    background-color: shade(@theme_selected_bg_color, 0.6);
+}
+
+/* Shutdown button is red on hover */
+#shutdown_button.button:hover {
+    background-color: shade(@error_bg_color,0.95);
+}
+
+/* Restart button is dark yellow on hover */
+#restart_button.button:hover {
+    background-color: shade(@warning_bg_color,0.75);
 }
