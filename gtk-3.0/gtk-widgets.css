@@ -551,6 +551,7 @@ GtkComboBox.combobox-entry .button:insensitive {
                                       shade(@theme_base_color, 0.99),
                                       @theme_base_color
                                       );
+    background-color: @theme_base_color;
 
     color: @theme_text_color;
 }
