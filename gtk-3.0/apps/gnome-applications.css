@@ -297,6 +297,7 @@ SushiFontWidget {
  *************/
 GucharmapChartable {
     background-color: @theme_base_color;
+    color: @theme_text_color;
 }
 
 GucharmapChartable:active,
@@ -304,4 +305,12 @@ GucharmapChartable:focus,
 GucharmapChartable:selected {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
+}
+
+/*************
+ * evolution *
+ *************/
+EPreviewPane .entry {
+    background-color: @theme_base_color;
+    color: @theme_text_color;
 }
