@@ -1,0 +1,3 @@
+[Gtk3] infobars need more integrated buttons
+[Gtk3] infobar-comboboxes need theming fixes (used in Parole)
+[Gtk3] menubar-menuitems have less padding than in Gtk2
