@@ -26,6 +26,7 @@ style "notify-button"
 style "notify-text"
 {
     fg[NORMAL] = "#ffffff"
+    fg[PRELIGHT] = "#ffffff"
     GtkWidget::link-color = "#a7a7a7"
 }
 
