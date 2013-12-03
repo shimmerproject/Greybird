@@ -687,6 +687,49 @@ GtkInfoBar {
     color: @info_fg_color;
 }
 
+.info .button {
+    border-top-color: shade(@info_bg_color, 0.8);
+    border-right-color: shade(@info_bg_color, 0.72);
+    border-left-color: shade(@info_bg_color, 0.72);
+    border-bottom-color: shade(@info_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@info_bg_color, 1.02), 1.05),
+                                      shade(shade(@info_bg_color, 1.02), 0.97)
+                                      );
+
+    color: @info_fg_color;
+}
+
+.info .button:hover {
+    border-top-color: shade(@info_bg_color, 0.85);
+    border-right-color: shade(@info_bg_color, 0.78);
+    border-left-color: shade(@info_bg_color, 0.78);
+    border-bottom-color: shade(@info_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(@info_bg_color, 1.15),
+                                      shade(@info_bg_color, 1.07)
+                                      );
+}
+
+.info .button:active {
+    border-color: shade(@info_bg_color, 0.6);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@info_bg_color, 0.85), 1.05),
+                                      shade(shade(@info_bg_color, 0.85), 0.97)
+                                      );
+}
+
+.info .button:active:hover {
+    border-top-color: shade(@info_bg_color, 0.85);
+    border-right-color: shade(@info_bg_color, 0.78);
+    border-left-color: shade(@info_bg_color, 0.78);
+    border-bottom-color: shade(@info_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(@info_bg_color, 1.15),
+                                      shade(@info_bg_color, 1.07)
+                                      );
+}
+
 .info .button.close {
     color: @info_fg_color;
 }
@@ -715,6 +758,49 @@ GtkInfoBar {
                                       );
 
     color: @warning_fg_color;
+}
+
+.warning .button {
+    border-top-color: shade(@warning_bg_color, 0.8);
+    border-right-color: shade(@warning_bg_color, 0.72);
+    border-left-color: shade(@warning_bg_color, 0.72);
+    border-bottom-color: shade(@warning_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@warning_bg_color, 1.02), 1.05),
+                                      shade(shade(@warning_bg_color, 1.02), 0.97)
+                                      );
+
+    color: @warning_fg_color;
+}
+
+.warning .button:hover {
+    border-top-color: shade(@warning_bg_color, 0.85);
+    border-right-color: shade(@warning_bg_color, 0.78);
+    border-left-color: shade(@warning_bg_color, 0.78);
+    border-bottom-color: shade(@warning_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(@warning_bg_color, 1.15),
+                                      shade(@warning_bg_color, 1.07)
+                                      );
+}
+
+.warning .button:active {
+    border-color: shade(@warning_bg_color, 0.6);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@warning_bg_color, 0.85), 1.05),
+                                      shade(shade(@warning_bg_color, 0.85), 0.97)
+                                      );
+}
+
+.warning .button:active:hover {
+    border-top-color: shade(@warning_bg_color, 0.85);
+    border-right-color: shade(@warning_bg_color, 0.78);
+    border-left-color: shade(@warning_bg_color, 0.78);
+    border-bottom-color: shade(@warning_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(@warning_bg_color, 1.15),
+                                      shade(@warning_bg_color, 1.07)
+                                      );
 }
 
 .warning .button.close {
@@ -747,6 +833,49 @@ GtkInfoBar {
     color: @question_fg_color;
 }
 
+.question .button {
+    border-top-color: shade(@question_bg_color, 0.8);
+    border-right-color: shade(@question_bg_color, 0.72);
+    border-left-color: shade(@question_bg_color, 0.72);
+    border-bottom-color: shade(@question_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@question_bg_color, 1.02), 1.05),
+                                      shade(shade(@question_bg_color, 1.02), 0.97)
+                                      );
+
+    color: @question_fg_color;
+}
+
+.question .button:hover {
+    border-top-color: shade(@question_bg_color, 0.85);
+    border-right-color: shade(@question_bg_color, 0.78);
+    border-left-color: shade(@question_bg_color, 0.78);
+    border-bottom-color: shade(@question_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(@question_bg_color, 1.15),
+                                      shade(@question_bg_color, 1.07)
+                                      );
+}
+
+.question .button:active {
+    border-color: shade(@question_bg_color, 0.6);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@question_bg_color, 0.85), 1.05),
+                                      shade(shade(@question_bg_color, 0.85), 0.97)
+                                      );
+}
+
+.question .button:active:hover {
+    border-top-color: shade(@question_bg_color, 0.85);
+    border-right-color: shade(@question_bg_color, 0.78);
+    border-left-color: shade(@question_bg_color, 0.78);
+    border-bottom-color: shade(@question_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(@question_bg_color, 1.15),
+                                      shade(@question_bg_color, 1.07)
+                                      );
+}
+
 .question .button.close {
     color: @question_fg_color;
 }
@@ -775,6 +904,49 @@ GtkInfoBar {
                                       );
 
     color: @error_fg_color;
+}
+
+.error .button {
+    border-top-color: shade(@error_bg_color, 0.8);
+    border-right-color: shade(@error_bg_color, 0.72);
+    border-left-color: shade(@error_bg_color, 0.72);
+    border-bottom-color: shade(@error_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@error_bg_color, 1.02), 1.05),
+                                      shade(shade(@error_bg_color, 1.02), 0.97)
+                                      );
+
+    color: @error_fg_color;
+}
+
+.error .button:hover {
+    border-top-color: shade(@error_bg_color, 0.85);
+    border-right-color: shade(@error_bg_color, 0.78);
+    border-left-color: shade(@error_bg_color, 0.78);
+    border-bottom-color: shade(@error_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(@error_bg_color, 1.15),
+                                      shade(@error_bg_color, 1.07)
+                                      );
+}
+
+.error .button:active {
+    border-color: shade(@error_bg_color, 0.6);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@error_bg_color, 0.85), 1.05),
+                                      shade(shade(@error_bg_color, 0.85), 0.97)
+                                      );
+}
+
+.error .button:active:hover {
+    border-top-color: shade(@error_bg_color, 0.85);
+    border-right-color: shade(@error_bg_color, 0.78);
+    border-left-color: shade(@error_bg_color, 0.78);
+    border-bottom-color: shade(@error_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(@error_bg_color, 1.15),
+                                      shade(@error_bg_color, 1.07)
+                                      );
 }
 
 .error .button.close {
