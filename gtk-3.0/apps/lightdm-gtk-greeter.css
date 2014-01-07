@@ -11,6 +11,11 @@
     color: @lightdm_fg_color;
 }
 
+#panel_window, 
+#panel_window .menubar {
+    box-shadow: inset 0px -1px alpha(@light_shadow,0.2);
+}
+
 /* Add border-outlines to all the dialogs */
 #restart_dialog,
 #shutdown_dialog,
