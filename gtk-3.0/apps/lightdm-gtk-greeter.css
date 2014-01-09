@@ -1,13 +1,17 @@
 /* General colors for the greeter */
 #login_window,
 #panel_window,
-#panel_window .menubar,
-#panel_window .menubar > .menuitem,
 #restart_dialog,
 #shutdown_dialog,
 #login_window,
 #login_window #user_combobox .arrow {
     background-color: shade (@lightdm_bg_color, 0.9);
+    color: @lightdm_fg_color;
+}
+
+#panel_window .menubar,
+#panel_window .menubar > .menuitem {
+    background-color: transparent;
     color: @lightdm_fg_color;
 }
 
