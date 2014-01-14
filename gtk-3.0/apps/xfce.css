@@ -8,18 +8,21 @@ XfceHeading {
 .xfce4-panel {
     background-color: shade(@panel_bg_color, 0.35);
     font: normal;
+    color: @panel_fg_color;
 }
 
 .xfce4-panel .button {
     border-radius: 0;
     padding: 1px;
     color: @panel_fg_color;
+    text-shadow: 0px 1px alpha(@dark_shadow, 1.0);
 }
 
 .xfce4-panel .button:active {
     background-image: none;
     background-color: shade(@panel_bg_color, 0.7);
     border-color: shade(@panel_bg_color, 0.6);
+    color: @panel_fg_color;
     transition: none;
 }
 
@@ -35,6 +38,7 @@ XfceHeading {
                 inset 1px 0 alpha(white, 0.15),
                 inset -1px 0 alpha(white, 0.15),
                 inset 0 1px alpha(white, 0.15);
+    color: @panel_fg_color;
     transition: none;
 }
 
@@ -44,6 +48,7 @@ XfceHeading {
 .xfce4-panel .menu GtkImage {
     background-color: shade(@menu_bg_color, 1.18);
     color: @menu_fg_color;
+    text-shadow: none;
 }
 
 .xfce4-panel .menu *:hover {
@@ -51,7 +56,6 @@ XfceHeading {
                                       shade(@theme_selected_bg_color, 1.2),
                                       shade(@theme_selected_bg_color, 1.0)
                                       );
-
     transition: none;
 }
 
