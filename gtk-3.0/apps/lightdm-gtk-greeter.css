@@ -13,6 +13,8 @@
 #panel_window .menubar > .menuitem {
     background-color: transparent;
     color: @lightdm_fg_color;
+    text-shadow: 0px 1px alpha(@dark_shadow, 1.0);
+    font: bold;
 }
 
 #panel_window .menubar > .menuitem:insensitive {
