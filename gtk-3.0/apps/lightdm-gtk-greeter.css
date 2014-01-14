@@ -15,6 +15,10 @@
     color: @lightdm_fg_color;
 }
 
+#panel_window .menubar > .menuitem:insensitive {
+    color: alpha (@lightdm_fg_color, 0.7);
+}
+
 #panel_window {
     box-shadow: inset 0px -1px alpha(@light_shadow,0.2);
 }
