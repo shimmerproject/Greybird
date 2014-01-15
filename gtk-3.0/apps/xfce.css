@@ -15,6 +15,9 @@ XfceHeading {
     border-radius: 0;
     padding: 1px;
     color: @panel_fg_color;
+}
+
+.xfce4-panel .button > GtkLabel {
     text-shadow: 0px 1px alpha(@dark_shadow, 1.0);
 }
 
@@ -40,27 +43,4 @@ XfceHeading {
                 inset 0 1px alpha(white, 0.15);
     color: @panel_fg_color;
     transition: none;
-}
-
-/* menu-styling, e.g. for indicators */
-.xfce4-panel .menu,
-.xfce4-panel .menu GtkLabel,
-.xfce4-panel .menu GtkImage {
-    background-color: shade(@menu_bg_color, 1.18);
-    color: @menu_fg_color;
-    text-shadow: none;
-}
-
-.xfce4-panel .menu *:hover {
-    background-image: linear-gradient(to bottom,
-                                      shade(@theme_selected_bg_color, 1.2),
-                                      shade(@theme_selected_bg_color, 1.0)
-                                      );
-    transition: none;
-}
-
-.xfce4-panel .menu GtkLabel:hover,
-.xfce4-panel .menu GtkImage:hover {
-    background-image: none;
-    background-color: transparent;
 }
