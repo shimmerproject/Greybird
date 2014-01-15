@@ -17,7 +17,7 @@ XfceHeading {
     color: @panel_fg_color;
 }
 
-.xfce4-panel .button > GtkLabel {
+.xfce4-panel .button {
     text-shadow: 0px 1px alpha(@dark_shadow, 1.0);
 }
 
@@ -43,4 +43,8 @@ XfceHeading {
                 inset 0 1px alpha(white, 0.15);
     color: @panel_fg_color;
     transition: none;
+}
+
+.xfce4-panel .menu {
+    text-shadow: none;
 }
