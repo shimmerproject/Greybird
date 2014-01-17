@@ -23,20 +23,22 @@
 @define-color dark_shadow #000;
 
 /* misc colors used by gtk+ */
-@define-color info_fg_color rgb (0, 0, 0);
+@define-color info_fg_color rgb (50, 49, 40);
 @define-color info_bg_color rgb (252, 246, 202);
-@define-color warning_fg_color rgb (0, 0, 0);
+@define-color warning_fg_color rgb (50, 34, 12);
 @define-color warning_bg_color rgb (250, 173, 61);
-@define-color question_fg_color rgb (255, 255, 255);
+@define-color question_fg_color rgb (215, 232, 250);
 @define-color question_bg_color rgb (57, 142, 231);
-@define-color error_fg_color rgb (255, 255, 255);
+@define-color error_fg_color rgb (251, 214, 214);
 @define-color error_bg_color rgb (237, 54, 54);
-@define-color link_color #569be4;
+@define-color link_color #2d71b8;
 @define-color success_color #4e9a06;
 @define-color warning_color #f57900;
 @define-color error_color #cc0000;
 
 /* widget colors */
+@define-color titlebar_bg_color @theme_bg_color;
+@define-color titlebar_fg_color @theme_fg_color;
 @define-color menubar_bg_color @theme_bg_color;
 @define-color menubar_fg_color @theme_fg_color;
 @define-color toolbar_bg_color @theme_bg_color;
@@ -70,6 +72,6 @@
 @import url("apps/gnome-applications.css");
 @import url("apps/granite-widgets.css");
 @import url("apps/unity.css");
+@import url("apps/xfce.css");
 @import url("apps/lightdm-unity-greeter.css");
 @import url("apps/lightdm-gtk-greeter.css");
-@import url("apps/xfce.css");
