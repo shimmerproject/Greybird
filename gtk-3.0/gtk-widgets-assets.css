@@ -155,6 +155,7 @@ GtkIconView.content-view.cell.check:active {
 /******************
  * pane separator *
  ******************/
+.pane-separator,
 .pane-separator.horizontal {
     background-image: url("assets/pane-separator.png");
     background-repeat: no-repeat;
