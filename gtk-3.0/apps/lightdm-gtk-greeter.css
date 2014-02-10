@@ -2,7 +2,7 @@
  * panel *
  *********/
 #panel_window {
-    background-color: alpha (@dark_bg_color, 0.8);
+    background-color: alpha (black, 0.5);
     color: white;
     font: bold;
     text-shadow: 0 1px alpha(black, 0.5);
@@ -133,18 +133,22 @@
     padding: 3px;
     border-radius: 3px;
     /* draw border using box-shadow */
-    box-shadow: inset 1px 0 shade(@lightdm_bg_color, 0.55),
-                inset -1px 0 shade(@lightdm_bg_color, 0.55),
-                inset 0 1px shade(@lightdm_bg_color, 0.4),
-                inset 0 -1px shade(@lightdm_bg_color, 0.8);
+    box-shadow: inset 1px 0 shade(@lightdm_bg_color, 0.75),
+                inset -1px 0 shade(@lightdm_bg_color, 0.75),
+                inset 0 1px shade(@lightdm_bg_color, 0.55),
+                inset 0 -1px shade(@lightdm_bg_color, 1.8);
 }
 
 #user_image_border {
     border-radius: 3px;
-    box-shadow: inset 1px 0 shade(@lightdm_bg_color, 0.8),
-                inset -1px 0 shade(@lightdm_bg_color, 0.8),
-                inset 0 1px shade(@lightdm_bg_color, 0.8),
-                inset 0 -1px shade(@lightdm_bg_color, 0.8);
+    box-shadow: inset 0 1px shade(@lightdm_bg_color, 0.8),
+                inset 0 -1px shade(@lightdm_bg_color, 0.55);
+    background-image: linear-gradient(to bottom,
+                                      shade(@lightdm_bg_color, 0.9),
+                                      shade(@lightdm_bg_color, 0.98) 10%,
+                                      shade(@lightdm_bg_color, 1.0) 99%,
+                                      shade(@lightdm_bg_color, 1.0)
+                                      );
 }
 
 #buttonbox_frame {
