@@ -1,8 +1,11 @@
 XfceHeading {
-    background-color: @theme_base_color;
+    background-color: shade(@theme_bg_color, 1.18);
     background-image: none;
+    color: @text_color;
     padding: 0;
     border-width: 0;
+    margin: 0;
+    text-shadow: 0px 1px alpha(@dark_shadow, 0.15);
 }
 
 .xfce4-panel {
