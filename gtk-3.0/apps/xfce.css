@@ -1,4 +1,9 @@
-XfceHeading {
+CatfishWindow .pane-separator {
+    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
+}
+
+XfceHeading,
+.XfceHeading {
     background-color: shade(@theme_bg_color, 1.18);
     background-image: none;
     color: @text_color;
