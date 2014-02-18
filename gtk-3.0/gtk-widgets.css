@@ -537,17 +537,18 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-left-color: shade(@theme_bg_color, 0.7);
     border-bottom-color: shade(@theme_bg_color, 0.72);
     border-radius: 3px;
+    background-color: @theme_base_color;
     background-image: linear-gradient(to bottom,
                                       shade(@theme_base_color, 0.99),
                                       @theme_base_color
                                       );
-    background-color: @theme_base_color;
 
     color: @theme_text_color;
 }
 
 .entry:active,
 .entry:focus {
+    background-color: @theme_base_color;
     border-color: shade(@theme_selected_bg_color, 0.8);
 }
 
@@ -2337,6 +2338,7 @@ GtkColorButton.button {
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: shade(@titlebar_bg_color, 0.7);
+    background-color: @titlebar_bg_color;
     background-image: linear-gradient(to bottom,
                                       shade(@titlebar_bg_color, 1.0),
                                       shade(@titlebar_bg_color, 0.88)
@@ -2446,6 +2448,7 @@ GtkColorButton.button {
 .toolbar {
     padding: 6px;
     border-style: none;
+    background-color: @toolbar_bg_color;
     background-image: linear-gradient(to bottom,
                                       shade(@toolbar_bg_color, 1.0),
                                       shade(@toolbar_bg_color, 0.88)
@@ -2486,6 +2489,7 @@ GtkColorButton.button {
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: shade(@toolbar_bg_color, 0.7);
+    background-color: @toolbar_bg_color;
     background-image: linear-gradient(to bottom,
                                       shade(@toolbar_bg_color, 1.0),
                                       shade(@toolbar_bg_color, 0.88)
