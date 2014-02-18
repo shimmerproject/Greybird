@@ -285,6 +285,12 @@ GeditFileBrowserWidget .primary-toolbar.toolbar  {
     background-image: none;
 }
 
+.gedit-search-entry-occurrences-tag {
+    margin: 2px;
+    padding: 2px;
+    color: mix(@theme_text_color, @theme_base_color, 0.4);
+}
+
 /***************
  * font-viewer *
  ***************/
