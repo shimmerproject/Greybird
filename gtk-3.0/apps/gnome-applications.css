@@ -196,7 +196,7 @@ TerminalWindow GtkNotebook.notebook {
 /*********
  * gedit *
  *********/
-GeditWindow .pane-separator, 
+GeditWindow .pane-separator,
 GeditWindow .pane-separator:hover {
     border-width: 0 1px 1px 1px;
     border-style: solid;
@@ -205,57 +205,100 @@ GeditWindow .pane-separator:hover {
     color: shade(@theme_bg_color, 0.8);
 }
 
-GeditPanel.title GtkLabel {
-    padding: 5px 0;
+.gedit-document-panel {
+    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
+    color: mix(@theme_text_color, @theme_base_color, 0.3);
 }
 
-GeditPanel.vertical .title {
-    padding: 5px 0 4px 3px;
-    border-style: none;
-}
-
-GeditPanel .toolbar {
-    border-style: none;
-    background-color: transparent;
-}
-
-GeditDocumentsPanel .view {
+.gedit-document-panel-group-row,
+.gedit-document-panel-group-row:hover {
+    border-top: 1px solid shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.9);
     background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
 }
 
-GeditPanel.vertical .notebook {
-    padding: 0;
-    border-width: 1px 0;
+.gedit-document-panel-document-row:hover {
+    background-color: shade(mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1), 0.95);
 }
 
-GeditPanel.horizontal .notebook {
-    padding: 0;
-    border-width: 0 1px 1px 0;
+.gedit-document-panel-document-row:selected,
+.gedit-document-panel-document-row:selected:hover {
+    background-color: @theme_selected_bg_color;
 }
 
-GeditWindow .notebook {
-    border-width: 1px 0;
+.gedit-document-panel .list-row .button {
+    padding: 1px;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    background-color: transparent;
+    background-image: none;
+    color: transparent;
+    icon-shadow: none;
 }
 
-GeditPanel .notebook tab,
-GeditWindow .notebook tab {
-    border-width: 0;
+.gedit-document-panel .prelight-row .button  {
+    border-color: alpha(black, 0.1);
+    color: mix(@theme_text_color, @theme_base_color, 0.5);
 }
 
-GeditStatusComboBox .button,
-GeditStatusComboBox .button:hover,
-GeditStatusComboBox .button:active,
-GeditStatusComboBox .button:active:hover {
-    padding: 1px 6px 2px 4px;
+.gedit-document-panel .list-row .button:hover,
+.gedit-document-panel .prelight-row .button:hover {
+    color: @theme_text_color;
+    border-color: alpha(black, 0.1);
+}
+
+.gedit-document-panel .prelight-row .button:active {
+    color: @theme_text_color;
+    background-color: alpha(black, 0.08);
+    border-color: alpha(black, 0.27)
+                  alpha(black, 0.13)
+                  alpha(black, 0.13)
+                  alpha(black, 0.13);
+}
+
+GeditStatusbar {
+    border-top: 1px solid shade(@theme_bg_color, 0.8);
+}
+
+GeditStatusbar GeditSmallButton,
+GeditStatusMenuButton {
+    text-shadow: none;
+}
+
+GeditStatusbar GeditSmallButton.button,
+GeditStatusbar GeditSmallButton.button:hover,
+GeditStatusbar GeditSmallButton.button:active,
+GeditStatusbar GeditSmallButton.button:active:hover,
+GeditStatusMenuButton.button,
+GeditStatusMenuButton.button:hover,
+GeditStatusMenuButton.button:active,
+GeditStatusMenuButton.button:active:hover {
+    border-image: none;
     border-style: solid;
     border-width: 0 1px;
     border-radius: 0;
+    padding: 1px 6px 2px 4px;
 }
 
-GeditStatusComboBox .button:hover,
-GeditStatusComboBox .button:active,
-GeditStatusComboBox .button:active:hover {
+GeditStatusbar GeditSmallButton.button:hover,
+GeditStatusbar GeditSmallButton.button:active,
+GeditStatusbar GeditSmallButton.button:active:hover,
+GeditStatusMenuButton.button:hover,
+GeditStatusMenuButton.button:active,
+GeditStatusMenuButton.button:active:hover {
     border-color: shade(@theme_bg_color, 0.8);
+}
+
+GeditStatusbar GeditSmallButton.button:active,
+GeditStatusMenuButton.button:active {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 0.8),
+                                      shade(@theme_bg_color, 0.95));
+
+    color: @theme_fg_color;
 }
 
 GeditViewFrame .gedit-search-slider {
@@ -278,7 +321,7 @@ GeditViewFrame .gedit-search-slider .not-found:selected {
     color: @theme_selected_fg_color;
 }
 
-GeditFileBrowserWidget .primary-toolbar.toolbar  {
+GeditFileBrowserWidget .toolbar {
     padding: 2px;
     border-top: none;
     background-color: @theme_bg_color;
