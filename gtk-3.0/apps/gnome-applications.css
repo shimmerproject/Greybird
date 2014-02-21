@@ -139,7 +139,7 @@ NautilusWindow .sidebar .frame {
 
 NautilusWindow > GtkGrid > .pane-separator,
 NautilusWindow > GtkGrid > .pane-separator:hover {
-    border-width: 0 1px 0 1px;
+    border-width: 0 1px 0 0;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
@@ -155,7 +155,7 @@ NautilusNotebook .frame {
     border-width: 0;
 }
 
-NautilusQueryEditor .primary-toolbar.toolbar {
+NautilusQueryEditor .search-bar.toolbar {
     border-top-width: 0;
     border-bottom-width: 0;
 }
@@ -174,7 +174,7 @@ NautilusQueryEditor .toolbar:nth-child(2) {
 }
 
 NautilusQueryEditor .toolbar:last-child,
-NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+NautilusQueryEditor .search-bar.toolbar:only-child {
     border-bottom-width: 1px;
     border-bottom-color: shade(@toolbar_bg_color, 0.8);
 }
@@ -363,4 +363,25 @@ GucharmapChartable:selected {
 EPreviewPane .entry {
     background-color: @theme_base_color;
     color: @theme_text_color;
+}
+
+/******************
+ * gnome calendar *
+ ******************/
+.calendar-view {
+    background-color: shade(@theme_base_color, 0.95);
+    color: @theme_text_color;
+}
+
+/*******************
+ * gnome-bluetooth *
+ *******************/
+GtkEntry.entry.pin-entry {
+	font: regular 50;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+GtkLabel.pin-label {
+	font: regular 50;
 }

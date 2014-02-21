@@ -2417,6 +2417,8 @@ GtkColorButton.button {
                                       shade(@titlebar_bg_color, 1.0),
                                       shade(@titlebar_bg_color, 0.88)
                                       );
+
+    color: @titlebar_fg_color;
 }
 
 .header-bar .button.text-button {
@@ -2527,6 +2529,8 @@ GtkColorButton.button {
                                       shade(@toolbar_bg_color, 1.0),
                                       shade(@toolbar_bg_color, 0.88)
                                       );
+
+    color: @toolbar_fg_color;
 }
 
 .toolbar .button {
@@ -3340,7 +3344,7 @@ GtkTreeView {
 GtkTreeView.dnd {
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@theme_selected_bg_color, 1.2);
+    border-color: @theme_selected_bg_color;
     border-radius: 0;
 }
 
