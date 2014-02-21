@@ -223,6 +223,7 @@ GeditWindow .pane-separator:hover {
 .gedit-document-panel-document-row:selected,
 .gedit-document-panel-document-row:selected:hover {
     background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 .gedit-document-panel .list-row .button {
