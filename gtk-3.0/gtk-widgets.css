@@ -4002,6 +4002,8 @@ GtkBubbleWindow .toolbar {
                                       shade(@titlebar_bg_color, 1.07),
                                       shade(@titlebar_bg_color, 0.88)
                                       );
+
+    color: @titlebar_fg_color;
 }
 
 .tiled .titlebar {
