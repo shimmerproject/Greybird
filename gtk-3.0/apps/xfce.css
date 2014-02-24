@@ -6,7 +6,7 @@ XfceHeading,
 .XfceHeading {
     background-color: shade(@theme_bg_color, 1.18);
     background-image: none;
-    color: @text_color;
+    color: @theme_text_color;
     padding: 0;
     border-width: 0;
     margin: 0;
