@@ -622,6 +622,19 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-radius: 0;
 }
 
+/**********
+ * window *
+ **********/
+GtkWindow {
+    color: @fg_color;
+}
+
+* {
+    /* inherit the color from parent by default */
+    color: inherit;
+    background-color: @bg_color;
+}
+
 /*******************
  * scrolled window *
  *******************/
