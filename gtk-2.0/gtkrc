@@ -593,11 +593,11 @@ style "xfce-header"
 style "xfwm-tabwin"
 {
 	Xfwm4TabwinWidget::border-width = 1
-        Xfwm4TabwinWidget::border-alpha = 0.6
+        Xfwm4TabwinWidget::border-alpha = 0.9
 	Xfwm4TabwinWidget::icon-size = 64
 	Xfwm4TabwinWidget::listview-icon-size = 16
         Xfwm4TabwinWidget::alpha = 0.8
-        Xfwm4TabwinWidget::radius = 10
+        Xfwm4TabwinWidget::border-radius = 10
 
 	bg[NORMAL]	= shade (0.35, @bg_color_dark)
 	bg[ACTIVE]	= shade (0.65, @selected_bg_color)
