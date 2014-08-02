@@ -42,8 +42,9 @@ style "notify-progressbar"
     ythickness   = 0
 
     fg[PRELIGHT] = "#000000"
-    bg[NORMAL]   = "#dbdbdb"
-    bg[SELECTED] = "#dbdbdb"
+    bg[NORMAL]   = "#fefefe"
+    bg[SELECTED] = "#fefefe"
+    bg[ACTIVE]   = "#696969"
 
     engine "murrine" {
         gradient_shades = { 1.0, 1.0, 1.0, 1.0 }
