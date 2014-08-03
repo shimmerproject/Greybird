@@ -131,6 +131,14 @@ GtkGrid:insensitive {
     transition: all 150ms ease-in;
 }
 
+.notebook tab GtkLabel,
+.notebook .prelight-page,
+.notebook .prelight-page GtkLabel,
+.notebook .active-page,
+.notebook .active-page GtkLabel {
+    transition: all 200ms ease-in;
+}
+
 /* inset shadows */
 .button,
 .primary-toolbar .raised .button,
@@ -173,6 +181,7 @@ GtkSwitch.slider:insensitive {
 .primary-toolbar GtkComboBox,
 .primary-toolbar .button *,
 .primary-toolbar .button,
+.notebook tab .button,
 column-header .button,
 GtkCalendar.button {
     box-shadow: none;
@@ -630,7 +639,7 @@ GtkScrolledWindow.frame {
     border-radius: 0;
 }
 
-/* avoid double borders when a viewport is 
+/* avoid double borders when a viewport is
  * packed into a GtkScrolledWindow */
 GtkScrolledWindow GtkViewport.frame {
     border-style: none;
