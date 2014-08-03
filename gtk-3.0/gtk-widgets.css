@@ -1263,13 +1263,17 @@ GtkPopover {
     margin: 10px;
     padding: 2px;
     border-radius: 3px;
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@menu_bg_color, 0.8);
     border-width: 1px;
     border-style: solid;
     background-clip: border-box;
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
+    background-color: @menu_bg_color;
+    color: @menu_fg_color;
     box-shadow: 0 2px 3px alpha(black, 0.5);
+}
+
+GtkPopover:backdrop {
+    box-shadow: none;
 }
 
 GtkPopover.osd {
@@ -1297,26 +1301,57 @@ GtkPopover .separator {
     font-weight: bold;
 }
 
-GtkModelButton.button,
-GtkModelButton.button:active,
-GtkModelButton.button:insensitive,
-GtkModelButton.button:active:insensitive {
+.menuitem.button {
+    color: @theme_fg_color;
+}
+
+.menuitem.button,
+.menuitem.button:active,
+.menuitem.button:insensitive,
+.menuitem.button:active:insensitive {
     background-color: transparent;
     background-image: none;
     border-color: transparent;
     border-style: none;
     box-shadow: none;
-    color: @theme_fg_color;
+    color: @menu_fg_color;
 }
 
-GtkModelButton.button:active:hover,
-GtkModelButton.button:hover,
-GtkModelButton.button:selected {
+.menuitem.button:active:hover,
+.menuitem.button:hover,
+.menuitem.button:selected {
     border-width: 0;
     border-color: transparent;
     background-color: @theme_selected_bg_color;
     background-image: none;
     color: @theme_selected_fg_color;
+}
+
+GtkModelButton.button {
+    color: @menu_fg_color;
+}
+
+GtkModelButton.button:active,
+GtkModelButton.button:insensitive,
+GtkModelButton.button:active:insensitive,
+GtkModelButton.button {
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: none;
+    box-shadow: none;
+}
+
+GtkModelButton.button:active:hover,
+GtkModelButton.button:hover,
+GtkModelButton.button:selected {
+    background-image: none;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    text-shadow: none;
+    border-width: 0;
+    border-color: transparent;
 }
 
 /************
@@ -1927,7 +1962,8 @@ OsScrollbar:insensitive {
     border-color: shade(@titlebar_bg_color, 0.85);
 }
 
-.menuitem.separator {
+.menuitem.separator,
+.menuitem .separator {
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
 
@@ -4038,7 +4074,7 @@ GtkBubbleWindow .toolbar {
 
 .titlebar .title {
     font: bold;
-    text-shadow: 0 1px shade(@titlebar_bg_color, 1.2);
+    text-shadow: 0 1px shade(@titlebar_bg_color, 1.1);
 }
 
 .titlebar:backdrop {
@@ -4049,7 +4085,7 @@ GtkBubbleWindow .toolbar {
 }
 
 .titlebar .title:backdrop {
-    text-shadow: 0 1px shade(@titlebar_bg_color, 1.1);
+    text-shadow: 0 1px shade(@titlebar_bg_color, 1.05);
 }
 
 .titlebar .titlebutton {
@@ -4057,7 +4093,7 @@ GtkBubbleWindow .toolbar {
     border-style: none;
     background: none;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.3);
-    icon-shadow: 0 1px shade(@titlebar_bg_color, 1.2);
+    icon-shadow: 0 1px shade(@titlebar_bg_color, 1.1);
     box-shadow: none;
 }
 
@@ -4094,7 +4130,7 @@ GtkBubbleWindow .toolbar {
 .titlebar .titlebutton:backdrop {
     background-image: none;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
-    icon-shadow: 0 1px shade(@titlebar_bg_color, 1.1);
+    icon-shadow: 0 1px shade(@titlebar_bg_color, 1.05);
 }
 
 .window-frame {
