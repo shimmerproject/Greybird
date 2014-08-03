@@ -644,7 +644,6 @@ GtkIconView.view.cell:selected:focus {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_selected_bg_color, 0.8);
-    border-radius: 3px;
     background-image: linear-gradient(to bottom,
                                       shade(@theme_selected_bg_color, 1.2),
                                       shade(@theme_selected_bg_color, 1.0)
@@ -3737,7 +3736,6 @@ GtkProgressBar.osd.progressbar {
 .osd GtkIconView.cell:selected:focus {
     background-color: transparent;
     border-style: solid;
-    border-radius: 3px;
     border-width: 3px;
     border-color: @osd_fg;
     outline-color: transparent;
