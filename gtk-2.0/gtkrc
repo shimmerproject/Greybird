@@ -622,6 +622,11 @@ style "xfwm-tabwin"
 	}
 }
 
+style "xfwm-tabwin-button"
+{
+	font_name = "bold"
+}
+
 style "xfdesktop-icon-view"
 {
 	XfdesktopIconView::label-alpha = 0
@@ -775,6 +780,7 @@ widget_class "*GnmSimpleCanvas*"		style "treeview-header" # Gnumeric treeview-he
 # Xfce specific theming
 widget_class "*XfceHeading*"		style "xfce-header"
 widget "xfwm4-tabwin*"			style "xfwm-tabwin"
+widget "xfwm4-tabwin*GtkButton*"		style "xfwm-tabwin-button"
 widget_class "*XfsmLogoutDialog*"	style "xfsm-logout"
 widget_class "*XfsmLogoutDialog*GtkVBox.GtkVBox.GtkLabel"	style "xfsm-label"
 widget_class "*XfsmLogoutDialog*GtkButton*"	style "xfsm-button"
