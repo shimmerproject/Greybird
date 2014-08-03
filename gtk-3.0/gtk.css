@@ -56,10 +56,10 @@
 /* window manager colors */
 @define-color wm_bg_a shade(@titlebar_bg_color, 1.07);
 @define-color wm_bg_b @titlebar_bg_color;
-@define-color wm_title_focused shade(@titlebar_fg_color, 1.2);
-@define-color wm_title_focused_shadow shade(@titlebar_bg_color, 1.2);
-@define-color wm_title_unfocused shade(@titlebar_fg_color, 2.0);
-@define-color wm_title_unfocused_shadow shade(@titlebar_bg_color, 1.1);
+@define-color wm_title_focused mix(@titlebar_fg_color, @titlebar_bg_color, 0.3);
+@define-color wm_title_focused_shadow shade(@titlebar_bg_color, 1.1);
+@define-color wm_title_unfocused mix(@titlebar_fg_color, @titlebar_bg_color, 0.6);
+@define-color wm_title_unfocused_shadow shade(@titlebar_bg_color, 1.05);
 @define-color wm_border_focused shade(@titlebar_bg_color, 0.7);
 @define-color wm_border_unfocused shade(@titlebar_bg_color, 0.8);
 
