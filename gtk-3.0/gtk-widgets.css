@@ -10,6 +10,8 @@
     -GtkButton-image-spacing: 0;
     -GtkButton-inner-border: 1;
     -GtkButton-interior-focus: true;
+    -GtkButtonBox-child-min-height: 24;
+    -GtkButtonBox-child-internal-pad-y: 1;
     -GtkCheckButton-indicator-size: 15;
     -GtkCheckMenuItem-indicator-size: 14;
     -GtkExpander-expander-size: 12;
@@ -2232,8 +2234,12 @@ GtkComboBox .separator {
 }
 
 .menu.spinner,
+.menu .spinner,
+.menu .spinner:hover,
 .primary-toolbar .spinner {
     color: @theme_selected_bg_color;
+    border: none;
+    box-shadow: none;
 }
 
 /*************
@@ -2692,7 +2698,7 @@ GtkColorButton.button {
 .inline-toolbar.toolbar {
     -GtkToolbar-button-relief: normal;
 
-    padding: 1px;
+    padding: 4px;
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
@@ -2711,7 +2717,7 @@ GtkColorButton.button {
 }
 
 .inline-toolbar.toolbar .button {
-    padding: 1px;
+    padding: 2px;
     border-width: 1px 0 1px 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);

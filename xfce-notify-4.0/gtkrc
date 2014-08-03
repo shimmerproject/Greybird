@@ -37,15 +37,17 @@ style "notify-summary"
 
 style "notify-progressbar"
 {
-    xthickness   = 1
-    ythickness   = 1
+    GtkProgressBar::min-horizontal-bar-height = 4
+    xthickness   = 0
+    ythickness   = 0
 
     fg[PRELIGHT] = "#000000"
-    bg[NORMAL]   = "#dbdbdb"
-    bg[SELECTED] = "#dbdbdb"
+    bg[NORMAL]   = "#fefefe"
+    bg[SELECTED] = "#fefefe"
+    bg[ACTIVE]   = "#696969"
 
     engine "murrine" {
-        gradient_shades = {1.1,0.95,1.1,0.85}
+        gradient_shades = { 1.0, 1.0, 1.0, 1.0 }
         contrast	= 0.5
         border_shades	= { 0.9, 0.9 }
         progressbarstyle    = 0
