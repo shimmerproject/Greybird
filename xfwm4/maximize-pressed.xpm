@@ -4,7 +4,7 @@ static char * maximize_pressed_xpm[] = {
 " 	c #939393",
 ".	c #FFFFFF",
 "+	c #DEDEDE s active_color_2",
-"@	c #5189B5 s active_color_1",
+"@	c #93b723",
 "                    ",
 "....................",
 "++++++++++++++++++++",
