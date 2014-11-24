@@ -1276,9 +1276,15 @@ GtkPopover {
     border-width: 1px;
     border-style: solid;
     background-clip: border-box;
+    background-image: none;
     background-color: @menu_bg_color;
     color: @menu_fg_color;
     box-shadow: 0 2px 3px alpha(black, 0.5);
+}
+
+GtkPopover.background {
+    background-image: none;
+    background-color: @menu_bg_color;
 }
 
 GtkPopover:backdrop {
@@ -1292,6 +1298,7 @@ GtkPopover.osd {
 GtkPopover > .list,
 GtkPopover > .view,
 GtkPopover > .toolbar {
+    background-image: none;
     background-color: transparent;
 }
 
@@ -1346,7 +1353,7 @@ GtkModelButton.button:active:insensitive,
 GtkModelButton.button {
     background-color: transparent;
     background-image: none;
-    border-color: transparent;
+    border: transparent;
     border-image: none;
     border-style: none;
     box-shadow: none;
