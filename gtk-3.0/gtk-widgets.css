@@ -331,6 +331,7 @@ GtkAssistant .sidebar {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
+    box-shadow: none;
 }
 
 /****************
@@ -664,7 +665,10 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-radius: 0;
 }
 
-.frame.flat { border: none; }
+.frame.flat {
+    border: none;
+    box-shadow: none;
+}
 
 /*******************
  * scrolled window *
@@ -2750,6 +2754,7 @@ GtkColorButton.button {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
+    box-shadow: none;
 }
 
 .primary-toolbar .raised .button,
