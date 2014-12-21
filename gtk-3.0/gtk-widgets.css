@@ -164,7 +164,7 @@ GtkSwitch.slider {
 .button:checked,
 .primary-toolbar .button:checked,
 .toolbar .button:checked,
-.header-bar .button:checked, {
+.header-bar .button:checked {
     box-shadow: inset 1px 1px alpha(@dark_shadow, 0.06),
                 inset -1px -1px alpha(@dark_shadow, 0.06);
 }
