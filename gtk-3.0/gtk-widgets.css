@@ -4447,3 +4447,7 @@ GtkBubbleWindow .toolbar {
     box-shadow: 0 3px 5px alpha(black, 0.5),
                 0 0 0 1px alpha(black, 0.2);
 }
+
+GtkPaned {
+    background-color: @theme_bg_color;
+}
