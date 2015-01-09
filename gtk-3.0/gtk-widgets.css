@@ -2864,7 +2864,7 @@ GtkColorButton.button {
 .inline-toolbar.toolbar {
     -GtkToolbar-button-relief: normal;
 
-    padding: 4px;
+    padding: 2px;
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
@@ -2883,7 +2883,7 @@ GtkColorButton.button {
 }
 
 .inline-toolbar.toolbar .button {
-    padding: 2px;
+    padding: 4px;
     border-width: 1px 0 1px 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
@@ -3811,9 +3811,9 @@ GtkOverlay.osd {
     padding: 4px;
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@osd_bg, 0.8);
-    border-radius: 3px;
-    background-color: shade(@osd_bg, 1.05);
+    border-color: transparent;
+    border-radius: 2px;
+    background-color: transparent;
     background-image: none;
     color: @osd_fg;
 }
@@ -3821,8 +3821,8 @@ GtkOverlay.osd {
 .osd.button:prelight,
 .osd.button:hover,
 .osd .button:hover {
-    border-color: shade(@osd_bg, 0.7);
-    background-color: shade(@osd_bg, 1.15);
+    border-color: shade(@osd_bg, 0.6);
+    background-color: transparent;
     background-image: none;
 }
 
@@ -3832,9 +3832,12 @@ GtkOverlay.osd {
 .osd .button:checked,
 .osd GtkMenuButton.button:active,
 .osd GtkMenuButton.button:checked {
-    border-color: shade(@osd_bg, 0.8);
-    background-color: shade(@osd_bg, 0.95);
-    background-image: none;
+    border-color: shade(@osd_bg, 0.4);
+    background-color: shade(@osd_bg, 0.65);
+    background-image: linear-gradient(to bottom,
+                                      shade(@osd_bg, 0.5),
+                                      shade(@osd_bg, 0.75)
+                                      );
 }
 
 .osd.button:active:hover,
@@ -3842,12 +3845,12 @@ GtkOverlay.osd {
 .osd .button:active:hover,
 .osd .button:checked:hover,
 .osd GtkMenuButton.button:active:hover {
-    border-color: shade(@osd_bg, 0.7);
+    border-color: shade(@osd_bg, 0.4);
 }
 
 .osd.button:insensitive,
 .osd .button:insensitive {
-    border-color: shade(@osd_bg, 0.85);
+    border-color: transparent;
     background-color: shade(@osd_bg, 0.9);
     background-image: none;
 }
