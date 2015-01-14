@@ -2948,6 +2948,8 @@ GtkColorButton.button {
 .inline-toolbar.toolbar .button,
 .inline-toolbar.toolbar GtkToolButton .button,
 .inline-toolbar.toolbar GtkToolButton > .button {
+    padding: 6px;
+
     box-shadow: inset -1px 0 shade(@theme_bg_color, 0.8),
                 inset 1px 1px alpha(@light_shadow, 0.4);
 }
