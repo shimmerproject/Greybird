@@ -1346,8 +1346,11 @@ GtkPopover .list-row {
 }
 
 GtkPopover .list-row:hover {
-    background-image: none;
-    background-color: @theme_selected_bg_color;
+    border-color: shade(@theme_selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_selected_bg_color, 1.2),
+                                      shade(@theme_selected_bg_color, 1.0)
+                                      );
     color: @theme_selected_fg_color;
 }
 
@@ -1396,7 +1399,7 @@ GtkPopover .separator {
 .menuitem.button:checked:insensitive {
     background-color: transparent;
     background-image: none;
-    border: none;
+    border-width: 1px;
     box-shadow: none;
     color: @menu_fg_color;
 }
@@ -1405,14 +1408,17 @@ GtkPopover .separator {
 .menuitem.button:checked:hover,
 .menuitem.button:hover,
 .menuitem.button:selected {
-    border: none;
-    background-color: @theme_selected_bg_color;
-    background-image: none;
+    border-color: shade(@theme_selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_selected_bg_color, 1.2),
+                                      shade(@theme_selected_bg_color, 1.0)
+                                      );
     color: @theme_selected_fg_color;
 }
 
 GtkModelButton.button {
     color: @menu_fg_color;
+    transition: none;
 }
 
 GtkModelButton.button:active,
@@ -1425,7 +1431,7 @@ GtkModelButton.button {
     background-image: none;
     border-color: transparent;
     border-image: none;
-    border-style: none;
+    border-width: 1px;
     box-shadow: none;
 }
 
@@ -1433,12 +1439,14 @@ GtkModelButton.button:active:hover,
 GtkModelButton.button:checked:hover,
 GtkModelButton.button:hover,
 GtkModelButton.button:selected {
-    background-image: none;
-    background-color: @theme_selected_bg_color;
+    border-color: shade(@theme_selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_selected_bg_color, 1.2),
+                                      shade(@theme_selected_bg_color, 1.0)
+                                      );
     color: @theme_selected_fg_color;
     text-shadow: none;
-    border-width: 0;
-    border-color: transparent;
+    border-width: 1px;
 }
 
 /************
