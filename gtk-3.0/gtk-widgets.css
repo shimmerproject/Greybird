@@ -122,7 +122,7 @@ GtkGrid:insensitive {
  ******************/
 /* transitions */
 .button {
-    transition: background 150ms ease-in-out;
+    transition: none;
 }
 
 .entry {
@@ -1418,7 +1418,6 @@ GtkPopover .separator {
 
 GtkModelButton.button {
     color: @menu_fg_color;
-    transition: none;
 }
 
 GtkModelButton.button:active,
@@ -3832,7 +3831,7 @@ GtkOverlay.osd {
 .osd.button:hover,
 .osd .button:hover {
     border-color: shade(@osd_bg, 0.6);
-    background-color: transparent;
+    background-color: shade(@osd_bg, 1.15);
     background-image: none;
 }
 
