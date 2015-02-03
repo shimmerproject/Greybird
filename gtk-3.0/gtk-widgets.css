@@ -2267,7 +2267,7 @@ GtkComboBox .separator {
 
 .spinner {
     -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
-    color: @selected_bg_color;
+    color: @theme_fg_color;
     opacity: 0;
 }
 

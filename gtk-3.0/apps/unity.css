@@ -94,5 +94,5 @@ UnityPanelWidget,
 .menu IdoPlaybackMenuItem.menuitem:active {
     -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
     animation: playbackmenuitem_spinner 1s infinite linear;
-    color: @selected_bg_color;
+    color: @theme_fg_color;
 }

@@ -63,5 +63,5 @@
 
 .lightdm.entry:active {
     -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
-        animation: dashentry_spinner 1s infinite linear;
+    animation: dashentry_spinner 1s infinite linear;
 }
