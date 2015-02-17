@@ -184,6 +184,7 @@
 /******************************
  * default and focused button *
  ******************************/
+#login_window #login_button,
 #login_window .button.default,
 #shutdown_dialog .button.default,
 #restart_dialog .button.default,
