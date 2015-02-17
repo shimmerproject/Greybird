@@ -1,6 +1,15 @@
+/***********
+ * general *
+ ***********/
+
+#screen.lightdm-gtk-greeter {
+    background: transparent;
+}
+
 /*********
  * panel *
  *********/
+
 #panel_window {
     background-color: alpha (black, 0.5);
     color: white;
