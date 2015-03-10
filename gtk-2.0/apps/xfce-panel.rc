@@ -127,6 +127,7 @@ widget "*WnckPager*"			style "workspace-switcher"
 class "GtkEntry"			style "combo"
 class "*SexyIconEntry*"			style:highest "combo"	# fixes dict-plugin
 widget "*xfce4-verve-plugin*GtkEntry"	style:highest "combo"	# fixes verve-plugin
+widget "*bookmark*GtkEntry" style "panel-entry" # fixes smartbookmark-plugin
 
 # Make sure panel text color doesn't change
 widget_class "*Panel*MenuBar*"		style "theme-main-menu-text"
