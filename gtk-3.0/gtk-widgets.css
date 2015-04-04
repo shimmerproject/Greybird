@@ -1493,7 +1493,7 @@ GtkModelButton.button:selected {
 
 .notebook GtkViewport {
     border-width: 0;
-    background-color: @theme_base_color;
+    background-color: transparent;
     color: @theme_text_color;
 }
 
