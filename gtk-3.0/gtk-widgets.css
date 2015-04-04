@@ -3551,7 +3551,8 @@ GtkColorButton.button {
 /***********
  * tooltip *
  ***********/
-.tooltip {
+.tooltip,
+.tooltip.background {
     border-width: 1px;
     border-style: solid;
     border-color: alpha(@theme_tooltip_bg_color, 0.9);
