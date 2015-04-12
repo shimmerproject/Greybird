@@ -4386,7 +4386,7 @@ GtkBubbleWindow .toolbar {
 }
 
 .window-frame.solid-csd {
-    border: solid 1px alpha(black, 0.7);
+    border: solid 1px shade(@theme_bg_color, 0.5);
     border-radius: 0;
     margin: 2px;
     background-color: @theme_bg_color;
