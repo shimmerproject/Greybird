@@ -12,7 +12,7 @@ gtk-color-scheme	= "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
 gtk-color-scheme	= "bg_color_dark:#686868\ntext_color_dark:#FFF"
 
 gtk-icon-sizes          = "panel-applications-menu=24,24:panel-menu=24,24:panel=16,16:gtk-button=16,16"
-gtk-button-images	= 0					# Disables icons for buttons with text
+gtk-button-images	= 1					# Disables icons for buttons with text
 gtk-toolbar-style	= 0					# Disables text in toolbar
 gtk-auto-mnemonics	= 1					# Disables ugly lines under menu items
 
@@ -596,6 +596,7 @@ style "xfwm-tabwin"
         Xfwm4TabwinWidget::border-alpha = 0.9
 	Xfwm4TabwinWidget::icon-size = 64
 	Xfwm4TabwinWidget::listview-icon-size = 16
+        Xfwm4TabwinWidget::preview-size = 512
         Xfwm4TabwinWidget::alpha = 0.8
         Xfwm4TabwinWidget::border-radius = 10
 
