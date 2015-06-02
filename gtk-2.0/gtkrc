@@ -298,7 +298,7 @@ style "menu"
 	text[PRELIGHT]    = @base_color
 	text[SELECTED]    = @base_color
 	text[ACTIVE]      = @fg_color
-	text[INSENSITIVE] = @text_color
+	text[INSENSITIVE] = mix (0.4, @fg_color, @bg_color)
 	
 	engine "murrine" 
 	{
