@@ -59,15 +59,15 @@ style "default"
 	GtkScale		::slider-width				= 15
 	GtkScale		::trough-side-details			= 1
 
-	GtkScrollbar		::min-slider-length			= 50
-	GtkScrollbar		::slider-width				= 9
+	GtkScrollbar		::min-slider-length			= 30
+	GtkScrollbar		::slider-width				= 6
 	#GtkScrollbar		::activate-slider			= 1
-	GtkScrollbar		::trough-border				= 3
+	GtkScrollbar		::trough-border				= 0
 	GtkScrollbar		::has-backward-stepper 			= 0
 	GtkScrollbar		::has-forward-stepper			= 0 
 
 	GtkScrolledWindow	::scrollbar-spacing			= 0
-	GtkScrolledWindow	::scrollbars-within-bevel		= 1
+	GtkScrolledWindow	::scrollbars-within-bevel		= 0
 
 	GtkMenuBar		::internal-padding			= 0
 	GtkMenuBar		::window-dragging			= 1
@@ -427,23 +427,23 @@ style "progressbar"
 
 style "scrollbar"
 {
-	GtkScrollbar::stepper-size	= 0
-	GtkScrollbar::arrow-scaling	= 0.0
+	bg[SELECTED]				= shade (0.6, @base_color)
+	bg[ACTIVE]				= @base_color
 	
-	bg[NORMAL]	= @bg_color
-	
-	bg[ACTIVE]	= shade (1.75, @base_color)
-	bg[PRELIGHT]	= shade (0.8, @bg_color)
-	bg[INSENSITIVE]	= shade (0.75, @bg_color)
-
 	engine "murrine"
 	{
-		colorize_scrollbar	= FALSE
-		roundness	= 10
-		border_shades	= {0.75, 0.75}
-		trough_shades	= {1.1, 1.3}
-		contrast	= 0.05
-		gradient_shades	= {1.06,1.06,1.04,1.04}
+		roundness			= 2
+		gradient_shades			= {1.0,1.0,1.0,1.0}
+		highlight_shade			= 1.0
+		glow_shade			= 1.0
+		reliefstyle			= 0
+		gradient_colors			= FALSE
+		lightborder_shade		= 1.0
+		lightborderstyle		= 0
+		trough_shades	        	= { 1.3, 1.3}
+		border_shades			= { 2.0, 2.0}
+		contrast			= 0.0
+		prelight_shade			= 0.65
 	}
 }
 
