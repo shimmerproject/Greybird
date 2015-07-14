@@ -165,7 +165,7 @@ style "resize-grip"
 			overlay_border	= {0,0,0,0 }
 			overlay_stretch	= FALSE
 		}
-        }
+    }
 }
 
 style "paned" = "default"
@@ -238,7 +238,7 @@ style "button" = "wider"
 	bg[SELECTED]      = shade (0.5, @selected_bg_color)
 	bg[INSENSITIVE]   = shade (0.95, @bg_color)
 
-  	engine "murrine"
+	engine "murrine"
 	{
 		contrast            = 0.9
 		highlight_shade     = 1.0
@@ -338,9 +338,9 @@ style "menubar-menuitem"
 	text[SELECTED] = @base_color
 
 	engine "murrine"
-        {
+    {
 		lightborder_shade = 1.5
-        }
+    }
 }
 
 style "separator-menu-item"
@@ -358,7 +358,7 @@ style "separator-menu-item"
 style "treeview"
 {
 	bg[NORMAL]	= @bg_color
-  	engine "murrine"
+	engine "murrine"
 	{
 		roundness = 0
 		gradient_shades     = {1.3,1.2,1.2,1.1}
@@ -537,7 +537,7 @@ style "radiocheck"
 	fg[ACTIVE]	= @fg_color
 	fg[INSENSITIVE] = mix (0.4, @fg_color, @bg_color)
 
-  	engine "murrine"
+	engine "murrine"
 	{
 		border_shades		= { 0.9, 0.8 }
 		contrast		= 0.8
@@ -593,12 +593,12 @@ style "xfce-header"
 style "xfwm-tabwin"
 {
 	Xfwm4TabwinWidget::border-width = 1
-        Xfwm4TabwinWidget::border-alpha = 0.9
+	Xfwm4TabwinWidget::border-alpha = 0.9
 	Xfwm4TabwinWidget::icon-size = 64
 	Xfwm4TabwinWidget::listview-icon-size = 16
-        Xfwm4TabwinWidget::preview-size = 512
-        Xfwm4TabwinWidget::alpha = 0.8
-        Xfwm4TabwinWidget::border-radius = 10
+	Xfwm4TabwinWidget::preview-size = 512
+	Xfwm4TabwinWidget::alpha = 0.8
+	Xfwm4TabwinWidget::border-radius = 10
 
 	bg[NORMAL]	= shade (0.35, @bg_color_dark)
 	bg[ACTIVE]	= shade (0.65, @selected_bg_color)
