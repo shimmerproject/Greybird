@@ -91,3 +91,14 @@ XfceHeading,
 
     text-shadow: none;
 }
+
+TopMenuAppMenuBar.menubar {
+    background-color: shade(@panel_bg_color, 0.35);
+    color: @panel_fg_color;
+
+    text-shadow: none;
+}
+
+TopMenuAppMenuBar.menubar > .menuitem {
+    color: @panel_fg_color;
+}
