@@ -24,15 +24,15 @@
     -GtkPaned-handle-size: 3;
     -GtkProgressBar-min-horizontal-bar-height: 10;
     -GtkProgressBar-min-vertical-bar-width: 10;
-    -GtkRange-slider-width: 9;
+    -GtkRange-slider-width: 5;
     -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-border: 3;
+    -GtkRange-trough-border: 0;
     -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkScrollbar-min-slider-length: 50;
+    -GtkScrollbar-min-slider-length: 30;
     -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
+    -GtkScrolledWindow-scrollbars-within-bevel: 0;
     -GtkStatusbar-shadow-type: none;
     -GtkTextView-error-underline-color: @error_color;
     -GtkToolButton-icon-spacing: 6;
@@ -1891,85 +1891,33 @@ GtkLevelBar.vertical {
  * scrollbar *
  *************/
 .scrollbar {
-    border-width: 1px;
+    border-width: 0px;
     border-style: solid;
     padding: 0;
 }
 
 .scrollbars-junction,
-.scrollbar.trough,
-.scrollbar.trough.vertical {
+.scrollbar.trough {
     border-width: 0;
-    border-radius: 0;
-    background-image: linear-gradient(to right,
-                                      shade(@theme_bg_color, 1.1),
-                                      shade(@theme_bg_color, 1.3)
-                                      );
-}
-
-.scrollbar.trough.horizontal {
-    background-image: linear-gradient(to bottom,
-                                      shade(@theme_bg_color, 1.1),
-                                      shade(@theme_bg_color, 1.3)
-                                      );
+    background: #fff;
 }
 
 .scrollbar.slider,
-.scrollbar.button,
-.scrollbar.slider.vertical,
-.scrollbar.button.vertical {
-    border-width: 1px;
-    border-color: shade(@theme_bg_color, 0.7);
-    border-radius: 10px;
-    background-image: linear-gradient(to right,
-                                      shade(shade(@theme_bg_color, 0.9), 1.2),
-                                      shade(shade(@theme_bg_color, 0.9), 1.15)
-                                      );
-
-    color: shade(@theme_bg_color, 0.6);
+.scrollbar.button {
+    border-width: 0;
+    background: shade(@theme_bg_color, 0.7);
 }
 
-.scrollbar.slider.horizontal,
-.scrollbar.button.horizontal {
-    background-image: linear-gradient(to bottom,
-                                      shade(shade(@theme_bg_color, 0.9), 1.2),
-                                      shade(shade(@theme_bg_color, 0.9), 1.15)
-                                      );
+.scrollbar.slider:hover {
+    background: shade(@theme_bg_color, 0.5);
 }
 
-.scrollbar.slider:hover,
-.scrollbar.slider.vertical:hover {
-    background-image: linear-gradient(to right,
-                                      shade(shade(@theme_bg_color, 0.8), 1.2),
-                                      shade(shade(@theme_bg_color, 0.8), 1.15)
-                                      );
-}
-
-.scrollbar.slider.horizontal:hover {
-    background-image: linear-gradient(to bottom,
-                                      shade(shade(@theme_bg_color, 0.8), 1.2),
-                                      shade(shade(@theme_bg_color, 0.8), 1.15)
-                                      );
-}
-
-.scrollbar.button:insensitive,
-.scrollbar.button.vertical:insensitive {
-    background-image: linear-gradient(to right,
-                                      shade(shade(@theme_bg_color, 0.95), 1.05),
-                                      shade(shade(@theme_bg_color, 0.95), 0.97)
-                                      );
-}
-
-.scrollbar.button.horizontal:insensitive {
-    background-image: linear-gradient(to bottom,
-                                      shade(shade(@theme_bg_color, 0.95), 1.05),
-                                      shade(shade(@theme_bg_color, 0.95), 0.97)
-                                      );
+.scrollbar.button:insensitive {
+    background: shade(@theme_bg_color, 0.7);
 }
 
 .scrollbar.slider.fine-tune:prelight:active {
-      border-width: 2px;
-      border-color: transparent;
+    border-width: 0;
 }
 
 /* overlay scrollbar */
