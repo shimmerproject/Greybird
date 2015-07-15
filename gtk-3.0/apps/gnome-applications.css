@@ -307,6 +307,18 @@ GeditViewFrame .gedit-search-slider {
     background-color: @theme_base_color;
 }
 
+GeditViewFrame .gedit-search-slider .button,
+GeditViewFrame .gedit-search-slider .entry {
+    padding: 4px;
+}
+
+GeditViewFrame .gedit-search-slider .entry, 
+GeditViewFrame .gedit-search-slider .entry:active,
+GeditViewFrame .gedit-search-slider .entry:focus {
+    border-right-width: 1px;
+    border-right-color: shade(@theme_bg_color, 0.8);
+}
+
 GeditViewFrame .gedit-search-slider .not-found {
     background-color: @error_bg_color;
     background-image: none;
