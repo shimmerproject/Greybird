@@ -343,6 +343,33 @@ GeditFileBrowserWidget .toolbar {
     color: mix(@theme_text_color, @theme_base_color, 0.4);
 }
 
+/**********
+ * Evince *
+ **********/
+EvWindow EggFindBar.primary-toolbar.toolbar {
+    padding: 4px;
+    background-color: @toolbar_bg_color;
+    background-image: none;
+}
+
+EvWindow EggFindBar.primary-toolbar.toolbar .button,
+EvWindow EggFindBar.primary-toolbar.toolbar .entry {
+    padding: 4px;
+}
+
+EvWindow EggFindBar.primary-toolbar.toolbar .entry,
+EvWindow EggFindBar.primary-toolbar.toolbar .entry:active,
+EvWindow EggFindBar.primary-toolbar.toolbar .entry:focus {
+    border-right-width: 1px;
+    border-right-color: shade(@theme_bg_color, 0.8);
+}
+
+
+EvWindow EvFindSidebar .frame {
+    border: none;
+    border-right: 1px solid shade(@theme_bg_color, 0.8);
+}
+
 /***************
  * font-viewer *
  ***************/
