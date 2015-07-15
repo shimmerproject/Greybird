@@ -402,3 +402,12 @@ GtkLabel.pin-label {
 
     color: @theme_selected_fg_color;
 }
+
+/************
+ * Shotwell *
+ ************/
+SearchFilterToolbar.toolbar {
+    background-color: @panel_bg_color;
+    background-image: none;
+    color: @theme_selected_fg_color;
+}
