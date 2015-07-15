@@ -381,3 +381,24 @@ GtkEntry.entry.pin-entry {
 GtkLabel.pin-label {
 	font: regular 50;
 }
+
+/*********
+ * Geary *
+ *********/
+ .sidebar ConversationListView.view {
+    background-color: @theme_base_color;
+    background-image: none;
+    color: @theme_text_color;
+}
+
+.sidebar ConversationListView.view row:selected,
+.sidebar ConversationListView.view row:selected:hover,
+.sidebar ConversationListView.view row:selected:focus {
+    border-color: shade(@theme_selected_bg_color, 1.1);
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_selected_bg_color, 1.2),
+                                      shade(@theme_selected_bg_color, 1.0)
+                                      );
+
+    color: @theme_selected_fg_color;
+}
