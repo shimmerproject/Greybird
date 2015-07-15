@@ -327,7 +327,9 @@ GtkAssistant .sidebar {
 }
 
 .button.flat,
-.button.flat:insensitive {
+.button.flat:insensitive,
+.header-bar .button.flat,
+.header-bar .button.flat:insensitive {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
@@ -2520,7 +2522,8 @@ GtkColorButton.button {
     color: @titlebar_fg_color;
 }
 
-.header-bar .button:hover {
+.header-bar .button:hover,
+.header-bar .button.flat:hover {
     border-top-color: shade(@titlebar_bg_color, 0.85);
     border-right-color: shade(@titlebar_bg_color, 0.78);
     border-left-color: shade(@titlebar_bg_color, 0.78);
@@ -2532,7 +2535,9 @@ GtkColorButton.button {
 }
 
 .header-bar .button:active,
-.header-bar .button:checked {
+.header-bar .button:checked,
+.header-bar .button.flat:active,
+.header-bar .button.flat:checked {
     border-color: shade(@titlebar_bg_color, 0.6);
     background-image: linear-gradient(to bottom,
                                       shade(shade(@titlebar_bg_color, 0.85), 1.05),
