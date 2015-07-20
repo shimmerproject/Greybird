@@ -1896,6 +1896,21 @@ GtkLevelBar.vertical {
     padding: 0;
 }
 
+.scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+    -GtkRange-slider-width: 5px;
+    -GtkRange-trough-border: 1px;
+}
+
+.scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider {
+    border-radius: 3px;
+}
+
+.scrollbar.overlay-indicator:not(.dragging):not(.hovering) .trough {
+    border-style: none;
+    background-image: none;
+    background-color: transparent;
+}
+
 .scrollbars-junction,
 .scrollbar.trough,
 .scrollbar.trough.vertical {
