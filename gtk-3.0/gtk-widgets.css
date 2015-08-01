@@ -2371,6 +2371,14 @@ GtkSwitch.slider {
                                       );
 }
 
+GtkSwitch.slider:focus,
+GtkSwitch.slider:active:focus,
+GtkSwitch.slider:checked:focus,
+GtkSwitch.slider:active:hover:focus,
+GtkSwitch.slider:checked:hover:focus {
+    border-color: shade(@theme_selected_bg_color, 0.8); 
+}
+
 GtkSwitch.slider:insensitive {
     border-color: shade(@theme_bg_color, 0.8);
     background-image: linear-gradient(to bottom,
