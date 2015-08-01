@@ -2544,8 +2544,9 @@ GtkColorButton.button {
     padding: 6px;
 }
 
-.header-bar GtkMenuButton.button {
-    padding: 8px;
+.header-bar GtkMenuButton.titlebutton {
+    padding: 6px;
+    border: 1px solid transparent;
 }
 
 .header-bar .title {
