@@ -2371,11 +2371,7 @@ GtkSwitch.slider {
                                       );
 }
 
-GtkSwitch.slider:focus,
-GtkSwitch.slider:active:focus,
-GtkSwitch.slider:checked:focus,
-GtkSwitch.slider:active:hover:focus,
-GtkSwitch.slider:checked:hover:focus {
+GtkSwitch.slider:focus {
     border-color: shade(@theme_selected_bg_color, 0.8); 
 }
 
@@ -4412,22 +4408,6 @@ GtkBubbleWindow .toolbar {
     color: @theme_selected_bg_color;
     box-shadow: none;
 }
-
-/*
-.titlebar .right .titlebutton:first-child {
-    border-left: 1px solid shade(@titlebar_bg_color, 0.9);
-}
-
-.titlebar .right .titlebutton:last-child {
-}
-
-.titlebar .left .titlebutton:last-child {
-    border-right: 1px solid shade(@titlebar_bg_color, 0.9);
-}
-
-.titlebar .left .titlebutton:first-child {
-}
-*/
 
 .titlebar .titlebutton:backdrop {
     background-image: none;
