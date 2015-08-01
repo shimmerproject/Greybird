@@ -2077,22 +2077,22 @@ OsScrollbar:insensitive {
 .titlebar .separator:insensitive {
     -GtkWidget-window-dragging: true;
 
-    border-color: shade(@titlebar_bg_color, 0.95);
-    color: shade(@titlebar_bg_color, 0.95);
+    border-color: shade(@titlebar_bg_color, 0.8);
+    color: shade(@titlebar_bg_color, 0.8);
 }
 
 .primary-toolbar .button .separator,
 .primary-toolbar .button.separator,
 .toolbar .button .separator,
 .toolbar .button.separator {
-    border-color: shade(@toolbar_bg_color, 0.95);
+    border-color: shade(@toolbar_bg_color, 0.8);
 }
 
 .header-bar .button .separator,
 .header-bar .button.separator,
 .titlebar .button .separator,
 .titlebar .button.separator {
-    border-color: shade(@titlebar_bg_color, 0.95);
+    border-color: shade(@titlebar_bg_color, 0.8);
 }
 
 .primary-toolbar .button .separator:insensitive,
@@ -2544,6 +2544,10 @@ GtkColorButton.button {
     padding: 6px;
 }
 
+.header-bar GtkMenuButton.button {
+    padding: 8px;
+}
+
 .header-bar .title {
     font: bold;
     padding: 0 12px;
@@ -2555,7 +2559,10 @@ GtkColorButton.button {
 }
 
 .header-bar GtkComboBox,
-.header-bar .button {
+.header-bar .button,
+.header-bar GtkMenuButton.button:hover {
+    border-width: 1px;
+    border-style: solid;
     border-top-color: shade(@titlebar_bg_color, 0.8);
     border-right-color: shade(@titlebar_bg_color, 0.72);
     border-left-color: shade(@titlebar_bg_color, 0.72);
@@ -2583,7 +2590,11 @@ GtkColorButton.button {
 .header-bar .button:active,
 .header-bar .button:checked,
 .header-bar .button.flat:active,
-.header-bar .button.flat:checked {
+.header-bar .button.flat:checked,
+.header-bar GtkMenuButton.button:active,
+.header-bar GtkMenuButton.button:checked {
+    border-width: 1px;
+    border-style: solid;
     border-color: shade(@titlebar_bg_color, 0.6);
     background-image: linear-gradient(to bottom,
                                       shade(shade(@titlebar_bg_color, 0.85), 1.05),
@@ -2592,7 +2603,9 @@ GtkColorButton.button {
 }
 
 .header-bar .button:active:hover,
-.header-bar .button:checked:hover {
+.header-bar .button:checked:hover,
+.header-bar GtkMenuButton.button:active:hover,
+.header-bar GtkMenuButton.button:checked:hover {
     border-top-color: shade(@titlebar_bg_color, 0.85);
     border-right-color: shade(@titlebar_bg_color, 0.78);
     border-left-color: shade(@titlebar_bg_color, 0.78);
