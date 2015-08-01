@@ -2663,6 +2663,13 @@ GtkColorButton.button {
     border-color: shade(@theme_selected_bg_color, 0.8);
 }
 
+/************
+ * pathbar *
+ ************/
+.path-bar .button GtkImage {
+    padding-right: 3px;
+}
+
 /***********
  * toolbar *
  ***********/
