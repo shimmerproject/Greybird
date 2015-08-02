@@ -157,3 +157,90 @@ GtkIconView.content-view.cell.check:active, GtkIconView.content-view.cell.check:
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+/*******************
+ * window controls *
+ *******************/
+.titlebar .button.titlebutton.close,
+.titlebar .button.titlebutton.close:backdrop:hover,
+.titlebar .button.titlebutton.close:backdrop:hover:focus {
+    background-image: url("assets/titlebutton-close.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    box-shadow: none;
+    color: transparent;
+    icon-shadow: none;
+    opacity: 1;
+}
+
+.titlebar .button.titlebutton.close:hover,
+.titlebar .button.titlebutton.close:hover:focus {
+    background-image: url("assets/titlebutton-close-hover.png");
+}
+
+.titlebar .button.titlebutton.close:active,
+.titlebar .button.titlebutton.close:checked {
+    background-image: url("assets/titlebutton-close-active.png");
+}
+
+.titlebar .button.titlebutton.close:backdrop {
+    background-image: url("assets/titlebutton-close.png");
+    opacity: 0.4;
+}
+
+.titlebar .button.titlebutton.maximize,
+.titlebar .button.titlebutton.maximize:backdrop:hover,
+.titlebar .button.titlebutton.maximize:backdrop:hover:focus {
+    background-image: url("assets/titlebutton-maximize.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    box-shadow: none;
+    color: transparent;
+    icon-shadow: none;
+    opacity: 1;
+}
+
+.titlebar .button.titlebutton.maximize:hover,
+.titlebar .button.titlebutton.maximize:hover:focus {
+    background-image: url("assets/titlebutton-maximize-hover.png");
+}
+
+.titlebar .button.titlebutton.maximize:active,
+.titlebar .button.titlebutton.maximize:checked {
+    background-image: url("assets/titlebutton-maximize-active.png");
+}
+
+.titlebar .button.titlebutton.maximize:backdrop {
+    background-image: url("assets/titlebutton-maximize.png");
+    opacity: 0.4;
+}
+
+.titlebar .button.titlebutton.minimize,
+.titlebar .button.titlebutton.minimize:backdrop:hover,
+.titlebar .button.titlebutton.minimize:backdrop:hover:focus {
+    background-image: url("assets/titlebutton-minimize.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    box-shadow: none;
+    color: transparent;
+    icon-shadow: none;
+    opacity: 1;
+}
+
+.titlebar .button.titlebutton.minimize:hover,
+.titlebar .button.titlebutton.minimize:hover:focus {
+    background-image: url("assets/titlebutton-minimize-hover.png");
+}
+
+.titlebar .button.titlebutton.minimize:active,
+.titlebar .button.titlebutton.minimize:checked {
+    background-image: url("assets/titlebutton-minimize-active.png");
+}
+
+.titlebar .button.titlebutton.minimize:backdrop {
+    background-image: url("assets/titlebutton-minimize.png");
+    opacity: 0.4;
+}

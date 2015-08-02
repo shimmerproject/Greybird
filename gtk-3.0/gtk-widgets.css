@@ -2081,6 +2081,16 @@ OsScrollbar:insensitive {
     color: shade(@titlebar_bg_color, 0.8);
 }
 
+.header-bar GtkSeparatorToolItem:backdrop,
+.header-bar .separator:backdrop,
+.header-bar .separator:backdrop:insensitive,
+.titlebar GtkSeparatorToolItem:backdrop,
+.titlebar .separator:backdrop,
+.titlebar .separator:backdrop:insensitive {
+    border-color: shade(@titlebar_bg_color, 0.95);
+    color: shade(@titlebar_bg_color, 0.95);
+}
+
 .primary-toolbar .button .separator,
 .primary-toolbar .button.separator,
 .toolbar .button .separator,
@@ -4374,14 +4384,18 @@ GtkBubbleWindow .toolbar {
 
 .titlebar:backdrop {
     background-image: linear-gradient(to bottom,
-                                      shade(@titlebar_bg_color, 1.02),
-                                      shade(@titlebar_bg_color, 0.88)
+                                      shade(@titlebar_bg_color, 1.12),
+                                      shade(@titlebar_bg_color, 0.98)
                                       );
 }
 
 .titlebar .title:backdrop {
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.6);
     text-shadow: 0 1px shade(@titlebar_bg_color, 1.05);
+}
+
+.titlebar .button:backdrop {
+    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.6);
 }
 
 .titlebar .titlebutton {
