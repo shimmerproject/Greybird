@@ -576,6 +576,12 @@ style "infobar" {
 	}
 }
 
+style "iconview" {
+    engine "murrine" {
+        focusstyle = 1
+    }
+}
+
 style "nautilus_location" {
 	bg[NORMAL]  = mix (0.60, shade (1.05, @bg_color), @selected_bg_color)
 }
@@ -780,6 +786,7 @@ widget_class "*.<GtkCList>.<GtkButton>"	style "treeview-header"
 widget_class "*GnmSimpleCanvas*"		style "treeview-header" # Gnumeric treeview-headers
 
 # Xfce specific theming
+widget_class "*ExoIconView*"        style "iconview"
 widget_class "*XfceHeading*"		style "xfce-header"
 widget "xfwm4-tabwin*"			style "xfwm-tabwin"
 widget "xfwm4-tabwin*GtkButton*"		style "xfwm-tabwin-button"
