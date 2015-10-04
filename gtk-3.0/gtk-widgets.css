@@ -2551,7 +2551,7 @@ GtkColorButton.button {
 }
 
 .header-bar .subtitle {
-    font: smaller;
+    font-size: smaller;
     padding: 0 12px;
 }
 
