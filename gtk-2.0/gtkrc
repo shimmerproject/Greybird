@@ -54,6 +54,7 @@ style "default"
 	GtkRange		::slider-width				= 9
 	GtkRange		::stepper-size				= 13
 	GtkRange		::stepper_spacing			= 0
+	GtkRange	::trough-under-steppers		= 0
 
 	GtkScale		::slider-length				= 15
 	GtkScale		::slider-width				= 15
@@ -62,7 +63,7 @@ style "default"
 	GtkScrollbar		::min-slider-length			= 50
 	GtkScrollbar		::slider-width				= 9
 	#GtkScrollbar		::activate-slider			= 1
-	GtkScrollbar		::trough-border				= 3
+	GtkScrollbar		::trough-border				= 2
 	GtkScrollbar		::has-backward-stepper 			= 0
 	GtkScrollbar		::has-forward-stepper			= 0
 
@@ -705,7 +706,7 @@ style "calendar"
 # The following part of the gtkrc applies the different styles to the widgets.
 ###############################################################################
 
-class "GtkWindow*" style "resize-grip"
+class "GtkWindow*" style "statusbar"
 
 # Murrine default style is applied to every widget.
 class "GtkWidget"    style "default"
