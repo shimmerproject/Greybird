@@ -133,6 +133,11 @@ NautilusWindow .sidebar .frame {
     border-style: none;
 }
 
+NautilusWindow .sidebar-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 NautilusWindow > GtkGrid > .pane-separator,
 NautilusWindow > GtkGrid > .pane-separator:hover {
     border-width: 0 1px 0 0;
