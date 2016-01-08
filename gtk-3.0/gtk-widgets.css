@@ -2585,6 +2585,10 @@ GtkColorButton.button {
     color: @titlebar_fg_color;
 }
 
+.header-bar GtkComboBox {
+    border-style: none;
+}
+
 .header-bar .button:hover,
 .header-bar .button.flat:hover {
     border-top-color: shade(@titlebar_bg_color, 0.85);
