@@ -2133,12 +2133,20 @@ GtkComboBox .separator {
     -gtk-icon-style: regular;
 }
 
+.sidebar-row {
+    border-width: 1px 0;
+    border-style: none;
+}
+
 .sidebar row:selected,
 .sidebar row:selected:hover,
 .sidebar row:selected:focus,
 .sidebar .view row:selected,
 .sidebar .view row:selected:hover,
-.sidebar .view row:selected:focus {
+.sidebar .view row:selected:focus,
+.sidebar-row:selected,
+.sidebar-row:selected:hover,
+.sidebar-row:selected:focus, {
     border-width: 1px 0;
     border-style: solid;
     border-top-color: shade(@theme_bg_color, 0.85);
@@ -2154,11 +2162,16 @@ GtkComboBox .separator {
 }
 
 .sidebar row:prelight,
-.sidebar .view row:prelight {
+.sidebar .view row:prelight,
+.sidebar-row:prelight {
     border-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.3);
     background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.3);
     background-image: none;
     color: @theme_text_color;
+}
+
+.sidebar-row .sidebar-label {
+    padding-left: 3px;
 }
 
 .sidebar .scrollbar.trough {
