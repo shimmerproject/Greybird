@@ -12,11 +12,10 @@ The Greybird desktop suite includes:
 – Gtk+2 theme
 – Gtk+3 theme
 – Xfwm4 themes (normal and compact)
-– xfce-notifyd theme
+– xfce-notifyd theme (dark and bright)
 – Emerald theme
 – Metacity theme
 – Mutter theme
-– Xubuntu 11.04 wallpaper (svg and png)
 – Unity support
 
 Dependencies for Gtk+2 support:
