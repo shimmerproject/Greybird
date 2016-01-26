@@ -2146,7 +2146,7 @@ GtkComboBox .separator {
 .sidebar .view row:selected:focus,
 .sidebar-row:selected,
 .sidebar-row:selected:hover,
-.sidebar-row:selected:focus, {
+.sidebar-row:selected:focus {
     border-width: 1px 0;
     border-style: solid;
     border-top-color: shade(@theme_bg_color, 0.85);
