@@ -291,7 +291,7 @@ style "menu"
 	fg[NORMAL]        = @fg_color # Color for normal text.
 	fg[PRELIGHT]      = @base_color
 	fg[SELECTED]      = @base_color
-	fg[ACTIVE]        = @base_color
+	fg[ACTIVE]        = @fg_color
 	fg[INSENSITIVE]   = mix (0.4, @fg_color, @bg_color) # Text color for non-interactive menu items
 	text[NORMAL]      = @text_color # Color for menu-item radio/checks.
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
@@ -346,7 +346,7 @@ style "menubar-menuitem"
 style "separator-menu-item"
 {
 	xthickness = 1
-	ythickness = 0
+	ythickness = 1
 
 	GtkSeparatorMenuItem::horizontal-padding = 2
 
