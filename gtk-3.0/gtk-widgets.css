@@ -2880,14 +2880,7 @@ GtkColorButton.button {
                                       );
 }
 
-.inline-toolbar.toolbar:last-child {
-    border-width: 0 1px 1px 1px;
-    border-bottom-color: shade(@theme_bg_color, 0.76);
-    border-color: shade(@theme_bg_color, 0.7);
-    border-radius: 0;
-}
-
-.inline-toolbar.toolbar .button {
+.inline-toolbar.toolbar GtkToolButton > .button {
     padding: 4px;
     border-width: 1px 0 1px 1px;
     border-style: solid;
@@ -2901,7 +2894,7 @@ GtkColorButton.button {
     color: @theme_fg_color;
 }
 
-.inline-toolbar.toolbar .button:hover {
+.inline-toolbar.toolbar GtkToolButton > .button:hover {
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom,
                                       shade(@theme_bg_color, 1.15),
@@ -2909,35 +2902,14 @@ GtkColorButton.button {
                                       );
 }
 
-.inline-toolbar.toolbar .button:active,
-.inline-toolbar.toolbar .button:checked {
+.inline-toolbar.toolbar GtkToolButton > .button:active, .inline-toolbar GtkToolButton > .button:checked {
     border-color: shade(@theme_bg_color, 0.6);
     background-image: linear-gradient(to bottom,
                                       shade(shade(@theme_bg_color, 0.85), 1.05),
                                       shade(shade(@theme_bg_color, 0.85), 0.97)
                                       );
 }
-
-.inline-toolbar.toolbar .button:active:hover,
-.inline-toolbar.toolbar .button:checked:hover {
-    border-bottom-color: shade(@theme_bg_color, 0.75);
-    background-image: linear-gradient(to bottom,
-                                      shade(@theme_bg_color, 1.15),
-                                      shade(@theme_bg_color, 1.07)
-                                      );
-}
-
-.inline-toolbar.toolbar .button:focus,
-.inline-toolbar.toolbar .button:hover:focus,
-.inline-toolbar.toolbar .button:active:focus,
-.inline-toolbar.toolbar .button:checked:focus,
-.inline-toolbar.toolbar .button:active:hover:focus,
-.inline-toolbar.toolbar .button:checked:hover:focus {
-    border-color: shade(@theme_selected_bg_color, 0.8);
-}
-
-.inline-toolbar.toolbar .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive {
+.inline-toolbar.toolbar GtkToolButton > .button:insensitive {
     border-color: shade(@theme_bg_color, 0.8);
     background-image: linear-gradient(to bottom,
                                       shade(shade(@theme_bg_color, 0.95), 1.05),
@@ -2945,181 +2917,81 @@ GtkColorButton.button {
                                       );
 }
 
-/******************
- * linked buttons *
- *****************/
-/* set up shadows for visual separation */
-.linked .button,
-.inline-toolbar.toolbar .button,
-.inline-toolbar.toolbar GtkToolButton .button,
-.inline-toolbar.toolbar GtkToolButton > .button {
-    padding: 6px;
-
-    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.8),
-                inset 1px 1px alpha(@light_shadow, 0.4);
+.inline-toolbar.toolbar GtkToolButton > .button:insensitive > GtkLabel, .inline-toolbar GtkToolButton > .button:insensitive GtkLabel {
+    color: inherit;
 }
 
-.linked .button:active,
-.linked .button:checked,
-.inline-toolbar.toolbar .button:active,
-.inline-toolbar.toolbar .button:checked,
-.inline-toolbar.toolbar GtkToolButton .button:active,
-.inline-toolbar.toolbar GtkToolButton .button:checked,
-.inline-toolbar.toolbar GtkToolButton > .button:active,
-.inline-toolbar.toolbar GtkToolButton > .button:checked {
-    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.8),
-                inset 1px 1px alpha(@dark_shadow, 0.06),
-                inset -1px -1px alpha(@dark_shadow, 0.06);
+.inline-toolbar.toolbar GtkToolButton > .button:insensitive:active, .inline-toolbar GtkToolButton > .button:insensitive:checked {
+    text-shadow: none;
+    icon-shadow: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: transparent;
 }
 
-.linked .button:insensitive,
-.inline-toolbar.toolbar .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton > .button:insensitive {
-    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.8),
-		inset 1px 1px alpha(@light_shadow, 0.2);
+.inline-toolbar.toolbar GtkToolButton > .button:insensitive:active > GtkLabel, .inline-toolbar GtkToolButton > .button:insensitive:active GtkLabel, .inline-toolbar GtkToolButton > .button:insensitive:checked > GtkLabel, .inline-toolbar GtkToolButton > .button:insensitive:checked GtkLabel {
+    color: inherit;
 }
 
-/* remove box shadow from last-child and only-child */
-.linked .button:active:insensitive:last-child,
-.linked .button:checked:insensitive:last-child,
-.linked .button:active:insensitive:only-child,
-.linked .button:checked:insensitive:only-child,
-.inline-toolbar.toolbar .button:active:insensitive:last-child,
-.inline-toolbar.toolbar .button:checked:insensitive:last-child,
-.inline-toolbar.toolbar .button:active:insensitive:only-child,
-.inline-toolbar.toolbar .button:checked:insensitive:only-child,
-.inline-toolbar.toolbar GtkToolButton:last-child > .button:active:insensitive,
-.inline-toolbar.toolbar GtkToolButton:last-child > .button:checked:insensitive,
-.inline-toolbar.toolbar GtkToolButton:only-child > .button:active:insensitive,
-.inline-toolbar.toolbar GtkToolButton:only-child > .button:checked:insensitive {
-    box-shadow: none;
-}
-
-/* add back the inset shadow effect */
-.linked .button:last-child,
-.linked .button:only-child,
-.inline-toolbar.toolbar .button:last-child,
-.inline-toolbar.toolbar .button:only-child,
-.inline-toolbar.toolbar GtkToolButton:last-child > .button,
-.inline-toolbar.toolbar GtkToolButton:only-child > .button {
-    box-shadow: inset 1px 1px alpha(@light_shadow, 0.4),
-                inset -1px 0 alpha(@light_shadow, 0.4);
-}
-
-
-.linked .button:insensitive:last-child,
-.linked .button:insensitive:only-child,
-.inline-toolbar.toolbar .button:insensitive:last-child,
-.inline-toolbar.toolbar .button:insensitive:only-child,
-.inline-toolbar.toolbar GtkToolButton:last-child > .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton:only-child > .button:insensitive {
-    box-shadow: inset 1px 1px alpha(@light_shadow, 0.2),
-                inset -1px 0 alpha(@light_shadow, 0.2);
-}
-
-.linked .button:active:last-child,
-.linked .button:checked:last-child,
-.linked .button:active:only-child,
-.linked .button:checked:only-child,
-.inline-toolbar.toolbar .button:active:last-child,
-.inline-toolbar.toolbar .button:checked:last-child,
-.inline-toolbar.toolbar .button:active:only-child,
-.inline-toolbar.toolbar .button:checked:only-child,
-.inline-toolbar.toolbar GtkToolButton:last-child > .button:active,
-.inline-toolbar.toolbar GtkToolButton:last-child > .button:checked,
-.inline-toolbar.toolbar GtkToolButton:only-child > .button:active,
-.inline-toolbar.toolbar GtkToolButton:only-child > .button:checked {
-    box-shadow: inset 1px 1px alpha(@dark_shadow, 0.06),
-                inset -1px -1px alpha(@dark_shadow, 0.06);
-}
-
-/* middle button */
-.linked .entry,
-.linked .button,
-.linked .button:active,
-.linked .button:checked,
-.linked .button:active:hover,
-.linked .button:checked:hover,
-.linked .button:insensitive,
-.inline-toolbar.toolbar .button,
-.inline-toolbar.toolbar .button:active,
-.inline-toolbar.toolbar .button:checked,
-.inline-toolbar.toolbar .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton .button,
-.inline-toolbar.toolbar GtkToolButton .button:active,
-.inline-toolbar.toolbar GtkToolButton .button:checked,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive {
-    border-width: 1px;
+.inline-toolbar.toolbar GtkToolButton > .button.flat, .inline-toolbar.toolbar GtkToolButton > .sidebar-button.button, .inline-toolbar.toolbar NautilusWindow GtkToolButton > .sidebar-button.button, .inline-toolbar .button, .linked > .button, .linked > .button:hover, .linked > GtkComboBox > .the-button-in-the-combobox:dir(ltr), .linked > GtkComboBox > .the-button-in-the-combobox:dir(rtl) {
     border-radius: 0;
-    border-right-width: 0;
-    border-left-width: 0;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.75);
 }
 
-/*leftmost button */
-.linked .entry:first-child,
-.linked .button:first-child,
-.linked .button:active:first-child,
-.linked .button:checked:first-child,
-.linked .button:active:hover:first-child,
-.linked .button:checked:hover:first-child,
-.linked .button:insensitive:first-child,
-.inline-toolbar.toolbar .button:first-child,
-.inline-toolbar.toolbar .button:active:first-child,
-.inline-toolbar.toolbar .button:checked:first-child,
-.inline-toolbar.toolbar .button:insensitive:first-child,
-.inline-toolbar.toolbar GtkToolButton:first-child .button,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:active,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:checked,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:insensitive {
-    border-width: 1px;
-    border-radius: 3px;
-    border-right-width: 0;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+.inline-toolbar.toolbar GtkToolButton > .button.flat:active, .inline-toolbar.toolbar GtkToolButton > .sidebar-button.button:active, .inline-toolbar.toolbar NautilusWindow GtkToolButton > .sidebar-button.button:active, .inline-toolbar .button:active, .linked > .button:active, .linked > GtkComboBox > .the-button-in-the-combobox:active:dir(ltr), .linked > GtkComboBox > .the-button-in-the-combobox:active:dir(rtl), .inline-toolbar.toolbar GtkToolButton > .button.flat:checked, .inline-toolbar.toolbar GtkToolButton > .sidebar-button.button:checked, .inline-toolbar.toolbar NautilusWindow GtkToolButton > .sidebar-button.button:checked, .inline-toolbar .button:checked, .linked > .button:checked, .linked > GtkComboBox > .the-button-in-the-combobox:checked:dir(ltr), .linked > GtkComboBox > .the-button-in-the-combobox:checked:dir(rtl) {
+    border-radius: 0;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.6);
 }
 
-/* rightmost button */
-.linked .entry:last-child,
-.linked .button:last-child,
-.linked .button:active:last-child,
-.linked .button:checked:last-child,
-.linked .button:active:hover:last-child,
-.linked .button:checked:hover:last-child,
-.linked .button:insensitive:last-child,
-.inline-toolbar.toolbar .button:last-child,
-.inline-toolbar.toolbar .button:active:last-child,
-.inline-toolbar.toolbar .button:checked:last-child,
-.inline-toolbar.toolbar .button:insensitive:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:active,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:checked,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive {
-    border-width: 1px;
-    border-radius: 3px;
-    border-left-width: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+.inline-toolbar.toolbar GtkToolButton:first-child > .button, .inline-toolbar .button:first-child, .linked > .button:first-child, .inline-toolbar.toolbar GtkToolButton:first-child > .button.flat, .inline-toolbar.toolbar GtkToolButton:first-child > .sidebar-button.button, .inline-toolbar.toolbar NautilusWindow GtkToolButton:first-child > .sidebar-button.button, GtkComboBox.combobox-entry .the-button-in-the-combobox:first-child,
+.linked > GtkComboBox:first-child > .the-button-in-the-combobox {
+    border-radius: 3px 0 0 3px;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.75);
 }
 
-/* linked single button */
-.linked .entry:only-child,
-.linked .button:only-child,
-.linked .button:active:only-child,
-.linked .button:checked:only-child,
-.linked .button:active:hover:only-child,
-.linked .button:checked:hover:only-child,
-.linked .button:insensitive:only-child,
-.inline-toolbar.toolbar .button:only-child,
-.inline-toolbar.toolbar .button:active:only-child,
-.inline-toolbar.toolbar .button:checked:only-child,
-.inline-toolbar.toolbar .button:insensitive:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:active,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:checked,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive {
-    border-width: 1px;
+.inline-toolbar.toolbar GtkToolButton:first-child > .button:active, .inline-toolbar .button:first-child:active, .linked > .button:first-child:active, .inline-toolbar.toolbar GtkToolButton:first-child > .button.flat:active, .inline-toolbar.toolbar GtkToolButton:first-child > .sidebar-button.button:active, .inline-toolbar.toolbar NautilusWindow GtkToolButton:first-child > .sidebar-button.button:active, GtkComboBox.combobox-entry .the-button-in-the-combobox:active:first-child,
+  .linked > GtkComboBox:first-child > .the-button-in-the-combobox:active, .inline-toolbar .button:first-child:checked, .linked > .button:first-child:checked, .inline-toolbar.toolbar GtkToolButton:first-child > .button.flat:checked, .inline-toolbar.toolbar GtkToolButton:first-child > .sidebar-button.button:checked, .inline-toolbar.toolbar NautilusWindow GtkToolButton:first-child > .sidebar-button.button:checked, GtkComboBox.combobox-entry .the-button-in-the-combobox:checked:first-child, .linked > GtkComboBox:first-child > .the-button-in-the-combobox:checked {
+    border-radius: 3px 0 0 3px;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.6);
+}
+
+.inline-toolbar.toolbar GtkToolButton:last-child > .button, .inline-toolbar .button:last-child, .linked > .button:last-child, .inline-toolbar.toolbar GtkToolButton:last-child > .button.flat, .inline-toolbar.toolbar GtkToolButton:last-child > .sidebar-button.button, .inline-toolbar.toolbar NautilusWindow GtkToolButton:last-child > .sidebar-button.button, GtkComboBox.combobox-entry .the-button-in-the-combobox:last-child,
+.linked > GtkComboBox:last-child > .the-button-in-the-combobox {
+    border-radius: 0 3px 3px 0;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.75);
+}
+
+.inline-toolbar .button:last-child:active, .linked > .button:last-child:active, .inline-toolbar.toolbar GtkToolButton:last-child > .button.flat:active, .inline-toolbar.toolbar GtkToolButton:last-child > .sidebar-button.button:active, .inline-toolbar.toolbar NautilusWindow GtkToolButton:last-child > .sidebar-button.button:active, GtkComboBox.combobox-entry .the-button-in-the-combobox:active:last-child,.linked > GtkComboBox:last-child > .the-button-in-the-combobox:active, .inline-toolbar .button:last-child:checked, .linked > .button:last-child:checked, .inline-toolbar.toolbar GtkToolButton:last-child > .button.flat:checked, .inline-toolbar.toolbar GtkToolButton:last-child > .sidebar-button.button:checked, .inline-toolbar.toolbar NautilusWindow GtkToolButton:last-child > .sidebar-button.button:checked, GtkComboBox.combobox-entry .the-button-in-the-combobox:checked:last-child, .linked > GtkComboBox:last-child > .the-button-in-the-combobox:checked {
+    border-radius: 0 3px 3px 0;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.6);
+}
+
+.inline-toolbar .button:only-child, .linked > .button:only-child, .inline-toolbar.toolbar GtkToolButton:only-child > .button.flat, .inline-toolbar.toolbar GtkToolButton:only-child > .sidebar-button.button, .inline-toolbar.toolbar NautilusWindow GtkToolButton:only-child > .sidebar-button.button, GtkComboBox.combobox-entry .the-button-in-the-combobox:only-child, .linked > GtkComboBox:only-child > .button {
     border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.75);
+}
+
+.inline-toolbar .button:only-child:active, .linked > .button:only-child:active, .inline-toolbar.toolbar GtkToolButton:only-child > .button.flat:active, .inline-toolbar.toolbar GtkToolButton:only-child > .sidebar-button.button:active, .inline-toolbar.toolbar NautilusWindow GtkToolButton:only-child > .sidebar-button.button:active, GtkComboBox.combobox-entry .the-button-in-the-combobox:active:only-child, .linked > GtkComboBox:only-child > .button:active, .inline-toolbar .button:only-child:checked, .linked > .button:only-child:checked, .inline-toolbar.toolbar GtkToolButton:only-child > .button.flat:checked, .inline-toolbar.toolbar GtkToolButton:only-child > .sidebar-button.button:checked, .inline-toolbar.toolbar NautilusWindow GtkToolButton:only-child > .sidebar-button.button:checked, GtkComboBox.combobox-entry .the-button-in-the-combobox:checked:only-child, .linked > GtkComboBox:only-child > .button:checked {
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.6);
 }
 
 /* linked button shadows (vertical) */
@@ -3259,231 +3131,12 @@ GtkColorButton.button {
     border-radius: 3px;
 }
 
-/* linked toolbar buttons */
-.primary-toolbar .button.raised.linked,
-.primary-toolbar .raised.linked .button,
-.toolbar .button.raised.linked,
-.toolbar .raised.linked .button,
-.toolbar .linked .button {
-    box-shadow: inset -1px 0 shade(@toolbar_bg_color, 0.8),
-		inset 1px 1px alpha(@light_shadow, 0.4);
-}
-
-.primary-toolbar .button.raised.linked:active,
-.primary-toolbar .button.raised.linked:checked,
-.primary-toolbar .raised.linked .button:active,
-.primary-toolbar .raised.linked .button:checked,
-.toolbar .button.raised.linked:active,
-.toolbar .button.raised.linked:checked,
-.toolbar .raised.linked .button:active,
-.toolbar .raised.linked .button:checked,
-.toolbar .linked .button:active,
-.toolbar .linked .button:checked {
-    box-shadow: inset -1px 0 shade(@toolbar_bg_color, 0.8),
-                inset 1px 1px alpha(@dark_shadow, 0.06),
-                inset -1px -1px alpha(@dark_shadow, 0.06);
-}
-
-.primary-toolbar .button.raised.linked:insensitive,
-.primary-toolbar .raised.linked .button:insensitive,
-.toolbar .button.raised.linked:insensitive,
-.toolbar .raised.linked .button:insensitive,
-.toolbar .linked .button:insensitive {
-    box-shadow: inset -1px 0 shade(@toolbar_bg_color, 0.8),
-		inset 1px 1px alpha(@light_shadow, 0.2);
-}
-
-/* remove box shadow from last-child and only-child */
-.primary-toolbar .button:active:insensitive.raised.linked:last-child,
-.primary-toolbar .button:checked:insensitive.raised.linked:last-child,
-.primary-toolbar .button:active:insensitive.raised.linked:only-child,
-.primary-toolbar .button:checked:insensitive.raised.linked:only-child,
-.primary-toolbar .raised.linked .button:active:insensitive:last-child,
-.primary-toolbar .raised.linked .button:checked:insensitive:last-child,
-.primary-toolbar .raised.linked .button:active:insensitive:only-child,
-.primary-toolbar .raised.linked .button:checked:insensitive:only-child,
-.toolbar .button:active:insensitive.raised.linked:last-child,
-.toolbar .button:checked:insensitive.raised.linked:last-child,
-.toolbar .button:active:insensitive.raised.linked:only-child,
-.toolbar .button:checked:insensitive.raised.linked:only-child,
-.toolbar .raised.linked .button:active:insensitive:last-child,
-.toolbar .raised.linked .button:checked:insensitive:last-child,
-.toolbar .raised.linked .button:active:insensitive:only-child,
-.toolbar .raised.linked .button:checked:insensitive:only-child,
-.toolbar .linked .button:active:insensitive:last-child,
-.toolbar .linked .button:checked:insensitive:last-child,
-.toolbar .linked .button:active:insensitive:only-child
-.toolbar .linked .button:checked:insensitive:only-child {
-    box-shadow: none;
-}
-
-/* add back the inset shadow effect */
-.primary-toolbar .button.raised.linked:last-child,
-.primary-toolbar .button.raised.linked:only-child,
-.primary-toolbar .raised.linked .button:last-child,
-.primary-toolbar .raised.linked .button:only-child,
-.toolbar .button.raised.linked:last-child,
-.toolbar .button.raised.linked:only-child,
-.toolbar .raised.linked .button:last-child,
-.toolbar .raised.linked .button:only-child,
-.toolbar .linked .button:last-child,
-.toolbar .linked .button:only-child {
-    box-shadow: inset 1px 1px alpha(@light_shadow, 0.4),
-                inset -1px 0 alpha(@light_shadow, 0.4);
-}
-
-.primary-toolbar .button:insensitive.raised.linked:last-child,
-.primary-toolbar .button:insensitive.raised.linked:only-child,
-.primary-toolbar .raised.linked .button:insensitive:last-child,
-.primary-toolbar .raised.linked .button:insensitive:only-child,
-.toolbar .button:insensitive.raised.linked:last-child,
-.toolbar .button:insensitive.raised.linked:only-child,
-.toolbar .raised.linked .button:insensitive:last-child,
-.toolbar .raised.linked .button:insensitive:only-child,
-.toolbar .linked .button:insensitive:last-child,
-.toolbar .linked .button:insensitive:only-child {
-    box-shadow: inset 1px 1px alpha(@light_shadow, 0.2),
-                inset -1px 0 alpha(@light_shadow, 0.2);
-}
-
-.primary-toolbar .button:active.raised.linked:last-child,
-.primary-toolbar .button:checked.raised.linked:last-child,
-.primary-toolbar .button:active.raised.linked:only-child,
-.primary-toolbar .button:checked.raised.linked:only-child,
-.primary-toolbar .raised.linked .button:active:last-child,
-.primary-toolbar .raised.linked .button:checked:last-child,
-.primary-toolbar .raised.linked .button:active:only-child,
-.primary-toolbar .raised.linked .button:checked:only-child,
-.toolbar .button:active.raised.linked:last-child,
-.toolbar .button:checked.raised.linked:last-child,
-.toolbar .button:active.raised.linked:only-child,
-.toolbar .button:checked.raised.linked:only-child,
-.toolbar .raised.linked .button:active:last-child,
-.toolbar .raised.linked .button:checked:last-child,
-.toolbar .raised.linked .button:active:only-child,
-.toolbar .raised.linked .button:checked:only-child,
-.toolbar .linked .button:active:last-child,
-.toolbar .linked .button:checked:last-child,
-.toolbar .linked .button:active:only-child,
-.toolbar .linked .button:checked:only-child {
-    box-shadow: inset 1px 1px alpha(@dark_shadow, 0.06),
-                inset -1px -1px alpha(@dark_shadow, 0.06);
-}
-
-/* middle button */
-.primary-toolbar .button.raised.linked,
-.primary-toolbar .button.raised.linked:active,
-.primary-toolbar .button.raised.linked:checked,
-.primary-toolbar .button.raised.linked:insensitive,
-.primary-toolbar .raised.linked .button,
-.primary-toolbar .raised.linked .button:active,
-.primary-toolbar .raised.linked .button:checked,
-.primary-toolbar .raised.linked .button:insensitive,
-.toolbar .button.raised.linked,
-.toolbar .button.raised.linked:active,
-.toolbar .button.raised.linked:checked,
-.toolbar .button.raised.linked:insensitive,
-.toolbar .raised.linked .button,
-.toolbar .raised.linked .button:active,
-.toolbar .raised.linked .button:checked,
-.toolbar .raised.linked .button:insensitive,
-.toolbar .linked .button,
-.toolbar .linked .button:active,
-.toolbar .linked .button:checked,
-.toolbar .linked .button:insensitive {
-    border-width: 1px;
-    border-radius: 0;
-    border-right-width: 0;
-    border-left-width: 0;
-}
-
-/* leftmost button */
-.primary-toolbar .button.raised.linked:first-child,
-.primary-toolbar .button.raised.linked:active:first-child,
-.primary-toolbar .button.raised.linked:checked:first-child,
-.primary-toolbar .button.raised.linked:insensitive:first-child,
-.primary-toolbar .raised.linked .button:first-child,
-.primary-toolbar .raised.linked .button:active:first-child,
-.primary-toolbar .raised.linked .button:checked:first-child,
-.primary-toolbar .raised.linked .button:insensitive:first-child,
-.toolbar .button.raised.linked:first-child,
-.toolbar .button.raised.linked:active:first-child,
-.toolbar .button.raised.linked:checked:first-child,
-.toolbar .button.raised.linked:insensitive:first-child,
-.toolbar .raised.linked .button:first-child,
-.toolbar .raised.linked .button:active:first-child,
-.toolbar .raised.linked .button:checked:first-child,
-.toolbar .raised.linked .button:insensitive:first-child,
-.toolbar .linked .button:first-child,
-.toolbar .linked .button:active:first-child,
-.toolbar .linked .button:checked:first-child,
-.toolbar .linked .button:insensitive:first-child {
-    border-width: 1px;
-    border-radius: 3px;
-    border-right-width: 0;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
-
-/* rightmost button */
-.primary-toolbar .button.raised.linked:last-child,
-.primary-toolbar .button.raised.linked:active:last-child,
-.primary-toolbar .button.raised.linked:checked:last-child,
-.primary-toolbar .button.raised.linked:insensitive:last-child,
-.primary-toolbar .raised.linked .button:last-child,
-.primary-toolbar .raised.linked .button:active:last-child,
-.primary-toolbar .raised.linked .button:checked:last-child,
-.primary-toolbar .raised.linked .button:insensitive:last-child,
-.toolbar .button.raised.linked:last-child,
-.toolbar .button.raised.linked:active:last-child,
-.toolbar .button.raised.linked:checked:last-child,
-.toolbar .button.raised.linked:insensitive:last-child,
-.toolbar .raised.linked .button:last-child,
-.toolbar .raised.linked .button:active:last-child,
-.toolbar .raised.linked .button:checked:last-child,
-.toolbar .raised.linked .button:insensitive:last-child,
-.toolbar .linked .button:last-child,
-.toolbar .linked .button:active:last-child,
-.toolbar .linked .button:checked:last-child,
-.toolbar .linked .button:insensitive:last-child {
-    border-width: 1px;
-    border-radius: 3px;
-    border-left-width: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-}
-
-/* linked single button */
-.primary-toolbar .button.raised.linked:only-child,
-.primary-toolbar .button.raised.linked:active:only-child,
-.primary-toolbar .button.raised.linked:checked:only-child,
-.primary-toolbar .button.raised.linked:insensitive:only-child,
-.primary-toolbar .raised.linked .button:only-child,
-.primary-toolbar .raised.linked .button:active:only-child,
-.primary-toolbar .raised.linked .button:checked:only-child,
-.primary-toolbar .raised.linked .button:insensitive:only-child,
-.toolbar .button.raised.linked:only-child,
-.toolbar .button.raised.linked:active:only-child,
-.toolbar .button.raised.linked:checked:only-child,
-.toolbar .button.raised.linked:insensitive:only-child,
-.toolbar .raised.linked .button:only-child,
-.toolbar .raised.linked .button:active:only-child,
-.toolbar .raised.linked .button:checked:only-child,
-.toolbar .raised.linked .button:insensitive:only-child,
-.toolbar .linked .button:only-child,
-.toolbar .linked .button:active:only-child,
-.toolbar .linked .button:checked:only-child,
-.toolbar .linked .button:insensitive:only-child {
-    border-width: 1px;
-    border-radius: 3px;
-}
-
 /* linked titlebar buttons */
 .header-bar .button.raised.linked,
 .header-bar .raised.linked .button,
 .header-bar .linked .button {
     box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.8),
-		inset 1px 1px alpha(@light_shadow, 0.4);
+                inset 1px 1px alpha(@light_shadow, 0.4);
 }
 
 .header-bar .button.raised.linked:active,
@@ -3501,7 +3154,7 @@ GtkColorButton.button {
 .header-bar .raised.linked .button:insensitive,
 .header-bar .linked .button:insensitive {
     box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.8),
-		inset 1px 1px alpha(@light_shadow, 0.2);
+                inset 1px 1px alpha(@light_shadow, 0.2);
 }
 
 /* remove box shadow from last-child and only-child */
