@@ -632,12 +632,12 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-radius: 0;
     padding: 3px;
     background-image: none;
-    background-color: transparent;
+    background-color: shade(@theme_bg_color, 1.15);
 }
 
 .list-row:hover {
     background-image: none;
-    background-color: shade(@theme_bg_color, 1.02);
+    background-color: shade(@theme_bg_color, 1.08);
 }
 
 .list-row:selected {
