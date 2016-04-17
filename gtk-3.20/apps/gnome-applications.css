@@ -77,7 +77,7 @@ PanelApplet .button:active {
                                       );
 }
 
-PanelApplet .button:prelight {
+PanelApplet .button:hover {
     border-width: 0 1px;
     border-radius: 0;
     border-color: shade(@panel_bg_color, 0.7);
@@ -87,7 +87,7 @@ PanelApplet .button:prelight {
                                       );
 }
 
-PanelApplet .button:active:prelight {
+PanelApplet .button:active:hover {
     border-width: 0 1px;
     border-radius: 0;
     border-color: shade(@panel_bg_color, 0.7);
@@ -122,7 +122,7 @@ WnckPager, WnckTasklist {
 }
 
 .nautilus-desktop.nautilus-canvas-item:active,
-.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:hover,
 .nautilus-desktop.nautilus-canvas-item:selected {
     text-shadow: none;
 }
@@ -236,7 +236,7 @@ GeditWindow .pane-separator:hover {
     background-color: transparent;
     background-image: none;
     color: transparent;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 .gedit-document-panel .prelight-row .button  {

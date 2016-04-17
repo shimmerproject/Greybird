@@ -6,7 +6,7 @@
     color: white;
     font: bold;
     text-shadow: 0 1px alpha(black, 0.5);
-    icon-shadow: 0 1px alpha(black, 0.5);
+    -gtk-icon-shadow: 0 1px alpha(black, 0.5);
     box-shadow: inset 0 -1px alpha (black, 0.5);
 }
 
@@ -16,10 +16,10 @@
     color: white;
     font: bold;
     text-shadow: 0 1px alpha(black, 0.5);
-    icon-shadow: 0 1px alpha(black, 0.5);
+    -gtk-icon-shadow: 0 1px alpha(black, 0.5);
 }
 
-#panel_window .menubar .menuitem:insensitive {
+#panel_window .menubar .menuitem:disabled {
     color: alpha(white, 0.7);
 }
 

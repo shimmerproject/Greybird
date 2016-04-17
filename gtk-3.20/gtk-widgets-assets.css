@@ -8,9 +8,9 @@
     background-image: url("assets/checkbox-unchecked.png");
 }
 
-.check:insensitive,
-.check row:selected:insensitive,
-.check row:selected:focus:insensitive {
+.check:disabled,
+.check row:selected:disabled,
+.check row:selected:focus:disabled {
     background-image: url("assets/checkbox-unchecked-insensitive.png");
 }
 
@@ -26,27 +26,27 @@
     background-image: url("assets/checkbox-checked-hover.png");
 }
 
-.check:active:insensitive,
-.check row:selected:active:insensitive,
-.check row:selected:focus:active:insensitive {
+.check:active:disabled,
+.check row:selected:active:disabled,
+.check row:selected:focus:active:disabled {
     background-image: url("assets/checkbox-checked-insensitive.png");
 }
 
-.check:inconsistent,
-.check row:selected:inconsistent,
-.check row:selected:focus:inconsistent {
+.check:indeterminate,
+.check row:selected:indeterminate,
+.check row:selected:focus:indeterminate {
     background-image: url("assets/checkbox-mixed.png");
 }
 
-.check:inconsistent:hover,
-.check row:selected:inconsistent:hover,
-.check row:selected:focus:inconsistent:hover {
+.check:indeterminate:hover,
+.check row:selected:indeterminate:hover,
+.check row:selected:focus:indeterminate:hover {
     background-image: url("assets/checkbox-mixed-hover.png");
 }
 
-.check:inconsistent:insensitive,
-.check row:selected:inconsistent:insensitive,
-.check row:selected:focus:inconsistent:insensitive {
+.check:indeterminate:disabled,
+.check row:selected:indeterminate:disabled,
+.check row:selected:focus:indeterminate:disabled {
     background-image: url("assets/checkbox-mixed-insensitive.png");
 }
 
@@ -56,9 +56,9 @@
     background-image: url("assets/radio-unselected.png");
 }
 
-.radio:insensitive,
-.radio row:selected:insensitive,
-.radio row:selected:focus:insensitive {
+.radio:disabled,
+.radio row:selected:disabled,
+.radio row:selected:focus:disabled {
     background-image: url("assets/radio-unselected-insensitive.png");
 }
 
@@ -74,27 +74,27 @@
     background-image: url("assets/radio-selected-hover.png");
 }
 
-.radio:active:insensitive,
-.radio row:selected:active:insensitive,
-.radio row:selected:focus:active:insensitive {
+.radio:active:disabled,
+.radio row:selected:active:disabled,
+.radio row:selected:focus:active:disabled {
     background-image: url("assets/radio-selected-insensitive.png");
 }
 
-.radio:inconsistent,
-.radio row:selected:inconsistent,
-.radio row:selected:focus:inconsistent {
+.radio:indeterminate,
+.radio row:selected:indeterminate,
+.radio row:selected:focus:indeterminate {
     background-image: url("assets/radio-mixed.png");
 }
 
-.radio:inconsistent:hover,
-.radio row:selected:inconsistent:hover,
-.radio row:selected:focus:inconsistent:hover {
+.radio:indeterminate:hover,
+.radio row:selected:indeterminate:hover,
+.radio row:selected:focus:indeterminate:hover {
     background-image: url("assets/radio-mixed-hover.png");
 }
 
-.radio:inconsistent:insensitive,
-.radio row:selected:inconsistent:insensitive,
-.radio row:selected:focus:inconsistent:insensitive {
+.radio:indeterminate:disabled,
+.radio row:selected:indeterminate:disabled,
+.radio row:selected:focus:indeterminate:disabled {
     background-image: url("assets/radio-mixed-insensitive.png");
 }
 
@@ -106,22 +106,22 @@
     background-image: url("assets/menuitem-checkbox-checked-hover.png");
 }
 
-.menuitem.check:active:insensitive {
+.menuitem.check:active:disabled {
     background-image: url("assets/menuitem-checkbox-checked-insensitive.png");
 }
 
-.menuitem.check:inconsistent:hover,
-.menuitem.radio:inconsistent:hover {
+.menuitem.check:indeterminate:hover,
+.menuitem.radio:indeterminate:hover {
     background-image: url("assets/menuitem-checkbox-mixed-hover.png");
 }
 
-.menuitem.check:inconsistent,
-.menuitem.radio:inconsistent {
+.menuitem.check:indeterminate,
+.menuitem.radio:indeterminate {
     background-image: url("assets/menuitem-checkbox-mixed.png");
 }
 
-.menuitem.check:inconsistent:insensitive,
-.menuitem.radio:inconsistent:insensitive {
+.menuitem.check:indeterminate:disabled,
+.menuitem.radio:indeterminate:disabled {
     background-image: url("assets/menuitem-checkbox-mixed-insensitive.png");
 }
 
@@ -133,7 +133,7 @@
     background-image: url("assets/menuitem-radio-checked-hover.png");
 }
 
-.menuitem.radio:active:insensitive {
+.menuitem.radio:active:disabled {
     background-image: url("assets/menuitem-radio-checked-insensitive.png");
 }
 
