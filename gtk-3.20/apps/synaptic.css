@@ -1,0 +1,15 @@
+/* Synaptic's toolbar */
+GtkWindow > GtkVBox > .dock,
+GtkWindow > GtkVBox > .dock > GtkHBox > GtkToolbar {
+    padding: 6px;
+    border-style: none;
+    background-image: linear-gradient(to bottom,
+                                      shade(@toolbar_bg_color, 1.0),
+                                      shade(@toolbar_bg_color, 0.88)
+                                      );
+
+    color: @toolbar_fg_color;
+
+    box-shadow: inset 0 -1px shade(@toolbar_bg_color, 0.7);
+}
+
