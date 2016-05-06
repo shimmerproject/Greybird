@@ -2,167 +2,167 @@
  * check and radio *
  *******************/
 /* draw regular check and radio items using our assets */
-.check,
-.check row:selected,
-.check row:selected:focus {
+check,
+check row:selected,
+check row:selected:focus {
     background-image: url("assets/checkbox-unchecked.png");
 }
 
-.check:disabled,
-.check row:selected:disabled,
-.check row:selected:focus:disabled {
+check:disabled,
+check row:selected:disabled,
+check row:selected:focus:disabled {
     background-image: url("assets/checkbox-unchecked-insensitive.png");
 }
 
-.check:active,
-.check row:selected:active,
-.check row:selected:focus:active {
+check:active,
+check row:selected:active,
+check row:selected:focus:active {
     background-image: url("assets/checkbox-checked.png");
 }
 
-.check:active:hover,
-.check row:selected:active:hover,
-.check row:selected:focus:active:hover {
+check:active:hover,
+check row:selected:active:hover,
+check row:selected:focus:active:hover {
     background-image: url("assets/checkbox-checked-hover.png");
 }
 
-.check:active:disabled,
-.check row:selected:active:disabled,
-.check row:selected:focus:active:disabled {
+check:active:disabled,
+check row:selected:active:disabled,
+check row:selected:focus:active:disabled {
     background-image: url("assets/checkbox-checked-insensitive.png");
 }
 
-.check:indeterminate,
-.check row:selected:indeterminate,
-.check row:selected:focus:indeterminate {
+check:indeterminate,
+check row:selected:indeterminate,
+check row:selected:focus:indeterminate {
     background-image: url("assets/checkbox-mixed.png");
 }
 
-.check:indeterminate:hover,
-.check row:selected:indeterminate:hover,
-.check row:selected:focus:indeterminate:hover {
+check:indeterminate:hover,
+check row:selected:indeterminate:hover,
+check row:selected:focus:indeterminate:hover {
     background-image: url("assets/checkbox-mixed-hover.png");
 }
 
-.check:indeterminate:disabled,
-.check row:selected:indeterminate:disabled,
-.check row:selected:focus:indeterminate:disabled {
+check:indeterminate:disabled,
+check row:selected:indeterminate:disabled,
+check row:selected:focus:indeterminate:disabled {
     background-image: url("assets/checkbox-mixed-insensitive.png");
 }
 
-.radio,
-.radio row:selected,
-.radio row:selected:focus {
+radio,
+radio row:selected,
+radio row:selected:focus {
     background-image: url("assets/radio-unselected.png");
 }
 
-.radio:disabled,
-.radio row:selected:disabled,
-.radio row:selected:focus:disabled {
+radio:disabled,
+radio row:selected:disabled,
+radio row:selected:focus:disabled {
     background-image: url("assets/radio-unselected-insensitive.png");
 }
 
-.radio:active,
-.radio row:selected:active,
-.radio row:selected:focus:active {
+radio:active,
+radio row:selected:active,
+radio row:selected:focus:active {
     background-image: url("assets/radio-selected.png");
 }
 
-.radio:active:hover,
-.radio row:selected:active:hover,
-.radio row:selected:focus:active:hover {
+radio:active:hover,
+radio row:selected:active:hover,
+radio row:selected:focus:active:hover {
     background-image: url("assets/radio-selected-hover.png");
 }
 
-.radio:active:disabled,
-.radio row:selected:active:disabled,
-.radio row:selected:focus:active:disabled {
+radio:active:disabled,
+radio row:selected:active:disabled,
+radio row:selected:focus:active:disabled {
     background-image: url("assets/radio-selected-insensitive.png");
 }
 
-.radio:indeterminate,
-.radio row:selected:indeterminate,
-.radio row:selected:focus:indeterminate {
+radio:indeterminate,
+radio row:selected:indeterminate,
+radio row:selected:focus:indeterminate {
     background-image: url("assets/radio-mixed.png");
 }
 
-.radio:indeterminate:hover,
-.radio row:selected:indeterminate:hover,
-.radio row:selected:focus:indeterminate:hover {
+radio:indeterminate:hover,
+radio row:selected:indeterminate:hover,
+radio row:selected:focus:indeterminate:hover {
     background-image: url("assets/radio-mixed-hover.png");
 }
 
-.radio:indeterminate:disabled,
-.radio row:selected:indeterminate:disabled,
-.radio row:selected:focus:indeterminate:disabled {
+radio:indeterminate:disabled,
+radio row:selected:indeterminate:disabled,
+radio row:selected:focus:indeterminate:disabled {
     background-image: url("assets/radio-mixed-insensitive.png");
 }
 
-.menuitem.check:active {
+menuitem check:active {
     background-image: url("assets/menuitem-checkbox-checked.png");
 }
 
-.menuitem.check:active:hover {
+menuitem check:active:hover {
     background-image: url("assets/menuitem-checkbox-checked-hover.png");
 }
 
-.menuitem.check:active:disabled {
+menuitem check:active:disabled {
     background-image: url("assets/menuitem-checkbox-checked-insensitive.png");
 }
 
-.menuitem.check:indeterminate:hover,
-.menuitem.radio:indeterminate:hover {
+menuitem check:indeterminate:hover,
+menuitem radio:indeterminate:hover {
     background-image: url("assets/menuitem-checkbox-mixed-hover.png");
 }
 
-.menuitem.check:indeterminate,
-.menuitem.radio:indeterminate {
+menuitem check:indeterminate,
+menuitem radio:indeterminate {
     background-image: url("assets/menuitem-checkbox-mixed.png");
 }
 
-.menuitem.check:indeterminate:disabled,
-.menuitem.radio:indeterminate:disabled {
+menuitem check:indeterminate:disabled,
+menuitem radio:indeterminate:disabled {
     background-image: url("assets/menuitem-checkbox-mixed-insensitive.png");
 }
 
-.menuitem.radio:active {
+menuitem radio:active {
     background-image: url("assets/menuitem-radio-checked.png");
 }
 
-.menuitem.radio:active:hover {
+menuitem radio:active:hover {
     background-image: url("assets/menuitem-radio-checked-hover.png");
 }
 
-.menuitem.radio:active:disabled {
+menuitem radio:active:disabled {
     background-image: url("assets/menuitem-radio-checked-insensitive.png");
 }
 
-GtkIconView.content-view.cell.check {
+?GtkIconView.content-view.cell.check {
     background-image: url("assets/grid-selection-unchecked.png");
 }
 
-GtkIconView.content-view.cell.check:active {
+?GtkIconView.content-view.cell.check:active {
     background-image: url("assets/grid-selection-checked.png");
 }
 
 /***************
  * resize grip *
  ***************/
-.grip {
+?.grip {
     background-image: url("assets/resize-grip.png");
 }
 
 /******************
  * pane separator *
  ******************/
-.pane-separator,
-.pane-separator.horizontal {
+paned > separator,
+paned > separator.horizontal {
     background-image: url("assets/pane-separator.png");
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-.pane-separator.vertical {
+paned > separator.vertical {
     background-image: url("assets/pane-separator-vertical.png");
     background-repeat: no-repeat;
     background-position: center center;
