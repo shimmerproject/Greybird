@@ -67,6 +67,7 @@ style "theme-main-menu-text" = "theme-panel-text"
 
 style "workspace-switcher" = "theme-panel"
 {
+ 	bg[ACTIVE]	= shade (0.8, @selected_bg_color)
 	bg[SELECTED]	= shade (0.8, @selected_bg_color)
 }
 
@@ -123,6 +124,7 @@ widget_class "*Notif*Brasero*"		style "theme-panel"
 widget "*Xfce*Panel*"			style "theme-panel"
 class "*Xfce*Panel*"			style "theme-panel"
 widget "*WnckPager*"			style "workspace-switcher"
+widget "*PagerButtons*"			style "workspace-switcher"
 
 # Fix gtk-entries in the panel
 class "GtkEntry"			style "combo"
