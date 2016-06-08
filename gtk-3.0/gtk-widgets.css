@@ -2125,12 +2125,15 @@ GtkComboBox .separator {
  ***********/
 .sidebar,
 .sidebar.view,
-.sidebar .view,
-.sidebar GtkScrolledWindow {
+.sidebar .view {
     background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
     color: mix(@theme_text_color, @theme_base_color, 0.3);
     /* Don't use symbolic icons in the sidebar */
     -gtk-icon-style: regular;
+}
+
+.sidebar GtkScrolledWindow {
+    background: transparent;
 }
 
 .sidebar-row {
