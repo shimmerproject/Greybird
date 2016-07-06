@@ -1,8 +1,8 @@
 # Google Chrome/Chromium theming (requires 9.0.597 or newer)
 style "chrome-gtk-frame"
 {
-    ChromeGtkFrame::frame-color = shade (0.5, @bg_color)
-    ChromeGtkFrame::inactive-frame-color = shade (0.5, @bg_color)
+    ChromeGtkFrame::frame-color = shade (1.0, @bg_color)
+    ChromeGtkFrame::inactive-frame-color = shade (1.0, @bg_color)
     ChromeGtkFrame::incognito-frame-color = shade (0.5, @bg_color)
     ChromeGtkFrame::incognito-inactive-frame-color = shade (0.5, @bg_color)
 
