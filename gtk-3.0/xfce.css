@@ -1,0 +1,99 @@
+CatfishWindow .pane-separator {
+  background-color: #d8e9fa; }
+
+CatfishWindow .sidebar treeview.view button.flat {
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: none;
+  background-color: #d8e9fa;
+  background-image: none; }
+  CatfishWindow .sidebar treeview.view button.flat:active, CatfishWindow .sidebar treeview.view button.flat:checked {
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #a8a8a8;
+    border-right-color: #c1c1c1;
+    border-bottom-color: #ededed;
+    border-left-color: #c1c1c1;
+    background-image: linear-gradient(to bottom, #9dc8f2, #c1dcf7 10%, #d3e6f9 92%, #b4d5f5); }
+
+CatfishWindow .sidebar button.flat:hover {
+  background-color: #d8e9fa;
+  background-image: none;
+  color: #212121; }
+
+XfceHeading,
+.XfceHeading {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-image: none;
+  background-color: #8bbdf1;
+  color: #212121;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.1); }
+
+.xfce4-panel {
+  background-color: shade(#686868, 0.35);
+  color: #fcfcfc;
+  font: normal; }
+
+.xfce4-panel button {
+  background-image: none;
+  background-color: transparent;
+  border-radius: 0;
+  border-color: transparent;
+  box-shadow: none;
+  padding: 0 1px;
+  color: #fcfcfc;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.1); }
+
+.xfce4-panel button:active,
+.xfce4-panel button:checked {
+  background-image: none;
+  background-color: shade(#686868, 0.7);
+  border-color: shade(#686868, 0.6);
+  color: #fcfcfc;
+  transition: none; }
+
+.xfce4-panel button:hover,
+.xfce4-panel button:active:hover,
+.xfce4-panel button:checked:hover {
+  border-color: shade(#398ee7, 0.6);
+  background-image: linear-gradient(to bottom, shade(#398ee7, 0.88), shade(#398ee7, 0.85));
+  color: #fcfcfc;
+  box-shadow: inset 0 -1px gtkalpha(white, 0), inset 1px 0 gtkalpha(white, 0.15), inset -1px 0 gtkalpha(white, 0.15), inset 0 1px gtkalpha(white, 0.15);
+  transition: none; }
+
+.xfce4-panel menu {
+  -gtk-image-effect: none;
+  text-shadow: none; }
+
+TopMenuAppMenuBar menubar {
+  background-color: black;
+  color: #fcfcfc;
+  text-shadow: none; }
+
+TopMenuAppMenuBar menubar > menuitem {
+  color: #fcfcfc; }
+
+#XfceNotifyWindow .osd {
+  background-color: shade(#686868, 0.3);
+  color: #fcfcfc;
+  border-color: shade(#686868, 0.6); }
+
+#XfceNotifyWindow.osd button {
+  border-color: shade(#fcfcfc, 0.35);
+  border-radius: 3px; }
+
+#XfceNotifyWindow.osd progressbar {
+  -GtkProgressBar-min-horizontal-bar-height: 6px;
+  border-radius: 3px; }
+
+#XfceNotifyWindow.osd progressbar progress {
+  background-image: none;
+  background-color: #fcfcfc;
+  border: 1px solid transparent; }
+
+#XfceNotifyWindow.osd progressbar trough {
+  background-image: linear-gradient(to bottom, shade(#686868, 0.65), shade(#686868, 1.25));
+  border: 1px solid shade(#686868, 0.2);
+  border-radius: 3px; }

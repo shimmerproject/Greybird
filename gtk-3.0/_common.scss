@@ -1829,17 +1829,21 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  box-shadow: inset 0 -1px transparentize(black, 0.9);
 
   &:backdrop { background-color: $backdrop_bg_color; }
 
   > menuitem {
     min-height: 16px;
-    padding: 4px 8px;
+    padding: 3px 8px;
+    border: 1px solid transparent;
 
     &:hover { //Seems like it :hover even with keyboard focus
-      box-shadow: inset 0 -3px $selected_bg_color;
-      color: $link_color;
+      background-image: linear-gradient(to bottom,
+                                        shade($selected_bg_color, 1.2),
+                                        shade($selected_bg_color, 1.0)
+                                        );
+      color: $selected_fg_color;
+      border-color: shade($selected_bg_color, 1.1);
     }
 
     &:disabled {
@@ -1868,7 +1872,9 @@ menu,
 
     &:hover {
       color: $selected_fg_color;
-      background-color: $selected_bg_color;
+      background-image: linear-gradient(to bottom, shade($selected_bg_color, 1.2), shade($selected_bg_color, 1.0));
+      box-shadow: inset 1px 1px shade($selected_bg_color, 0.8),
+                  inset -1px -1px shade($selected_bg_color, 0.8);
     }
 
     &:disabled {
@@ -1996,11 +2002,11 @@ popover.background {
  * Notebooks *
  *************/
 notebook {
+  &.frame { border-style: none; }
+
   > header {
     padding: 1px;
-    border-color: $borders_color;
-    border-width: 1px;
-    background-color: lighten($bg_color,5%);
+    background-color: $bg_color;
 
     &:backdrop {
       border-color: $backdrop_borders_color;
@@ -2010,57 +2016,58 @@ notebook {
     tabs { margin: -1px; }
 
     &.top {
-      border-bottom-style: solid;
+      > stack { border-top-style: none; }
       > tabs {
         margin-bottom: -2px;
         > tab {
-          &:hover { box-shadow: inset 0 -3px $borders_color; }
+          border-radius: 3px 3px 0 0;
+          border: 1px solid shade($bg_color, 0.9);
 
           &:backdrop { box-shadow: none; }
 
-          &:checked { box-shadow: inset 0 -3px $selected_bg_color; }
+          &:checked { border-width: 1px 1px 0 1px; }
         }
       }
     }
 
     &.bottom {
-      border-top-style: solid;
+      > stack { border-bottom-style: none; }
       > tabs {
         margin-top: -2px;
         > tab {
-          &:hover { box-shadow: inset 0 3px $borders_color; }
+          border-radius: 0 0 3px 3px;
 
           &:backdrop { box-shadow: none; }
 
-          &:checked { box-shadow: inset 0 3px $selected_bg_color; }
+          &:checked { border-width: 0 1px 1px 1px; }
         }
       }
     }
 
     &.left {
-      border-right-style: solid;
+      > stack { border-left-style: none; }
       > tabs {
         margin-right: -2px;
         > tab {
-          &:hover { box-shadow: inset -3px 0 $borders_color; }
+          border-radius: 3px 0 0 3px;
 
           &:backdrop { box-shadow: none; }
 
-          &:checked { box-shadow: inset -3px 0 $selected_bg_color; }
+          &:checked { border-width: 1px 0 1px 1px; }
         }
       }
     }
 
     &.right {
-      border-left-style: solid;
+      > stack { border-right-style: none; }
       > tabs {
         margin-left: -2px;
         > tab {
-          &:hover { box-shadow: inset 3px 0 $borders_color; }
+          border-radius: 0 3px 3px 0;
 
           &:backdrop { box-shadow: none; }
 
-          &:checked { box-shadow: inset 3px 0 $selected_bg_color; }
+          &:checked { border-width: 1px 1px 1px 0; }
         }
       }
     }
@@ -2132,17 +2139,19 @@ notebook {
     }
 
     tab {
-      min-height: 30px;
+      min-height: 24px;
       min-width: 30px;
       padding: 3px 12px;
 
       outline-offset: -5px;
 
       color: $insensitive_fg_color;
-      font-weight: bold;
+      background-color: $bg_color;
 
       border-width: 1px;         // for reorderable tabs
-      border-color: $fg_color; //
+      border-radius: 3px;
+      border-color: shade($bg_color, 0.9); //
+      border-style: solid;
 
       &:hover {
         color: mix($insensitive_fg_color, $fg_color, 50%);
@@ -2164,11 +2173,14 @@ notebook {
 
       &:checked {
         color: $fg_color;
+        background-color: shade($bg_color, 1.05);
+        border-width: 1px 1px 0 1px;
+        &:backdrop {
+          background-color: $bg_color;
+        }
         &.reorderable-page {
           border-color: transparentize($borders_color, 0.5);
-          background-color: transparentize($bg_color, 0.5);
-
-          &:hover { background-color: transparentize($bg_color, 0.3); }
+          background-color: shade($bg_color, 1.05);
         }
       }
 
@@ -2224,7 +2236,7 @@ notebook {
           margin-left: 4px;
           margin-right: 4px;
 
-          &.reorderable-page { border-style: none solid; }
+          //&.reorderable-page { border-style: none solid; }
         }
       }
     }
@@ -2247,7 +2259,7 @@ notebook {
           margin-top: 4px;
           margin-bottom: 4px;
 
-          &.reorderable-page { border-style: solid none; }
+          //&.reorderable-page { border-style: solid none; }
         }
       }
     }
@@ -2257,7 +2269,8 @@ notebook {
   }
 
   > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
-    background-color: lighten($bg_color,5%);
+    background-color: shade($bg_color, 1.05);
+    border: 1px solid shade($bg_color, 0.9);
 
     &:backdrop { background-color: $backdrop_bg_color; }
   }
@@ -2745,6 +2758,11 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
     &:disabled { background-color: $insensitive_bg_color; }
   }
 
+//  highlight {
+//    margin: -2px;
+//    border: 1px solid shade($selected_bg_color, 0.7);
+//  }
+
   // ...on selected list rows
   row:selected & {
     box-shadow: none;
@@ -2764,9 +2782,12 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
 }
 
 %scale_highlight {
-  border: 1px solid $selected_borders_color;
+  border: 1px solid shade($selected_bg_color, 0.7);
   border-radius: 3px;
-  background-color: $selected_bg_color;
+  background-image: linear-gradient(to bottom,
+                                    shade($selected_bg_color, 1.1),
+                                    shade($selected_bg_color, 0.9)
+                                    );
 
   &:disabled {
     background-color: transparent;
@@ -2795,7 +2816,7 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
 
 scale {
   // sizing
-  $_marks_lenght: 6px;
+  $_marks_length: 6px;
   $_marks_distance: 6px;
 
   min-height: 10px;
@@ -2804,14 +2825,14 @@ scale {
 
   // those are inside the trough node, I need them to show their own border over the trough one, so negative margin
   fill,
-  highlight { margin: -1px; }
+  highlight { margin: -2px; }
 
   // the slider is inside the trough, so to have make it bigger there's a negative margin
 
   slider {
-    min-height: 9px;
-    min-width: 9px;
-    margin: -9px;
+    min-height: 13px;
+    min-width: 13px;
+    margin: -7px;
   }
 
   // click-and-hold the slider to activate
@@ -2843,6 +2864,7 @@ scale {
   trough {
     @extend %scale_trough;
 
+    padding: 1px;
     outline-offset: 2px;
     -gtk-outline-radius: 5px;
   }
@@ -2851,7 +2873,7 @@ scale {
   highlight { @extend %scale_highlight; }
 
   // this is another differently styled part of the backing bit, the most relevant use case is for example
-  // in media player to indicate how much video stream as been cached
+  // in media player to indicate how much video stream has been cached
   fill {
     @extend %scale_trough;
 
@@ -2881,8 +2903,12 @@ scale {
   }
 
   slider {
-    @include button(normal-alt, $edge: $shadow_color);
+    @include button(normal);
 
+    background-image: linear-gradient(to bottom,
+                                      shade($bg_color, 1.45),
+                                      shade($bg_color, 1.15)
+                                      );
     border: 1px solid darken($borders_color, 3%);
     border-radius: 100%;
     transition: $button_transition;
@@ -2925,134 +2951,11 @@ scale {
     }
   }
 
-  value { color: gtkalpha(currentColor, 0.4); }
+  value { color: gtkalpha(currentColor, 0.6); }
 
   marks {
     color: gtkalpha(currentColor, 0.4);
 
-    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
-                                                     (bottom, bottom, top),
-                                                     (top, left, right),
-                                                     (bottom, right, left) {
-      &.#{$marks_class} {
-        margin-#{$marks_margin}: $_marks_distance;
-        margin-#{$marks_pos}: -($_marks_distance + $_marks_lenght);
-      }
-    }
-  }
-
-  &.fine-tune marks {
-    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
-                                                     (bottom, bottom, top),
-                                                     (top, left, right),
-                                                     (bottom, right, left) {
-      &.#{$marks_class} {
-        margin-#{$marks_margin}: $_marks_distance;
-        margin-#{$marks_pos}: -($_marks_distance + $_marks_lenght - 3px);
-      }
-    }
-  }
-  &.horizontal {
-    indicator {
-      min-height: $_marks_lenght;
-      min-width: 1px;
-    }
-
-    &.fine-tune indicator { min-height: ($_marks_lenght - 3px); }
-  }
-  &.vertical {
-    indicator {
-      min-height: 1px;
-      min-width: $_marks_lenght;
-    }
-
-    &.fine-tune indicator { min-width: ($_marks_lenght - 3px); }
-  }
-  // *WARNING* scale with marks madness following
-
-  // FIXME: OSD and selected list rows missing, I don't feel like adding the other 144 assets needed for those...
-  $suffix: if($variant == 'light', '', '-dark');
-
-  @each $dir_class, $dir_infix in ('horizontal', 'horz'),
-                                  ('vertical', 'vert') {
-    @each $marks_infix, $marks_class in ('scale-has-marks-above', 'marks-before:not(.marks-after)'),
-                                        ('scale-has-marks-below', 'marks-after:not(.marks-before)') {
-      @each $state, $state_infix in ('', ''),
-                                    (':hover', '-hover'),
-                                    (':active', '-active'),
-                                    (':disabled', '-insensitive'),
-                                    (':backdrop', '-backdrop'),
-                                    (':backdrop:disabled', '-backdrop-insensitive') {
-        &.#{$dir_class}.#{$marks_class} {
-
-          slider {
-            &#{$state} {
-              // an asymmetric slider asset is used here, so the margins are uneven, the smaller
-              // margin is set on the point side.
-              margin: -10px;
-              $_scale_asset: 'assets/slider-#{$dir_infix}-#{$marks_infix}#{$state_infix}#{$suffix}';
-              border-style: none;
-              border-radius: 0;
-
-              background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png'));
-
-              $_scale_slider_bg_pos: bottom;
-
-              @if $dir_class == 'horizontal' {
-                min-height: 26px;
-                min-width: 22px;
-
-                @if $marks_infix == 'scale-has-marks-above' {
-                  margin-top: -14px;
-
-                  $_scale_slider_bg_pos: top;
-                }
-
-                @else { margin-bottom: -14px; }
-              }
-
-              @else {
-                min-height: 22px;
-                min-width: 26px;
-
-                @if $marks_infix == 'scale-has-marks-above' {
-                  margin-left: -14px;
-
-                  $_scale_slider_bg_pos: left bottom;
-                }
-
-                @else {
-                  margin-right: -14px;
-
-                  $_scale_slider_bg_pos: right bottom;
-                }
-              }
-
-              background-position: $_scale_slider_bg_pos;
-              background-repeat: no-repeat;
-              box-shadow: none;
-            }
-          }
-
-          &.fine-tune slider {
-            // bigger negative margins to make the trough grow here as well
-            margin: -7px;
-
-            @if $dir_class == 'horizontal' {
-              @if $marks_infix == 'scale-has-marks-above' { margin-top: -11px; }
-
-              @else { margin-bottom: -11px; }
-            }
-
-            @else {
-              @if $marks_infix == 'scale-has-marks-above' { margin-left: -11px; }
-
-              @else { margin-right: -11px; }
-            }
-          }
-        }
-      }
-    }
   }
 
   &.color {
@@ -3180,12 +3083,12 @@ progressbar {
   // sizing
   &.horizontal {
     trough,
-    progress { min-height: 2px; }
+    progress { min-height: 6px; }
   }
 
   &.vertical {
     trough,
-    progress { min-width: 2px; }
+    progress { min-width: 6px; }
   }
 
   &.horizontal progress { margin: 0 -1px; } // the progress node is positioned after the trough border
@@ -3208,26 +3111,26 @@ progressbar {
   progress {
     @extend %scale_highlight;
 
-    border-radius: 1.5px;
+    border-radius: 3px;
 
     &.left {
-      border-top-left-radius: 2px;
-      border-bottom-left-radius: 2px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
     }
 
     &.right {
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
     }
 
     &.top {
-      border-top-right-radius: 2px;
-      border-top-left-radius: 2px;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
     }
 
     &.bottom {
-      border-bottom-right-radius: 2px;
-      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
     }
   }
 
@@ -3687,7 +3590,12 @@ filechooserbutton:drop(active) {
     transition: $backdrop_transition;
   }
 
-  list { background-color: transparent; }
+  list, treeview {
+    background-color: transparent;
+    &:backdrop {
+      background-color: transparent;
+    }
+  }
 
   paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
 }
@@ -3729,7 +3637,7 @@ placessidebar {
 
   row {
     // Needs overriding of the GtkListBoxRow padding
-    min-height: 36px;
+    min-height: 24px;
     padding: 0px;
 
     // Using margins/padding directly in the SidebarRow

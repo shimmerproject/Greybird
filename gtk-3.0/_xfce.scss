@@ -6,26 +6,29 @@ CatfishWindow .pane-separator {
     background-color: mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1);
 }
 
-CatfishWindow .sidebar treeview.view button {
-    &.flat {
-    padding: 4px 6px;
-    border-radius: 4px;
-    transition: none;
-    background-color: lighten($selected_bg_color, 35%);
-    background-image: none;
-        &:active, &:checked {
-            border-width: 1px;
-            border-style: solid;
-            border-top-color: darken($bg_color, 15%);
-            border-right-color: darken($bg_color, 5%);
-            border-bottom-color: lighten($bg_color, 12%);
-            border-left-color: darken($bg_color, 5%);
-            background-image: linear-gradient(to bottom,
-                                              darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 13%),
-                                              darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 5%) 10%,
-                                              darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 1%) 92%,
-                                              darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 8%)
-                                              );
+CatfishWindow .sidebar treeview.view {
+    background-color: $sidebar_bg_color;
+    button {
+        &.flat {
+        padding: 4px 6px;
+        border-radius: 4px;
+        transition: none;
+        background-color: lighten($selected_bg_color, 35%);
+        background-image: none;
+            &:active, &:checked {
+                border-width: 1px;
+                border-style: solid;
+                border-top-color: darken($bg_color, 15%);
+                border-right-color: darken($bg_color, 5%);
+                border-bottom-color: lighten($bg_color, 12%);
+                border-left-color: darken($bg_color, 5%);
+                background-image: linear-gradient(to bottom,
+                                                  darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 13%),
+                                                  darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 5%) 10%,
+                                                  darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 1%) 92%,
+                                                  darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 8%)
+                                                  );
+            }
         }
     }
 }
@@ -93,7 +96,7 @@ XfceHeading,
 }
 
 .xfce4-panel menu {
-    -gtk-image-effect: none;
+    -gtk-icon-effect: none;
 
     text-shadow: none;
 }
@@ -120,15 +123,18 @@ TopMenuAppMenuBar menubar > menuitem {
     border-radius: 3px;
 }
 
+#XfceNotifyWindow.osd label#summary {
+    font-weight: bold;
+}
+
 #XfceNotifyWindow.osd progressbar {
-    -GtkProgressBar-min-horizontal-bar-height: 6px;
+    min-height: 6px;
     border-radius: 3px;
 }
 
 #XfceNotifyWindow.osd progressbar progress {
     background-image: none;
     background-color: $panel_fg_color;
-    border: 1px solid transparent;
 }
 
 #XfceNotifyWindow.osd progressbar trough {
