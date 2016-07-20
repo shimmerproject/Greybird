@@ -2386,31 +2386,25 @@ notebook > header {
         margin-left: -4px;
         margin-right: 4px; }
   notebook > header.top tabs, notebook > header.bottom tabs {
-    padding-left: 4px;
-    padding-right: 4px; }
+    padding: 0; }
     notebook > header.top tabs:not(:only-child), notebook > header.bottom tabs:not(:only-child) {
-      margin-left: 3px;
-      margin-right: 3px; }
-      notebook > header.top tabs:not(:only-child):first-child, notebook > header.bottom tabs:not(:only-child):first-child {
-        margin-left: -1px; }
-      notebook > header.top tabs:not(:only-child):last-child, notebook > header.bottom tabs:not(:only-child):last-child {
-        margin-right: -1px; }
+      margin-left: 2px;
+      margin-right: 2px; }
+    notebook > header.top tabs:first-child, notebook > header.bottom tabs:first-child {
+      margin-left: -3px; }
     notebook > header.top tabs tab, notebook > header.bottom tabs tab {
-      margin-left: 4px;
-      margin-right: 4px; }
+      margin-left: 2px;
+      margin-right: 2px; }
   notebook > header.left tabs, notebook > header.right tabs {
-    padding-top: 4px;
-    padding-bottom: 4px; }
+    padding: 0; }
     notebook > header.left tabs:not(:only-child), notebook > header.right tabs:not(:only-child) {
-      margin-top: 3px;
-      margin-bottom: 3px; }
-      notebook > header.left tabs:not(:only-child):first-child, notebook > header.right tabs:not(:only-child):first-child {
-        margin-top: -1px; }
-      notebook > header.left tabs:not(:only-child):last-child, notebook > header.right tabs:not(:only-child):last-child {
-        margin-bottom: -1px; }
+      margin-top: 2px;
+      margin-bottom: 2px; }
+    notebook > header.left tabs:first-child, notebook > header.right tabs:first-child {
+      margin-top: -3px; }
     notebook > header.left tabs tab, notebook > header.right tabs tab {
-      margin-top: 4px;
-      margin-bottom: 4px; }
+      margin-top: 2px;
+      margin-bottom: 2px; }
   notebook > header.top tab {
     padding-bottom: 4px; }
   notebook > header.bottom tab {

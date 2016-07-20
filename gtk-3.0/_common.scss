@@ -2221,22 +2221,19 @@ notebook {
     &.top,
     &.bottom {
       tabs {
-        padding-left: 4px;
-        padding-right: 4px;
+        padding: 0;
 
         &:not(:only-child) {
-          margin-left: 3px;
-          margin-right: 3px;
+          margin-left: 2px;
+          margin-right: 2px;
 
-          &:first-child { margin-left: -1px; }
-          &:last-child { margin-right: -1px; }
+          //&:first-child { margin-left: -4px; }
         }
+        &:first-child { margin-left: -3px; }
 
         tab {
-          margin-left: 4px;
-          margin-right: 4px;
-
-          //&.reorderable-page { border-style: none solid; }
+          margin-left: 2px;
+          margin-right: 2px;
         }
       }
     }
@@ -2244,22 +2241,17 @@ notebook {
     &.left,
     &.right {
       tabs {
-        padding-top: 4px;
-        padding-bottom: 4px;
+        padding: 0;
 
         &:not(:only-child) {
-          margin-top: 3px;
-          margin-bottom: 3px;
-
-          &:first-child { margin-top: -1px; }
-          &:last-child { margin-bottom: -1px; }
+          margin-top: 2px;
+          margin-bottom: 2px;
         }
+        &:first-child { margin-top: -3px; }
 
         tab {
-          margin-top: 4px;
-          margin-bottom: 4px;
-
-          //&.reorderable-page { border-style: solid none; }
+          margin-top: 2px;
+          margin-bottom: 2px;
         }
       }
     }
