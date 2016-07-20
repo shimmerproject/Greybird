@@ -3843,6 +3843,12 @@ infobar {
   .error label:selected {
     background-color: #0f4278; }
 
+/*************
+ * Buttonbox *
+ *************/
+buttonbox {
+  padding: 6px; }
+
 /************
  * Tooltips *
  ************/
