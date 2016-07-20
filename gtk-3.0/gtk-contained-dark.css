@@ -2392,6 +2392,8 @@ notebook > header {
       margin-right: 2px; }
     notebook > header.top tabs:first-child, notebook > header.bottom tabs:first-child {
       margin-left: -3px; }
+    notebook > header.top tabs:last-child, notebook > header.bottom tabs:last-child {
+      margin-right: -3px; }
     notebook > header.top tabs tab, notebook > header.bottom tabs tab {
       margin-left: 2px;
       margin-right: 2px; }
@@ -2402,6 +2404,8 @@ notebook > header {
       margin-bottom: 2px; }
     notebook > header.left tabs:first-child, notebook > header.right tabs:first-child {
       margin-top: -3px; }
+    notebook > header.left tabs:last-child, notebook > header.right tabs:last-child {
+      margin-bottom: -3px; }
     notebook > header.left tabs tab, notebook > header.right tabs tab {
       margin-top: 2px;
       margin-bottom: 2px; }

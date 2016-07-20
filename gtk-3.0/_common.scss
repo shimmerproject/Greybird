@@ -2226,10 +2226,9 @@ notebook {
         &:not(:only-child) {
           margin-left: 2px;
           margin-right: 2px;
-
-          //&:first-child { margin-left: -4px; }
         }
         &:first-child { margin-left: -3px; }
+        &:last-child { margin-right: -3px; }
 
         tab {
           margin-left: 2px;
@@ -2248,6 +2247,7 @@ notebook {
           margin-bottom: 2px;
         }
         &:first-child { margin-top: -3px; }
+        &:last-child { margin-bottom: -3px; }
 
         tab {
           margin-top: 2px;
