@@ -3568,6 +3568,8 @@ filechooser .dialog-action-box {
     border-top-color: #8a8a8a; }
 filechooser #pathbarbox {
   border-bottom: 1px solid #cecece; }
+  filechooser #pathbarbox stack {
+    background-color: #cecece; }
 
 filechooserbutton:drop(active) {
   box-shadow: none;
