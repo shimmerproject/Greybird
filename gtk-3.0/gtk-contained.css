@@ -4309,7 +4309,7 @@ XfceHeading,
   padding: 0;
   border-width: 0;
   background-image: none;
-  background-color: #8bbdf1;
+  background-color: shade(#cecece, 1.18);
   color: #212121;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.1); }
 
