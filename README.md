@@ -1,0 +1,40 @@
+Greybird
+=======
+Desktop Suite for Xfce
+----------------------
+URL: http://shimmerproject.org/projects/greybird/
+
+Copyright 2009–2016 Simon Steinbeiß, Satyajit Sahoo, Pasi Lallinaho
+
+Greybird is dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later.
+
+Greybird is the default theme in Xubuntu 11.04 onwards.
+
+The Greybird desktop suite includes:
+- Gtk+2 theme
+- Gtk+3 theme
+- Xfwm4 themes (normal and compact)
+- xfce-notifyd theme (dark and bright)
+- Emerald theme
+- Metacity theme
+- Mutter theme
+- Unity support
+
+Dependencies for Gtk+2 support:
+- gtk2-engines-pixbuf (>= 2.24)
+- gtk2-engines-murrine (>= 0.90)
+
+The Gtk+3 theme uses the builtin engine and consequently has no dependencies.
+
+### Install without admin privileges
+
+```
+./autogen.sh --prefix=$HOME/.local
+make install
+```
+
+### Install for all users
+
+```
+./autogen.sh
+sudo make install
