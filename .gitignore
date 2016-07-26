@@ -1,2 +1,14 @@
 *~
-
+Makefile
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.log
+config.status
+configure
+install-sh
+missing
+gtk.gresource
+gtk-contained.css
+gtk-contained-dark.css
+.sass-cache/
