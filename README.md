@@ -21,7 +21,6 @@ The Greybird desktop suite includes:
 - Unity support
 
 Dependencies for Gtk+2 support:
-- gtk2-engines-pixbuf (>= 2.24)
 - gtk2-engines-murrine (>= 0.90)
 
 The Gtk+3 theme uses the builtin engine and consequently has no dependencies.
