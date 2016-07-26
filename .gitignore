@@ -9,3 +9,6 @@ configure
 install-sh
 missing
 gtk.gresource
+gtk-contained.css
+gtk-contained-dark.css
+.sass-cache/

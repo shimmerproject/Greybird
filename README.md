@@ -29,11 +29,11 @@ The Gtk+3 theme uses the builtin engine and consequently has no dependencies.
 ### Build dependencies ###
 Debian or Ubuntu:
 
-`sudo apt install libgdk-pixbuf2.0-dev libglib2.0-bin`
+`sudo apt install libgdk-pixbuf2.0-dev libglib2.0-bin ruby-sass`
 
 Fedora:
 
-`dnf install gdk-pixbuf2-devel`
+`dnf install gdk-pixbuf2-devel rubygem-sass`
 
 ### Install without admin privileges
 
