@@ -1588,6 +1588,7 @@ headerbar {
   }
 }
 
+
 /**************
  * Tree Views *
  **************/
@@ -2344,16 +2345,18 @@ scrollbar {
 
       slider {
         margin: 0;
-        min-width: 3px;
-        min-height: 3px;
-        background-color: $fg_color;
+        min-width: 6px;
+        min-height: 6px;
+        background-color: shade($fg_color, 0.9);
+        background-image: none;
         border: 1px solid if($variant == 'light', white, black);
       }
 
       button {
         min-width: 5px;
         min-height: 5px;
-        background-color: $fg_color;
+        background-color: shade($fg_color, 0.9);
+        background-image: none;
         background-clip: padding-box;
         border-radius: 100%;
         border: 1px solid if($variant == 'light', white, black);
