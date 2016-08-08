@@ -3,14 +3,21 @@ EXTRA_DIST = \
 	LICENSE.GPL \
 	README.md
 
+MOSTLYCLEANFILES = \
+	gtk-3.0/gtk.gresource \
+	gtk-3.0/gtk-contained.css \
+	gtk-3.0/gtk-contained-dark.css
+
 themedir = $(datadir)/themes/Greybird
+SASS = sass
 
 all: clean compile
 
-clean:
-	rm -f $(srcdir)/gtk-3.0/gtk.gresource
+clean-local:
+	rm -rf $(srcdir)/gtk-3.0/.sass-cache
 
 compile:
+	$(SASS) --update --sourcemap=none $(srcdir)/gtk-3.0
 	glib-compile-resources --sourcedir=$(srcdir)/gtk-3.0 $(srcdir)/gtk-3.0/gtk.gresource.xml
 
 install-data-hook:
