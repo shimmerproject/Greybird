@@ -4278,32 +4278,6 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_button_active_color_b shade(#cecece, 0.89);
 @define-color wm_button_active_color_c shade(#cecece, 0.9);
 @define-color content_view_bg #fcfcfc;
-CatfishWindow .pane-separator {
-  background-color: #d8e9fa; }
-
-CatfishWindow .sidebar treeview.view {
-  background-color: #dae0e6; }
-  CatfishWindow .sidebar treeview.view button.flat {
-    padding: 4px 6px;
-    border-radius: 4px;
-    transition: none;
-    background-color: #d8e9fa;
-    background-image: none; }
-    CatfishWindow .sidebar treeview.view button.flat:active, CatfishWindow .sidebar treeview.view button.flat:checked {
-      border-width: 1px;
-      border-style: solid;
-      border-top-color: #a8a8a8;
-      border-right-color: #c1c1c1;
-      border-bottom-color: #ededed;
-      border-left-color: #c1c1c1;
-      background-image: linear-gradient(to bottom, #9dc8f2, #c1dcf7 10%, #d3e6f9 92%, #b4d5f5); }
-
-CatfishWindow .sidebar button.flat:hover {
-  background-color: #d8e9fa;
-  background-image: none;
-  color: #212121; }
-
-XfceHeading,
 .XfceHeading {
   margin: 0;
   padding: 0;
@@ -4494,3 +4468,39 @@ TopMenuAppMenuBar menubar > menuitem {
     border-bottom-right-radius: 5px;
     background-image: linear-gradient(to bottom, shade(#cecece, 0.85), shade(#cecece, 0.98) 10%, shade(#cecece, 1) 99%, shade(#cecece, 1));
     box-shadow: inset 1px 0 shade(#fcfcfc, 0.6), inset -1px 0 shade(#fcfcfc, 0.6), inset 0 1px shade(#fcfcfc, 0.6), inset 0 -1px shade(#fcfcfc, 0.6); }
+
+/************************
+ * NAUTILUS (aka Files) *
+ ************************/
+.nautilus-window {
+  background-color: #fcfcfc; }
+  .nautilus-window notebook, .nautilus-window notebook > stack {
+    background-color: #fcfcfc; }
+
+/* Floating status bar */
+.floating-bar {
+  background-color: #fcfcfc;
+  border-style: solid;
+  border-color: #828282; }
+  .floating-bar.left {
+    border-radius: 0 3px 0 0;
+    border-width: 1px 1px 0 0; }
+  .floating-bar.right {
+    border-radius: 3px 0 0 0;
+    border-width: 1px 0 0 1px; }
+  .floating-bar:backdrop {
+    background-color: #cecece;
+    border-color: #8a8a8a; }
+  .floating-bar button {
+    padding: 0px; }
+
+/* Searchbar */
+.search-bar {
+  box-shadow: none; }
+
+/* View */
+.nautilus-list-view .view, .nautilus-list-view iconview {
+  border-bottom: 1px solid #cecece;
+  /* Hide superfluous treeview drop target indication */ }
+  .nautilus-list-view .view.dnd, .nautilus-list-view iconview.dnd {
+    border-style: none; }
