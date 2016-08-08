@@ -2,44 +2,6 @@ $variant: 'light';
 
 @import 'colors';
 
-CatfishWindow .pane-separator {
-    background-color: mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1);
-}
-
-CatfishWindow .sidebar treeview.view {
-    background-color: $sidebar_bg_color;
-    button {
-        &.flat {
-        padding: 4px 6px;
-        border-radius: 4px;
-        transition: none;
-        background-color: lighten($selected_bg_color, 35%);
-        background-image: none;
-            &:active, &:checked {
-                border-width: 1px;
-                border-style: solid;
-                border-top-color: darken($bg_color, 15%);
-                border-right-color: darken($bg_color, 5%);
-                border-bottom-color: lighten($bg_color, 12%);
-                border-left-color: darken($bg_color, 5%);
-                background-image: linear-gradient(to bottom,
-                                                  darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 13%),
-                                                  darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 5%) 10%,
-                                                  darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 1%) 92%,
-                                                  darken(mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.1), 8%)
-                                                  );
-            }
-        }
-    }
-}
-
-CatfishWindow .sidebar button.flat:hover {
-    background-color: mix(darken($base_color, 10%), lighten($selected_bg_color, 35%), 0.3);
-    background-image: none;
-    color: $text_color;
-}
-
-XfceHeading,
 .XfceHeading {
     margin: 0;
     padding: 0;
@@ -99,17 +61,6 @@ XfceHeading,
     -gtk-icon-effect: none;
 
     text-shadow: none;
-}
-
-TopMenuAppMenuBar menubar {
-    background-color: darken($panel_bg_color, 65%);
-    color: $panel_fg_color;
-
-    text-shadow: none;
-}
-
-TopMenuAppMenuBar menubar > menuitem {
-    color: $panel_fg_color;
 }
 
 #XfceNotifyWindow .osd {
