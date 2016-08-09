@@ -2477,8 +2477,6 @@ scrollbar {
   scrollbar.fine-tune.vertical slider {
     border-width: 4px 5px; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
-    -GtkRange-slider-width: 5px;
-    -GtkRange-trough-border: 1px;
     border-color: transparent;
     opacity: 0.4;
     background-color: transparent; }
@@ -4322,14 +4320,6 @@ read if you used those and something break with a version upgrade you're on your
 .xfce4-panel menu {
   -gtk-icon-effect: none;
   text-shadow: none; }
-
-TopMenuAppMenuBar menubar {
-  background-color: black;
-  color: #fcfcfc;
-  text-shadow: none; }
-
-TopMenuAppMenuBar menubar > menuitem {
-  color: #fcfcfc; }
 
 #XfceNotifyWindow .osd {
   background-color: shade(#686868, 0.3);
