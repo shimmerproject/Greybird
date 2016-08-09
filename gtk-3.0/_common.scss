@@ -1588,7 +1588,6 @@ headerbar {
   }
 }
 
-
 /**************
  * Tree Views *
  **************/
@@ -2420,7 +2419,7 @@ scrollbar {
     &:disabled {
       @include button(undecorated);
 
-      color: gtkalpha($scrollbar_slider_color, 0.8);
+      color: transparentize($scrollbar_slider_color, 0.8);
     }
     &:backdrop {
       @include button(undecorated);
@@ -2750,11 +2749,6 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
 
     &:disabled { background-color: $insensitive_bg_color; }
   }
-
-//  highlight {
-//    margin: -2px;
-//    border: 1px solid shade($selected_bg_color, 0.7);
-//  }
 
   // ...on selected list rows
   row:selected & {
