@@ -28,9 +28,10 @@ install-data-hook:
 	$(MKDIR_P)				$(DESTDIR)$(datadir)/themes/Greybird-compact/xfwm4
 
 	cp -r $(srcdir)/gtk-2.0			$(DESTDIR)$(themedir)
-	cp    $(srcdir)/gtk-3.0/gtk.css		$(DESTDIR)$(themedir)/gtk-3.0
-	cp    $(srcdir)/gtk-3.0/gtk.gresource	$(DESTDIR)$(themedir)/gtk-3.0
-	cp    $(srcdir)/gtk-3.0/settings.ini	$(DESTDIR)$(themedir)/gtk-3.0
+	cp -r $(srcdir)/gtk-3.0			$(DESTDIR)$(themedir)
+#	cp    $(srcdir)/gtk-3.0/gtk.css		$(DESTDIR)$(themedir)/gtk-3.0
+#	cp    $(srcdir)/gtk-3.0/gtk.gresource	$(DESTDIR)$(themedir)/gtk-3.0
+#	cp    $(srcdir)/gtk-3.0/settings.ini	$(DESTDIR)$(themedir)/gtk-3.0
 	cp -r $(srcdir)/metacity-1		$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/unity			$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/xfce-notify-4.0		$(DESTDIR)$(themedir)
