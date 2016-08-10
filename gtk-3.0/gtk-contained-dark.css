@@ -3608,12 +3608,10 @@ placessidebar row {
       color: #949796; }
     placessidebar row:backdrop:disabled {
       color: #5d6767; }
-  placessidebar row image.sidebar-icon {
-    opacity: 0.7; }
-    placessidebar row image.sidebar-icon:dir(ltr) {
-      padding-right: 8px; }
-    placessidebar row image.sidebar-icon:dir(rtl) {
-      padding-left: 8px; }
+  placessidebar row image.sidebar-icon:dir(ltr) {
+    padding-right: 8px; }
+  placessidebar row image.sidebar-icon:dir(rtl) {
+    padding-left: 8px; }
   placessidebar row label.sidebar-label:dir(ltr) {
     padding-right: 2px; }
   placessidebar row label.sidebar-label:dir(rtl) {

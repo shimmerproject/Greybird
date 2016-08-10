@@ -3648,8 +3648,6 @@ placessidebar {
     }
 
     image.sidebar-icon {
-      opacity: $_placesidebar_icons_opacity; // dim the device icons
-
       &:dir(ltr) { padding-right: 8px; }
       &:dir(rtl) { padding-left: 8px; }
     }
