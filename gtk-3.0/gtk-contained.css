@@ -4492,3 +4492,64 @@ read if you used those and something break with a version upgrade you're on your
   /* Hide superfluous treeview drop target indication */ }
   .nautilus-list-view .view.dnd, .nautilus-list-view iconview.dnd {
     border-style: none; }
+
+UnityDecoration {
+  -UnityDecoration-extents: 28px 1px 1px 1px;
+  -UnityDecoration-input-extents: 10px;
+  -UnityDecoration-shadow-offset-x: 1px;
+  -UnityDecoration-shadow-offset-y: 1px;
+  -UnityDecoration-active-shadow-color: rgba(0, 0, 0, 0.7);
+  -UnityDecoration-active-shadow-radius: 8px;
+  -UnityDecoration-inactive-shadow-color: rgba(0, 0, 0, 0.5);
+  -UnityDecoration-inactive-shadow-radius: 5px;
+  -UnityDecoration-glow-size: 10px;
+  -UnityDecoration-glow-color: #398ee7;
+  -UnityDecoration-title-indent: 10px;
+  -UnityDecoration-title-fade: 35px;
+  -UnityDecoration-title-alignment: 0.0; }
+  UnityDecoration .top {
+    border: 1px solid shade(#cecece, 0.7);
+    border-bottom-width: 0;
+    border-radius: 4px 4px 0 0;
+    padding: 1px 8px 0 8px;
+    background-image: linear-gradient(to bottom, shade(#cecece, 1.07), #cecece);
+    color: #3c3c3c;
+    text-shadow: 0 1px shade(#cecece, 1.2); }
+    UnityDecoration .top:backdrop {
+      border: 1px solid shade(#cecece, 0.8);
+      border-bottom-width: 0;
+      background-image: linear-gradient(to bottom, shade(#cecece, 1.02), #cecece);
+      color: #3c3c3c;
+      text-shadow: 0 1px shade(#cecece, 1.1); }
+  UnityDecoration .left, UnityDecoration .right, UnityDecoration .bottom {
+    background-color: shade(#cecece, 0.7); }
+    UnityDecoration .left:backdrop, UnityDecoration .right:backdrop, UnityDecoration .bottom:backdrop {
+      background-color: shade(#cecece, 0.8); }
+
+UnityPanelWidget,
+.unity-panel {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: shade(#686868, 1);
+  background-color: shade(#686868, 0.35); }
+  UnityPanelWidget.menuitem, UnityPanelWidget .menuitem,
+  .unity-panel.menuitem,
+  .unity-panel .menuitem {
+    border-width: 0 1px;
+    color: #fcfcfc; }
+    UnityPanelWidget.menuitem:hover, UnityPanelWidget.menuitem *:hover, UnityPanelWidget .menuitem:hover, UnityPanelWidget .menuitem *:hover,
+    .unity-panel.menuitem:hover,
+    .unity-panel.menuitem *:hover,
+    .unity-panel .menuitem:hover,
+    .unity-panel .menuitem *:hover {
+      border-color: shade(#686868, 0.8);
+      background-color: shade(#686868, 0.75);
+      color: #fcfcfc; }
+
+@keyframes playbackmenuitem_spinner {
+  to {
+    -gtk-icon-transform: rotate(1turn); } }
+.menu IdoPlaybackMenuItem.menuitem:active {
+  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+  animation: playbackmenuitem_spinner 1s infinite linear;
+  color: #3c3c3c; }
