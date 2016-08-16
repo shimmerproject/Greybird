@@ -4312,22 +4312,22 @@ read if you used those and something break with a version upgrade you're on your
     -gtk-icon-effect: none;
     text-shadow: none; }
 
-#XfceNotifyWindow .osd {
+#XfceNotifyWindow {
   background-color: shade(#686868, 0.3);
   color: #fcfcfc;
   border-color: shade(#686868, 0.6); }
-  #XfceNotifyWindow .osd button {
+  #XfceNotifyWindow button {
     border-color: shade(#fcfcfc, 0.35);
     border-radius: 3px; }
-  #XfceNotifyWindow .osd label#summary {
+  #XfceNotifyWindow label#summary {
     font-weight: bold; }
-  #XfceNotifyWindow .osd progressbar {
+  #XfceNotifyWindow progressbar {
     min-height: 6px;
     border-radius: 3px; }
-    #XfceNotifyWindow .osd progressbar progress {
+    #XfceNotifyWindow progressbar progress {
       background-image: none;
       background-color: #fcfcfc; }
-    #XfceNotifyWindow .osd progressbar trough {
+    #XfceNotifyWindow progressbar trough {
       background-image: linear-gradient(to bottom, shade(#686868, 0.65), shade(#686868, 1.25));
       border: 1px solid shade(#686868, 0.2);
       border-radius: 3px; }

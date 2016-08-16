@@ -53,7 +53,7 @@ $variant: 'light';
     }
 }
 
-#XfceNotifyWindow .osd {
+#XfceNotifyWindow {
     background-color: shade($panel_bg_color, 0.3);
     color: $panel_fg_color;
     border-color: shade($panel_bg_color, 0.6);
