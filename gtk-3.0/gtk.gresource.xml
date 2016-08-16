@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gresources>
+	<gresource prefix='/org/shimmerproject/greybird/gtk-3.0'>
+		<file preprocess='to-pixdata'>assets/bullet-symbolic.svg</file>
+		<file preprocess='to-pixdata'>assets/bullet-symbolic.symbolic.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-active-selectionmode.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-backdrop-selectionmode.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-checked-active-selectionmode.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-checked-backdrop-selectionmode.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-checked-hover-selectionmode.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-checked-insensitive.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-hover-selectionmode.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-mixed-hover.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-mixed-insensitive.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-mixed.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-selectionmode.png</file>
+		<file preprocess='to-pixdata'>assets/checkbox-unchecked-insensitive.png</file>
+		<file preprocess='to-pixdata'>assets/check-symbolic.svg</file>
+		<file preprocess='to-pixdata'>assets/check-symbolic.symbolic.png</file>
+		<file preprocess='to-pixdata'>assets/dash-symbolic.svg</file>
+		<file preprocess='to-pixdata'>assets/dash-symbolic.symbolic.png</file>
+		<file preprocess='to-pixdata'>assets/grid-selection-checked.png</file>
+		<file preprocess='to-pixdata'>assets/grid-selection-unchecked.png</file>
+		<file preprocess='to-pixdata'>assets/menuitem-checkbox-checked-hover.png</file>
+		<file preprocess='to-pixdata'>assets/menuitem-checkbox-checked-insensitive.png</file>
+		<file preprocess='to-pixdata'>assets/menuitem-checkbox-checked.png</file>
+		<file preprocess='to-pixdata'>assets/menuitem-checkbox-mixed-hover.png</file>
+		<file preprocess='to-pixdata'>assets/menuitem-checkbox-mixed-insensitive.png</file>
+		<file preprocess='to-pixdata'>assets/menuitem-checkbox-mixed.png</file>
+		<file preprocess='to-pixdata'>assets/menuitem-radio-checked-hover.png</file>
+		<file preprocess='to-pixdata'>assets/menuitem-radio-checked-insensitive.png</file>
+		<file preprocess='to-pixdata'>assets/menuitem-radio-checked.png</file>
+		<file preprocess='to-pixdata'>assets/pane-separator.png</file>
+		<file preprocess='to-pixdata'>assets/pane-separator-vertical.png</file>
+		<file preprocess='to-pixdata'>assets/radio-mixed-hover.png</file>
+		<file preprocess='to-pixdata'>assets/radio-mixed-insensitive.png</file>
+		<file preprocess='to-pixdata'>assets/radio-mixed.png</file>
+		<file preprocess='to-pixdata'>assets/radio-selected-hover.png</file>
+		<file preprocess='to-pixdata'>assets/radio-selected-insensitive.png</file>
+		<file preprocess='to-pixdata'>assets/radio-selected.png</file>
+		<file preprocess='to-pixdata'>assets/radio-unselected-insensitive.png</file>
+		<file preprocess='to-pixdata'>assets/radio-unselected.png</file>
+		<file preprocess='to-pixdata'>assets/resize-grip.png</file>
+		<file preprocess='to-pixdata'>assets/titlebutton-close-active.png</file>
+		<file preprocess='to-pixdata'>assets/titlebutton-close-hover.png</file>
+		<file preprocess='to-pixdata'>assets/titlebutton-close.png</file>
+		<file preprocess='to-pixdata'>assets/titlebutton-maximize-active.png</file>
+		<file preprocess='to-pixdata'>assets/titlebutton-maximize-hover.png</file>
+		<file preprocess='to-pixdata'>assets/titlebutton-maximize.png</file>
+		<file preprocess='to-pixdata'>assets/titlebutton-minimize-active.png</file>
+		<file preprocess='to-pixdata'>assets/titlebutton-minimize-hover.png</file>
+		<file preprocess='to-pixdata'>assets/titlebutton-minimize.png</file>
+		<file>gtk-contained.css</file>
+		<file>gtk-contained-dark.css</file>
+	</gresource>
+</gresources>
