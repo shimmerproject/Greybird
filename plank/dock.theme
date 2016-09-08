@@ -1,0 +1,34 @@
+# Based on the Jupiter Redux theme by Cassidy James
+# http://cassidyjames.deviantart.com/art/Jupiter-Redux-Formerly-Pantheon-theme-for-Plank-213303421
+[PlankTheme]
+TopRoundness=6
+BottomRoundness=0
+LineWidth=1
+OuterStrokeColor=25;;25;;25;;204
+FillStartColor=36;;36;;36;;204
+FillEndColor=36;;36;;36;;204
+InnerStrokeColor=36;;36;;36;;204
+
+[PlankDockTheme]
+HorizPadding=1.5
+TopPadding=1.5
+BottomPadding=2
+ItemPadding=2
+IndicatorSize=5
+IconShadowSize=1
+UrgentBounceHeight=1.6666666666666667
+LaunchBounceHeight=0.625
+FadeOpacity=1
+ClickTime=300
+UrgentBounceTime=600
+LaunchBounceTime=600
+ActiveTime=300
+SlideTime=300
+FadeTime=200
+HideTime=150
+GlowSize=30
+GlowTime=10000
+GlowPulseTime=2000
+UrgentHueShift=150
+ItemMoveTime=450
+CascadeHide=true
