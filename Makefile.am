@@ -42,7 +42,7 @@ install-data-hook:
 	cp    $(srcdir)/index.theme		$(DESTDIR)$(themedir)
 	cp    $(srcdir)/ubiquity-panel-bg.png	$(DESTDIR)$(themedir)
 	cp    $(srcdir)/Greybird.emerald	$(DESTDIR)$(themedir)
-	cp    $(srcdir)/plank			$(DESTDIR)$(themedir)
+	cp -r $(srcdir)/plank			$(DESTDIR)$(themedir)
 
 uninstall-hook:
 	test -e $(DESTDIR)$(themedir) && rm -rfv $(DESTDIR)$(themedir)
