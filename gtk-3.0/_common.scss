@@ -271,9 +271,9 @@ spinner {
 %entry,
 entry {
   %entry_basic, & {
-    min-height: 32px;
-    padding-left: 8px;
-    padding-right: 8px;
+    min-height: 28px;
+    padding-left: 4px;
+    padding-right: 4px;
     border: 1px solid;
     border-radius: 3px;
     transition: all 200ms $ease-out-quad;
