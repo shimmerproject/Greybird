@@ -3154,20 +3154,22 @@ scale {
 progressbar {
   font-size: smaller;
   color: rgba(238, 238, 236, 0.4); }
-  progressbar.horizontal trough,
-  progressbar.horizontal progress {
+  progressbar.horizontal trough {
     min-height: 6px; }
-  progressbar.vertical trough,
-  progressbar.vertical progress {
-    min-width: 6px; }
   progressbar.horizontal progress {
-    margin: 0 -1px; }
+    min-height: 8px; }
+  progressbar.vertical trough {
+    min-width: 6px; }
   progressbar.vertical progress {
-    margin: -1px 0; }
+    min-width: 8px; }
+  progressbar.horizontal progress, progressbar.vertical progress {
+    margin: 0; }
   progressbar:backdrop {
     box-shadow: none;
     transition: 200ms ease-out; }
   progressbar progress {
+    border-width: 0;
+    box-shadow: inset 1px 1px shade(#145ba6, 0.7), inset -1px -1px shade(#145ba6, 0.7);
     border-radius: 3px; }
     progressbar progress.left {
       border-top-left-radius: 3px;
@@ -3181,6 +3183,8 @@ progressbar {
     progressbar progress.bottom {
       border-bottom-right-radius: 3px;
       border-bottom-left-radius: 3px; }
+  progressbar:backdrop progress {
+    box-shadow: none; }
   progressbar.osd {
     min-width: 3px;
     min-height: 3px;

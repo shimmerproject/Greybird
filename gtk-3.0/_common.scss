@@ -3071,17 +3071,17 @@ scale {
 progressbar {
   // sizing
   &.horizontal {
-    trough,
-    progress { min-height: 6px; }
+    trough { min-height: 6px; }
+    progress { min-height: 8px; }
   }
 
   &.vertical {
-    trough,
-    progress { min-width: 6px; }
+    trough { min-width: 6px; }
+    progress { min-width: 8px; }
   }
 
-  &.horizontal progress { margin: 0 -1px; } // the progress node is positioned after the trough border
-  &.vertical progress { margin: -1px 0; }   // this moves it over it.
+  &.horizontal progress,
+  &.vertical progress { margin: 0; }
 
 
   // FIXME: insensitive state missing and some other state should be set probably
@@ -3099,6 +3099,9 @@ progressbar {
 
   progress {
     @extend %scale_highlight;
+    border-width: 0; // use box-shadow instead of border in order to not draw anything if the progressbar's fraction is 0 (borders are always drawn!)
+    box-shadow: inset 1px 1px shade($selected_bg_color, 0.7),
+                inset -1px -1px shade($selected_bg_color, 0.7);
 
     border-radius: 3px;
 
@@ -3123,7 +3126,10 @@ progressbar {
     }
   }
 
-  &:backdrop progress { @extend %scale_highlight:backdrop; } // states not passed here as well
+  &:backdrop progress { // states not passed here as well
+    @extend %scale_highlight:backdrop;
+    box-shadow: none;
+  }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
     min-width: 3px;
