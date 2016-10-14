@@ -121,8 +121,8 @@ $variant: 'light';
         }
         #user_combobox {
             color: $fg_color;
-            font: 18px;
-            menu { font: normal; }
+            font-size: 18px;
+            menu { font-weight: normal; }
         }
         #user_image {
             padding: 3px;

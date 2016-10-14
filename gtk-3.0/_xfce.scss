@@ -15,7 +15,7 @@ $variant: 'light';
 .xfce4-panel {
     background-color: shade($panel_bg_color, 0.35);
     color: $panel_fg_color;
-    font: normal;
+    font-weight: normal;
     button {
         background-image: none;
         background-color: transparent;

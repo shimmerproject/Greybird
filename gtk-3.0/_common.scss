@@ -119,33 +119,7 @@ textview {
   }
 }
 
-textview border {
-  background-color: mix($bg_color, $base_color, 50%);
-  background-image: image(transparentize(black, 0.8)); // HACK: the border node just draws background so,
-  background-repeat: no-repeat;                        // using a background-image to draw the border
-
-  &:backdrop { background-color: mix($backdrop_bg_color, $backdrop_base_color, 50%); }
-
-  &.bottom {
-    background-size: 100% 1px;
-    background-position: top;
-  }
-
-  &.top {
-    background-size: 100% 1px;
-    background-position: bottom;
-  }
-
-  &.left {
-    background-size: 1px 100%;
-    background-position: right;
-  }
-
-  &.right {
-    background-size: 1px 100%;
-    background-position: left;
-  }
-}
+textview border { background-color: mix($bg_color, $base_color, 50%); }
 
 iconview { @extend .view; }
 
@@ -281,8 +255,8 @@ entry {
     @include entry(normal);
 
     image { // icons inside the entry
-      &.left { padding-left: 0; padding-right: 6px; }
-      &.right { padding-left: 6px; padding-right: 0; }
+      &.left { margin-right: 6px; }
+      &.right { margin-left: 6px; }
     }
 
     undershoot {
@@ -294,7 +268,7 @@ entry {
       &:focus, & {
         min-height: 0;
         padding: 2px;
-        background-image: none;
+        background-color: transparent;
         border-color: transparent;
         border-radius: 0;
       }
@@ -323,11 +297,11 @@ entry {
 
         &:focus { @include entry(focus, $e_color); }
 
-        &:selected { &:focus, & { background-color: $e_color; }}
+        selection { background-color: $e_color; }
       }
     }
 
-    & image { // entry icons colors
+    image { // entry icons colors
       color: mix($fg_color, $base_color, 80%);
 
       &:hover { color: $fg_color; }
@@ -922,7 +896,7 @@ toolbar.inline-toolbar toolbutton:backdrop {
   background-color: transparent;
   background-image: none;
   border-color: transparent;
-  box-shadow: inset 0 1px transparentize(white,1),
+  box-shadow: inset 0 1px transparentize(white, 1),
               0 1px transparentize(white, 1);
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -974,7 +948,9 @@ button.color {
       box-shadow: 0 1px _text_shadow_color();
 
       &:disabled,
-      &:backdrop { box-shadow: none; }
+      &:backdrop,
+      &:active,
+      &:checked { colorswatch:only-child { box-shadow: none; }}
     }
   }
 }
@@ -1073,7 +1049,10 @@ spinbutton {
         background-color: $base_hover_color;
       }
 
-      &:disabled { color: transparentize($insensitive_fg_color, 0.7); }
+      &:disabled {
+        color: transparentize($insensitive_fg_color, 0.7);
+        background-color: transparent;
+      }
 
       &:active {
         background-color: transparentize(black, 0.9);
@@ -1089,7 +1068,7 @@ spinbutton {
 
       &:backdrop:disabled {
         color: transparentize($backdrop_insensitive_color,0.7);
-        background-image: none;
+        background-color: transparent;
         border-style: none none none solid; // It is needed or it gets overridden
 
         &:dir(rtl) { border-style: none solid none none; }
@@ -1139,7 +1118,7 @@ spinbutton {
         box-shadow: none;
       }
 
-      &:last-child { border-radius: 0 3px 3px 0; }
+      &:dir(ltr):last-child { border-radius: 0 3px 3px 0; }
 
       &:dir(rtl):first-child { border-radius: 3px 0 0 3px; }
     }
@@ -1154,6 +1133,7 @@ spinbutton {
     // FIXME: this should not be set at all, but otherwise it gets the wrong
     // color
     &:disabled { color: $insensitive_fg_color; }
+
     &:backdrop:disabled { color: $backdrop_insensitive_color; }
 
     &:drop(active) {
@@ -1482,7 +1462,8 @@ headerbar {
     .selection-menu {
       &:backdrop, & {
         border-color: transparentize($selected_bg_color, 1);
-        background-image: linear-gradient(to bottom, transparentize($selected_bg_color, 1));
+        background-color: transparentize($selected_bg_color, 1);
+        background-image: none;
         box-shadow: none;
         padding-left: 10px;
         padding-right: 10px;
@@ -1510,6 +1491,18 @@ headerbar {
       min-width: 26px;
       margin: 0;
       padding: 0;
+    }
+  }
+
+  .solid-csd & {
+    &:backdrop, & {
+      &:dir(rtl), &:dir(ltr) { // specificity bump
+        margin-left: -1px;
+        margin-right: -1px;
+        margin-top: -1px;
+        border-radius: 0;
+        box-shadow: none;
+      }
     }
   }
 }
@@ -1683,11 +1676,11 @@ treeview.view {
     background-color: $selected_bg_color;
     background-image: linear-gradient(to bottom,
                                       $selected_bg_color,
-                                      darken($selected_bg_color,10%));
-    box-shadow: inset 0 1px if($variant=='light', transparentize(white,0.7),
-                                                  transparentize(white,0.85)),
+                                      darken($selected_bg_color, 10%));
+    box-shadow: inset 0 1px if($variant=='light', transparentize(white, 0.7),
+                                                  transparentize(white, 0.85)),
                       0 1px if($variant=='light', transparentize(black, 0.8),
-                                                  transparentize(black,0.9));
+                                                  transparentize(black, 0.9));
 
     &:selected {
       &:focus, & {
@@ -1702,7 +1695,7 @@ treeview.view {
 
         background-image: linear-gradient(to bottom,
                                           $base_color,
-                                          darken($base_color,10%));
+                                          darken($base_color, 10%));
 
         &:backdrop {
           @if $variant == 'light' {
@@ -1856,7 +1849,8 @@ menubar,
 }
 
 menu,
-.menu {
+.menu,
+.context-menu {
   margin: 4px;
   padding: 2px 0px;
   background-color: $menu_color;
@@ -1905,6 +1899,10 @@ menu,
         margin-right: 10px;
       }
     }
+
+    // avoids labels color being overridden, see
+    // https://bugzilla.gnome.org/show_bug.cgi?id=767058
+    label { &:dir(rtl), &:dir(ltr) { color: inherit; }}
   }
 
   // overflow arrows
@@ -2447,9 +2445,9 @@ scrollbar {
 
   &.horizontal {
     button {
-      &.down { -gtk-icon-source: -gtk-icontheme('pan-right-symbolic'); }
+      &.down { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic'); }
 
-      &.up { -gtk-icon-source: -gtk-icontheme('pan-left-symbolic'); }
+      &.up { -gtk-icon-source: -gtk-icontheme('pan-start-symbolic'); }
     }
   }
 }
@@ -2952,7 +2950,7 @@ scale {
     min-width: 0;
 
     trough {
-      background-image: linear-gradient(to top, $borders_color);
+      background-image: image($borders_color);
       background-repeat: no-repeat;
     }
 
@@ -4176,7 +4174,7 @@ headerbar.selection-mode button.titlebutton,
   }
 }
 
-.monospace { font: Monospace; }
+.monospace { font-family: monospace; }
 
 
 /**********************
@@ -4217,8 +4215,8 @@ cursor-handle {
 .context-menu { font: initial; } // Decouple the font of context menus from their entry/textview
 
 button.circular { // FIXME: aggregate to buttons
-  border-radius: 20px;
-  -gtk-outline-radius: 20px;
+  border-radius: 9999px;
+  -gtk-outline-radius: 9999px;
 
   label { padding: 0; }
 }
@@ -4247,8 +4245,8 @@ button.circular { // FIXME: aggregate to buttons
   }
 }
 
-*:drop(active):focus,
-*:drop(active) { // FIXME needs to be done widget by widget, this wildcard should really die
+:not(decoration):not(window):drop(active):focus,
+:not(decoration):not(window):drop(active) { // FIXME needs to be done widget by widget, this wildcard should really die
   border-color: $drop_target_color;
   box-shadow: inset 0 0 0 1px $drop_target_color;
 }
