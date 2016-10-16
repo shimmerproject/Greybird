@@ -2626,14 +2626,14 @@ switch {
   switch:backdrop {
     color: #858585;
     border-color: #8a8a8a;
-    background-image: linear-gradient(to bottom, #b6b6b6);
+    background-color: #b6b6b6;
     box-shadow: none;
     text-shadow: none;
     transition: 200ms ease-out; }
     switch:backdrop:checked {
       color: #cecece;
       border-color: #398ee7;
-      background-image: linear-gradient(to bottom, #398ee7);
+      background-color: #398ee7;
       box-shadow: none; }
   switch:disabled {
     color: #a8a8a8;

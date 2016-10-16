@@ -2613,13 +2613,13 @@ switch {
   switch:backdrop {
     color: #949796;
     border-color: #1f2222;
-    background-image: linear-gradient(to bottom, #303535);
+    background-color: #303535;
     box-shadow: none;
     text-shadow: none;
     transition: 200ms ease-out; }
     switch:backdrop:checked {
       border-color: #09294b;
-      background-image: linear-gradient(to bottom, #145ba6);
+      background-color: #145ba6;
       box-shadow: none; }
   switch:disabled {
     color: #5d6767;
