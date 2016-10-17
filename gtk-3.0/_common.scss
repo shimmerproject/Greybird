@@ -361,11 +361,11 @@ entry {
     &:not(:disabled) + entry:not(:disabled),
     &:not(:disabled) + %entry:not(:disabled) {
       border-top-color: mix($borders_color, $base_color, 30%);
-      background-image: linear-gradient(to bottom, $base_color);
+      background-color: $base_color;
 
       &:backdrop {
         border-top-color: mix($backdrop_borders_color, $backdrop_base_color, 30%);
-        background-image: linear-gradient(to bottom, $backdrop_base_color);
+        background-color: $backdrop_base_color;
       }
     }
 
@@ -2471,7 +2471,7 @@ switch {
   border: 1px solid $borders_color;
   border-radius: 3px;
   color: $fg_color;
-  background-image: linear-gradient(to bottom, mix($bg_color, $borders_color, 60%));
+  background-color: mix($bg_color, $borders_color, 60%);
   text-shadow: 0 1px transparentize(black, 0.9);
 
   &:checked {

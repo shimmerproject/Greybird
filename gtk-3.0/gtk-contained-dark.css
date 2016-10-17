@@ -333,12 +333,12 @@ entry {
 entry:not(:disabled) + entry:not(:disabled), .linked.vertical >
 entry:not(:disabled) + spinbutton:not(:disabled):not(.vertical) {
   border-top-color: #252626;
-  background-image: linear-gradient(to bottom, #292929); }
+  background-color: #292929; }
   .linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled):backdrop, .linked.vertical > spinbutton:not(:disabled):not(.vertical) + spinbutton:not(:disabled):backdrop:not(.vertical), .linked.vertical >
   entry:not(:disabled) + entry:not(:disabled):backdrop, .linked.vertical >
   entry:not(:disabled) + spinbutton:not(:disabled):backdrop:not(.vertical) {
     border-top-color: #282929;
-    background-image: linear-gradient(to bottom, #2c2c2c); }
+    background-color: #2c2c2c; }
 .linked.vertical > spinbutton:disabled:not(.vertical) + spinbutton:disabled:not(.vertical), .linked.vertical > spinbutton:disabled:not(.vertical) + entry:disabled, .linked.vertical >
 entry:disabled + spinbutton:disabled:not(.vertical), .linked.vertical >
 entry:disabled + entry:disabled {
@@ -2594,7 +2594,7 @@ switch {
   border: 1px solid #1c1f1f;
   border-radius: 3px;
   color: #eeeeec;
-  background-image: linear-gradient(to bottom, #2d3232);
+  background-color: #2d3232;
   text-shadow: 0 1px rgba(0, 0, 0, 0.1); }
   switch:checked {
     color: white;
