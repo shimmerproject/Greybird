@@ -1929,6 +1929,11 @@ window.csd > .titlebar:not(headerbar) {
 .titlebar:not(headerbar) > separator {
   background-color: #1c1f1f; }
 
+.background:not(.csd):not(.ssd):not(.solid-csd) headerbar, .background:not(.csd):not(.ssd):not(.solid-csd) headerbar:not(:last-child), .background:not(.csd):not(.ssd):not(.solid-csd) headerbar:backdrop, .background:not(.csd):not(.ssd):not(.solid-csd) headerbar:backdrop:not(:last-child) {
+  border-radius: 0;
+  border-top-color: transparent;
+  box-shadow: none; }
+
 /************
  * Pathbars *
  ************/
