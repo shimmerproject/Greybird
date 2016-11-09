@@ -12,7 +12,7 @@ $variant: 'light';
     text-shadow: 0px 1px $shadow_color;
 }
 
-.xfce4-panel {
+.xfce4-panel.background {
     background-color: shade($panel_bg_color, 0.35);
     color: $panel_fg_color;
     font-weight: normal;
