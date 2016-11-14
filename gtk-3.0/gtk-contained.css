@@ -2368,8 +2368,8 @@ notebook > header {
       text-shadow: none;
       -gtk-icon-shadow: none; }
   notebook > header tab {
-    min-height: 24px;
-    min-width: 30px;
+    min-height: 20px;
+    min-width: 24px;
     padding: 3px 12px;
     outline-offset: -5px;
     color: #858585;
