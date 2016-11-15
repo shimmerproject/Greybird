@@ -2391,20 +2391,20 @@ notebook > header {
         background-color: #393f3f; }
     notebook > header tab button.flat {
       padding: 0;
-      margin-top: 4px;
-      margin-bottom: 4px;
-      min-width: 20px;
-      min-height: 20px; }
+      margin-top: 1px;
+      margin-bottom: 1px;
+      min-width: 16px;
+      min-height: 16px; }
       notebook > header tab button.flat:hover {
         color: currentColor; }
       notebook > header tab button.flat, notebook > header tab button.flat:backdrop {
         color: alpha(currentColor,0.3); }
       notebook > header tab button.flat:last-child {
-        margin-left: 4px;
-        margin-right: -4px; }
+        margin-left: 1px;
+        margin-right: -1px; }
       notebook > header tab button.flat:first-child {
-        margin-left: -4px;
-        margin-right: 4px; }
+        margin-left: -1px;
+        margin-right: 1px; }
   notebook > header.top tabs, notebook > header.bottom tabs {
     padding: 0; }
     notebook > header.top tabs:not(:only-child), notebook > header.bottom tabs:not(:only-child) {
