@@ -4507,6 +4507,17 @@ read if you used those and something break with a version upgrade you're on your
   .nautilus-list-view .view.dnd, .nautilus-list-view iconview.dnd {
     border-style: none; }
 
+/*********
+ * Geary *
+ *********/
+.conversation-frame .view.cell, .conversation-frame iconview.cell {
+  background-color: #fcfcfc; }
+
+.conversation-frame .view.cell:selected, .conversation-frame iconview.cell:selected,
+.conversation-frame .view.cell:selected:focus,
+.conversation-frame iconview.cell:selected:focus {
+  background-color: #398ee7; }
+
 UnityDecoration {
   -UnityDecoration-extents: 28px 1px 1px 1px;
   -UnityDecoration-input-extents: 10px;
