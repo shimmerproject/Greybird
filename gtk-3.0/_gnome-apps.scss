@@ -43,3 +43,15 @@ $variant: 'light';
         &.dnd { border-style: none; }
     }
 }
+
+/*********
+ * Geary *
+ *********/
+.conversation-frame .view.cell {
+    background-color: $base_color;
+}
+
+.conversation-frame .view.cell:selected,
+.conversation-frame .view.cell:selected:focus {
+    background-color: $selected_bg_color;
+}
