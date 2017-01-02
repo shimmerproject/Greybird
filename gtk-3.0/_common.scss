@@ -2472,40 +2472,40 @@ treeview ~ scrollbar.vertical {
  * Switch *
  **********/
 switch {
-  font-weight: bold;
-  font-size: smaller;
+  font-size: 0;
   outline-offset: -4px;
   box-shadow: inset 0 1px transparentize(black, 0.9), // needs to be set here
               _widget_edge(transparent);              // otherwise it gets
                                                       // clipped
   // similar to the .scale
-  border: 1px solid $borders_color;
-  border-radius: 3px;
-  color: $fg_color;
+  border: 1px solid gtkalpha(black, 0.25);
+  border-radius: 12px;
   background-color: mix($bg_color, $borders_color, 60%);
   text-shadow: 0 1px transparentize(black, 0.9);
+  min-height: 24px;
+  min-width: 24px;
+  transition: all 200ms ease-in;
 
   &:checked {
-    color: white;
-    border-color: $selected_borders_color;
-    background-color: $selected_bg_color;
-    background-image: none;
-    box-shadow: _widget_edge(transparent);
+    box-shadow: inset 0 1px transparentize(black, 0.9),
+                _widget_edge(transparent);
+    border-color: shade($selected_borders_color, 1.1);
+    background-image: linear-gradient(to bottom,
+                                      shade($selected_bg_color, 1.1),
+                                      $selected_bg_color
+                                      );
     text-shadow: 0 1px transparentize($selected_borders_color, 0.5),
                  0 0 2px transparentize(white, 0.4);
   }
 
   &:disabled {
-    color: $insensitive_fg_color;
     border-color: $borders_color;
-    background-image: none;
     background-color: $insensitive_bg_color;
     box-shadow: _widget_edge(transparent);
     text-shadow: none;
   }
 
   &:backdrop {
-    color: $backdrop_fg_color;
     border-color: $backdrop_borders_color;
     background-color: $backdrop_dark_fill;
     box-shadow: none;
@@ -2522,7 +2522,6 @@ switch {
   }
 
   &:disabled {
-    color: $backdrop_insensitive_color;
     border-color: $backdrop_borders_color;
     background-image: none;
     background-color: $insensitive_bg_color;
@@ -2530,10 +2529,9 @@ switch {
 
   slider {
     margin: -1px;
-    min-width: 44px;
-    min-height: 26px;
-    border: 1px solid;
-    border-radius: 3px;
+    border: 1px solid gtkalpha(black, 0.2);
+    border-radius: 12px;
+    min-width: 24px;
     transition: $button_transition;
 
     @include button(normal-alt, $edge: $shadow_color);
@@ -2541,7 +2539,7 @@ switch {
 
   &:hover slider { @include button(hover-alt, $edge: $shadow_color); }
 
-  &:checked slider { border: 1px solid $selected_borders_color; }
+  &:checked slider { border: 1px solid gtkalpha($selected_borders_color, 0.8); }
 
   &:disabled slider { @include button(insensitive); }
 
