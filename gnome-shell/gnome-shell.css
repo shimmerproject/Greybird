@@ -1,0 +1,63 @@
+@import url("/usr/share/gnome-shell/theme/gnome-shell.css");
+
+/* default text style */
+stage {
+    color: #212121; /* text_color */
+}
+
+/* PopupMenu */
+
+.popup-menu-boxpointer,
+.candidate-popup-boxpointer {
+    -arrow-border-radius: 2px;
+    -arrow-background-color: #fcfcfc;
+    -arrow-border-width: 1px;
+}
+
+.popup-menu-item:active {
+    background-color: #398ee7; /* selected_bg_color */
+    color: #fff /* selected_fg_color */
+}
+
+.popup-separator-menu-item {
+    -gradient-start: #cecece;
+    -gradient-end: #cecece;
+    -margin-horizontal: 0;
+    height: 1px;
+    padding: 0;
+}
+
+.popup-menu-icon {
+    color: #212121; /* text_color */
+}
+
+/* Panel */
+
+#panel {
+    background-color: #cecece;
+}
+
+.panel-button {
+    color: #212121; /* text_color */
+}
+
+.panel-button:active,
+.panel-button:overview,
+.panel-button:focus,
+.panel-button:hover {
+    text-shadow: none;
+}
+
+.panel-corner {
+    -panel-corner-radius: 0;
+}
+
+.system-menu-action {
+    color: #212121; /* text_color */
+}
+
+/* Modal Dialogs */
+
+.modal-dialog {
+    background-color: #cecece;
+}
