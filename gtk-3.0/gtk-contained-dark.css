@@ -127,14 +127,14 @@ assistant .sidebar label.highlight {
 .app-notification.frame, .osd .scale-popup, .osd {
   color: #eeeeee;
   border: none;
-  background-color: rgba(104, 104, 104, 0.2);
+  background-color: rgba(34, 34, 34, 0.8);
   background-clip: padding-box;
   outline-color: rgba(238, 238, 238, 0.3);
   text-shadow: 0 1px black;
   -gtk-icon-shadow: 0 1px black; }
   popover.background.touch-selection:backdrop, popover.background.magnifier:backdrop, popover.background.osd:backdrop, .app-notification:backdrop, .osd .scale-popup:backdrop, .osd:backdrop {
     color: shade(#eeeeee, 1.2);
-    background-color: shade(rgba(104, 104, 104, 0.2), 1.6);
+    background-color: shade(rgba(34, 34, 34, 0.8), 1.6);
     text-shadow: none;
     -gtk-icon-shadow: none; }
 
@@ -293,9 +293,9 @@ entry {
       -gtk-icon-shadow: none; }
     .osd spinbutton:disabled:not(.vertical), .osd
     entry:disabled {
-      color: #ababab;
+      color: #888888;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(117, 117, 117, 0.5);
+      background-color: rgba(34, 34, 34, 0.8);
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -579,7 +579,7 @@ button.osd {
   outline-color: rgba(238, 238, 238, 0.3);
   color: #eeeeee;
   border-color: rgba(0, 0, 0, 0.7);
-  background-color: rgba(104, 104, 104, 0.2);
+  background-color: rgba(34, 34, 34, 0.8);
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
@@ -592,7 +592,7 @@ button.osd {
   button.osd:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(135, 135, 135, 0.2);
+    background-color: rgba(65, 65, 65, 0.8);
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -614,9 +614,9 @@ button.osd {
     box-shadow: none; }
   button.osd:disabled:backdrop,
   button.osd:disabled {
-    color: #ababab;
+    color: #888888;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(117, 117, 117, 0.5);
+    background-color: rgba(34, 34, 34, 0.8);
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -625,7 +625,7 @@ button.osd {
   button.osd:backdrop {
     color: #eeeeee;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(104, 104, 104, 0.2);
+    background-color: rgba(34, 34, 34, 0.8);
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -636,7 +636,7 @@ button.osd {
 button {
   color: #eeeeee;
   border-color: rgba(0, 0, 0, 0.7);
-  background-color: rgba(104, 104, 104, 0.2);
+  background-color: rgba(34, 34, 34, 0.8);
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
@@ -646,7 +646,7 @@ button {
   button:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(135, 135, 135, 0.2);
+    background-color: rgba(65, 65, 65, 0.8);
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -668,9 +668,9 @@ button {
   popover.background.touch-selection button:disabled:backdrop, popover.background.magnifier button:disabled:backdrop, .app-notification button:disabled:backdrop, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .app-notification button:disabled, .osd
   button:disabled:backdrop, .osd
   button:disabled {
-    color: #ababab;
+    color: #888888;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(117, 117, 117, 0.5);
+    background-color: rgba(34, 34, 34, 0.8);
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -679,7 +679,7 @@ button {
   button:backdrop {
     color: #eeeeee;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(104, 104, 104, 0.2);
+    background-color: rgba(34, 34, 34, 0.8);
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -699,7 +699,7 @@ button {
     button.flat:hover {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(135, 135, 135, 0.2);
+      background-color: rgba(65, 65, 65, 0.8);
       background-clip: padding-box;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
       text-shadow: 0 1px black;
@@ -707,9 +707,9 @@ button {
       outline-color: rgba(238, 238, 238, 0.3); }
     popover.background.touch-selection button.flat:disabled, popover.background.magnifier button.flat:disabled, .app-notification button.flat:disabled, .osd
     button.flat:disabled {
-      color: #ababab;
+      color: #888888;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(117, 117, 117, 0.5);
+      background-color: rgba(34, 34, 34, 0.8);
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -893,9 +893,9 @@ button.suggested-action {
     .osd
     button.suggested-action:disabled:backdrop, .osd
     button.suggested-action:disabled {
-      color: #ababab;
+      color: #888888;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(117, 117, 117, 0.5);
+      background-color: rgba(34, 34, 34, 0.8);
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -1056,9 +1056,9 @@ button.destructive-action {
     .osd
     button.destructive-action:disabled:backdrop, .osd
     button.destructive-action:disabled {
-      color: #ababab;
+      color: #888888;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(117, 117, 117, 0.5);
+      background-color: rgba(34, 34, 34, 0.8);
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -1473,7 +1473,7 @@ spinbutton:not(.vertical) {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     -gtk-icon-shadow: none;
-    color: #ababab;
+    color: #888888;
     border-color: rgba(0, 0, 0, 0.5);
     -gtk-icon-shadow: none;
     box-shadow: none; }
@@ -1506,7 +1506,7 @@ spinbutton.vertical button.down {
 .osd spinbutton.vertical button:first-child {
   color: #eeeeee;
   border-color: rgba(0, 0, 0, 0.7);
-  background-color: rgba(104, 104, 104, 0.2);
+  background-color: rgba(34, 34, 34, 0.8);
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
@@ -1515,7 +1515,7 @@ spinbutton.vertical button.down {
   .osd spinbutton.vertical button:first-child:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(135, 135, 135, 0.2);
+    background-color: rgba(65, 65, 65, 0.8);
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -1531,9 +1531,9 @@ spinbutton.vertical button.down {
     -gtk-icon-shadow: none;
     outline-color: rgba(238, 238, 238, 0.3); }
   .osd spinbutton.vertical button:first-child:disabled {
-    color: #ababab;
+    color: #888888;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(117, 117, 117, 0.5);
+    background-color: rgba(34, 34, 34, 0.8);
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -1541,7 +1541,7 @@ spinbutton.vertical button.down {
   .osd spinbutton.vertical button:first-child:backdrop {
     color: #eeeeee;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(104, 104, 104, 0.2);
+    background-color: rgba(34, 34, 34, 0.8);
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -1581,7 +1581,7 @@ toolbar {
     padding: 13px;
     border: none;
     border-radius: 5px;
-    background-color: rgba(104, 104, 104, 0.2); }
+    background-color: rgba(34, 34, 34, 0.8); }
     toolbar.osd.left, toolbar.osd.right, toolbar.osd.top, toolbar.osd.bottom {
       border-radius: 0; }
   toolbar.horizontal separator {
@@ -2791,7 +2791,7 @@ radio {
   radio {
     color: #eeeeee;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(104, 104, 104, 0.2);
+    background-color: rgba(34, 34, 34, 0.8);
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -2801,7 +2801,7 @@ radio {
     radio:hover {
       color: #eeeeee;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(104, 104, 104, 0.2);
+      background-color: rgba(34, 34, 34, 0.8);
       background-clip: padding-box;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
       text-shadow: 0 1px black;
@@ -2821,16 +2821,16 @@ radio {
     radio:backdrop {
       color: #eeeeee;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(104, 104, 104, 0.2);
+      background-color: rgba(34, 34, 34, 0.8);
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
     .osd check:disabled, .osd
     radio:disabled {
-      color: #ababab;
+      color: #888888;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(117, 117, 117, 0.5);
+      background-color: rgba(34, 34, 34, 0.8);
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -2942,7 +2942,7 @@ scale trough, scale fill, progressbar trough {
     box-shadow: none;
     outline-color: rgba(238, 238, 238, 0.2); }
     .osd scale trough:disabled, scale .osd trough:disabled, .osd scale fill:disabled, scale .osd fill:disabled, .osd progressbar trough:disabled, progressbar .osd trough:disabled {
-      background-color: rgba(117, 117, 117, 0.5); }
+      background-color: rgba(34, 34, 34, 0.8); }
 
 scale highlight, progressbar progress {
   border: 1px solid shade(#145ba6, 0.7);
@@ -3056,18 +3056,18 @@ scale {
     .osd scale slider {
       color: #eeeeee;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(104, 104, 104, 0.2);
+      background-color: rgba(34, 34, 34, 0.8);
       background-clip: padding-box;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
       outline-color: rgba(238, 238, 238, 0.3);
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: #686868; }
+      background-color: #222222; }
       .osd scale slider:hover {
         color: white;
         border-color: rgba(0, 0, 0, 0.7);
-        background-color: rgba(135, 135, 135, 0.2);
+        background-color: rgba(65, 65, 65, 0.8);
         background-clip: padding-box;
         box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
         text-shadow: 0 1px black;
@@ -3083,9 +3083,9 @@ scale {
         -gtk-icon-shadow: none;
         outline-color: rgba(238, 238, 238, 0.3); }
       .osd scale slider:disabled {
-        color: #ababab;
+        color: #888888;
         border-color: rgba(0, 0, 0, 0.7);
-        background-color: rgba(117, 117, 117, 0.5);
+        background-color: rgba(34, 34, 34, 0.8);
         background-clip: padding-box;
         box-shadow: none;
         text-shadow: none;
@@ -3093,7 +3093,7 @@ scale {
       .osd scale slider:backdrop {
         color: #eeeeee;
         border-color: rgba(0, 0, 0, 0.7);
-        background-color: rgba(104, 104, 104, 0.2);
+        background-color: rgba(34, 34, 34, 0.8);
         background-clip: padding-box;
         box-shadow: none;
         text-shadow: none;
@@ -3467,7 +3467,7 @@ row {
 .app-notification.frame {
   padding: 10px;
   border-radius: 0 0 5px 5px;
-  background-color: rgba(104, 104, 104, 0.2);
+  background-color: rgba(34, 34, 34, 0.8);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 2px);
   background-clip: padding-box; }
   .app-notification:backdrop,
