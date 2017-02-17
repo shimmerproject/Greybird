@@ -1913,6 +1913,10 @@ headerbar separator,
 headerbar button {
   margin-top: 6px;
   margin-bottom: 6px; }
+headerbar button.titlebutton image {
+  min-width: 22px; }
+headerbar button:not(.image-button):not(.titlebutton) image {
+  min-width: 28px; }
 headerbar switch {
   margin-top: 9px;
   margin-bottom: 9px; }
