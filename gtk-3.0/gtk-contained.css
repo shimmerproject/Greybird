@@ -3805,7 +3805,8 @@ infobar {
     border-left-color: shade(#cecece, 0.72);
     border-bottom-color: shade(#cecece, 0.7);
     background-image: linear-gradient(to bottom, shade(shade(#398ee7, 1.02), 1.05), shade(shade(#398ee7, 1.02), 0.97));
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.4); }
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+    border-color: #145ba6; }
     .info button:hover,
     .question button:hover,
     .warning button:hover,

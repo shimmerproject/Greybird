@@ -3839,6 +3839,7 @@ infobar { border-style: none; }
   button {
     // FIXME: extend selection mode buttons
     @include button(normal, $selected_bg_color, $selected_fg_color, none);
+    border-color: darken($selected_bg_color, 20%);
 
     &:hover { @include button(hover, $selected_bg_color, $selected_fg_color, none); }
 
