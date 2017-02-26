@@ -1907,9 +1907,16 @@ headerbar button {
   margin-top: 6px;
   margin-bottom: 6px; }
 headerbar button.titlebutton image {
-  min-width: 22px; }
+  min-width: 22px;
+  min-height: 22px; }
 headerbar button:not(.image-button):not(.titlebutton) image {
-  min-width: 28px; }
+  min-width: 28px;
+  min-height: 28px; }
+headerbar button.image-button {
+  min-width: 28px;
+  min-height: 28px;
+  padding-left: 2px;
+  padding-right: 2px; }
 headerbar switch {
   margin-top: 9px;
   margin-bottom: 9px; }

@@ -1518,9 +1518,17 @@ headerbar {
   }
   button.titlebutton image {
     min-width: 22px;
+    min-height: 22px;
   }
   button:not(.image-button):not(.titlebutton) image {
     min-width: 28px;
+    min-height: 28px;
+  }
+  button.image-button {
+    min-width: 28px;
+    min-height: 28px;
+    padding-left: 2px;
+    padding-right: 2px;
   }
   switch {
     margin-top: 9px;
