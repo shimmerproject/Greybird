@@ -53,6 +53,12 @@ $variant: 'light';
     }
 }
 
+/* Workspace switcher provided by libwnck */
+wnck-pager {
+  &:selected { background-color: shade($selected_bg_color, 0.88); }
+  &:hover { background-color: $selected_bg_color; }
+}
+
 #XfceNotifyWindow {
     background-color: shade($panel_bg_color, 0.3);
     color: $panel_fg_color;
