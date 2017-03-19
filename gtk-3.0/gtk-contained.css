@@ -4344,6 +4344,12 @@ read if you used those and something break with a version upgrade you're on your
     -gtk-icon-effect: none;
     text-shadow: none; }
 
+/* Workspace switcher provided by libwnck */
+wnck-pager:selected {
+  background-color: shade(#398ee7, 0.88); }
+wnck-pager:hover {
+  background-color: #398ee7; }
+
 #XfceNotifyWindow {
   background-color: shade(#686868, 0.3);
   color: #fcfcfc;
