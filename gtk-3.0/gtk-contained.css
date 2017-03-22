@@ -3539,10 +3539,12 @@ expander arrow {
  ***********/
 calendar {
   color: #212121;
-  border: 1px solid #828282; }
+  border: 1px solid #828282;
+  padding: 2px; }
   calendar:selected {
-    border-radius: 3px; }
+    border-radius: 6px; }
   calendar.header {
+    border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0; }
     calendar.header:backdrop {
@@ -3556,10 +3558,10 @@ calendar {
     calendar.button:disabled {
       color: rgba(133, 133, 133, 0.45); }
   calendar:indeterminate, calendar:indeterminate:backdrop {
-    color: alpha(currentColor,0.55); }
+    color: alpha(currentColor,0.25); }
   calendar.highlight, calendar.highlight:backdrop {
     font-size: smaller;
-    color: #3c3c3c; }
+    color: #368ce7; }
   calendar:backdrop {
     color: #4c4c4c;
     border-color: #8a8a8a; }
