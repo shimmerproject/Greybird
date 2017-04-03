@@ -4368,11 +4368,14 @@ wnck-pager:hover {
     border-radius: 3px; }
     #XfceNotifyWindow progressbar progress {
       background-image: none;
-      background-color: #fcfcfc; }
+      background-color: #fcfcfc;
+      border: none;
+      box-shadow: none; }
     #XfceNotifyWindow progressbar trough {
       background-image: linear-gradient(to bottom, shade(#686868, 0.65), shade(#686868, 1.25));
       border: 1px solid shade(#686868, 0.2);
-      border-radius: 3px; }
+      border-radius: 3px;
+      padding: 1px 0; }
 
 .lightdm-gtk-greeter {
   /*********

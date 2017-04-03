@@ -81,6 +81,8 @@ wnck-pager {
         progress {
             background-image: none;
             background-color: $panel_fg_color;
+            border: none;
+            box-shadow: none;
         }
         trough {
             background-image: linear-gradient(to bottom,
@@ -89,6 +91,7 @@ wnck-pager {
                                               );
             border: 1px solid shade($panel_bg_color, 0.2);
             border-radius: 3px;
+            padding: 1px 0;
         }
     }
 }
