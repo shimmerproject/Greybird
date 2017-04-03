@@ -4,7 +4,7 @@ Desktop Suite for Xfce
 ----------------------
 URL: http://shimmerproject.org/projects/greybird/
 
-Copyright 2009–2016 Simon Steinbeiß, Satyajit Sahoo, Pasi Lallinaho
+Copyright 2009–2017 Simon Steinbeiß, Satyajit Sahoo, Pasi Lallinaho
 
 Greybird is dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later.
 
