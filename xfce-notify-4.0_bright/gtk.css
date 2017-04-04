@@ -32,6 +32,8 @@
 #XfceNotifyWindow progressbar progress {
     background-image: none;
     background-color: #686868;
+    border: none;
+    box-shadow: none;
 }
 
 #XfceNotifyWindow progressbar trough {
@@ -41,4 +43,5 @@
                                       );
     border: 1px solid shade(#f2f1f1, 0.2);
     border-radius: 3px;
+    padding: 1px 0;
 }
