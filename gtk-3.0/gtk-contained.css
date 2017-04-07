@@ -3516,6 +3516,12 @@ row {
   .app-notification.frame:backdrop {
     background-image: none;
     transition: 200ms ease-out; }
+  .app-notification button,
+  .app-notification.frame button {
+    background: rgba(0, 0, 0, 0.1); }
+    .app-notification button:hover,
+    .app-notification.frame button:hover {
+      background: rgba(0, 0, 0, 0.3); }
   .app-notification border,
   .app-notification.frame border {
     border: none; }

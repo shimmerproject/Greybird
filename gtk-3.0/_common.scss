@@ -3419,7 +3419,11 @@ row {
     transition: $backdrop_transition;
   }
 
-  button { @extend %osd_button; }
+  button {
+    @extend %osd_button;
+    background: transparentize(black, 0.9);
+    &:hover { background: transparentize(black, 0.7); }
+  }
 
   border { border: none; }
 }
