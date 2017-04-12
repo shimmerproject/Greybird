@@ -14,6 +14,7 @@ full_width_title=true
 title_vertical_offset_active=2
 title_vertical_offset_inactive=2
 button_offset=8
+maximized_offset=5
 button_spacing=10
 shadow_delta_height=2
 shadow_delta_width=0
