@@ -3212,11 +3212,13 @@ progressbar {
   font-size: smaller;
   color: rgba(60, 60, 60, 0.4); }
   progressbar.horizontal trough {
-    min-height: 6px; }
+    min-height: 6px;
+    padding: 1px 0; }
   progressbar.horizontal progress {
     min-height: 8px; }
   progressbar.vertical trough {
-    min-width: 6px; }
+    min-width: 6px;
+    padding: 0 1px; }
   progressbar.vertical progress {
     min-width: 8px; }
   progressbar.horizontal progress, progressbar.vertical progress {
@@ -3225,8 +3227,7 @@ progressbar {
     box-shadow: none;
     transition: 200ms ease-out; }
   progressbar progress {
-    border-width: 0;
-    box-shadow: inset 1px 1px shade(#398ee7, 0.7), inset -1px -1px shade(#398ee7, 0.7);
+    border: 1px solid shade(#398ee7, 0.7);
     border-radius: 3px; }
     progressbar progress.left {
       border-top-left-radius: 3px;

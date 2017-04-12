@@ -3094,12 +3094,12 @@ scale {
 progressbar {
   // sizing
   &.horizontal {
-    trough { min-height: 6px; }
+    trough { min-height: 6px; padding: 1px 0; }
     progress { min-height: 8px; }
   }
 
   &.vertical {
-    trough { min-width: 6px; }
+    trough { min-width: 6px; padding: 0 1px; }
     progress { min-width: 8px; }
   }
 
@@ -3122,9 +3122,7 @@ progressbar {
 
   progress {
     @extend %scale_highlight;
-    border-width: 0; // use box-shadow instead of border in order to not draw anything if the progressbar's fraction is 0 (borders are always drawn!)
-    box-shadow: inset 1px 1px shade($selected_bg_color, 0.7),
-                inset -1px -1px shade($selected_bg_color, 0.7);
+    border: 1px solid shade($selected_bg_color, 0.7);
 
     border-radius: 3px;
 
