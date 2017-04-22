@@ -5,7 +5,7 @@ static char * hide_pressed_xpm[] = {
 ".	c #FFFFFF",
 "+	c #DEDEDE s active_color_2",
 "@	c #6696BA s active_color_1",
-"            ",
+"                      ",
 "......................",
 "++++++++++++++++++++++",
 "++++++++++++++++++++++",
