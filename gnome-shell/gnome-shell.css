@@ -1,7 +1,9 @@
-@import url("/usr/share/gnome-shell/theme/gnome-shell.css");
-
 /* Panel */
 
 #panel {
     background-color: rgba(36, 36, 36, 0.8);
+}
+
+#panel .panel-corner {
+    -panel-corner-radius: 0;
 }
