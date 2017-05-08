@@ -1,0 +1,78 @@
+/* default color scheme */
+@define-color bg_color #cecece;
+@define-color fg_color #3c3c3c;
+@define-color base_color #fcfcfc;
+@define-color text_color #212121;
+@define-color selected_bg_color #398ee7;
+@define-color selected_fg_color #fff;
+@define-color tooltip_bg_color #000;
+@define-color tooltip_fg_color #e1e1e1;
+
+/* colormap actually used by the theme, to be overridden in other css files */
+@define-color theme_bg_color @bg_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_base_color @base_color;
+@define-color theme_text_color @text_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color theme_tooltip_bg_color @tooltip_bg_color;
+@define-color theme_tooltip_fg_color @tooltip_fg_color;
+
+/* shadow effects */
+@define-color light_shadow #fff;
+@define-color dark_shadow #000;
+
+/* misc colors used by gtk+ */
+@define-color info_fg_color rgb (50, 49, 40);
+@define-color info_bg_color rgb (252, 246, 202);
+@define-color warning_fg_color rgb (50, 34, 12);
+@define-color warning_bg_color rgb (250, 173, 61);
+@define-color question_fg_color rgb (215, 232, 250);
+@define-color question_bg_color rgb (57, 142, 231);
+@define-color error_fg_color rgb (251, 214, 214);
+@define-color error_bg_color rgb (237, 54, 54);
+@define-color link_color #2d71b8;
+@define-color success_color #4e9a06;
+@define-color warning_color #f57900;
+@define-color error_color #cc0000;
+
+/* widget colors */
+@define-color titlebar_bg_color @theme_bg_color;
+@define-color titlebar_fg_color @theme_fg_color;
+@define-color menubar_bg_color @theme_bg_color;
+@define-color menubar_fg_color @theme_fg_color;
+@define-color toolbar_bg_color @theme_bg_color;
+@define-color toolbar_fg_color @theme_fg_color;
+@define-color menu_bg_color shade(@theme_bg_color, 1.18);
+@define-color menu_fg_color @theme_fg_color;
+@define-color panel_bg_color #686868;
+@define-color panel_fg_color #fcfcfc;
+
+/* osd */
+@define-color osd_base #333;
+@define-color osd_fg #eee;
+@define-color osd_bg alpha(@osd_base, 0.8);
+
+/* window manager colors */
+@define-color wm_bg_a shade(@titlebar_bg_color, 1.07);
+@define-color wm_bg_b @titlebar_bg_color;
+@define-color wm_title_focused shade(@titlebar_fg_color, 1.2);
+@define-color wm_title_focused_shadow shade(@titlebar_bg_color, 1.2);
+@define-color wm_title_unfocused shade(@titlebar_fg_color, 2.0);
+@define-color wm_title_unfocused_shadow shade(@titlebar_bg_color, 1.1);
+@define-color wm_border_focused shade(@titlebar_bg_color, 0.7);
+@define-color wm_border_unfocused shade(@titlebar_bg_color, 0.8);
+
+/* lightdm greeter color scheme */
+@define-color lightdm_bg_color #f9f9f9;
+@define-color lightdm_fg_color #3c3c3c;
+
+@import url("gtk-widgets.css");
+@import url("gtk-widgets-assets.css");
+@import url("apps/gnome-applications.css");
+@import url("apps/granite-widgets.css");
+@import url("apps/unity.css");
+@import url("apps/xfce.css");
+@import url("apps/lightdm-unity-greeter.css");
+@import url("apps/lightdm-gtk-greeter.css");
+@import url("apps/synaptic.css");

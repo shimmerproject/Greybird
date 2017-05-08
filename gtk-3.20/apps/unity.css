@@ -1,0 +1,88 @@
+UnityDecoration {
+    -UnityDecoration-extents: 28px 1px 1px 1px;
+    -UnityDecoration-input-extents: 10px;
+
+    -UnityDecoration-shadow-offset-x: 1px;
+    -UnityDecoration-shadow-offset-y: 1px;
+    -UnityDecoration-active-shadow-color: rgba(0,0,0,0.7);
+    -UnityDecoration-active-shadow-radius: 8px;
+    -UnityDecoration-inactive-shadow-color: rgba(0,0,0,0.5);
+    -UnityDecoration-inactive-shadow-radius: 5px;
+
+    -UnityDecoration-glow-size: 10px;
+    -UnityDecoration-glow-color: @theme_selected_bg_color;
+
+    -UnityDecoration-title-indent: 10px;
+    -UnityDecoration-title-fade: 35px;
+    -UnityDecoration-title-alignment: 0.0;
+}
+
+UnityDecoration.top {
+    border: 1px solid shade(@titlebar_bg_color, 0.7);
+    border-bottom-width: 0;
+    border-radius: 4px 4px 0 0;
+    padding: 1px 8px 0 8px;
+    background-image: linear-gradient(to bottom,
+                                      shade(@titlebar_bg_color, 1.07),
+                                      @titlebar_bg_color
+                                      );
+
+    color: @titlebar_fg_color;
+    text-shadow: 0 1px shade(@titlebar_bg_color, 1.2);
+}
+
+UnityDecoration.top:backdrop {
+    border: 1px solid shade(@titlebar_bg_color, 0.8);
+    border-bottom-width: 0;
+    background-image: linear-gradient(to bottom,
+                                      shade(@titlebar_bg_color, 1.02),
+                                      @titlebar_bg_color
+                                      );
+
+    color: @titlebar_fg_color;
+    text-shadow: 0 1px shade(@titlebar_bg_color, 1.1);
+}
+
+UnityDecoration.left,
+UnityDecoration.right,
+UnityDecoration.bottom {
+    background-color: shade(@titlebar_bg_color, 0.7);
+}
+
+UnityDecoration.left:backdrop,
+UnityDecoration.right:backdrop,
+UnityDecoration.bottom:backdrop {
+    background-color: shade(@titlebar_bg_color, 0.8);
+}
+
+UnityPanelWidget,
+.unity-panel {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: shade(@panel_bg_color, 1.0);
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.2),
+                                      shade(@panel_bg_color, 1.0)
+                                      );
+}
+
+.unity-panel.menubar,
+.unity-panel .menubar {
+}
+
+.unity-panel.menuitem,
+.unity-panel .menuitem {
+    border-width: 0 1px;
+    color: @panel_fg_color;
+}
+
+.unity-panel.menubar.menuitem:hover,
+.unity-panel.menubar .menuitem *:hover {
+    border-color: shade(@panel_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.2),
+                                      shade(@panel_bg_color, 1.0)
+                                      );
+
+    color: @panel_fg_color;
+}
