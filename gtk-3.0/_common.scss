@@ -2044,58 +2044,46 @@ notebook {
 
     &.top {
       > stack { border-top-style: none; }
-      > tabs {
-        margin-bottom: -2px;
-        > tab {
-          border-radius: 3px 3px 0 0;
-          border: 1px solid shade($bg_color, 0.9);
+      > tabs > tab {
+        border-radius: 3px 3px 0 0;
+        border: 1px solid shade($bg_color, 0.9);
 
-          &:backdrop { box-shadow: none; }
+        &:backdrop { box-shadow: none; }
 
-          &:checked { border-width: 1px 1px 0 1px; }
-        }
+        &:checked { border-width: 1px 1px 0 1px; }
       }
     }
 
     &.bottom {
       > stack { border-bottom-style: none; }
-      > tabs {
-        margin-top: -2px;
-        > tab {
-          border-radius: 0 0 3px 3px;
+      > tabs > tab {
+        border-radius: 0 0 3px 3px;
 
-          &:backdrop { box-shadow: none; }
+        &:backdrop { box-shadow: none; }
 
-          &:checked { border-width: 0 1px 1px 1px; }
-        }
+        &:checked { border-width: 0 1px 1px 1px; }
       }
     }
 
     &.left {
       > stack { border-left-style: none; }
-      > tabs {
-        margin-right: -2px;
-        > tab {
-          border-radius: 3px 0 0 3px;
+      > tabs > tab {
+        border-radius: 3px 0 0 3px;
 
-          &:backdrop { box-shadow: none; }
+        &:backdrop { box-shadow: none; }
 
-          &:checked { border-width: 1px 0 1px 1px; }
-        }
+        &:checked { border-width: 1px 0 1px 1px; }
       }
     }
 
     &.right {
       > stack { border-right-style: none; }
-      > tabs {
-        margin-left: -2px;
-        > tab {
-          border-radius: 0 3px 3px 0;
+      > tabs > tab {
+        border-radius: 0 3px 3px 0;
 
-          &:backdrop { box-shadow: none; }
+        &:backdrop { box-shadow: none; }
 
-          &:checked { border-width: 1px 1px 1px 0; }
-        }
+        &:checked { border-width: 1px 1px 1px 0; }
       }
     }
 
@@ -2287,7 +2275,22 @@ notebook {
     &.bottom tab { padding-top: 4px; }
   }
 
-  > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
+  &.frame > header {
+    &.top > tabs {
+      margin-bottom: -2px;
+    }
+    &.bottom > tabs {
+      margin-top: -2px;
+    }
+    &.left > tabs {
+      margin-right: -2px;
+    }
+    &.right > tabs {
+      margin-left: -2px;
+    }
+  }
+
+  &.frame > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
     background-color: shade($bg_color, 1.05);
     border: 1px solid shade($bg_color, 0.9);
 
