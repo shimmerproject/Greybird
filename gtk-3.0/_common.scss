@@ -2275,26 +2275,31 @@ notebook {
     &.bottom tab { padding-top: 4px; }
   }
 
-  &.frame > header {
-    &.top > tabs {
-      margin-bottom: -2px;
-    }
-    &.bottom > tabs {
-      margin-top: -2px;
-    }
-    &.left > tabs {
-      margin-right: -2px;
-    }
-    &.right > tabs {
-      margin-left: -2px;
-    }
-  }
+  &.frame {
+    > header {
+      &.top > tabs {
+        margin-bottom: -2px;
+      }
 
-  &.frame > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
-    background-color: shade($bg_color, 1.05);
-    border: 1px solid shade($bg_color, 0.9);
+      &.bottom > tabs {
+        margin-top: -2px;
+      }
 
-    &:backdrop { background-color: $backdrop_bg_color; }
+      &.left > tabs {
+        margin-right: -2px;
+      }
+
+      &.right > tabs {
+        margin-left: -2px;
+      }
+    }
+
+    > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
+      background-color: shade($bg_color, 1.05);
+      border: 1px solid shade($bg_color, 0.9);
+
+      &:backdrop { background-color: $backdrop_bg_color; }
+    }
   }
 }
 
