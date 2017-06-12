@@ -2298,45 +2298,37 @@ notebook > header {
     margin: -1px; }
   notebook > header.top > stack {
     border-top-style: none; }
-  notebook > header.top > tabs {
-    margin-bottom: -2px; }
-    notebook > header.top > tabs > tab {
-      border-radius: 3px 3px 0 0;
-      border: 1px solid shade(#cecece, 0.9); }
-      notebook > header.top > tabs > tab:backdrop {
-        box-shadow: none; }
-      notebook > header.top > tabs > tab:checked {
-        border-width: 1px 1px 0 1px; }
+  notebook > header.top > tabs > tab {
+    border-radius: 3px 3px 0 0;
+    border: 1px solid shade(#cecece, 0.9); }
+    notebook > header.top > tabs > tab:backdrop {
+      box-shadow: none; }
+    notebook > header.top > tabs > tab:checked {
+      border-width: 1px 1px 0 1px; }
   notebook > header.bottom > stack {
     border-bottom-style: none; }
-  notebook > header.bottom > tabs {
-    margin-top: -2px; }
-    notebook > header.bottom > tabs > tab {
-      border-radius: 0 0 3px 3px; }
-      notebook > header.bottom > tabs > tab:backdrop {
-        box-shadow: none; }
-      notebook > header.bottom > tabs > tab:checked {
-        border-width: 0 1px 1px 1px; }
+  notebook > header.bottom > tabs > tab {
+    border-radius: 0 0 3px 3px; }
+    notebook > header.bottom > tabs > tab:backdrop {
+      box-shadow: none; }
+    notebook > header.bottom > tabs > tab:checked {
+      border-width: 0 1px 1px 1px; }
   notebook > header.left > stack {
     border-left-style: none; }
-  notebook > header.left > tabs {
-    margin-right: -2px; }
-    notebook > header.left > tabs > tab {
-      border-radius: 3px 0 0 3px; }
-      notebook > header.left > tabs > tab:backdrop {
-        box-shadow: none; }
-      notebook > header.left > tabs > tab:checked {
-        border-width: 1px 0 1px 1px; }
+  notebook > header.left > tabs > tab {
+    border-radius: 3px 0 0 3px; }
+    notebook > header.left > tabs > tab:backdrop {
+      box-shadow: none; }
+    notebook > header.left > tabs > tab:checked {
+      border-width: 1px 0 1px 1px; }
   notebook > header.right > stack {
     border-right-style: none; }
-  notebook > header.right > tabs {
-    margin-left: -2px; }
-    notebook > header.right > tabs > tab {
-      border-radius: 0 3px 3px 0; }
-      notebook > header.right > tabs > tab:backdrop {
-        box-shadow: none; }
-      notebook > header.right > tabs > tab:checked {
-        border-width: 1px 1px 1px 0; }
+  notebook > header.right > tabs > tab {
+    border-radius: 0 3px 3px 0; }
+    notebook > header.right > tabs > tab:backdrop {
+      box-shadow: none; }
+    notebook > header.right > tabs > tab:checked {
+      border-width: 1px 1px 1px 0; }
   notebook > header.top > tabs > arrow {
     border-top-style: none; }
   notebook > header.bottom > tabs > arrow {
@@ -2459,10 +2451,18 @@ notebook > header {
     padding-bottom: 4px; }
   notebook > header.bottom tab {
     padding-top: 4px; }
-notebook > stack:not(:only-child) {
+notebook.frame > header.top > tabs {
+  margin-bottom: -2px; }
+notebook.frame > header.bottom > tabs {
+  margin-top: -2px; }
+notebook.frame > header.left > tabs {
+  margin-right: -2px; }
+notebook.frame > header.right > tabs {
+  margin-left: -2px; }
+notebook.frame > stack:not(:only-child) {
   background-color: shade(#cecece, 1.05);
   border: 1px solid shade(#cecece, 0.9); }
-  notebook > stack:not(:only-child):backdrop {
+  notebook.frame > stack:not(:only-child):backdrop {
     background-color: #cecece; }
 
 /**************
