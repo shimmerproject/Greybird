@@ -4352,6 +4352,20 @@ read if you used those and something break with a version upgrade you're on your
   .xfce4-panel.background menu {
     -gtk-icon-effect: none;
     text-shadow: none; }
+  .xfce4-panel.background .tasklist button {
+    padding: 3px;
+    margin: 1px;
+    border-radius: 3px;
+    text-shadow: 0 1px #3c3c3c;
+    color: shade(#fcfcfc, 0.7); }
+    .xfce4-panel.background .tasklist button:active, .xfce4-panel.background .tasklist button:checked {
+      border-color: shade(#398ee7, 0.7);
+      background-image: linear-gradient(to bottom, shade(#398ee7, 0.65), shade(#398ee7, 0.6), shade(#398ee7, 0.5), shade(#398ee7, 0.45));
+      color: shade(#fcfcfc, 1); }
+    .xfce4-panel.background .tasklist button:hover, .xfce4-panel.background .tasklist button:active:hover, .xfce4-panel.background .tasklist button:checked:hover {
+      background-image: linear-gradient(to bottom, shade(#398ee7, 0.85), shade(#398ee7, 0.8), shade(#398ee7, 0.7), shade(#398ee7, 0.65));
+      color: shade(#fcfcfc, 1);
+      box-shadow: none; }
 
 /* Workspace switcher provided by libwnck */
 wnck-pager:selected {
