@@ -57,6 +57,18 @@ $variant: 'light';
         border-radius: 3px;
         text-shadow: 0 1px $fg_color;
         color: shade($panel_fg_color, 0.7);
+        background-image: linear-gradient(to bottom,
+                                          shade($panel_bg_color, 0.65),
+                                          shade($panel_bg_color, 0.60),
+                                          shade($panel_bg_color, 0.50),
+                                          shade($panel_bg_color, 0.45)
+                                          );
+        border-color: shade($panel_bg_color, 0.7);
+        &.flat {
+            background-image: none;
+            border: none;
+            box-shadow: none;
+        }
         &:active, &:checked {
             border-color: shade($selected_bg_color, 0.7);
             background-image: linear-gradient(to bottom,
