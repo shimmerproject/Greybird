@@ -34,6 +34,7 @@ install-data-hook:
 #	cp    $(srcdir)/gtk-3.0/settings.ini	$(DESTDIR)$(themedir)/gtk-3.0
 	cp -r $(srcdir)/metacity-1		$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/unity			$(DESTDIR)$(themedir)
+	cp -r $(srcdir)/gnome-shell		$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/xfce-notify-4.0		$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/xfce-notify-4.0_bright/* $(DESTDIR)$(datadir)/themes/Greybird-bright/xfce-notify-4.0
 	cp -r $(srcdir)/xfwm4			$(DESTDIR)$(themedir)
