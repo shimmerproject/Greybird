@@ -18,6 +18,7 @@ The Greybird desktop suite includes:
 - Emerald theme
 - Metacity theme
 - Mutter theme
+- Gnome Shell theme
 - Plank theme
 - Unity support
 
