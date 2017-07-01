@@ -102,6 +102,21 @@ wnck-pager {
   &:hover { background-color: $selected_bg_color; }
 }
 
+XfdesktopIconView.view {
+  background: transparent;
+  color: $panel_fg_color;
+  border-radius: 3px;
+  &:active {
+    background: rgba(darken($selected_bg_color, 15%), 0.5);
+    text-shadow: 0 1px 1px black;
+  }
+  .label { text-shadow: 1px 1px 2px black; }
+  .rubberband {
+    background: rgba($selected_bg_color, 0.2);
+    border: 1px solid shade($selected_bg_color, 0.7);
+  }
+}
+
 #XfceNotifyWindow {
     background-color: shade($panel_bg_color, 0.3);
     color: $panel_fg_color;

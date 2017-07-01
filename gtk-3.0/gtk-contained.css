@@ -4380,6 +4380,19 @@ wnck-pager:selected {
 wnck-pager:hover {
   background-color: #398ee7; }
 
+XfdesktopIconView.view {
+  background: transparent;
+  color: #fcfcfc;
+  border-radius: 3px; }
+  XfdesktopIconView.view:active {
+    background: rgba(23, 104, 189, 0.5);
+    text-shadow: 0 1px 1px black; }
+  XfdesktopIconView.view .label {
+    text-shadow: 1px 1px 2px black; }
+  XfdesktopIconView.view .rubberband {
+    background: rgba(57, 142, 231, 0.2);
+    border: 1px solid shade(#398ee7, 0.7); }
+
 #XfceNotifyWindow {
   background-color: shade(#686868, 0.3);
   color: #fcfcfc;
