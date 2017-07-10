@@ -4640,3 +4640,27 @@ UnityPanelWidget,
   -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
   animation: playbackmenuitem_spinner 1s infinite linear;
   color: #3c3c3c; }
+
+/* places, treeview, history, information, emblems and notes */
+.caja-side-pane {
+  background-color: #dae0e6;
+  -gtk-icon-style: regular; }
+  .caja-side-pane treeview.view {
+    padding: 2px 0px;
+    background: transparent; }
+    .caja-side-pane treeview.view:selected, .caja-side-pane treeview.view:selected:hover {
+      background-image: linear-gradient(to bottom, shade(#dae0e6, 0.87), shade(#dae0e6, 0.95) 10%, shade(#dae0e6, 0.99) 92%, shade(#dae0e6, 0.92));
+      box-shadow: 0 -1px shade(#cecece, 0.85), 0 1px shade(#cecece, 1.12);
+      color: #3c3c3c; }
+    .caja-side-pane treeview.view:hover {
+      background-color: shade(#dae0e6, 0.95); }
+    .caja-side-pane treeview.view text {
+      background: transparent; }
+  .caja-side-pane viewport.frame, .caja-side-pane widget .vertical {
+    background: transparent; }
+
+/* to avoid overlap with eject buttons */
+.caja-side-pane scrollbar.vertical.left.overlay-indicator {
+  min-width: 8px; }
+  .caja-side-pane scrollbar.vertical.left.overlay-indicator trough, .caja-side-pane scrollbar.vertical.left.overlay-indicator slider, .caja-side-pane scrollbar.vertical.left.overlay-indicator button {
+    min-width: 8px; }

@@ -1,0 +1,33 @@
+/* places, treeview, history, information, emblems and notes */
+.caja-side-pane {
+  background-color: $sidebar_bg_color;
+  -gtk-icon-style: regular;
+  treeview.view {
+    padding: 2px 0px;
+    background: transparent;
+    &:selected, &:selected:hover {
+      background-image: linear-gradient(to bottom,
+                                        shade($sidebar_bg_color, 0.87),
+                                        shade($sidebar_bg_color, 0.95) 10%,
+                                        shade($sidebar_bg_color, 0.99) 92%,
+                                        shade($sidebar_bg_color, 0.92)
+                                        );
+      box-shadow: 0 -1px shade($bg_color, 0.85),
+                  0  1px shade($bg_color, 1.12);
+      color: $fg_color;
+    }
+    &:hover {
+      background-color: shade($sidebar_bg_color, 0.95);
+    }
+    text { background: transparent; }
+  }
+  viewport.frame, widget .vertical { background: transparent; }
+}
+
+/* to avoid overlap with eject buttons */
+.caja-side-pane scrollbar {
+  &.vertical.left.overlay-indicator {
+    min-width: 8px;
+    trough, slider, button { min-width: 8px; }
+  }
+}
