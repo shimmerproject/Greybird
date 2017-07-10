@@ -3557,6 +3557,8 @@ messagedialog .titlebar {
 messagedialog.csd.background {
   border-bottom-left-radius: 9px;
   border-bottom-right-radius: 9px; }
+messagedialog.csd buttonbox {
+  padding: 0px; }
 messagedialog.csd .dialog-action-area button {
   padding: 10px 14px;
   border-radius: 0;
