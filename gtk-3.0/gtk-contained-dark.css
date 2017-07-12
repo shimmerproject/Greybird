@@ -229,6 +229,7 @@ entry {
     box-shadow: none; }
   spinbutton.error:not(.vertical),
   entry.error {
+    background-color: rgba(204, 0, 0, 0.1);
     color: #cc0000;
     border-color: #1a0000; }
     spinbutton.error:focus:not(.vertical),
@@ -239,6 +240,7 @@ entry {
       background-color: #cc0000; }
   spinbutton.warning:not(.vertical),
   entry.warning {
+    background-color: rgba(245, 121, 0, 0.1);
     color: #f57900;
     border-color: #432100; }
     spinbutton.warning:focus:not(.vertical),
