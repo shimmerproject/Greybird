@@ -841,14 +841,14 @@ button.suggested-action {
     -gtk-icon-shadow: none;
     color: rgba(20, 91, 166, 0.8); }
   button.suggested-action:disabled {
-    border-color: #1c1f1f;
-    background-color: #333636;
+    border-color: #061d34;
+    background-color: #175493;
     text-shadow: none;
     -gtk-icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     button.suggested-action:disabled label,
     button.suggested-action:disabled {
-      color: #949796; }
+      color: #8baac9; }
     button.suggested-action:disabled:active,
     button.suggested-action:disabled:checked {
       border-color: #061d34;
@@ -1004,14 +1004,14 @@ button.destructive-action {
     -gtk-icon-shadow: none;
     color: rgba(213, 16, 16, 0.8); }
   button.destructive-action:disabled {
-    border-color: #1c1f1f;
-    background-color: #333636;
+    border-color: #5e0707;
+    background-color: #bb1414;
     text-shadow: none;
     -gtk-icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     button.destructive-action:disabled label,
     button.destructive-action:disabled {
-      color: #949796; }
+      color: #dd8a8a; }
     button.destructive-action:disabled:active,
     button.destructive-action:disabled:checked {
       border-color: #5e0707;
@@ -1803,6 +1803,7 @@ headerbar {
         border-bottom-color: shade(#393f3f, 0.7);
         background-image: linear-gradient(to bottom, #343a3a, #2f3434 60%, #2a2f2f);
         box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+        color: #ffffff;
         border-color: #09294b; }
         .selection-mode.titlebar:not(headerbar) button.suggested-action:hover,
         headerbar.selection-mode button.suggested-action:hover {
@@ -1827,6 +1828,8 @@ headerbar {
           text-shadow: none;
           -gtk-icon-shadow: none;
           box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+          background-image: none;
+          background: #393f3f;
           border-color: #09294b; }
           .selection-mode.titlebar:not(headerbar) button.suggested-action:disabled label, .selection-mode.titlebar:not(headerbar) button.suggested-action:disabled,
           headerbar.selection-mode button.suggested-action:disabled label,
