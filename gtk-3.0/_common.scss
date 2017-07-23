@@ -2305,6 +2305,7 @@ notebook {
       &:backdrop { background-color: $backdrop_bg_color; }
     }
   }
+  stack { background-color: shade($bg_color, 1.05); }
 }
 
 

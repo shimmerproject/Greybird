@@ -2456,6 +2456,8 @@ notebook.frame > stack:not(:only-child) {
   border: 1px solid shade(#393f3f, 0.9); }
   notebook.frame > stack:not(:only-child):backdrop {
     background-color: #393f3f; }
+notebook stack {
+  background-color: shade(#393f3f, 1.05); }
 
 /**************
  * Scrollbars *
