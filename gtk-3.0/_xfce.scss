@@ -50,6 +50,15 @@ $variant: 'light';
         -gtk-icon-effect: none;
 
         text-shadow: none;
+        // Theme pulseaudio-plugin's mpris buttons
+        .linked button {
+            @extend %linked;
+            @include button(normal, $menu_color, $text_color);
+            &:disabled {
+              @include button(insensitive);
+              border-color: transparentize($borders_color, 0.5);
+            }
+        }
     }
     .tasklist button {
         margin: 1px;

@@ -1209,7 +1209,7 @@ button, .linked >
 button:hover, .linked >
 button:active, .linked >
 button:checked, .linked >
-button:backdrop, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
+button:backdrop, .xfce4-panel.background menu .linked button, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
   border-radius: 0;
   border-right-style: none; }
 
@@ -1217,14 +1217,14 @@ button:backdrop, .linked > combobox > box > button.combo:dir(ltr), .linked > com
 entry:first-child, .inline-toolbar
 button:first-child, .linked >
 button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat,
-toolbar.inline-toolbar toolbutton:backdrop:first-child > button.flat, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo {
+toolbar.inline-toolbar toolbutton:backdrop:first-child > button.flat, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .xfce4-panel.background menu .linked button:first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px; }
 .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) >
 entry:last-child, .inline-toolbar
 button:last-child, .linked >
 button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat,
-toolbar.inline-toolbar toolbutton:backdrop:last-child > button.flat, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo {
+toolbar.inline-toolbar toolbutton:backdrop:last-child > button.flat, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .xfce4-panel.background menu .linked button:last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-right-style: solid; }
@@ -1232,7 +1232,7 @@ toolbar.inline-toolbar toolbutton:backdrop:last-child > button.flat, combobox.li
 entry:only-child, .inline-toolbar
 button:only-child, .linked >
 button:only-child, toolbar.inline-toolbar toolbutton:only-child > button.flat,
-toolbar.inline-toolbar toolbutton:backdrop:only-child > button.flat, .linked:not(.vertical) > combobox:only-child > box > button.combo {
+toolbar.inline-toolbar toolbutton:backdrop:only-child > button.flat, .linked:not(.vertical) > combobox:only-child > box > button.combo, .xfce4-panel.background menu .linked button:only-child {
   border-radius: 3px;
   border-style: solid; }
 
@@ -4359,6 +4359,24 @@ read if you used those and something break with a version upgrade you're on your
   .xfce4-panel.background menu {
     -gtk-icon-effect: none;
     text-shadow: none; }
+    .xfce4-panel.background menu .linked button {
+      color: #212121;
+      outline-color: rgba(33, 33, 33, 0.3);
+      border-top-color: shade(#cecece, 0.8);
+      border-right-color: shade(#cecece, 0.72);
+      border-left-color: shade(#cecece, 0.72);
+      border-bottom-color: shade(#cecece, 0.7);
+      background-image: linear-gradient(to bottom, shade(shade(#fcfcfc, 1.02), 1.05), shade(shade(#fcfcfc, 1.02), 0.97));
+      box-shadow: inset 0 1px white; }
+      .xfce4-panel.background menu .linked button:disabled {
+        border-color: #828282;
+        background-color: #e0e0e0;
+        text-shadow: none;
+        -gtk-icon-shadow: none;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+        border-color: rgba(130, 130, 130, 0.5); }
+        .xfce4-panel.background menu .linked button:disabled label, .xfce4-panel.background menu .linked button:disabled {
+          color: #858585; }
   .xfce4-panel.background .tasklist button {
     margin: 1px;
     border-radius: 3px;
