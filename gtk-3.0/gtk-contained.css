@@ -4422,6 +4422,8 @@ XfdesktopIconView.view {
   background-color: shade(#686868, 0.3);
   color: #fcfcfc;
   border-color: shade(#686868, 0.6); }
+  #XfceNotifyWindow buttonbox {
+    padding: 0; }
   #XfceNotifyWindow button {
     background-image: none;
     border-color: shade(#fcfcfc, 0.35);
