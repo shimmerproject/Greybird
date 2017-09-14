@@ -3598,14 +3598,21 @@ filechooserbutton:drop(active) {
   border-style: none;
   background-color: #222;
   -gtk-icon-style: regular; }
-  .sidebar row:selected {
+  .sidebar row:selected,
+  .sidebar treeview:selected {
     background-image: linear-gradient(to bottom, shade(#222, 0.87), shade(#222, 0.95) 10%, shade(#222, 0.99) 92%, shade(#222, 0.92));
     box-shadow: 0 -1px shade(#393f3f, 0.85), 0 1px shade(#393f3f, 1.12); }
-    .sidebar row:selected label {
+    .sidebar row:selected label,
+    .sidebar treeview:selected label {
       color: #eeeeec; }
-      .sidebar row:selected label:backdrop {
+      .sidebar row:selected label:backdrop,
+      .sidebar treeview:selected label:backdrop {
         color: #949796; }
-  .sidebar row:backdrop {
+    .sidebar row:selected.view:selected,
+    .sidebar treeview:selected.view:selected {
+      color: #eeeeec; }
+  .sidebar row:backdrop,
+  .sidebar treeview:backdrop {
     background-color: transparent; }
   stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
     border-right: 1px solid #1c1f1f;

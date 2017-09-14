@@ -3592,7 +3592,8 @@ filechooserbutton:drop(active) {
   background-color: $sidebar_bg_color;
   -gtk-icon-style: regular;
 
-  row {
+  row,
+  treeview {
     &:selected {
       background-image: linear-gradient(to bottom,
                                         shade($sidebar_bg_color, 0.87),
@@ -3607,6 +3608,7 @@ filechooserbutton:drop(active) {
         color: $fg_color;
         &:backdrop { color: $backdrop_fg_color; }
       }
+      &.view:selected { color: $fg_color; }
     }
     &:backdrop { background-color: transparent; }
   }
