@@ -3627,30 +3627,54 @@ filechooserbutton:drop(active) {
   border-style: none;
   background-color: #dae0e6;
   -gtk-icon-style: regular; }
-  .sidebar row:selected,
-  .sidebar treeview:selected {
-    background-image: linear-gradient(to bottom, shade(#dae0e6, 0.87), shade(#dae0e6, 0.95) 10%, shade(#dae0e6, 0.99) 92%, shade(#dae0e6, 0.92));
-    box-shadow: 0 -1px shade(#cecece, 0.85), 0 1px shade(#cecece, 1.12); }
-    .sidebar row:selected label,
-    .sidebar treeview:selected label {
+  .sidebar row,
+  .sidebar treeview {
+    box-shadow: none;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent; }
+    .sidebar row:selected, .sidebar row:selected:focus,
+    .sidebar treeview:selected,
+    .sidebar treeview:selected:focus {
+      background-image: linear-gradient(to bottom, shade(#dae0e6, 0.87), shade(#dae0e6, 0.95) 10%, shade(#dae0e6, 0.99) 92%, shade(#dae0e6, 0.92));
+      border-top: 1px solid shade(#cecece, 0.85);
+      border-bottom: 1px solid shade(#cecece, 1.12); }
+      .sidebar row:selected label, .sidebar row:selected:focus label,
+      .sidebar treeview:selected label,
+      .sidebar treeview:selected:focus label {
+        color: #3c3c3c; }
+        .sidebar row:selected label:backdrop, .sidebar row:selected:focus label:backdrop,
+        .sidebar treeview:selected label:backdrop,
+        .sidebar treeview:selected:focus label:backdrop {
+          color: #858585; }
+      .sidebar row:selected:backdrop, .sidebar row:selected:focus:backdrop,
+      .sidebar treeview:selected:backdrop,
+      .sidebar treeview:selected:focus:backdrop {
+        background-image: none;
+        background-color: #cecece;
+        color: #3c3c3c;
+        border-top: 1px solid shade(#cecece, 0.9);
+        border-bottom: 1px solid shade(#cecece, 0.9); }
+    .sidebar row .view:selected, .sidebar row iconview:selected, .sidebar row .view:selected:focus, .sidebar row iconview:selected:focus,
+    .sidebar treeview .view:selected,
+    .sidebar treeview iconview:selected,
+    .sidebar treeview .view:selected:focus,
+    .sidebar treeview iconview:selected:focus {
       color: #3c3c3c; }
-      .sidebar row:selected label:backdrop,
-      .sidebar treeview:selected label:backdrop {
-        color: #858585; }
-    .sidebar row:selected.view:selected,
-    .sidebar treeview:selected.view:selected {
-      color: #3c3c3c; }
-  .sidebar row:backdrop,
-  .sidebar treeview:backdrop {
-    background-color: transparent; }
+    .sidebar row:backdrop,
+    .sidebar treeview:backdrop {
+      background-color: transparent; }
   stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
     border-right: 1px solid #828282;
-    border-left-style: none; }
+    border-left-style: none;
+    border-top-style: none;
+    border-bottom-style: none; }
   stacksidebar.sidebar:dir(rtl) list
   .sidebar:dir(rtl), stacksidebar.sidebar.right list
   .sidebar:dir(rtl), .sidebar.right {
     border-left: 1px solid #828282;
-    border-right-style: none; }
+    border-right-style: none;
+    border-top-style: none;
+    border-bottom-style: none; }
   .sidebar:backdrop {
     background-color: #e4e4e4;
     border-color: #8a8a8a;

@@ -3594,22 +3594,31 @@ filechooserbutton:drop(active) {
 
   row,
   treeview {
-    &:selected {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    &:selected, &:selected:focus {
       background-image: linear-gradient(to bottom,
                                         shade($sidebar_bg_color, 0.87),
                                         shade($sidebar_bg_color, 0.95) 10%,
                                         shade($sidebar_bg_color, 0.99) 92%,
                                         shade($sidebar_bg_color, 0.92)
                                         );
-      box-shadow: 0 -1px shade($bg_color, 0.85),
-                  0 1px shade($bg_color, 1.12);
+      border-top: 1px solid shade($bg_color, 0.85);
+      border-bottom: 1px solid shade($bg_color, 1.12);
 
       label {
         color: $fg_color;
         &:backdrop { color: $backdrop_fg_color; }
       }
-      &.view:selected { color: $fg_color; }
+      &:backdrop {
+        background-image: none;
+        background-color: $bg_color;
+        color: $fg_color;
+        border-top: 1px solid shade($bg_color, 0.9);
+        border-bottom: 1px solid shade($bg_color, 0.9);
+      }
     }
+    .view:selected, .view:selected:focus { color: $fg_color; }
     &:backdrop { background-color: transparent; }
   }
   @at-root %sidebar_left,
@@ -3618,6 +3627,8 @@ filechooserbutton:drop(active) {
   &.left:dir(rtl) {
     border-right: 1px solid $borders_color;
     border-left-style: none;
+    border-top-style: none;
+    border-bottom-style: none;
   }
 
   @at-root %sidebar_right
@@ -3625,6 +3636,8 @@ filechooserbutton:drop(active) {
   &.right {
     border-left: 1px solid $borders_color;
     border-right-style: none;
+    border-top-style: none;
+    border-bottom-style: none;
   }
 
   &:backdrop {
