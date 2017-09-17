@@ -3653,7 +3653,11 @@ filechooserbutton:drop(active) {
     }
   }
 
-  paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
+  paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & {
+    border-style: none;
+    border-top: 1px solid $borders_color;
+    }
+  }
 }
 
 stacksidebar {

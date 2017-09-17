@@ -3600,7 +3600,6 @@ filechooserbutton:drop(active) {
   -gtk-icon-style: regular; }
   .sidebar row,
   .sidebar treeview {
-    box-shadow: none;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent; }
     .sidebar row:selected, .sidebar row:selected:focus,
@@ -3655,7 +3654,8 @@ filechooserbutton:drop(active) {
     .sidebar list:backdrop, .sidebar treeview:backdrop {
       background-color: transparent; }
   paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
-    border-style: none; }
+    border-style: none;
+    border-top: 1px solid #1c1f1f; }
 
 stacksidebar row {
   padding: 10px 4px; }
