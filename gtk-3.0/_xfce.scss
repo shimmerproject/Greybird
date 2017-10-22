@@ -111,6 +111,12 @@ wnck-pager {
   &:hover { background-color: $selected_bg_color; }
 }
 
+/* Thunar's sidebar top border */
+.sidebar.frame.shortcuts-pane,
+scrolledwindow.sidebar.frame {
+  border-top: 1px solid $borders_color;
+}
+
 XfdesktopIconView.view {
   background: transparent;
   color: $panel_fg_color;
