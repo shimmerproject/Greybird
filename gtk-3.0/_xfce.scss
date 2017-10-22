@@ -112,8 +112,7 @@ wnck-pager {
 }
 
 /* Thunar's sidebar top border */
-.sidebar.frame.shortcuts-pane,
-scrolledwindow.sidebar.frame {
+.thunar .sidebar.frame {
   border-top: 1px solid $borders_color;
 }
 
