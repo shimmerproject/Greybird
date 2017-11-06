@@ -34,7 +34,7 @@ Debian or Ubuntu:
 
 Fedora:
 
-`dnf install gdk-pixbuf2-devel librsvg-2-devel rubygem-sass`
+`dnf install gdk-pixbuf2-devel librsvg2-devel rubygem-sass`
 
 ### Install without admin privileges
 
