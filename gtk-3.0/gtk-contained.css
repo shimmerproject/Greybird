@@ -81,7 +81,8 @@ textview border {
 rubberband,
 flowbox rubberband,
 treeview.view rubberband,
-.content-view rubberband {
+.content-view rubberband,
+XfdesktopIconView.view .rubberband {
   border: 1px solid #1a74d3;
   background-color: rgba(26, 116, 211, 0.2); }
 
@@ -3683,8 +3684,7 @@ filechooserbutton:drop(active) {
     .sidebar list:backdrop, .sidebar treeview:backdrop {
       background-color: transparent; }
   paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
-    border-style: none;
-    border-top: 1px solid #828282; }
+    border-style: none; }
 
 stacksidebar row {
   padding: 10px 4px; }
@@ -4449,9 +4449,6 @@ XfdesktopIconView.view {
     text-shadow: 0 1px 1px black; }
   XfdesktopIconView.view .label {
     text-shadow: 1px 1px 2px black; }
-  XfdesktopIconView.view .rubberband {
-    background: rgba(57, 142, 231, 0.2);
-    border: 1px solid shade(#398ee7, 0.7); }
 
 #XfceNotifyWindow {
   background-color: shade(#686868, 0.3);

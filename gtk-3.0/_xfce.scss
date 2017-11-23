@@ -125,10 +125,7 @@ XfdesktopIconView.view {
     text-shadow: 0 1px 1px black;
   }
   .label { text-shadow: 1px 1px 2px black; }
-  .rubberband {
-    background: rgba($selected_bg_color, 0.2);
-    border: 1px solid shade($selected_bg_color, 0.7);
-  }
+  .rubberband { @extend rubberband; }
 }
 
 #XfceNotifyWindow {
