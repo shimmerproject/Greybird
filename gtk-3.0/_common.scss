@@ -2980,6 +2980,44 @@ scale {
   marks {
     color: gtkalpha(currentColor, 0.4);
 
+    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
+                                                     (bottom, bottom, top),
+                                                     (top, left, right),
+                                                     (bottom, right, left) {
+      &.#{$marks_class} {
+        margin-#{$marks_margin}: $_marks_distance;
+        margin-#{$marks_pos}: -($_marks_distance + $_marks_length);
+      }
+    }
+  }
+  &.fine-tune marks {
+    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
+                                                     (bottom, bottom, top),
+                                                     (top, left, right),
+                                                     (bottom, right, left) {
+      &.#{$marks_class} {
+        margin-#{$marks_margin}: $_marks_distance;
+        margin-#{$marks_pos}: -($_marks_distance + $_marks_length - 3px);
+      }
+    }
+  }
+
+  &.horizontal {
+    indicator {
+      min-height: $_marks_length;
+      min-width: 1px;
+    }
+
+    &.fine-tune indicator { min-height: ($_marks_length - 3px); }
+  }
+
+  &.vertical {
+    indicator {
+      min-height: 1px;
+      min-width: $_marks_length;
+    }
+
+    &.fine-tune indicator { min-width: ($_marks_length - 3px); }
   }
 
   &.color {
