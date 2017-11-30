@@ -2507,11 +2507,11 @@ switch {
                                                       // clipped
   // similar to the .scale
   border: 1px solid gtkalpha(black, 0.25);
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: mix($bg_color, $borders_color, 60%);
   text-shadow: 0 1px transparentize(black, 0.9);
-  min-height: 24px;
-  min-width: 24px;
+  min-height: 20px;
+  min-width: 20px;
   transition: all 200ms ease-in;
 
   &:checked {
@@ -2558,8 +2558,9 @@ switch {
   slider {
     margin: -1px;
     border: 1px solid gtkalpha(black, 0.2);
-    border-radius: 12px;
-    min-width: 24px;
+    border-radius: 10px;
+    min-width: 20px;
+    min-height: 20px;
     transition: $button_transition;
 
     @include button(normal-alt, $edge: $shadow_color);
