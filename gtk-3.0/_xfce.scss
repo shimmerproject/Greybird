@@ -112,8 +112,9 @@ wnck-pager {
 }
 
 /* Thunar's sidebar top border */
-.thunar .sidebar.frame {
-  border-top: 1px solid $borders_color;
+.thunar {
+  :backdrop { color: $insensitive_fg_color; }
+  .sidebar.frame { border-top: 1px solid $borders_color; }
 }
 
 XfdesktopIconView.view {

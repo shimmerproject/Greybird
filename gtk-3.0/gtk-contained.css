@@ -4472,6 +4472,8 @@ wnck-pager:hover {
   background-color: #398ee7; }
 
 /* Thunar's sidebar top border */
+.thunar :backdrop {
+  color: #858585; }
 .thunar .sidebar.frame {
   border-top: 1px solid #828282; }
 
