@@ -4443,6 +4443,24 @@ read if you used those and something break with a version upgrade you're on your
         border-color: rgba(130, 130, 130, 0.5); }
         .xfce4-panel.background menu .linked button:disabled label, .xfce4-panel.background menu .linked button:disabled {
           color: #858585; }
+  .xfce4-panel.background progressbar {
+    margin: 0; }
+    .xfce4-panel.background progressbar.horizontal trough {
+      min-height: 6px;
+      padding: 0; }
+    .xfce4-panel.background progressbar.horizontal progress {
+      min-height: 4px; }
+    .xfce4-panel.background progressbar.vertical trough {
+      min-width: 6px;
+      padding: 0; }
+    .xfce4-panel.background progressbar.vertical progress {
+      min-width: 4px; }
+    .xfce4-panel.background progressbar progress {
+      border-radius: 0px; }
+    .xfce4-panel.background progressbar trough {
+      background: shade(#686868, 0.7);
+      border-radius: 0px;
+      border-color: shade(#686868, 0.4); }
   .xfce4-panel.background .tasklist button {
     margin: 1px;
     border-radius: 3px;

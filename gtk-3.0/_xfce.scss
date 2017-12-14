@@ -60,6 +60,24 @@ $variant: 'light';
             }
         }
     }
+    progressbar {
+        margin: 0;
+        &.horizontal {
+          trough { min-height: 6px; padding: 0; }
+          progress { min-height: 4px; }
+        }
+
+        &.vertical {
+          trough { min-width: 6px; padding: 0; }
+          progress { min-width: 4px; }
+        }
+        progress { border-radius: 0px; }
+        trough {
+            background: shade($panel_bg_color, 0.7);
+            border-radius: 0px;
+            border-color: shade($panel_bg_color, 0.4);
+        }
+    }
     .tasklist button {
         margin: 1px;
         border-radius: 3px;
