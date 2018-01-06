@@ -2,7 +2,7 @@ Greybird
 =======
 Desktop Suite for Xfce
 ----------------------
-URL: http://shimmerproject.org/projects/greybird/
+URL: https://github.com/shimmerproject/Greybird
 
 Copyright 2009–2017 Simon Steinbeiß, Satyajit Sahoo, Pasi Lallinaho
 
