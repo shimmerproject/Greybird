@@ -4573,26 +4573,29 @@ XfdesktopIconView.view {
     .lightdm-gtk-greeter #shutdown_dialog button,
     .lightdm-gtk-greeter #restart_dialog button {
       padding: 3px 15px;
-      /***********************
-       * login/unlock button *
-       ***********************/
+      /************************************
+       * login/unlock and restart buttons *
+       ************************************/
       /*******************
        * shutdown button *
-       *******************/
-      /******************
-       * restart button *
-       ******************/ }
-      .lightdm-gtk-greeter #login_window button#login_button,
+       *******************/ }
+      .lightdm-gtk-greeter #login_window button#login_button, .lightdm-gtk-greeter #login_window button#restart_button,
       .lightdm-gtk-greeter #shutdown_dialog button#login_button,
-      .lightdm-gtk-greeter #restart_dialog button#login_button {
+      .lightdm-gtk-greeter #shutdown_dialog button#restart_button,
+      .lightdm-gtk-greeter #restart_dialog button#login_button,
+      .lightdm-gtk-greeter #restart_dialog button#restart_button {
         border-color: shade(#398ee7, 0.8);
         background-image: linear-gradient(to bottom, shade(#398ee7, 1.02), shade(#398ee7, 0.95) 90%, shade(#398ee7, 0.9));
         color: #ffffff; }
-        .lightdm-gtk-greeter #login_window button#login_button:hover, .lightdm-gtk-greeter #login_window button#login_button:active,
+        .lightdm-gtk-greeter #login_window button#login_button:hover, .lightdm-gtk-greeter #login_window button#login_button:active, .lightdm-gtk-greeter #login_window button#restart_button:hover, .lightdm-gtk-greeter #login_window button#restart_button:active,
         .lightdm-gtk-greeter #shutdown_dialog button#login_button:hover,
         .lightdm-gtk-greeter #shutdown_dialog button#login_button:active,
+        .lightdm-gtk-greeter #shutdown_dialog button#restart_button:hover,
+        .lightdm-gtk-greeter #shutdown_dialog button#restart_button:active,
         .lightdm-gtk-greeter #restart_dialog button#login_button:hover,
-        .lightdm-gtk-greeter #restart_dialog button#login_button:active {
+        .lightdm-gtk-greeter #restart_dialog button#login_button:active,
+        .lightdm-gtk-greeter #restart_dialog button#restart_button:hover,
+        .lightdm-gtk-greeter #restart_dialog button#restart_button:active {
           border-color: shade(#398ee7, 0.7);
           background-image: linear-gradient(to bottom, shade(#398ee7, 1.12), shade(#398ee7, 1.05) 90%, shade(#398ee7, 1)); }
       .lightdm-gtk-greeter #login_window button#shutdown_button,
@@ -4608,19 +4611,6 @@ XfdesktopIconView.view {
         .lightdm-gtk-greeter #restart_dialog button#shutdown_button:active {
           border-color: shade(#cc0000, 0.7);
           background-image: linear-gradient(to bottom, shade(#cc0000, 1.12), shade(#cc0000, 1.05) 90%, shade(#cc0000, 1)); }
-      .lightdm-gtk-greeter #login_window button#restart_button,
-      .lightdm-gtk-greeter #shutdown_dialog button#restart_button,
-      .lightdm-gtk-greeter #restart_dialog button#restart_button {
-        border-color: shade(#f57900, 0.8);
-        background-image: linear-gradient(to bottom, shade(#f57900, 1.02), shade(#f57900, 0.95) 90%, shade(#f57900, 0.9));
-        color: #ffffff; }
-        .lightdm-gtk-greeter #login_window button#restart_button:hover, .lightdm-gtk-greeter #login_window button#restart_button:active,
-        .lightdm-gtk-greeter #shutdown_dialog button#restart_button:hover,
-        .lightdm-gtk-greeter #shutdown_dialog button#restart_button:active,
-        .lightdm-gtk-greeter #restart_dialog button#restart_button:hover,
-        .lightdm-gtk-greeter #restart_dialog button#restart_button:active {
-          border-color: shade(#f57900, 0.7);
-          background-image: linear-gradient(to bottom, shade(#f57900, 1.12), shade(#f57900, 1.05) 90%, shade(#f57900, 1)); }
   .lightdm-gtk-greeter #content_frame {
     padding-bottom: 14px; }
   .lightdm-gtk-greeter #login_window menu {

@@ -40,10 +40,11 @@ $variant: 'light';
 
         button {
             padding: 3px 15px;
-            /***********************
-             * login/unlock button *
-             ***********************/
-            &#login_button {
+            /************************************
+             * login/unlock and restart buttons *
+             ************************************/
+            &#login_button,
+            &#restart_button {
                 border-color: shade($selected_bg_color, 0.8);
                 background-image: linear-gradient(to bottom,
                                                   shade($selected_bg_color, 1.02),
@@ -80,26 +81,6 @@ $variant: 'light';
                                                       shade($error_color, 1.12),
                                                       shade($error_color, 1.05) 90%,
                                                       shade($error_color, 1.00)
-                                                      );
-                }
-            }
-            /******************
-             * restart button *
-             ******************/
-            &#restart_button {
-                border-color: shade($warning_color, 0.8);
-                background-image: linear-gradient(to bottom,
-                                                  shade($warning_color, 1.02),
-                                                  shade($warning_color, 0.95) 90%,
-                                                  shade($warning_color, 0.90)
-                                                  );
-                color: $selected_fg_color;
-                &:hover,&:active {
-                    border-color: shade($warning_color, 0.7);
-                    background-image: linear-gradient(to bottom,
-                                                      shade($warning_color, 1.12),
-                                                      shade($warning_color, 1.05) 90%,
-                                                      shade($warning_color, 1.00)
                                                       );
                 }
             }
