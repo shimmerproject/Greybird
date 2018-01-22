@@ -62,6 +62,7 @@ $variant: 'light';
     }
     progressbar {
         margin: 0;
+
         &.horizontal {
           trough { min-height: 6px; padding: 0; }
           progress { min-height: 4px; }
@@ -132,6 +133,7 @@ wnck-pager {
 /* Thunar's sidebar top border */
 .thunar {
   :backdrop { color: $insensitive_fg_color; }
+  toolbar { border-bottom: none; }
   .sidebar.frame { border-top: 1px solid $borders_color; }
 }
 

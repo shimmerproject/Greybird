@@ -1251,7 +1251,10 @@ combobox {
 
 toolbar {
   @extend %toolbar;
+  @include headerbar_fill;
 
+  box-shadow: none;
+  border-bottom:1px solid $borders_color;
   padding: 4px 3px 3px 4px;
 
   // on OSD

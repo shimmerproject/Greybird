@@ -1584,6 +1584,10 @@ toolbar, .inline-toolbar, searchbar,
   background-color: #cecece; }
 
 toolbar {
+  background: #cecece linear-gradient(to bottom, #cecece, shade(#cecece, 0.88));
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+  border-bottom: 1px solid #828282;
   padding: 4px 3px 3px 4px; }
   .osd toolbar {
     background-color: transparent; }
@@ -4494,6 +4498,8 @@ wnck-pager:hover {
 /* Thunar's sidebar top border */
 .thunar :backdrop {
   color: #858585; }
+.thunar toolbar {
+  border-bottom: none; }
 .thunar .sidebar.frame {
   border-top: 1px solid #828282; }
 
