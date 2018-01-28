@@ -4750,3 +4750,8 @@ UnityPanelWidget,
   -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
   animation: playbackmenuitem_spinner 1s infinite linear;
   color: #3c3c3c; }
+
+window.background.chromium {
+  background-color: #cecece; }
+  window.background.chromium button {
+    border-color: #828282; }
