@@ -4363,3 +4363,49 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_button_active_color_b shade(#393f3f, 0.89);
 @define-color wm_button_active_color_c shade(#393f3f, 0.9);
 @define-color content_view_bg #292929;
+/************************
+ * NAUTILUS (aka Files) *
+ ************************/
+.nautilus-window {
+  background-color: #292929; }
+  .nautilus-window notebook, .nautilus-window notebook > stack {
+    background-color: #292929; }
+
+/* Floating status bar */
+.floating-bar {
+  background-color: #292929;
+  border-style: solid;
+  border-color: #1c1f1f; }
+  .floating-bar.left {
+    border-radius: 0 3px 0 0;
+    border-width: 1px 1px 0 0; }
+  .floating-bar.right {
+    border-radius: 3px 0 0 0;
+    border-width: 1px 0 0 1px; }
+  .floating-bar:backdrop {
+    background-color: #393f3f;
+    border-color: #1f2222; }
+  .floating-bar button {
+    padding: 0px; }
+
+/* Searchbar */
+.search-bar {
+  box-shadow: none; }
+
+/* View */
+.nautilus-list-view .view, .nautilus-list-view iconview {
+  border-bottom: 1px solid #393f3f;
+  /* Hide superfluous treeview drop target indication */ }
+  .nautilus-list-view .view.dnd, .nautilus-list-view iconview.dnd {
+    border-style: none; }
+
+/*********
+ * Geary *
+ *********/
+.conversation-frame .view.cell, .conversation-frame iconview.cell {
+  background-color: #292929; }
+
+.conversation-frame .view.cell:selected, .conversation-frame iconview.cell:selected,
+.conversation-frame .view.cell:selected:focus,
+.conversation-frame iconview.cell:selected:focus {
+  background-color: #145ba6; }
