@@ -2641,8 +2641,9 @@ switch {
     text-shadow: none;
     transition: 200ms ease-out; }
     switch:backdrop:checked {
-      border-color: #09294b;
-      background-color: #145ba6;
+      border-color: rgba(9, 41, 75, 0.7);
+      background-color: rgba(20, 91, 166, 0.7);
+      background-image: none;
       box-shadow: none; }
   switch:disabled {
     border-color: #1f2222;
@@ -2686,7 +2687,7 @@ switch {
     switch:backdrop slider label, switch:backdrop slider {
       color: #949796; }
   switch:backdrop:checked slider {
-    border-color: #09294b; }
+    border-color: rgba(9, 41, 75, 0.7); }
   switch:backdrop:disabled slider {
     border-color: #1f2222;
     background-color: #333636;
@@ -2975,7 +2976,9 @@ scale highlight, progressbar progress {
     background-color: transparent;
     border-color: transparent; }
   scale highlight:backdrop, progressbar progress:backdrop, progressbar:backdrop progress {
-    border-color: #09294b; }
+    border-color: rgba(9, 41, 75, 0.7);
+    background-color: rgba(20, 91, 166, 0.7);
+    background-image: none; }
     scale highlight:backdrop:disabled, progressbar progress:backdrop:disabled, progressbar:backdrop progress:disabled {
       background-color: transparent;
       border-color: transparent; }

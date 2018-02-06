@@ -2545,9 +2545,9 @@ switch {
 
     &:checked {
       @if $variant == 'light' { color: $backdrop_bg_color; }
-      border-color: if($variant == 'light', $selected_bg_color,
-                                            $selected_borders_color);
-      background-color: $selected_bg_color;
+      border-color: transparentize($selected_borders_color, 0.3);
+      background-color: transparentize($selected_bg_color, 0.3);
+      background-image: none;
       box-shadow: none;
     }
   }
@@ -2582,7 +2582,7 @@ switch {
       @include button(backdrop);
     }
 
-    &:checked slider { border-color: if($variant == 'light', $selected_bg_color, $selected_borders_color); }
+    &:checked slider { border-color: transparentize($selected_borders_color, 0.3); }
 
     &:disabled slider { @include button(backdrop-insensitive); }
   }
@@ -2823,8 +2823,9 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
   }
 
   &:backdrop {
-    border-color: if($variant=='light', $selected_bg_color,
-                                        $selected_borders_color);
+    border-color: transparentize($selected_borders_color, 0.3);
+    background-color: transparentize($selected_bg_color, 0.3);
+    background-image: none;
     &:disabled {
       background-color: transparent;
       border-color: transparent;
