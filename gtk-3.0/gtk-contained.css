@@ -2783,9 +2783,9 @@ radio {
   -gtk-icon-source: none;
   color: #3c3c3c;
   outline-color: rgba(60, 60, 60, 0.3);
-  border-color: #828282;
-  background-image: linear-gradient(to bottom, #dbdbdb 20%, #cecece 90%);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), inset 0 -2px lightgray, inset 0 -1px #afafaf, 0 1px rgba(0, 0, 0, 0.1); }
+  border-color: #9b9b9b;
+  background-image: linear-gradient(to bottom, #e8e8e8 20%, #dbdbdb 90%);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), inset 0 -2px #e0e0e0, inset 0 -1px #bcbcbc, 0 1px rgba(0, 0, 0, 0.1); }
   check:only-child,
   radio:only-child {
     margin: 0; }

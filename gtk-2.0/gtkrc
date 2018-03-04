@@ -137,7 +137,7 @@ style "default"
 		menubarstyle        = 2                 # 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
 		menuitemstyle       = 0                 # 0 = flat, 1 = glassy, 2 = striped
 		menustyle           = 0                 # 0 = no vertical menu stripe, 1 = display vertical menu stripe
-		prelight_shade      = .9               # shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors
+		prelight_shade      = .9               # shade level for scrollbar`s slider, comboboxstyle(1), and prelight state with gradient_colors
 		progressbarstyle    = 0                 # 0 = nothing, 1 = stripes, 2 = lines
 		reliefstyle         = 3                 # 0 = flat, 1 = inset, 2 = shadow
 		rgba                = FALSE             # FALSE = disabled, TRUE = enabled
@@ -526,7 +526,7 @@ style "hscale" = "scale"
 {
 }
 
-style "radiocheck"
+style "radio"
 {
 	bg[NORMAL]	= shade (1.06, @bg_color)
 	bg[PRELIGHT]	= shade (1.06, @bg_color)
@@ -537,11 +537,260 @@ style "radiocheck"
 	fg[ACTIVE]	= @fg_color
 	fg[INSENSITIVE] = mix (0.4, @fg_color, @bg_color)
 
-	engine "murrine"
-	{
-		border_shades		= { 0.9, 0.8 }
-		contrast		= 0.8
-		lightborder_shade	= 1.5
+	engine "pixmap" {
+		image {
+		  function        = OPTION
+		  state           = NORMAL
+		  shadow          = OUT
+		  overlay_file    = "assets/radio-unchecked.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = PRELIGHT
+		  shadow          = OUT
+		  overlay_file    = "assets/radio-unchecked-hover.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = ACTIVE
+		  shadow          = OUT
+		  overlay_file    = "assets/radio-unchecked-active.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = SELECTED
+		  shadow          = OUT
+		  overlay_file    = "assets/radio-unchecked.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = INSENSITIVE
+		  shadow          = OUT
+		  overlay_file    = "assets/radio-unchecked-insensitive.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+			function        = OPTION
+			state           = NORMAL
+			shadow          = IN
+			overlay_file    = "assets/radio-checked.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = PRELIGHT
+		  shadow          = IN
+		  overlay_file    = "assets/radio-checked-hover.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = ACTIVE
+		  shadow          = IN
+		  overlay_file    = "assets/radio-checked-active.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = SELECTED
+		  shadow          = IN
+		  overlay_file    = "assets/radio-checked.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = INSENSITIVE
+		  shadow          = IN
+		  overlay_file    = "assets/radio-checked-insensitive.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = NORMAL
+		  shadow          = ETCHED_IN
+		  overlay_file    = "assets/radio-mixed.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = PRELIGHT
+		  shadow          = ETCHED_IN
+		  overlay_file    = "assets/radio-mixed-hover.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = ACTIVE
+		  shadow          = ETCHED_IN
+		  overlay_file    = "assets/radio-mixed-active.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = SELECTED
+		  shadow          = ETCHED_IN
+		  overlay_file    = "assets/radio-mixed.png"
+		  overlay_stretch = FALSE
+		}
+
+		image {
+		  function        = OPTION
+		  state           = INSENSITIVE
+		  shadow          = ETCHED_IN
+		  overlay_file    = "assets/radio-mixed-insensitive.png"
+		  overlay_stretch = FALSE
+		}
+	}
+}
+
+style "check"
+{
+	bg[NORMAL]	= shade (1.06, @bg_color)
+	bg[PRELIGHT]	= shade (1.06, @bg_color)
+	bg[ACTIVE]	= shade (0.85, @bg_color)
+	bg[SELECTED]	= @base_color
+	bg[INSENSITIVE]	= shade (0.95, @bg_color)
+	text[PRELIGHT]	= shade (0.8, @selected_bg_color)
+	fg[ACTIVE]	= @fg_color
+	fg[INSENSITIVE] = mix (0.4, @fg_color, @bg_color)
+
+	engine "pixmap" {
+		image {
+			function        = CHECK
+			state           = NORMAL
+			shadow          = OUT
+			overlay_file    = "assets/checkbox-unchecked.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = PRELIGHT
+			shadow          = OUT
+			overlay_file    = "assets/checkbox-unchecked-hover.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = ACTIVE
+			shadow          = OUT
+			overlay_file    = "assets/checkbox-unchecked-active.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = SELECTED
+			shadow          = OUT
+			overlay_file    = "assets/checkbox-unchecked.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = INSENSITIVE
+			shadow          = OUT
+			overlay_file    = "assets/checkbox-unchecked-insensitive.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = NORMAL
+			shadow          = IN
+			overlay_file    = "assets/checkbox-checked.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = PRELIGHT
+			shadow          = IN
+			overlay_file    = "assets/checkbox-checked-hover.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = ACTIVE
+			shadow          = IN
+			overlay_file    = "assets/checkbox-checked-active.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = SELECTED
+			shadow          = IN
+			overlay_file    = "assets/checkbox-checked.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = INSENSITIVE
+			shadow          = IN
+			overlay_file    = "assets/checkbox-checked-insensitive.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = NORMAL
+			shadow          = ETCHED_IN
+			overlay_file    = "assets/checkbox-mixed.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = PRELIGHT
+			shadow          = ETCHED_IN
+			overlay_file    = "assets/checkbox-mixed-hover.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = ACTIVE
+			shadow          = ETCHED_IN
+			overlay_file    = "assets/checkbox-mixed-active.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = SELECTED
+			shadow          = ETCHED_IN
+			overlay_file    = "assets/checkbox-mixed.png"
+			overlay_stretch = FALSE
+		}
+
+		image {
+			function        = CHECK
+			state           = INSENSITIVE
+			shadow          = ETCHED_IN
+			overlay_file    = "assets/checkbox-mixed-insensitive.png"
+			overlay_stretch = FALSE
+		}
 	}
 }
 
@@ -728,8 +977,8 @@ class "GtkScrollbar"   style "scrollbar"
 class "GtkVScrollbar"  style "scrollbar"
 class "GtkHScrollbar"  style "scrollbar"
 
-class "GtkRadio*"	style "radiocheck"
-class "GtkCheck*"	style "radiocheck"
+class "GtkRadio*"	style "radio"
+class "GtkCheck*"	style "check"
 
 # General matching following, the order is choosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
 #widget_class "*<GtkNotebook>*<GtkEventBox>"     style "notebook"
@@ -775,8 +1024,8 @@ widget_class "*GtkVPaned" style "paned"
 widget_class "*<GtkProgress>"	       style "progressbar"
 widget_class "*<GtkProgressBar>"       style "progressbar"
 
-widget_class "*<GtkRadioButton>*"		style "radiocheck"
-widget_class "*<GtkCheckButton>*"		style "radiocheck"
+widget_class "*<GtkRadioButton>*"		style "radio"
+widget_class "*<GtkCheckButton>*"		style "check"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>"	style "treeview-header"
