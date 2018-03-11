@@ -4171,6 +4171,37 @@ decoration {
 button.titlebutton {
   text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
   -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.76923); }
+  button.titlebutton.close, button.titlebutton.maximize, button.titlebutton.minimize {
+    color: transparent;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat; }
+    button.titlebutton.close:backdrop, button.titlebutton.maximize:backdrop, button.titlebutton.minimize:backdrop {
+      opacity: 0.5; }
+  button.titlebutton.close {
+    background-image: url("assets/titlebutton-close.png"); }
+  button.titlebutton.close:backdrop {
+    background-image: url("assets/titlebutton-close-backdrop.png"); }
+  button.titlebutton.close:hover {
+    background-image: url("assets/titlebutton-close-hover.png"); }
+  button.titlebutton.close:active {
+    background-image: url("assets/titlebutton-close-active.png"); }
+  button.titlebutton.maximize {
+    background-image: url("assets/titlebutton-maximize.png"); }
+  button.titlebutton.maximize:backdrop {
+    background-image: url("assets/titlebutton-maximize-backdrop.png"); }
+  button.titlebutton.maximize:hover {
+    background-image: url("assets/titlebutton-maximize-hover.png"); }
+  button.titlebutton.maximize:active {
+    background-image: url("assets/titlebutton-maximize-active.png"); }
+  button.titlebutton.minimize {
+    background-image: url("assets/titlebutton-minimize.png"); }
+  button.titlebutton.minimize:backdrop {
+    background-image: url("assets/titlebutton-minimize-backdrop.png"); }
+  button.titlebutton.minimize:hover {
+    background-image: url("assets/titlebutton-minimize-hover.png"); }
+  button.titlebutton.minimize:active {
+    background-image: url("assets/titlebutton-minimize-active.png"); }
   button.titlebutton:backdrop {
     -gtk-icon-shadow: none; }
 

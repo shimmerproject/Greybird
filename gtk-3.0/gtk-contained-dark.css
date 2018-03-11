@@ -4141,6 +4141,37 @@ decoration {
 button.titlebutton {
   text-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
   -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.81176); }
+  button.titlebutton.close, button.titlebutton.maximize, button.titlebutton.minimize {
+    color: transparent;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat; }
+    button.titlebutton.close:backdrop, button.titlebutton.maximize:backdrop, button.titlebutton.minimize:backdrop {
+      opacity: 0.5; }
+  button.titlebutton.close {
+    background-image: url("assets/titlebutton-close-dark.png"); }
+  button.titlebutton.close:backdrop {
+    background-image: url("assets/titlebutton-close-backdrop-dark.png"); }
+  button.titlebutton.close:hover {
+    background-image: url("assets/titlebutton-close-hover-dark.png"); }
+  button.titlebutton.close:active {
+    background-image: url("assets/titlebutton-close-active-dark.png"); }
+  button.titlebutton.maximize {
+    background-image: url("assets/titlebutton-maximize-dark.png"); }
+  button.titlebutton.maximize:backdrop {
+    background-image: url("assets/titlebutton-maximize-backdrop-dark.png"); }
+  button.titlebutton.maximize:hover {
+    background-image: url("assets/titlebutton-maximize-hover-dark.png"); }
+  button.titlebutton.maximize:active {
+    background-image: url("assets/titlebutton-maximize-active-dark.png"); }
+  button.titlebutton.minimize {
+    background-image: url("assets/titlebutton-minimize-dark.png"); }
+  button.titlebutton.minimize:backdrop {
+    background-image: url("assets/titlebutton-minimize-backdrop-dark.png"); }
+  button.titlebutton.minimize:hover {
+    background-image: url("assets/titlebutton-minimize-hover-dark.png"); }
+  button.titlebutton.minimize:active {
+    background-image: url("assets/titlebutton-minimize-active-dark.png"); }
   button.titlebutton:backdrop {
     -gtk-icon-shadow: none; }
 
