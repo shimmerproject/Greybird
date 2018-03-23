@@ -657,6 +657,47 @@ style "radio"
 		  overlay_file    = "assets/radio-mixed-insensitive.png"
 		  overlay_stretch = FALSE
 		}
+		image
+		{
+			function			= BOX
+			detail				= "buttondefault"
+			recolorable		= TRUE
+			file					= "assets/button-default.png"
+			border				= { 4, 4, 4, 4 }
+			stretch				= TRUE
+		}
+		image
+		{
+			function			= BOX
+			state					= PRELIGHT
+			recolorable		= TRUE
+			file					= "assets/button-hover.png"
+			border				= { 4, 4, 4, 4 }
+			stretch				= TRUE
+		}
+		image
+		{
+			function			= BOX
+			state					= ACTIVE
+			file					= "assets/button-pressed.png"
+			border				= { 4, 4, 4, 4 }
+			stretch				= TRUE
+		}
+		image
+		{
+			function			= BOX
+			state					= INSENSITIVE
+			file					= "assets/button-insensitive.png"
+			border				= { 4, 4, 4, 4 }
+			stretch				= TRUE
+		}
+		image
+		{
+			function			= BOX
+			file					= "assets/button-default.png"
+			border				= { 4, 4, 4, 4 }
+			stretch				= TRUE
+		}
 	}
 }
 
