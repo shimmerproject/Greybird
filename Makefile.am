@@ -26,6 +26,7 @@ install-data-hook:
 	$(MKDIR_P)				$(DESTDIR)$(datadir)/themes/Greybird-bright/xfce-notify-4.0
 	$(MKDIR_P)				$(DESTDIR)$(datadir)/themes/Greybird-accessibility/xfwm4
 	$(MKDIR_P)				$(DESTDIR)$(datadir)/themes/Greybird-compact/xfwm4
+	$(MKDIR_P)				$(DESTDIR)$(datadir)/themes/Greybird-hidpi/xfwm4
 
 	cp -r $(srcdir)/gtk-2.0			$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/gtk-3.0			$(DESTDIR)$(themedir)
@@ -40,6 +41,7 @@ install-data-hook:
 	cp -r $(srcdir)/xfwm4			$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/xfwm4-a11y/*		$(DESTDIR)$(datadir)/themes/Greybird-accessibility/xfwm4
 	cp -r $(srcdir)/xfwm4-compact/*		$(DESTDIR)$(datadir)/themes/Greybird-compact/xfwm4
+	cp -r $(srcdir)/xfwm4-hidpi/*		$(DESTDIR)$(datadir)/themes/Greybird-hidpi/xfwm4
 	cp    $(srcdir)/index.theme		$(DESTDIR)$(themedir)
 	cp    $(srcdir)/ubiquity-panel-bg.png	$(DESTDIR)$(themedir)
 	cp    $(srcdir)/Greybird.emerald	$(DESTDIR)$(themedir)
