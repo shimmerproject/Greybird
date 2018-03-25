@@ -4255,7 +4255,8 @@ button.titlebutton {
   // Load png assets for each button
   @each $k in ('close','maximize', 'minimize') {
     @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
-      &.#{$k}#{$l} { background-image: url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}.png'); }
+      &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}.png'),
+                                                   url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}@2.png')); }
     }
   }
 

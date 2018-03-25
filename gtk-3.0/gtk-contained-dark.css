@@ -4149,29 +4149,29 @@ button.titlebutton {
     button.titlebutton.close:backdrop, button.titlebutton.maximize:backdrop, button.titlebutton.minimize:backdrop {
       opacity: 0.5; }
   button.titlebutton.close {
-    background-image: url("assets/titlebutton-close-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-dark.png"), url("assets/titlebutton-close-dark@2.png")); }
   button.titlebutton.close:backdrop {
-    background-image: url("assets/titlebutton-close-backdrop-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark.png"), url("assets/titlebutton-close-backdrop-dark@2.png")); }
   button.titlebutton.close:hover {
-    background-image: url("assets/titlebutton-close-hover-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark.png"), url("assets/titlebutton-close-hover-dark@2.png")); }
   button.titlebutton.close:active {
-    background-image: url("assets/titlebutton-close-active-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark.png"), url("assets/titlebutton-close-active-dark@2.png")); }
   button.titlebutton.maximize {
-    background-image: url("assets/titlebutton-maximize-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark.png"), url("assets/titlebutton-maximize-dark@2.png")); }
   button.titlebutton.maximize:backdrop {
-    background-image: url("assets/titlebutton-maximize-backdrop-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark.png"), url("assets/titlebutton-maximize-backdrop-dark@2.png")); }
   button.titlebutton.maximize:hover {
-    background-image: url("assets/titlebutton-maximize-hover-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark.png"), url("assets/titlebutton-maximize-hover-dark@2.png")); }
   button.titlebutton.maximize:active {
-    background-image: url("assets/titlebutton-maximize-active-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark.png"), url("assets/titlebutton-maximize-active-dark@2.png")); }
   button.titlebutton.minimize {
-    background-image: url("assets/titlebutton-minimize-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark.png"), url("assets/titlebutton-minimize-dark@2.png")); }
   button.titlebutton.minimize:backdrop {
-    background-image: url("assets/titlebutton-minimize-backdrop-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark.png"), url("assets/titlebutton-minimize-backdrop-dark@2.png")); }
   button.titlebutton.minimize:hover {
-    background-image: url("assets/titlebutton-minimize-hover-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark.png"), url("assets/titlebutton-minimize-hover-dark@2.png")); }
   button.titlebutton.minimize:active {
-    background-image: url("assets/titlebutton-minimize-active-dark.png"); }
+    background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark.png"), url("assets/titlebutton-minimize-active-dark@2.png")); }
   button.titlebutton:backdrop {
     -gtk-icon-shadow: none; }
 
