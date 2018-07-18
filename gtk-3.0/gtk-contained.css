@@ -4534,6 +4534,8 @@ wnck-pager:hover {
   color: #858585; }
 .thunar toolbar {
   border-bottom: none; }
+  .thunar toolbar entry {
+    min-height: 24px; }
 .thunar .sidebar.frame {
   border-top: 1px solid #828282; }
 

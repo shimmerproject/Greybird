@@ -133,7 +133,11 @@ wnck-pager {
 /* Thunar's sidebar top border */
 .thunar {
   :backdrop { color: $insensitive_fg_color; }
-  toolbar { border-bottom: none; }
+  toolbar {
+    border-bottom: none;
+
+    entry { min-height: 24px; }
+  }
   .sidebar.frame { border-top: 1px solid $borders_color; }
 }
 
