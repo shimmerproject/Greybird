@@ -9,7 +9,6 @@ MOSTLYCLEANFILES = \
 	gtk-3.0/gtk-contained-dark.css
 
 themedir = $(datadir)/themes/Greybird
-SASS = sass
 
 all: clean compile
 
@@ -17,7 +16,7 @@ clean-local:
 	rm -rf $(srcdir)/gtk-3.0/.sass-cache
 
 compile:
-	$(SASS) --update --sourcemap=none $(srcdir)/gtk-3.0
+	$(srcdir)/parse-sass.sh
 	glib-compile-resources --sourcedir=$(srcdir)/gtk-3.0 $(srcdir)/gtk-3.0/gtk.gresource.xml
 
 install-data-hook:

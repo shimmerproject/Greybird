@@ -892,7 +892,7 @@ style "xfwm-tabwin"
 	Xfwm4TabwinWidget::border-alpha = 0.9
 	Xfwm4TabwinWidget::icon-size = 64
 	Xfwm4TabwinWidget::listview-icon-size = 16
-	Xfwm4TabwinWidget::preview-size = 512
+	Xfwm4TabwinWidget::preview-size = 128
 	Xfwm4TabwinWidget::alpha = 0.8
 	Xfwm4TabwinWidget::border-radius = 10
 
