@@ -4576,6 +4576,33 @@ XfdesktopIconView.view {
       border-radius: 3px;
       padding: 1px 0; }
 
+/* Xfwm4's alt-tab dialog, aka "tabwin" */
+#xfwm-tabwin {
+  padding: 12px;
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: shade(#ffffff, 0.65);
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  /* Set the application icon- and preview-size to 64px */
+  -XfwmTabwinWidget-icon-size: 64px;
+  -XfwmTabwinWidget-preview-size: 64px; }
+  #xfwm-tabwin button {
+    min-width: 96px;
+    min-height: 96px;
+    background-image: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 6px;
+    box-shadow: none; }
+    #xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover {
+      background: rgba(206, 206, 206, 0.3); }
+    #xfwm-tabwin button:hover {
+      background: #22558b;
+      transition-duration: 50ms; }
+
 .lightdm-gtk-greeter {
   /*********
    * panel *
