@@ -899,7 +899,7 @@ style "xfwm-tabwin"
 	bg[NORMAL]	= shade (0.35, @bg_color_dark)
 	bg[ACTIVE]	= shade (0.65, @selected_bg_color)
 	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
-	bg[SELECTED]	= shade (0.45, @bg_color_dark)
+	bg[SELECTED]	= shade (0.1, @bg_color_dark)
 
 	fg[NORMAL]	= shade (0.8, @base_color)
 	fg[ACTIVE]	= @base_color
