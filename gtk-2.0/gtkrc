@@ -888,18 +888,17 @@ style "xfce-header"
 
 style "xfwm-tabwin"
 {
-	Xfwm4TabwinWidget::border-width = 1
-	Xfwm4TabwinWidget::border-alpha = 0.9
+	Xfwm4TabwinWidget::border-width = 0
 	Xfwm4TabwinWidget::icon-size = 64
-	Xfwm4TabwinWidget::listview-icon-size = 16
+	Xfwm4TabwinWidget::listview-icon-size = 24
 	Xfwm4TabwinWidget::preview-size = 128
 	Xfwm4TabwinWidget::alpha = 0.8
-	Xfwm4TabwinWidget::border-radius = 10
+	Xfwm4TabwinWidget::border-radius = 12
 
-	bg[NORMAL]	= shade (0.35, @bg_color_dark)
+	bg[NORMAL]	= shade (0.15, @text_color)
 	bg[ACTIVE]	= shade (0.65, @selected_bg_color)
-	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
-	bg[SELECTED]	= shade (0.45, @bg_color_dark)
+	bg[PRELIGHT]	= shade (0.75, @selected_bg_color)
+	bg[SELECTED]	= shade (0.55, @bg_color)
 
 	fg[NORMAL]	= shade (0.8, @base_color)
 	fg[ACTIVE]	= @base_color
@@ -907,13 +906,6 @@ style "xfwm-tabwin"
 
 	engine "murrine" {
 		roundness	    = 6
-		contrast            = 0.8
-		highlight_shade     = 1.00
-		lightborder_shade   = 1.0
-		gradient_shades     = {0.9,1.2,1.2,1.4}
-		border_shades       = { 3.5, 3.5 }
-		reliefstyle         = 0
-		shadow_shades	    = { 1.3, 1.7 }
 		textstyle = 1
 		text_shade = 0.25
 	}
