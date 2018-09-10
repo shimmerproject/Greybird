@@ -2283,30 +2283,38 @@ notebook {
   }
 
   &.frame {
-    > header {
-      &.top > tabs {
-        margin-bottom: -2px;
-      }
-
-      &.bottom > tabs {
-        margin-top: -2px;
-      }
-
-      &.left > tabs {
-        margin-right: -2px;
-      }
-
-      &.right > tabs {
-        margin-left: -2px;
-      }
-    }
-
     > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
-      background-color: shade($bg_color, 1.05);
       border: 1px solid shade($bg_color, 0.9);
-
-      &:backdrop { background-color: $backdrop_bg_color; }
     }
+  }
+
+  // if the notebook property show_border is set to false, the frame directly inside the notebook
+  // doesn't exist, so we define the tab margins, the background and backdrop colors here:
+
+  > header {
+    &.top > tabs {
+      margin-bottom: -2px;
+    }
+
+    &.bottom > tabs {
+      margin-top: -2px;
+    }
+
+    &.left > tabs {
+      margin-right: -2px;
+    }
+
+    &.right > tabs {
+      margin-left: -2px;
+    }
+  }
+  
+  > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
+    background-color: shade($bg_color, 1.05);
+    border-width: 1px 0 0;
+    border-color: shade($bg_color, 0.9);
+    border-style: solid;
+    &:backdrop { background-color: $backdrop_bg_color; }
   }
 }
 
