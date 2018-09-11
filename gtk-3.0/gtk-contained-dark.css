@@ -2357,6 +2357,8 @@ popover.background {
  *************/
 notebook.frame {
   border-style: none; }
+  notebook.frame > stack:not(:only-child) {
+    border: 1px solid shade(#393f3f, 0.9); }
 
 notebook > header {
   padding: 1px;
@@ -2521,23 +2523,21 @@ notebook > header {
     padding-bottom: 4px; }
   notebook > header.bottom tab {
     padding-top: 4px; }
+  notebook > header.top > tabs {
+    margin-bottom: -2px; }
+  notebook > header.bottom > tabs {
+    margin-top: -2px; }
+  notebook > header.left > tabs {
+    margin-right: -2px; }
+  notebook > header.right > tabs {
+    margin-left: -2px; }
 
-notebook.frame > header.top > tabs {
-  margin-bottom: -2px; }
-
-notebook.frame > header.bottom > tabs {
-  margin-top: -2px; }
-
-notebook.frame > header.left > tabs {
-  margin-right: -2px; }
-
-notebook.frame > header.right > tabs {
-  margin-left: -2px; }
-
-notebook.frame > stack:not(:only-child) {
+notebook > stack:not(:only-child) {
   background-color: shade(#393f3f, 1.05);
-  border: 1px solid shade(#393f3f, 0.9); }
-  notebook.frame > stack:not(:only-child):backdrop {
+  border-width: 1px;
+  border-color: shade(#393f3f, 0.9);
+  border-style: solid; }
+  notebook > stack:not(:only-child):backdrop {
     background-color: #393f3f; }
 
 /**************

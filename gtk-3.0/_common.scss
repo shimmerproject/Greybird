@@ -2036,7 +2036,13 @@ popover.background {
  * Notebooks *
  *************/
 notebook {
-  &.frame { border-style: none; }
+  &.frame {
+    border-style: none;
+
+    > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
+      border: 1px solid shade($bg_color, 0.9);
+    }
+  }
 
   > header {
     padding: 1px;
@@ -2280,33 +2286,30 @@ notebook {
 
     &.top tab { padding-bottom: 4px; }
     &.bottom tab { padding-top: 4px; }
+
+    &.top > tabs {
+      margin-bottom: -2px;
+    }
+
+    &.bottom > tabs {
+      margin-top: -2px;
+    }
+
+    &.left > tabs {
+      margin-right: -2px;
+    }
+
+    &.right > tabs {
+      margin-left: -2px;
+    }
   }
 
-  &.frame {
-    > header {
-      &.top > tabs {
-        margin-bottom: -2px;
-      }
-
-      &.bottom > tabs {
-        margin-top: -2px;
-      }
-
-      &.left > tabs {
-        margin-right: -2px;
-      }
-
-      &.right > tabs {
-        margin-left: -2px;
-      }
-    }
-
-    > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
-      background-color: shade($bg_color, 1.05);
-      border: 1px solid shade($bg_color, 0.9);
-
-      &:backdrop { background-color: $backdrop_bg_color; }
-    }
+  > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
+    background-color: shade($bg_color, 1.05);
+    border-width: 1px;
+    border-color: shade($bg_color, 0.9);
+    border-style: solid;
+    &:backdrop { background-color: $backdrop_bg_color; }
   }
 }
 
