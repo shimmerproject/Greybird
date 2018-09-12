@@ -2360,6 +2360,9 @@ notebook.frame {
   notebook.frame > stack:not(:only-child) {
     border: 1px solid shade(#393f3f, 0.9); }
 
+notebook.frame > header {
+  margin-left: 0; }
+
 notebook > header {
   padding: 1px;
   background-color: #393f3f; }
@@ -2531,6 +2534,9 @@ notebook > header {
     margin-right: -2px; }
   notebook > header.right > tabs {
     margin-left: -2px; }
+
+notebook > header {
+  margin-left: 6px; }
 
 notebook > stack:not(:only-child) {
   background-color: shade(#393f3f, 1.05);
