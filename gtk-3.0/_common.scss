@@ -2039,6 +2039,8 @@ notebook {
   &.frame {
     border-style: none;
 
+    > header { margin-left: 0; }
+
     > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
       border: 1px solid shade($bg_color, 0.9);
     }
@@ -2302,6 +2304,13 @@ notebook {
     &.right > tabs {
       margin-left: -2px;
     }
+  }
+
+  // if the notebook property show_border is set to false, the frame directly inside the notebook
+  // doesn't exist, so we define the tab margins, the background and backdrop colors here:
+
+  > header {
+    margin-left: 6px;
   }
 
   > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
