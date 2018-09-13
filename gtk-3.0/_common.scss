@@ -2315,7 +2315,7 @@ notebook {
 
   > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
     background-color: shade($bg_color, 1.05);
-    border-width: 1px;
+    border-width: 1px 0 0;
     border-color: shade($bg_color, 0.9);
     border-style: solid;
     &:backdrop { background-color: $backdrop_bg_color; }
