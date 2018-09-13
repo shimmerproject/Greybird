@@ -4931,5 +4931,5 @@ UnityPanelWidget,
 
 window.background.chromium {
   background-color: #cecece; }
-  window.background.chromium button {
+  window.background.chromium button:not(.titlebutton) {
     border-color: #828282; }
