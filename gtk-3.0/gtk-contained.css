@@ -327,22 +327,28 @@ entry progress {
 
 .linked:not(.vertical) > spinbutton:focus:not(.vertical) + spinbutton:not(.vertical),
 .linked:not(.vertical) > spinbutton:focus:not(.vertical) + button,
-.linked:not(.vertical) > spinbutton:focus:not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) > entry:focus + spinbutton:not(.vertical),
+.linked:not(.vertical) > spinbutton:focus:not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) >
+entry:focus + spinbutton:not(.vertical),
 .linked:not(.vertical) >
 entry:focus + button,
 .linked:not(.vertical) >
-entry:focus + combobox > box > button.combo, .linked:not(.vertical) > spinbutton:focus:not(.vertical) + entry, .linked:not(.vertical) >
+entry:focus + combobox > box > button.combo,
+.linked:not(.vertical) > spinbutton:focus:not(.vertical) +
+entry, .linked:not(.vertical) >
 entry:focus +
 entry {
   border-left-color: #398ee7; }
 
 .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + spinbutton:not(.vertical),
 .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + button,
-.linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) > entry:drop(active) + spinbutton:not(.vertical),
+.linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) >
+entry:drop(active) + spinbutton:not(.vertical),
 .linked:not(.vertical) >
 entry:drop(active) + button,
 .linked:not(.vertical) >
-entry:drop(active) + combobox > box > button.combo, .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + entry, .linked:not(.vertical) >
+entry:drop(active) + combobox > box > button.combo,
+.linked:not(.vertical) > spinbutton:drop(active):not(.vertical) +
+entry, .linked:not(.vertical) >
 entry:drop(active) +
 entry {
   border-left-color: #4e9a06; }
@@ -350,30 +356,35 @@ entry {
 .linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled),
 .linked.vertical > spinbutton:not(:disabled):not(.vertical) + spinbutton:not(:disabled):not(.vertical), .linked.vertical >
 entry:not(:disabled) + entry:not(:disabled),
-.linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):not(.vertical) {
+.linked.vertical >
+entry:not(:disabled) + spinbutton:not(:disabled):not(.vertical) {
   border-top-color: #d7d7d7;
   background-color: #fcfcfc; }
   .linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled):backdrop,
   .linked.vertical > spinbutton:not(:disabled):not(.vertical) + spinbutton:not(:disabled):backdrop:not(.vertical), .linked.vertical >
   entry:not(:disabled) + entry:not(:disabled):backdrop,
-  .linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):backdrop:not(.vertical) {
+  .linked.vertical >
+  entry:not(:disabled) + spinbutton:not(:disabled):backdrop:not(.vertical) {
     border-top-color: #d8d8d8;
     background-color: #f9f9f9; }
 
 .linked.vertical > spinbutton:disabled:not(.vertical) + spinbutton:disabled:not(.vertical),
-.linked.vertical > spinbutton:disabled:not(.vertical) + entry:disabled, .linked.vertical > entry:disabled + spinbutton:disabled:not(.vertical),
+.linked.vertical > spinbutton:disabled:not(.vertical) + entry:disabled, .linked.vertical >
+entry:disabled + spinbutton:disabled:not(.vertical),
 .linked.vertical >
 entry:disabled + entry:disabled {
   border-top-color: #d7d7d7; }
 
 .linked.vertical > spinbutton:not(.vertical) + spinbutton:focus:not(:only-child):not(.vertical),
-.linked.vertical > spinbutton:not(.vertical) + entry:focus:not(:only-child), .linked.vertical > entry + spinbutton:focus:not(:only-child):not(.vertical),
+.linked.vertical > spinbutton:not(.vertical) + entry:focus:not(:only-child), .linked.vertical >
+entry + spinbutton:focus:not(:only-child):not(.vertical),
 .linked.vertical >
 entry + entry:focus:not(:only-child) {
   border-top-color: #398ee7; }
 
 .linked.vertical > spinbutton:not(.vertical) + spinbutton:drop(active):not(:only-child):not(.vertical),
-.linked.vertical > spinbutton:not(.vertical) + entry:drop(active):not(:only-child), .linked.vertical > entry + spinbutton:drop(active):not(:only-child):not(.vertical),
+.linked.vertical > spinbutton:not(.vertical) + entry:drop(active):not(:only-child), .linked.vertical >
+entry + spinbutton:drop(active):not(:only-child):not(.vertical),
 .linked.vertical >
 entry + entry:drop(active):not(:only-child) {
   border-top-color: #4e9a06; }
@@ -381,7 +392,8 @@ entry + entry:drop(active):not(:only-child) {
 .linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + spinbutton:not(.vertical),
 .linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + entry,
 .linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + button,
-.linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + combobox > box > button.combo, .linked.vertical > entry:focus:not(:only-child) + spinbutton:not(.vertical),
+.linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + combobox > box > button.combo, .linked.vertical >
+entry:focus:not(:only-child) + spinbutton:not(.vertical),
 .linked.vertical >
 entry:focus:not(:only-child) + entry,
 .linked.vertical >
@@ -393,7 +405,8 @@ entry:focus:not(:only-child) + combobox > box > button.combo {
 .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + spinbutton:not(.vertical),
 .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + entry,
 .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + button,
-.linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + combobox > box > button.combo, .linked.vertical > entry:drop(active):not(:only-child) + spinbutton:not(.vertical),
+.linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + combobox > box > button.combo, .linked.vertical >
+entry:drop(active):not(:only-child) + spinbutton:not(.vertical),
 .linked.vertical >
 entry:drop(active):not(:only-child) + entry,
 .linked.vertical >
@@ -1191,18 +1204,24 @@ button:backdrop {
 button {
   -gtk-icon-shadow: none; }
 
-.stack-switcher > button.needs-attention > label,
-.stack-switcher > button.needs-attention > image, stacksidebar row.needs-attention > label {
+.stack-switcher >
+button.needs-attention > label,
+.stack-switcher >
+button.needs-attention > image, stacksidebar row.needs-attention > label {
   animation: needs_attention 150ms ease-in;
   background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#398ee7), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(rgba(255, 255, 255, 0.769231)), to(transparent));
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
   background-position: right 3px, right 4px; }
-  .stack-switcher > button.needs-attention > label:backdrop,
-  .stack-switcher > button.needs-attention > image:backdrop, stacksidebar row.needs-attention > label:backdrop {
+  .stack-switcher >
+  button.needs-attention > label:backdrop,
+  .stack-switcher >
+  button.needs-attention > image:backdrop, stacksidebar row.needs-attention > label:backdrop {
     background-size: 6px 6px, 0 0; }
-  .stack-switcher > button.needs-attention > label:dir(rtl),
-  .stack-switcher > button.needs-attention > image:dir(rtl), stacksidebar row.needs-attention > label:dir(rtl) {
+  .stack-switcher >
+  button.needs-attention > label:dir(rtl),
+  .stack-switcher >
+  button.needs-attention > image:dir(rtl), stacksidebar row.needs-attention > label:dir(rtl) {
     background-position: left 3px, left 4px; }
 
 .inline-toolbar toolbutton > button {
@@ -1346,28 +1365,32 @@ popover.background radiobutton,
   popover.background radiobutton:hover,
   .menuitem.button.flat:hover {
     background-color: #398ee7; }
-  modelbutton.flat check:last-child, popover.background checkbutton check:last-child, popover.background radiobutton check:last-child,
-  modelbutton.flat radio:last-child,
-  popover.background checkbutton radio:last-child,
+  modelbutton.flat check:last-child, popover.background checkbutton check:last-child,
+  popover.background radiobutton check:last-child,
+  modelbutton.flat radio:last-child, popover.background checkbutton radio:last-child,
   popover.background radiobutton radio:last-child,
   .menuitem.button.flat check:last-child,
   .menuitem.button.flat radio:last-child {
     margin-left: 8px; }
-  modelbutton.flat check:first-child, popover.background checkbutton check:first-child, popover.background radiobutton check:first-child,
-  modelbutton.flat radio:first-child,
-  popover.background checkbutton radio:first-child,
+  modelbutton.flat check:first-child, popover.background checkbutton check:first-child,
+  popover.background radiobutton check:first-child,
+  modelbutton.flat radio:first-child, popover.background checkbutton radio:first-child,
   popover.background radiobutton radio:first-child,
   .menuitem.button.flat check:first-child,
   .menuitem.button.flat radio:first-child {
     margin-right: 8px; }
 
-modelbutton.flat arrow, popover.background checkbutton arrow, popover.background radiobutton arrow {
+modelbutton.flat arrow, popover.background checkbutton arrow,
+popover.background radiobutton arrow {
   background: none; }
-  modelbutton.flat arrow:hover, popover.background checkbutton arrow:hover, popover.background radiobutton arrow:hover {
+  modelbutton.flat arrow:hover, popover.background checkbutton arrow:hover,
+  popover.background radiobutton arrow:hover {
     background: none; }
-  modelbutton.flat arrow.left, popover.background checkbutton arrow.left, popover.background radiobutton arrow.left {
+  modelbutton.flat arrow.left, popover.background checkbutton arrow.left,
+  popover.background radiobutton arrow.left {
     -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-  modelbutton.flat arrow.right, popover.background checkbutton arrow.right, popover.background radiobutton arrow.right {
+  modelbutton.flat arrow.right, popover.background checkbutton arrow.right,
+  popover.background radiobutton arrow.right {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 button.color {
@@ -1388,20 +1411,20 @@ button:visited {
   *:link:visited,
   button:visited {
     color: #145ba6; }
-    *:selected *:link:visited, *:selected button:visited:link,
-    *:selected button:visited {
+    *:selected *:link:visited, *:selected button:visited:link, *:selected
+    button:visited {
       color: #b0d2f5; }
   *:link:hover, button:hover:link,
   button:hover:visited {
     color: #468ad2; }
-    *:selected *:link:hover, *:selected button:hover:link,
-    *:selected button:hover:visited {
+    *:selected *:link:hover, *:selected button:hover:link, *:selected
+    button:hover:visited {
       color: #ebf4fd; }
   *:link:active, button:active:link,
   button:active:visited {
     color: #2d71b8; }
-    *:selected *:link:active, *:selected button:active:link,
-    *:selected button:active:visited {
+    *:selected *:link:active, *:selected button:active:link, *:selected
+    button:active:visited {
       color: #d7e8fa; }
   *:link:backdrop:backdrop:hover, button:backdrop:backdrop:hover:link,
   button:backdrop:backdrop:hover:visited, *:link:backdrop:backdrop:hover:selected, button:backdrop:backdrop:hover:selected:link,
@@ -1409,19 +1432,26 @@ button:visited {
   headerbar.selection-mode .subtitle:backdrop:backdrop:hover:link, *:link:backdrop, button:backdrop:link,
   button:backdrop:visited {
     color: #398ee7; }
-  .info *:link, .info button:link,
-  .info button:visited,
-  .question *:link, .question button:link,
-  .question button:visited,
-  .warning *:link, .warning button:link,
-  .warning button:visited,
-  .error *:link, .error button:link,
-  .error button:visited, *:link:selected, button:selected:link,
+  .info *:link, .info button:link, .info
+  button:visited,
+  .question *:link,
+  .question button:link,
+  .question
+  button:visited,
+  .warning *:link,
+  .warning button:link,
+  .warning
+  button:visited,
+  .error *:link,
+  .error button:link,
+  .error
+  button:visited, *:link:selected, button:selected:link,
   button:selected:visited, .selection-mode.titlebar:not(headerbar) .subtitle:link,
   headerbar.selection-mode .subtitle:link,
   *:selected *:link,
   *:selected button:link,
-  *:selected button:visited {
+  *:selected
+  button:visited {
     color: #d7e8fa; }
 
 button:link,
@@ -4931,5 +4961,5 @@ UnityPanelWidget,
 
 window.background.chromium {
   background-color: #cecece; }
-  window.background.chromium button {
+  window.background.chromium button:not(.titlebutton) {
     border-color: #828282; }
