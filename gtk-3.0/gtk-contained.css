@@ -2371,11 +2371,10 @@ popover.background {
  *************/
 notebook.frame {
   border-style: none; }
+  notebook.frame > header {
+    margin-left: 0; }
   notebook.frame > stack:not(:only-child) {
     border: 1px solid shade(#cecece, 0.9); }
-
-notebook.frame > header {
-  margin-left: 0; }
 
 notebook > header {
   padding: 1px;
@@ -4706,8 +4705,6 @@ XfdesktopIconView.view {
   -XfwmTabwinWidget-icon-size: 64px;
   -XfwmTabwinWidget-preview-size: 64px; }
   #xfwm-tabwin button {
-    min-width: 96px;
-    min-height: 96px;
     background-image: none;
     color: #ffffff;
     font-weight: bold;
