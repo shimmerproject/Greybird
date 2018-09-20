@@ -4665,6 +4665,8 @@ XfdesktopIconView.view {
     text-shadow: 0 1px 1px black; }
   XfdesktopIconView.view .label {
     text-shadow: 1px 1px 2px black; }
+  XfdesktopIconView.view .rubberband {
+    border-radius: 0; }
 
 #XfceNotifyWindow {
   background-color: shade(#686868, 0.3);
