@@ -4616,7 +4616,6 @@ read if you used those and something break with a version upgrade you're on your
       border-radius: 0px;
       border-color: shade(#686868, 0.4); }
   .xfce4-panel.background .tasklist button {
-    margin: 1px;
     border-radius: 3px;
     text-shadow: 0 1px #3c3c3c;
     color: shade(#fcfcfc, 0.7);
@@ -4636,6 +4635,10 @@ read if you used those and something break with a version upgrade you're on your
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 -1px rgba(0, 0, 0, 0.2); }
     .xfce4-panel.background .tasklist button image {
       padding: 3px; }
+  .xfce4-panel.background.horizontal .tasklist button {
+    margin: 0 1px; }
+  .xfce4-panel.background.vertical .tasklist button {
+    margin: 1px 0; }
 
 /* Workspace switcher provided by libwnck */
 wnck-pager:selected {

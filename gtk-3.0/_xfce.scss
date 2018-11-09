@@ -80,7 +80,6 @@ $variant: 'light';
         }
     }
     .tasklist button {
-        margin: 1px;
         border-radius: 3px;
         text-shadow: 0 1px $fg_color;
         color: shade($panel_fg_color, 0.7);
@@ -122,6 +121,8 @@ $variant: 'light';
             padding: 3px;
         }
     }
+    &.horizontal .tasklist button { margin: 0 1px; }
+    &.vertical .tasklist button { margin: 1px 0; }
 }
 
 /* Workspace switcher provided by libwnck */
