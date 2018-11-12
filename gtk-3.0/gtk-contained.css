@@ -4576,6 +4576,8 @@ read if you used those and something break with a version upgrade you're on your
       color: #fcfcfc;
       box-shadow: inset 0 -1px alpha(white,0), inset 1px 0 alpha(white,0.15), inset -1px 0 alpha(white,0.15), inset 0 1px alpha(white,0.15);
       transition: none; }
+  .xfce4-panel.background entry {
+    caret-color: #212121; }
   .xfce4-panel.background menu {
     -gtk-icon-effect: none;
     text-shadow: none; }

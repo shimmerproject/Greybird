@@ -46,6 +46,7 @@ $variant: 'light';
             transition: none;
         }
     }
+    entry { caret-color: $text_color; }
     menu {
         -gtk-icon-effect: none;
 
