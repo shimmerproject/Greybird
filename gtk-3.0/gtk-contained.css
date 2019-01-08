@@ -4639,8 +4639,12 @@ read if you used those and something break with a version upgrade you're on your
       padding: 3px; }
   .xfce4-panel.background.horizontal .tasklist button {
     margin: 0 1px; }
+    .xfce4-panel.background.horizontal .tasklist button label {
+      padding-right: 3px; }
   .xfce4-panel.background.vertical .tasklist button {
     margin: 1px 0; }
+    .xfce4-panel.background.vertical .tasklist button label {
+      padding-bottom: 3px; }
 
 /* Workspace switcher provided by libwnck */
 wnck-pager:selected {

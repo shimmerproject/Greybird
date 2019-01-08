@@ -122,8 +122,18 @@ $variant: 'light';
             padding: 3px;
         }
     }
-    &.horizontal .tasklist button { margin: 0 1px; }
-    &.vertical .tasklist button { margin: 1px 0; }
+    &.horizontal .tasklist {
+        button {
+            margin: 0 1px;
+            label { padding-right: 3px; }
+        }
+    }
+    &.vertical .tasklist {
+        button {
+            margin: 1px 0;
+            label { padding-bottom: 3px; }
+        }
+    }
 }
 
 /* Workspace switcher provided by libwnck */
