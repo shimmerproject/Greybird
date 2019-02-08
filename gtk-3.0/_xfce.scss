@@ -237,3 +237,12 @@ XfdesktopIconView.view {
         }
     }
 }
+
+#xfce4-terminal-notebook {
+    > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
+    /* Make sure there are no extra borders for the tabs in the terminal apart from at the top */
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+}
