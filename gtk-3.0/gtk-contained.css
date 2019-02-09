@@ -4731,6 +4731,9 @@ XfdesktopIconView.view {
     #xfwm-tabwin button:hover {
       background: #22558b;
       transition-duration: 50ms; }
+  #xfwm-tabwin .tabwin-app-grid button {
+    min-width: 96px;
+    min-height: 96px; }
 
 #xfce4-terminal-notebook > stack:not(:only-child) {
   /* Make sure there are no extra borders for the tabs in the terminal apart from at the top */

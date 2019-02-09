@@ -236,6 +236,10 @@ XfdesktopIconView.view {
             transition-duration: 50ms;
         }
     }
+    .tabwin-app-grid button {
+        min-width: 96px;
+        min-height: 96px;
+    }
 }
 
 #xfce4-terminal-notebook {
