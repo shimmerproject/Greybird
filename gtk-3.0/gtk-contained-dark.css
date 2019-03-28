@@ -3445,6 +3445,8 @@ printdialog paper {
 
 printdialog .dialog-vbox {
   background-color: #393f3f; }
+  printdialog .dialog-vbox:backdrop {
+    background-color: #393f3f; }
 
 printdialog .dialog-action-box {
   margin: 12px; }

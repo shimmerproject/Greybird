@@ -3325,7 +3325,10 @@ printdialog {
       border-color: $backdrop_borders_color;
     }
   }
-  .dialog-vbox { background-color: $bg_color; }
+  .dialog-vbox {
+    background-color: $bg_color;
+    &:backdrop { background-color: $backdrop_bg_color; }
+  }
 
   .dialog-action-box { margin: 12px; }
 }
