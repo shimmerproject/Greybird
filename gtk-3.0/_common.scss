@@ -294,6 +294,7 @@ entry {
       &.#{$e_type} {
         background-color: transparentize($e_color, 0.9);
         color: $e_color;
+        text-shadow: none;
         border-color: entry_focus_border($e_color);
 
         &:focus { @include entry(focus, $e_color); }

@@ -238,6 +238,7 @@ entry {
   entry.error {
     background-color: rgba(204, 0, 0, 0.1);
     color: #cc0000;
+    text-shadow: none;
     border-color: #1a0000; }
     spinbutton.error:focus:not(.vertical),
     entry.error:focus {
@@ -249,6 +250,7 @@ entry {
   entry.warning {
     background-color: rgba(245, 121, 0, 0.1);
     color: #f57900;
+    text-shadow: none;
     border-color: #432100; }
     spinbutton.warning:focus:not(.vertical),
     entry.warning:focus {
