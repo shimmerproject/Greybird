@@ -426,7 +426,7 @@ treeview entry.flat, treeview entry {
 notebook > header > tabs > arrow, button.titlebutton,
 button {
   min-height: 24px;
-  min-width: 16px;
+  min-width: 22px;
   padding: 1px 2px;
   border: 1px solid;
   border-radius: 3px;
@@ -569,9 +569,9 @@ button {
         color: #949796; }
   notebook > header > tabs > arrow.image-button, button.image-button.titlebutton,
   button.image-button {
-    min-width: 24px;
-    padding-left: 4px;
-    padding-right: 4px; }
+    min-height: 20px;
+    min-width: 20px;
+    padding: 2px; }
   notebook > header > tabs > arrow.text-button, button.text-button.titlebutton,
   button.text-button {
     padding-left: 8px;
@@ -1994,6 +1994,9 @@ headerbar button.image-button {
 headerbar switch {
   margin-top: 9px;
   margin-bottom: 9px; }
+
+headerbar buttonbox {
+  padding: 0px; }
 
 .background:not(.tiled):not(.maximized) .titlebar:backdrop, .background:not(.tiled):not(.maximized) .titlebar {
   border-top-left-radius: 7px;
