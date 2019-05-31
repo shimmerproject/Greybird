@@ -1,4 +1,4 @@
-Greybird openSUSE
+Greybird Geeko
 =======
 This is a modified version of the Greybird theme with openSUSE branding elements.
 
