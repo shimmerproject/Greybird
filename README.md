@@ -1,5 +1,7 @@
-Greybird
+Greybird openSUSE
 =======
+This is a modified version of the Greybird theme with openSUSE branding elements.
+
 Desktop Suite for Xfce
 ----------------------
 URL: https://github.com/shimmerproject/Greybird
