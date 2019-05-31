@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Greybird openSUSE
-Comment=Greybird openSUSE theme
+Name=Greybird Geeko
+Comment=Greybird Geeko theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Greybird openSUSE
-MetacityTheme=Greybird openSUSE
+MetacityTheme=Greybird Geeko
 IconTheme=elementary-xfce-dark
-CursorTheme=DMZ-White
+CursorTheme=DMZ-Black
 ButtonLayout=:minimize,maximize,close
