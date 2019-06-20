@@ -2,6 +2,9 @@ Greybird Geeko
 ==============
 This is a modified version of the Greybird theme with openSUSE branding elements. Greybird is the default theme in Xubuntu 11.04 onwards. The original version is to be found [here](https://github.com/shimmerproject/Greybird).
 
+![theme preview](https://en.opensuse.org/images/0/0b/Greybird-geeko.png)
+
+
 ### Desktop Suite for Xfce ###
 The Greybird desktop suite is a complete package for all parts of the desktop environment. It includes:
 - Gtk+2 theme
