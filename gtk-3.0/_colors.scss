@@ -2,11 +2,11 @@
 // it gets @if ed depending on $variant
 
 
-$base_color: if($variant == 'light', #fcfcfc, #292929);
+$base_color: if($variant == 'light', #fcfcfc, #2d2e30);
 $text_color: if($variant == 'light', #212121, white);
-$bg_color: if($variant == 'light', #CECECE, #393f3f);
+$bg_color: if($variant == 'light', #CECECE, #3b3e3f);
 $fg_color: if($variant == 'light', #3c3c3c, #eeeeec);
-$deco_color: #35b9ab;
+$deco_color: if($variant == 'light', #35b9ab, #4ae6d6);
 
 $selected_fg_color: #ffffff;
 $selected_bg_color: if($variant == 'light', $deco_color, darken($deco_color,20%));
@@ -19,7 +19,7 @@ $top_hilight: $borders_edge;
 $dark_fill: mix($borders_color, $bg_color, 35%);
 $headerbar_color: if($variant == 'light', $bg_color, darken($bg_color, 3%));
 $menu_color: if($variant == 'light', lighten($bg_color, 18%), mix($bg_color, $base_color, 20%));
-$popover_bg_color: lighten($bg_color, 18%);
+$popover_bg_color: if($variant == 'light', lighten($bg_color, 18%), lighten($bg_color, 5%));
 $popover_hover_color: $selected_bg_color;
 
 $scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, 80%), mix($base_color, $bg_color, 50%));
@@ -56,7 +56,7 @@ $insensitive_bg_color: mix($bg_color, $base_color, 60%);
 $insensitive_borders_color: $borders_color;
 
 //colors for the backdrop state, derived from the main colors.
-$backdrop_base_color: if($variant == 'light', darken($base_color, 1%), lighten($base_color, 1%));
+$backdrop_base_color: if($variant == 'light', darken($base_color, 1%), lighten($base_color, 2%));
 $backdrop_text_color: mix($text_color, $backdrop_base_color, 80%);
 $backdrop_bg_color: $bg_color;
 $backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 50%);
