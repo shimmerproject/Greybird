@@ -15,8 +15,6 @@ The Greybird desktop suite is a complete package for all parts of the desktop en
 - Metacity theme
 - Mutter theme
 - Gnome Shell theme
-- Plank theme
-- Unity support
 
 Dependencies for Gtk+2 support:
 - gtk2-engines-murrine (>= 0.90)
