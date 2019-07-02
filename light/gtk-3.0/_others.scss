@@ -1,0 +1,9 @@
+@import 'colors';
+
+window.background.chromium {
+  background-color: $bg_color;
+
+  button:not(.titlebutton) { // tab borders
+    border-color: $borders_color;
+  }
+}

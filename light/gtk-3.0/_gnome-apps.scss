@@ -1,0 +1,55 @@
+@import 'colors';
+
+/************************
+ * NAUTILUS (aka Files) *
+ ************************/
+.nautilus-window {
+    background-color: $base_color;
+    notebook, notebook > stack { background-color: $base_color; }
+}
+
+/* Floating status bar */
+.floating-bar {
+    background-color: $base_color;
+    border-style: solid;
+    border-color: $borders_color;
+    &.left {
+        border-radius: 0 3px 0 0;
+        border-width: 1px 1px 0 0;
+    }
+    &.right {
+        border-radius: 3px 0 0 0;
+        border-width: 1px 0 0 1px;
+    }
+    &:backdrop {
+        background-color: $backdrop_bg_color;
+        border-color: $backdrop_borders_color;
+    }
+    button { padding: 0px; }
+}
+
+/* Searchbar */
+.search-bar {
+    box-shadow: none;
+}
+
+/* View */
+.nautilus-list-view {
+    .view {
+        border-bottom: 1px solid $bg_color;
+        /* Hide superfluous treeview drop target indication */
+        &.dnd { border-style: none; }
+    }
+}
+
+/*********
+ * Geary *
+ *********/
+.conversation-frame .view.cell {
+    background-color: $base_color;
+}
+
+.conversation-frame .view.cell:selected,
+.conversation-frame .view.cell:selected:focus {
+    background-color: $selected_bg_color;
+}

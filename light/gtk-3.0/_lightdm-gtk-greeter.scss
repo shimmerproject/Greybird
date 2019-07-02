@@ -1,0 +1,148 @@
+$variant: 'light';
+
+@import 'colors';
+
+.lightdm-gtk-greeter {
+    /*********
+     * panel *
+     *********/
+    #panel_window menubar {
+        color: $panel_fg_color;
+        font-weight: bold;
+        text-shadow: 0 1px transparentize (black, 0.5);
+        -gtk-icon-shadow: 0 1px transparentize (black, 0.5);
+        box-shadow: inset 0 -1px transparentize (black, 0.5);
+        background-color: rgba(36, 36, 36, 0.8);
+        text-shadow: 0 1px transparentize (black, 0.5);
+        -gtk-icon-shadow: 0 1px transparentize (black, 0.5);
+        menu {
+          background-color: $menu_color;
+          menuitem {
+            font-weight: normal;
+            text-shadow: none;
+          }
+        }
+        separator { background: transparent; }
+    }
+    /****************
+     * login window *
+     ****************/
+    #login_window,
+    #shutdown_dialog,
+    #restart_dialog {
+        border-style: none;
+        border-radius: 5px;
+        background-color: $base_color;
+        color: $fg_color;
+        box-shadow: inset 1px 0 shade($base_color, 0.6),
+                    inset -1px 0 shade($base_color, 0.6),
+                    inset 0 1px shade($base_color, 0.6),
+                    inset 0 -1px shade($base_color, 0.6);
+
+        button {
+            padding: 3px 15px;
+            /************************************
+             * login/unlock and restart buttons *
+             ************************************/
+            &#login_button,
+            &#restart_button {
+                border-color: shade($selected_bg_color, 0.8);
+                background-image: linear-gradient(to bottom,
+                                                  shade($selected_bg_color, 1.02),
+                                                  shade($selected_bg_color, 0.95) 90%,
+                                                  shade($selected_bg_color, 0.90)
+                                                  );
+
+                color: $selected_fg_color;
+
+                &:hover, &:active {
+                    border-color: shade($selected_bg_color, 0.7);
+                    background-image: linear-gradient(to bottom,
+                                                      shade($selected_bg_color, 1.12),
+                                                      shade($selected_bg_color, 1.05) 90%,
+                                                      shade($selected_bg_color, 1.00)
+                                                      );
+                }
+            }
+            /*******************
+             * shutdown button *
+             *******************/
+            &#shutdown_button {
+                border-color: shade($error_color, 0.8);
+                background-image: linear-gradient(to bottom,
+                                                  shade($error_color, 1.02),
+                                                  shade($error_color, 0.95) 90%,
+                                                  shade($error_color, 0.90)
+                                                  );
+                color: $selected_fg_color;
+
+                &:hover,&:active {
+                    border-color: shade($error_color, 0.7);
+                    background-image: linear-gradient(to bottom,
+                                                      shade($error_color, 1.12),
+                                                      shade($error_color, 1.05) 90%,
+                                                      shade($error_color, 1.00)
+                                                      );
+                }
+            }
+        }
+    }
+
+    #content_frame {
+        padding-bottom: 14px;
+    }
+
+    #login_window {
+        menu { border-radius: 1px; }
+        combobox button.combo {
+            color: $fg_color;
+            padding: 0;
+            background: none;
+            border-style: none;
+            box-shadow: none;
+        }
+        #user_combobox {
+            color: $fg_color;
+            font-size: 18px;
+            menu { font-weight: normal; }
+        }
+        #user_image {
+            padding: 3px;
+            border-radius: 3px;
+            box-shadow: inset 1px 0 shade($base_color, 0.75),
+                        inset -1px 0 shade($base_color, 0.75),
+                        inset 0 1px shade($base_color, 0.55),
+                        inset 0 -1px shade($base_color, 0.85);
+        }
+
+        #user_image_border {
+            border-radius: 3px;
+            background-image: linear-gradient(to bottom,
+                                              shade($base_color, 0.9),
+                                              shade($base_color, 0.98) 10%,
+                                              shade($base_color, 1.0) 99%,
+                                              shade($base_color, 1.0)
+                                              );
+            box-shadow: inset 0 1px shade($base_color, 0.8),
+                        inset 0 -1px shade($base_color, 0.55);
+        }
+
+    }
+    #buttonbox_frame {
+        padding-top: 20px;
+        padding-bottom: 0px;
+        border-style: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-image: linear-gradient(to bottom,
+                                          shade($bg_color, 0.85),
+                                          shade($bg_color, 0.98) 10%,
+                                          shade($bg_color, 1.0) 99%,
+                                          shade($bg_color, 1.0)
+                                          );
+        box-shadow: inset 1px 0 shade($base_color, 0.6),
+                    inset -1px 0 shade($base_color, 0.6),
+                    inset 0 1px shade($base_color, 0.6),
+                    inset 0 -1px shade($base_color, 0.6);
+    }
+}

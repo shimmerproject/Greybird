@@ -1,0 +1,79 @@
+style "sidepane"
+{
+	GtkTreeView::vertical-separator = 4
+
+	base[NORMAL]		= mix (0.1, shade (1.35,@selected_bg_color), shade (0.9,@base_color))
+	base[INSENSITIVE]	= mix (0.4, shade (1.35,@selected_bg_color), shade (0.9,@base_color))
+
+	text[NORMAL]		= mix (0.7, @text_color, @base_color)
+	text[ACTIVE]		= mix (0.7, @text_color, @base_color)
+	text[SELECTED]		= mix (0.7, @text_color, @base_color)
+
+	engine "pixmap" {
+		
+	image {
+		function	= FLAT_BOX
+		state		= SELECTED
+	        recolorable	= TRUE
+		file		= "thunar/sidebar_active.png"		
+		border		= { 0, 0, 0, 0 }
+		stretch		= TRUE
+        	}
+	
+	image {
+		function	= FOCUS
+		recolorable	= TRUE
+		file		= "thunar/sidebar_active.png"
+		border		= { 0, 0, 0, 0 }
+		stretch		= TRUE
+		} 
+	}
+}
+
+style "breadcrumbs" 
+{
+	xthickness = 9
+	ythickness = 4
+	ThunarLocationButtons::spacing = 0
+
+	engine "pixmap"	 {
+	image {
+		function	= BOX
+		state		= PRELIGHT
+		recolorable	= TRUE
+		file		= "thunar/breadcrumb_prelight.png"
+		border		= { 4, 10, 0, 0 }
+		stretch		= TRUE
+	}
+	image {
+		function	= BOX
+		state		= ACTIVE
+		file		= "thunar/breadcrumb_active.png"
+		border		= { 4, 10, 0, 0 }
+		stretch		= TRUE
+	}
+	image {
+		function	= BOX
+		state		= INSENSITIVE
+		file		= ""
+		border		= { 0, 10, 0, 0 }
+		stretch		= TRUE
+	}
+	image {
+		function	= BOX
+		file		= "thunar/breadcrumb_default.png"		
+		border		= { 4, 10, 0, 10 }
+		stretch		= TRUE
+        }
+	}
+}
+
+widget_class "*ThunarLocationButtons*"		style "breadcrumbs"
+widget_class "*ThunarShortcutsView*"		style "sidepane"
+widget_class "*ThunarTreeView*"			style "sidepane"
+widget_class "*ThunarLocationEntry*"		style "entry"
+widget_class "*ThunarStatusbar*"		style "resize-grip"
+
+# Gtk2 Open-File Dialog
+widget_class "*GtkFileChooserWidget.GtkFileChooserDefault.GtkVBox.GtkHPaned.GtkVBox.GtkScrolledWindow.GtkTreeView*"	style "sidepane"
+widget_class "*GtkFileChooserWidget.GtkFileChooserDefault.GtkVBox.GtkHPaned.GtkVBox.GtkScrolledWindow.<GtkTreeView>.<GtkButton>"	style "treeview-header"
