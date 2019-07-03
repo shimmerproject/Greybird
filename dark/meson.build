@@ -12,7 +12,7 @@ install_data('index.theme', install_dir : theme_path)
 # emerald file
 #
 
-install_data('Greybird-geeko.emerald', rename: 'Greybird Geeko Dark.emerald', install_dir : theme_path)
+install_data('Greybird-geeko.emerald', rename: 'Greybird-Geeko-Dark.emerald', install_dir : theme_path)
 
 #
 # GTK+-2.0 Files
