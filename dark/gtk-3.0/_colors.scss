@@ -1,6 +1,7 @@
 // When color definition differs for dark and light variant
 // it gets @if ed depending on $variant
 
+$variant: 'dark';
 
 $base_color: if($variant == 'light', #fcfcfc, #2d2e30);
 $text_color: if($variant == 'light', #212121, white);
