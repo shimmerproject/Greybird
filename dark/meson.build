@@ -1,4 +1,4 @@
-theme_path = join_paths(get_option('datadir'), 'themes/Greybird Geeko Light')
+theme_path = join_paths(get_option('datadir'), 'themes/Greybird Geeko Dark')
 
 #
 # index.theme
@@ -28,7 +28,7 @@ scss_files = files([
     'gtk-3.0/_xfce.scss'
 ])
 
-theme_deps += custom_target('Greybird-Geeko-Light',
+theme_deps += custom_target('Greybird-Geeko-Dark',
                             input: 'gtk-3.0/gtk-contained.scss',
                             output: 'gtk.css',
                             command: [
@@ -39,7 +39,7 @@ theme_deps += custom_target('Greybird-Geeko-Light',
                             install: true,
                             install_dir: join_paths(theme_path, 'gtk-3.0'))
 
-theme_deps += custom_target('Greybird-Geeko-Light-Dark',
+theme_deps += custom_target('Greybird-Geeko-Dark-Dark',
                             input: 'gtk-3.0/gtk-contained-dark.scss',
                             output: 'gtk-dark.css',
                             command: [
