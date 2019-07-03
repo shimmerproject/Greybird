@@ -15,6 +15,56 @@ install_data('index.theme', install_dir : theme_path)
 install_data('Greybird-geeko.emerald', install_dir : theme_path)
 
 #
+# GTK+-2.0 Files
+#
+
+gtk2_files = files([
+    'gtk-2.0/apps/terminal.rc',
+    'gtk-2.0/apps/chromium.rc',
+    'gtk-2.0/apps/thunar/breadcrumb_prelight.png',
+    'gtk-2.0/apps/thunar/breadcrumb_default.png',
+    'gtk-2.0/apps/thunar/sidebar_active.png',
+    'gtk-2.0/apps/thunar/breadcrumb_active.png',
+    'gtk-2.0/apps/claws-mail.rc',
+    'gtk-2.0/apps/thunar.rc',
+    'gtk-2.0/apps/gmusicbrowser.rc',
+    'gtk-2.0/apps/xfce-panel.rc',
+    'gtk-2.0/resize_grip.png',
+    'gtk-2.0/xfsmlogout.png',
+    'gtk-2.0/gtkrc',
+    'gtk-2.0/assets/checkbox-mixed.png',
+    'gtk-2.0/assets/radio-mixed.png',
+    'gtk-2.0/assets/checkbox-unchecked.png',
+    'gtk-2.0/assets/radio-checked-insensitive.png',
+    'gtk-2.0/assets/radio-checked-active.png',
+    'gtk-2.0/assets/radio-checked-hover.png',
+    'gtk-2.0/assets/checkbox-unchecked-hover.png',
+    'gtk-2.0/assets/radio-unchecked.png',
+    'gtk-2.0/assets/button-pressed.png',
+    'gtk-2.0/assets/checkbox-checked.png',
+    'gtk-2.0/assets/radio-mixed-insensitive.png',
+    'gtk-2.0/assets/radio-unchecked-insensitive.png',
+    'gtk-2.0/assets/checkbox-mixed-insensitive.png',
+    'gtk-2.0/assets/checkbox-unchecked-active.png',
+    'gtk-2.0/assets/checkbox-mixed-hover.png',
+    'gtk-2.0/assets/checkbox-mixed-active.png',
+    'gtk-2.0/assets/checkbox-checked-hover.png',
+    'gtk-2.0/assets/radio-mixed-hover.png',
+    'gtk-2.0/assets/radio-unchecked-active.png',
+    'gtk-2.0/assets/button-hover.png',
+    'gtk-2.0/assets/radio-mixed-active.png',
+    'gtk-2.0/assets/checkbox-checked-active.png',
+    'gtk-2.0/assets/checkbox-unchecked-insensitive.png',
+    'gtk-2.0/assets/checkbox-checked-insensitive.png',
+    'gtk-2.0/assets/button-default.png',
+    'gtk-2.0/assets/radio-checked.png',
+    'gtk-2.0/assets/button-insensitive.png',
+    'gtk-2.0/assets/radio-unchecked-hover.png'
+])
+
+install_data(gtk2_files, install_dir : join_paths(theme_path, 'gtk-2.0'))
+
+#
 # GTK+-3.0 Files
 #
 
