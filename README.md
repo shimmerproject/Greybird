@@ -34,20 +34,13 @@ Fedora:
 
 `dnf install gdk-pixbuf2-devel librsvg2-devel rubygem-sass`
 
-### Install without admin privileges
+### Build and install
 
 ```
-./autogen.sh --prefix=$HOME/.local
-make
-make install
-```
-
-### Install for all users
-
-```
-./autogen.sh
-make
-sudo make install
+meson builddir
+cd builddir
+ninja
+sudo ninja install
 ```
 
 ### Copyright ###
