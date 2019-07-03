@@ -1,4 +1,6 @@
 theme_path = join_paths(get_option('datadir'), 'themes/Greybird Geeko Light')
+a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird Geeko Light Accessibility')
+compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird Geeko Light Compact')
 
 #
 # index.theme
@@ -351,7 +353,7 @@ xfwm4_a11y_files = files([
     'xfwm4-a11y/title-1-inactive.xpm'
 ])
 
-install_data(xfwm4_a11y_files, install_dir : join_paths (theme_path, 'xfwm4-a11y'))
+install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
 
 #
 # Xfwm4 Compact Files
@@ -467,4 +469,4 @@ xfwm4_compact_files = files([
     'xfwm4-compact/title-1-inactive.xpm'
 ])
 
-install_data(xfwm4_compact_files, install_dir : join_paths (theme_path, 'xfwm4-compact'))
+install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
