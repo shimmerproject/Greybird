@@ -12,26 +12,35 @@ install_data('index.theme', install_dir : theme_path)
 # emerald file
 #
 
-install_data('Greybird-geeko.emerald', install_dir : theme_path)
+install_data('Greybird-geeko.emerald', rename: 'Greybird Geeko Dark.emerald', install_dir : theme_path)
 
 #
 # GTK+-2.0 Files
 #
 
-gtk2_files = files([
+gtk2_apps = files([
     'gtk-2.0/apps/terminal.rc',
     'gtk-2.0/apps/chromium.rc',
-    'gtk-2.0/apps/thunar/breadcrumb_prelight.png',
-    'gtk-2.0/apps/thunar/breadcrumb_default.png',
-    'gtk-2.0/apps/thunar/sidebar_active.png',
-    'gtk-2.0/apps/thunar/breadcrumb_active.png',
     'gtk-2.0/apps/claws-mail.rc',
     'gtk-2.0/apps/thunar.rc',
     'gtk-2.0/apps/gmusicbrowser.rc',
-    'gtk-2.0/apps/xfce-panel.rc',
+    'gtk-2.0/apps/xfce-panel.rc'
+])
+
+gtk2_thunar = files([
+    'gtk-2.0/apps/thunar/breadcrumb_prelight.png',
+    'gtk-2.0/apps/thunar/breadcrumb_default.png',
+    'gtk-2.0/apps/thunar/sidebar_active.png',
+    'gtk-2.0/apps/thunar/breadcrumb_active.png'
+])
+
+gtk2_files = files([
     'gtk-2.0/resize_grip.png',
     'gtk-2.0/xfsmlogout.png',
-    'gtk-2.0/gtkrc',
+    'gtk-2.0/gtkrc'
+])
+
+gtk2_assets = files([
     'gtk-2.0/assets/checkbox-mixed.png',
     'gtk-2.0/assets/radio-mixed.png',
     'gtk-2.0/assets/checkbox-unchecked.png',
@@ -63,6 +72,9 @@ gtk2_files = files([
 ])
 
 install_data(gtk2_files, install_dir : join_paths(theme_path, 'gtk-2.0'))
+install_data(gtk2_apps, install_dir : join_paths(theme_path, 'gtk-2.0/apps'))
+install_data(gtk2_thunar, install_dir : join_paths(theme_path, 'gtk-2.0/apps/thunar'))
+install_data(gtk2_assets, install_dir : join_paths(theme_path, 'gtk-2.0/assets'))
 
 #
 # GTK+-3.0 Files
@@ -108,7 +120,89 @@ gtk_gresources = gnome.compile_resources('gtk', 'gtk-3.0/gtk.gresource.xml',
                                          gresource_bundle: true,
                                          install_dir: join_paths(theme_path, 'gtk-3.0'))
 
+install_data('gtk-3.0/settings.ini', install_dir : join_paths(theme_path, 'gtk-3.0'))
 install_data(['gtk-3.0/apps/granite-widgets.css', 'gtk-3.0/apps/lightdm-unity-greeter.css'], install_dir : join_paths(theme_path, 'gtk-3.0/apps'))
+
+gtk3_assets = files([
+    'gtk-3.0/assets/checkbox-mixed.png',
+    'gtk-3.0/assets/titlebutton-minimize-hover@2.png',
+    'gtk-3.0/assets/titlebutton-maximize-active-dark@2.png',
+    'gtk-3.0/assets/titlebutton-maximize-active@2.png',
+    'gtk-3.0/assets/bullet-symbolic.svg',
+    'gtk-3.0/assets/titlebutton-minimize-backdrop-dark.png',
+    'gtk-3.0/assets/titlebutton-maximize@2.png',
+    'gtk-3.0/assets/titlebutton-maximize-dark@2.png',
+    'gtk-3.0/assets/checkbox-checked-active-selectionmode.png',
+    'gtk-3.0/assets/dash-symbolic.symbolic.png',
+    'gtk-3.0/assets/titlebutton-maximize.png',
+    'gtk-3.0/assets/titlebutton-minimize-hover-dark@2.png',
+    'gtk-3.0/assets/grid-selection-checked.png',
+    'gtk-3.0/assets/titlebutton-close-dark@2.png',
+    'gtk-3.0/assets/titlebutton-minimize.png',
+    'gtk-3.0/assets/titlebutton-maximize-backdrop@2.png',
+    'gtk-3.0/assets/titlebutton-maximize-dark.png',
+    'gtk-3.0/assets/pane-separator-vertical.png',
+    'gtk-3.0/assets/check-symbolic.symbolic.png',
+    'gtk-3.0/assets/titlebutton-minimize-hover-dark.png',
+    'gtk-3.0/assets/resize-grip.png',
+    'gtk-3.0/assets/titlebutton-close-active@2.svg',
+    'gtk-3.0/assets/checkbox-checked-hover-selectionmode.png',
+    'gtk-3.0/assets/titlebutton-maximize-backdrop-dark.png',
+    'gtk-3.0/assets/titlebutton-maximize-active-dark.png',
+    'gtk-3.0/assets/check-symbolic.svg',
+    'gtk-3.0/assets/checkbox-active-selectionmode.png',
+    'gtk-3.0/assets/titlebutton-close-backdrop.png',
+    'gtk-3.0/assets/titlebutton-close-dark.png',
+    'gtk-3.0/assets/titlebutton-minimize@2.png',
+    'gtk-3.0/assets/titlebutton-maximize-hover-dark@2.png',
+    'gtk-3.0/assets/titlebutton-minimize-backdrop-dark@2.png',
+    'gtk-3.0/assets/titlebutton-close-backdrop-dark.png',
+    'gtk-3.0/assets/titlebutton-minimize-active.png',
+    'gtk-3.0/assets/titlebutton-minimize-backdrop.png',
+    'gtk-3.0/assets/checkbox-mixed-insensitive.png',
+    'gtk-3.0/assets/titlebutton-close@2.png',
+    'gtk-3.0/assets/titlebutton-minimize-active-dark@2.png',
+    'gtk-3.0/assets/titlebutton-close-hover@2.png',
+    'gtk-3.0/assets/checkbox-mixed-hover.png',
+    'gtk-3.0/assets/titlebutton-close-hover.png',
+    'gtk-3.0/assets/checkbox-selectionmode.png',
+    'gtk-3.0/assets/titlebutton-close-hover-dark.png',
+    'gtk-3.0/assets/titlebutton-close-active.png',
+    'gtk-3.0/assets/titlebutton-maximize-hover@2.png',
+    'gtk-3.0/assets/checkbox-hover-selectionmode.png',
+    'gtk-3.0/assets/titlebutton-maximize-backdrop-dark@2.png',
+    'gtk-3.0/assets/titlebutton-close.png',
+    'gtk-3.0/assets/titlebutton-minimize-active-dark.png',
+    'gtk-3.0/assets/checkbox-checked-backdrop-selectionmode.png',
+    'gtk-3.0/assets/pane-separator.png',
+    'gtk-3.0/assets/titlebutton-maximize-hover.png',
+    'gtk-3.0/assets/titlebutton-maximize-backdrop.png',
+    'gtk-3.0/assets/titlebutton-maximize-hover-dark.png',
+    'gtk-3.0/assets/checkbox-backdrop-selectionmode.png',
+    'gtk-3.0/assets/titlebutton-minimize-dark@2.png',
+    'gtk-3.0/assets/titlebutton-minimize-dark.png',
+    'gtk-3.0/assets/grid-selection-unchecked.png',
+    'gtk-3.0/assets/bullet-symbolic.symbolic.png',
+    'gtk-3.0/assets/titlebutton-close-backdrop-dark@2.png',
+    'gtk-3.0/assets/titlebutton-maximize-active.png',
+    'gtk-3.0/assets/titlebutton-close-active-dark.png',
+    'gtk-3.0/assets/titlebutton-minimize-hover.png',
+    'gtk-3.0/assets/titlebutton-close@2.svg',
+    'gtk-3.0/assets/titlebutton-close-hover@2.svg',
+    'gtk-3.0/assets/titlebutton-minimize-active@2.png',
+    'gtk-3.0/assets/dash-symbolic.svg',
+    'gtk-3.0/assets/titlebutton-close-active-dark@2.png',
+    'gtk-3.0/assets/titlebutton-close-backdrop@2.png',
+    'gtk-3.0/assets/titlebutton-minimize-backdrop@2.png',
+    'gtk-3.0/assets/checkbox-unchecked-insensitive.png',
+    'gtk-3.0/assets/checkbox-checked-insensitive.png',
+    'gtk-3.0/assets/titlebutton-close-active-dark@2.svg',
+    'gtk-3.0/assets/titlebutton-close-active@2.png',
+    'gtk-3.0/assets/titlebutton-close-dark@2.svg',
+    'gtk-3.0/assets/titlebutton-close-hover-dark@2.png',
+])
+
+install_data(gtk3_assets, install_dir : join_paths (theme_path, 'gtk-3.0/assets'))
 
 #
 # GNOME Shell Files
