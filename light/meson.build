@@ -1,6 +1,6 @@
-theme_path = join_paths(get_option('datadir'), 'themes/Greybird Geeko Light')
-a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird Geeko Light Accessibility')
-compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird Geeko Light Compact')
+theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light')
+a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light-Accessibility')
+compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light-Compact')
 
 #
 # index.theme
@@ -114,7 +114,7 @@ theme_deps += custom_target('Greybird-Geeko-Light-Dark',
                             install: true,
                             install_dir: join_paths(theme_path, 'gtk-3.0'))
 
-gtk_gresources = gnome.compile_resources('gtk', 'gtk-3.0/gtk.gresource.xml',
+gtk_light_gresources = gnome.compile_resources('gtk', 'gtk-3.0/gtk.gresource.xml',
                                          source_dir: join_paths(meson.source_root(), 'light/gtk-3.0'),
                                          install: true,
                                          gresource_bundle: true,
