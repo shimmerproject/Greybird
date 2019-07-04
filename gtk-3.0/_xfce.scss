@@ -45,6 +45,11 @@ $variant: 'light';
                         inset 0 1px gtkalpha(white, 0.15);
             transition: none;
         }
+        &:drop(active) {
+          color: $drop_target_color;
+          border-color: $drop_target_color;
+          box-shadow: inset 0 0 0 1px $drop_target_color;
+        }
     }
     entry { caret-color: $text_color; }
     menu {
