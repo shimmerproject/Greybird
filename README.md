@@ -2,8 +2,8 @@ Greybird Geeko
 ==============
 This is a modified version of the Greybird theme with openSUSE branding elements. Greybird is the default theme in Xubuntu 11.04 onwards. The original version is to be found [here](https://github.com/shimmerproject/Greybird).
 
-![theme preview](https://en.opensuse.org/File:Thunar-light.png)
-![theme preview](https://en.opensuse.org/File:Thunar-dark.png)
+![theme preview](https://en.opensuse.org/images/e/e8/Thunar-light.png)
+![theme preview](https://en.opensuse.org/images/b/b4/Thunar-dark.png)
 
 
 
