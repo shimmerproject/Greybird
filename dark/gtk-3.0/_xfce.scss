@@ -146,6 +146,8 @@ wnck-pager {
   :backdrop { color: $insensitive_fg_color; }
   toolbar {
     border-bottom: none;
+    background-color: $bg_color;
+    background-image: none;
 
     entry { min-height: 24px; }
   }
