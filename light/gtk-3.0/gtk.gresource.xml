@@ -33,7 +33,5 @@
 		<file preprocess='to-pixdata'>assets/titlebutton-minimize-active.png</file>
 		<file preprocess='to-pixdata'>assets/titlebutton-minimize-hover.png</file>
 		<file preprocess='to-pixdata'>assets/titlebutton-minimize.png</file>
-		<file>gtk-contained.css</file>
-		<file>gtk-contained-dark.css</file>
 	</gresource>
 </gresources>
