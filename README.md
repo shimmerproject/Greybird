@@ -15,8 +15,6 @@ The Greybird desktop suite is a complete package for all parts of the desktop en
 - Metacity theme
 - Mutter theme
 - Gnome Shell theme
-- Plank theme
-- Unity support
 
 Dependencies for Gtk+2 support:
 - gtk2-engines-murrine (>= 0.90)
@@ -26,30 +24,23 @@ The Gtk+3 theme uses the builtin engine and consequently has no dependencies.
 ### Build dependencies ###
 openSUSE
 
-`zypper in autoconf automake fdupes gdk-pixbuf-devel gdk-pixbuf-loader-rsvg glib2-devel sassc`
+`zypper in meson fdupes gdk-pixbuf-devel gdk-pixbuf-loader-rsvg glib2-devel sassc`
 
 Debian or Ubuntu:
 
-`sudo apt install autoconf libgdk-pixbuf2.0-dev libglib2.0-bin librsvg2-dev ruby-sass sassc`
+`sudo apt install meson libgdk-pixbuf2.0-dev libglib2.0-bin librsvg2-dev ruby-sass sassc`
 
 Fedora:
 
-`dnf install gdk-pixbuf2-devel librsvg2-devel rubygem-sass`
+`dnf install meson gdk-pixbuf2-devel librsvg2-devel rubygem-sass`
 
-### Install without admin privileges
-
-```
-./autogen.sh --prefix=$HOME/.local
-make
-make install
-```
-
-### Install for all users
+### Build and install
 
 ```
-./autogen.sh
-make
-sudo make install
+meson builddir
+cd builddir
+ninja
+sudo ninja install
 ```
 
 ### Copyright ###
