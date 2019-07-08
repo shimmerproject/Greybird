@@ -448,9 +448,9 @@ xfwm4_a11y_files = files([
     'xfwm4-a11y/right-inactive.xpm',
     'xfwm4-a11y/title-1-inactive.xpm'
 ])
-
-install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
-
+# we're not installing xfwm a11y for dark
+# install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
+#
 #
 # Xfwm4 Compact Files
 #
@@ -564,5 +564,6 @@ xfwm4_compact_files = files([
     'xfwm4-compact/right-inactive.xpm',
     'xfwm4-compact/title-1-inactive.xpm'
 ])
-
-install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
+# we're not installing xfwm compact for dark
+# install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
+#
