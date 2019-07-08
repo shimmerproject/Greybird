@@ -4,7 +4,7 @@ static char * shade_prelight_xpm[] = {
 " 	c None",
 ".	c #727272",
 "+	c #000000",
-"@	c #3C4041",
+"@	c #3B3E3F",
 "#	c #A5A5A5",
 "$	c #9E9E9E",
 "%	c #A8A8A8",
