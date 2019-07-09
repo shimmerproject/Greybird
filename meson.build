@@ -11,5 +11,13 @@ gnome = import('gnome')
 
 theme_deps = []
 
-subdir('light')
-subdir('dark')
+if get_option('flatpak')
+    if get_option('flatpak-variant') == 'light'
+        subdir('light')
+    elif get_option('flatpak-variant') == 'dark'
+        subdir('dark')
+    endif
+else
+    subdir('light')
+    subdir('dark')
+endif

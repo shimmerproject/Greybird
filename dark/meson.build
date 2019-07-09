@@ -3,18 +3,6 @@ a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark-
 compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark-Compact')
 
 #
-# index.theme
-#
-
-install_data('index.theme', install_dir : theme_path)
-
-#
-# emerald file
-#
-
-install_data('Greybird-geeko.emerald', rename: 'Greybird-Geeko-Dark.emerald', install_dir : theme_path)
-
-#
 # GTK+-2.0 Files
 #
 
@@ -71,11 +59,6 @@ gtk2_assets = files([
     'gtk-2.0/assets/radio-unchecked-hover.png'
 ])
 
-install_data(gtk2_files, install_dir : join_paths(theme_path, 'gtk-2.0'))
-install_data(gtk2_apps, install_dir : join_paths(theme_path, 'gtk-2.0/apps'))
-install_data(gtk2_thunar, install_dir : join_paths(theme_path, 'gtk-2.0/apps/thunar'))
-install_data(gtk2_assets, install_dir : join_paths(theme_path, 'gtk-2.0/assets'))
-
 #
 # GTK+-3.0 Files
 #
@@ -91,37 +74,6 @@ scss_files = files([
     'gtk-3.0/_unity.scss',
     'gtk-3.0/_xfce.scss'
 ])
-
-theme_deps += custom_target('Greybird-Geeko-Dark',
-                            input: 'gtk-3.0/gtk-contained.scss',
-                            output: 'gtk.css',
-                            command: [
-                                sassc, sassc_opts, '@INPUT@', '@OUTPUT@'
-                            ],
-                            depend_files: scss_files,
-                            build_by_default: true,
-                            install: true,
-                            install_dir: join_paths(theme_path, 'gtk-3.0'))
-
-theme_deps += custom_target('Greybird-Geeko-Dark-Dark',
-                            input: 'gtk-3.0/gtk-contained-dark.scss',
-                            output: 'gtk-dark.css',
-                            command: [
-                                sassc, sassc_opts, '@INPUT@', '@OUTPUT@'
-                            ],
-                            depend_files: scss_files,
-                            build_by_default: true,
-                            install: true,
-                            install_dir: join_paths(theme_path, 'gtk-3.0'))
-
-gtk_dark_gresources = gnome.compile_resources('gtk', 'gtk-3.0/gtk.gresource.xml',
-                                         source_dir: join_paths(meson.source_root(), 'light/gtk-3.0'),
-                                         install: true,
-                                         gresource_bundle: true,
-                                         install_dir: join_paths(theme_path, 'gtk-3.0'))
-
-install_data('gtk-3.0/settings.ini', install_dir : join_paths(theme_path, 'gtk-3.0'))
-install_data(['gtk-3.0/apps/granite-widgets.css', 'gtk-3.0/apps/lightdm-unity-greeter.css'], install_dir : join_paths(theme_path, 'gtk-3.0/apps'))
 
 gtk3_assets = files([
     'gtk-3.0/assets/checkbox-mixed.png',
@@ -202,13 +154,9 @@ gtk3_assets = files([
     'gtk-3.0/assets/titlebutton-close-hover-dark@2.png',
 ])
 
-install_data(gtk3_assets, install_dir : join_paths (theme_path, 'gtk-3.0/assets'))
-
 #
 # GNOME Shell Files
 #
-
-install_data(['gnome-shell/gnome-shell.css'], install_dir : join_paths (theme_path, 'gnome-shell'))
 
 #
 # Metacity Files
@@ -243,8 +191,6 @@ metacity_files = files([
     'metacity-1/minimize_focused_normal.png'
 ])
 
-install_data(metacity_files, install_dir : join_paths (theme_path, 'metacity-1'))
-
 #
 # Xfce Notify 4.0 Files
 #
@@ -254,8 +200,6 @@ xfce_notify_files = files([
     'xfce-notify-4.0/gtkrc'
 ])
 
-install_data(xfce_notify_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
-
 #
 # Xfce Notify 4.0 Bright-Dateien 🥚
 #
@@ -264,8 +208,6 @@ xfce_notify_bright_files = files([
     'xfce-notify-4.0_bright/gtk.css',
     'xfce-notify-4.0_bright/gtkrc'
 ])
-
-install_data(xfce_notify_bright_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
 
 #
 # Xfwm4 Files
@@ -330,8 +272,6 @@ xfwm4_files = files([
     'xfwm4/top-right-active.xpm',
     'xfwm4/top-right-inactive.xpm'
 ])
-
-install_data(xfwm4_files, install_dir : join_paths (theme_path, 'xfwm4'))
 
 #
 # Xfwm4 A11y Files
@@ -448,9 +388,7 @@ xfwm4_a11y_files = files([
     'xfwm4-a11y/right-inactive.xpm',
     'xfwm4-a11y/title-1-inactive.xpm'
 ])
-# we're not installing xfwm a11y for dark
-# install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
-#
+
 #
 # Xfwm4 Compact Files
 #
@@ -564,6 +502,61 @@ xfwm4_compact_files = files([
     'xfwm4-compact/right-inactive.xpm',
     'xfwm4-compact/title-1-inactive.xpm'
 ])
-# we're not installing xfwm compact for dark
-# install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
+
 #
+#   Installing
+#
+
+# index.theme, always install this
+install_data('index.theme', install_dir : theme_path)
+
+# gtk3 stuff, also always install this
+theme_deps += custom_target('Greybird-Geeko-Dark',
+                            input: 'gtk-3.0/gtk-contained.scss',
+                            output: 'gtk.css',
+                            command: [
+                                sassc, sassc_opts, '@INPUT@', '@OUTPUT@'
+                            ],
+                            depend_files: scss_files,
+                            build_by_default: true,
+                            install: true,
+                            install_dir: join_paths(theme_path, 'gtk-3.0'))
+
+theme_deps += custom_target('Greybird-Geeko-Dark-Dark',
+                            input: 'gtk-3.0/gtk-contained-dark.scss',
+                            output: 'gtk-dark.css',
+                            command: [
+                                sassc, sassc_opts, '@INPUT@', '@OUTPUT@'
+                            ],
+                            depend_files: scss_files,
+                            build_by_default: true,
+                            install: true,
+                            install_dir: join_paths(theme_path, 'gtk-3.0'))
+
+gtk_dark_gresources = gnome.compile_resources('gtk', 'gtk-3.0/gtk.gresource.xml',
+                                         source_dir: join_paths(meson.source_root(), 'light/gtk-3.0'),
+                                         install: true,
+                                         gresource_bundle: true,
+                                         install_dir: join_paths(theme_path, 'gtk-3.0'))
+
+install_data('gtk-3.0/settings.ini', install_dir : join_paths(theme_path, 'gtk-3.0'))
+install_data(['gtk-3.0/apps/granite-widgets.css', 'gtk-3.0/apps/lightdm-unity-greeter.css'], install_dir : join_paths(theme_path, 'gtk-3.0/apps'))
+install_data(gtk3_assets, install_dir : join_paths (theme_path, 'gtk-3.0/assets'))
+
+# we don't want to install these in the flatpak
+if not get_option('flatpak')
+    install_data('Greybird-geeko.emerald', rename: 'Greybird-Geeko-Dark.emerald', install_dir : theme_path)
+    install_data(gtk2_files, install_dir : join_paths(theme_path, 'gtk-2.0'))
+    install_data(gtk2_apps, install_dir : join_paths(theme_path, 'gtk-2.0/apps'))
+    install_data(gtk2_thunar, install_dir : join_paths(theme_path, 'gtk-2.0/apps/thunar'))
+    install_data(gtk2_assets, install_dir : join_paths(theme_path, 'gtk-2.0/assets'))
+    install_data(['gnome-shell/gnome-shell.css'], install_dir : join_paths (theme_path, 'gnome-shell'))
+    install_data(metacity_files, install_dir : join_paths (theme_path, 'metacity-1'))
+    install_data(xfce_notify_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
+    install_data(xfce_notify_bright_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
+    install_data(xfwm4_files, install_dir : join_paths (theme_path, 'xfwm4'))
+    # we're not installing xfwm a11y for dark
+    # install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
+    # we're not installing xfwm compact for dark
+    # install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
+endif
