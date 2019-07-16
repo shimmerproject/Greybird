@@ -1,6 +1,7 @@
 theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark')
 a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark-Accessibility')
 compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark-Compact')
+bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark-Bright')
 
 #
 # GTK+-2.0 Files
@@ -553,7 +554,7 @@ if not get_option('flatpak')
     install_data(['gnome-shell/gnome-shell.css'], install_dir : join_paths (theme_path, 'gnome-shell'))
     install_data(metacity_files, install_dir : join_paths (theme_path, 'metacity-1'))
     install_data(xfce_notify_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
-    install_data(xfce_notify_bright_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
+    install_data(xfce_notify_bright_files, install_dir : join_paths (bright_theme_path, 'xfce-notify-4.0'))
     install_data(xfwm4_files, install_dir : join_paths (theme_path, 'xfwm4'))
     # we're not installing xfwm a11y for dark
     # install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
