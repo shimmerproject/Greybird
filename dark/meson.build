@@ -525,11 +525,22 @@ theme_deps += custom_target('Greybird-Geeko-Dark-Dark',
                             install: true,
                             install_dir: join_paths(theme_path, 'gtk-3.0'))
 
-gtk_dark_gresources = gnome.compile_resources('gtk', 'gtk-3.0/gtk.gresource.xml',
-                                         source_dir: join_paths(meson.source_root(), 'light/gtk-3.0'),
-                                         install: true,
-                                         gresource_bundle: true,
-                                         install_dir: join_paths(theme_path, 'gtk-3.0'))
+# we're commenting this out because of a meson bug in the version found in Leap
+#gtk_dark_gresources = gnome.compile_resources('gtk', 'gtk-3.0/gtk.gresource.xml',
+#                                              source_dir: join_paths(meson.source_root(), 'light/gtk-3.0'),
+#                                              install: true,
+#                                              gresource_bundle: true,
+#                                              install_dir: join_paths(theme_path, 'gtk-3.0'))
+
+gtk_dark_gresources = custom_target('gtk-dark-gresources',
+                                    input: 'gtk-3.0/gtk.gresource.xml',
+                                    output: 'gtk.gresource',
+                                    command: [
+                                        glib_compile_resources, '@INPUT@', '--target', '@OUTPUT@', '--sourcedir', join_paths(meson.current_source_dir(), 'gtk-3.0')
+                                    ],
+                                    build_by_default: true,
+                                    install: true,
+                                    install_dir: join_paths(theme_path, 'gtk-3.0'))
 
 install_data('gtk-3.0/settings.ini', install_dir : join_paths(theme_path, 'gtk-3.0'))
 install_data(['gtk-3.0/apps/granite-widgets.css', 'gtk-3.0/apps/lightdm-unity-greeter.css'], install_dir : join_paths(theme_path, 'gtk-3.0/apps'))
