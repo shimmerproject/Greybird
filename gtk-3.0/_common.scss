@@ -1327,6 +1327,15 @@ searchbar,
 
 
 /***************
+ * Status bars *
+ ***************/
+statusbar {
+  $statusbar-margin: 2px;
+  margin: ($statusbar-margin - 6) ($statusbar-margin - 10);
+}
+
+
+/***************
  * Header bars *
  ***************/
 %titlebar,
