@@ -1983,7 +1983,7 @@ headerbar button.titlebutton image {
 
 headerbar button:not(.image-button):not(.titlebutton) image {
   min-width: 28px;
-  min-height: 24px; }
+  min-height: 28px; }
 
 headerbar button.image-button {
   min-width: 28px;
