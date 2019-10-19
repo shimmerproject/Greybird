@@ -1977,6 +1977,10 @@ headerbar button {
   margin-top: 3px;
   margin-bottom: 3px; }
 
+headerbar button label {
+  min-width: 28px;
+  min-height: 28px; }
+
 headerbar button.titlebutton image {
   min-width: 22px;
   min-height: 22px; }
