@@ -2385,6 +2385,9 @@ notebook.frame {
   notebook.frame > stack:not(:only-child) {
     border: 1px solid shade(#cecece, 0.9); }
 
+notebook.frame > header {
+  margin-left: 0; }
+
 notebook > header {
   padding: 1px;
   background-color: #cecece; }
