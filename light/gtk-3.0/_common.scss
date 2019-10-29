@@ -1524,6 +1524,10 @@ headerbar {
     margin-top: 3px;
     margin-bottom: 3px;
   }
+  button label {
+    min-width: 28px;
+    min-height: 28px;
+  }
   button.titlebutton image {
     min-width: 22px;
     min-height: 22px;

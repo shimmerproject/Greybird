@@ -45,6 +45,11 @@ $variant: 'light';
                         inset 0 1px gtkalpha(white, 0.15);
             transition: none;
         }
+        &:drop(active) {
+            color: $drop_target_color;
+            border-color: $drop_target_color;
+            box-shadow: inset 0 0 0 1px $drop_target_color;
+        }
     }
     entry { caret-color: $text_color; }
     menu {
@@ -159,9 +164,15 @@ XfdesktopIconView.view {
   border-radius: 3px;
   &:active {
     background: rgba(darken($selected_bg_color, 15%), 0.5);
+    color: $selected_bg_color;
     text-shadow: 0 1px 1px black;
   }
-  .label { text-shadow: 1px 1px 2px black; }
+  .label {
+    text-shadow: 1px 1px 2px black;
+    &:active {
+      color: $selected_fg_color;
+    }
+  }
   .rubberband {
     @extend rubberband;
     border-radius: 0;
