@@ -1,7 +1,7 @@
-theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light')
-a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light-Accessibility')
-compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light-Compact')
-bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light-Bright')
+theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Light')
+a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Light-Accessibility')
+compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Light-Compact')
+bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Light-Bright')
 
 #
 # GTK+-2.0 Files
@@ -554,7 +554,7 @@ install_data('index.theme', install_dir : theme_path)
 install_data('gtk-3.0/settings.ini', install_dir : join_paths(theme_path, 'gtk-3.0'))
 install_data(['gtk-3.0/apps/granite-widgets.css', 'gtk-3.0/apps/lightdm-unity-greeter.css'], install_dir : join_paths(theme_path, 'gtk-3.0/apps'))
 install_data(gtk3_assets, install_dir : join_paths (theme_path, 'gtk-3.0/assets'))
-theme_deps += custom_target('Greybird-Geeko-Light',
+theme_deps += custom_target('Greybird-Light',
                             input: 'gtk-3.0/gtk-contained.scss',
                             output: 'gtk.css',
                             command: [
@@ -565,7 +565,7 @@ theme_deps += custom_target('Greybird-Geeko-Light',
                             install: true,
                             install_dir: join_paths(theme_path, 'gtk-3.0'))
 
-theme_deps += custom_target('Greybird-Geeko-Light-Dark',
+theme_deps += custom_target('Greybird-Light-Dark',
                             input: 'gtk-3.0/gtk-contained-dark.scss',
                             output: 'gtk-dark.css',
                             command: [
@@ -584,7 +584,7 @@ gtk_light_gresources = gnome.compile_resources('gtk', 'gtk-3.0/gtk.gresource.xml
 
 # we don't want to install these in the flatpak
 if not get_option('flatpak')
-    install_data('Greybird-geeko.emerald', rename: 'Greybird-Geeko-Light.emerald', install_dir : theme_path)
+    install_data('Greybird.emerald', rename: 'Greybird-Light.emerald', install_dir : theme_path)
     install_data(gtk2_files, install_dir : join_paths(theme_path, 'gtk-2.0'))
     install_data(gtk2_apps, install_dir : join_paths(theme_path, 'gtk-2.0/apps'))
     install_data(gtk2_thunar, install_dir : join_paths(theme_path, 'gtk-2.0/apps/thunar'))

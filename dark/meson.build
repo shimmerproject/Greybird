@@ -1,7 +1,7 @@
-theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark')
-a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark-Accessibility')
-compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark-Compact')
-bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Dark-Bright')
+theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark')
+a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark-Accessibility')
+compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark-Compact')
+bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark-Bright')
 
 #
 # GTK+-2.0 Files
@@ -503,7 +503,7 @@ xfwm4_compact_files = files([
 install_data('index.theme', install_dir : theme_path)
 
 # gtk3 stuff, also always install this
-theme_deps += custom_target('Greybird-Geeko-Dark',
+theme_deps += custom_target('Greybird-Dark',
                             input: 'gtk-3.0/gtk-contained.scss',
                             output: 'gtk.css',
                             command: [
@@ -514,7 +514,7 @@ theme_deps += custom_target('Greybird-Geeko-Dark',
                             install: true,
                             install_dir: join_paths(theme_path, 'gtk-3.0'))
 
-theme_deps += custom_target('Greybird-Geeko-Dark-Dark',
+theme_deps += custom_target('Greybird-Dark-Dark',
                             input: 'gtk-3.0/gtk-contained-dark.scss',
                             output: 'gtk-dark.css',
                             command: [
@@ -548,7 +548,7 @@ install_data(gtk3_assets, install_dir : join_paths (theme_path, 'gtk-3.0/assets'
 
 # we don't want to install these in the flatpak
 if not get_option('flatpak')
-    install_data('Greybird-geeko.emerald', rename: 'Greybird-Geeko-Dark.emerald', install_dir : theme_path)
+    install_data('Greybird.emerald', rename: 'Greybird-Dark.emerald', install_dir : theme_path)
     install_data(gtk2_files, install_dir : join_paths(theme_path, 'gtk-2.0'))
     install_data(gtk2_apps, install_dir : join_paths(theme_path, 'gtk-2.0/apps'))
     install_data(gtk2_thunar, install_dir : join_paths(theme_path, 'gtk-2.0/apps/thunar'))

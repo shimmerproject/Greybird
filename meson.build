@@ -1,4 +1,4 @@
-project('Greybird-Geeko')
+project('Greybird')
 
 sassc = find_program('sassc', required: true)
 if get_option('generate_sourcemaps')
