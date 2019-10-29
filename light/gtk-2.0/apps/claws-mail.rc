@@ -1,0 +1,3 @@
+widget_class "*<GtkNotebook>.<GtkScrolledWindow>.<GtkViewport>*"	style "notebook" # Claws-Mail compose-window workaround
+widget_class "*.<GtkCMCTree>.<GtkButton>"	style "treeview-header" # Claws-Mail treeview-headers
+widget_class "*.<GtkCMCList>.<GtkButton>"	style "treeview-header" # Claws-Mail treeview-headers
