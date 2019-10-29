@@ -1,0 +1,51 @@
+style "terminal"
+{
+	bg[NORMAL]	= @bg_color
+	bg[ACTIVE]	= @bg_color
+	bg[PRELIGHT]	= @bg_color
+	bg[SELECTED]	= @bg_color
+	base[NORMAL]	= @bg_color
+}
+
+style "terminal-scrollbar"
+{
+	base[NORMAL]	= @bg_color
+	bg[NORMAL]	= @bg_color
+	bg[PRELIGHT]	= shade(0.95,@bg_color)
+	engine "murrine" {
+		gradient_shades			= {0.85,0.85,0.85,0.85}
+		colorize_scrollbar		= FALSE
+		glow_shade			= 1.0
+		trough_shades	        	= { 0.975, 0.975 } # make the trough  #CECECE (@bg_color)
+		trough_border_shades		= { 1.03, 1.03 } # make the trough #CECECE
+		border_shades			= { 0.75, 0.75 }
+		contrast			= 0.0
+	}
+}
+
+style "terminal-notebook" = "dark"
+{
+	bg[NORMAL]	= shade (1.08, @bg_color) # Tab background.
+	bg[ACTIVE]	= shade (0.98, @bg_color) # Unfocused tab background.
+	fg[ACTIVE]	= shade (0.86, @bg_color)
+	base[NORMAL]	= @text_color
+	engine "murrine"
+	{
+		highlight_shade     = 1.0
+		roundness       = 3
+		contrast        = 0.6
+		
+		
+		## things that don't work:
+		#glow_shade	= 0.8
+		#glowstyle           = 2
+		#focusstyle	    = 3
+		#glazestyle          = 3
+		#border_shades	= { 0.45, 2.5 }
+		#prelight_shade	= 1.5
+	}
+}
+
+class "*TerminalWindow"				style "terminal"
+widget_class "TerminalWindow*GtkNotebook"			style "terminal-notebook"
+widget "*TerminalWindow.*.GtkVScrollbar"		style "terminal-scrollbar"
