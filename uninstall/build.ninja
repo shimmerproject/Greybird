@@ -23,7 +23,7 @@ rule CUSTOM_COMMAND_DEP
  restat = 1
 
 rule REGENERATE_BUILD
- command = /usr/bin/meson --internal regenerate /home/MauG/GIT/Greybird /home/MauG/GIT/Greybird/builddir --backend ninja
+ command = /usr/bin/meson --internal regenerate /home/MauG/GIT/Greybird /home/MauG/GIT/Greybird/uninstall --backend ninja
  description = Regenerating build files.
  generator = 1
 
@@ -85,7 +85,7 @@ build install: phony meson-install
 
 build meson-dist: CUSTOM_COMMAND PHONY
  DESC = Creating$ source$ packages
- COMMAND = /usr/bin/meson --internal dist /home/MauG/GIT/Greybird /home/MauG/GIT/Greybird/builddir /usr/bin/meson
+ COMMAND = /usr/bin/meson --internal dist /home/MauG/GIT/Greybird /home/MauG/GIT/Greybird/uninstall /usr/bin/meson
  pool = console
 
 build dist: phony meson-dist
@@ -93,7 +93,7 @@ build dist: phony meson-dist
 # Suffix
 
 build meson-scan-build: CUSTOM_COMMAND PHONY
- COMMAND = /usr/bin/meson --internal scanbuild /home/MauG/GIT/Greybird /home/MauG/GIT/Greybird/builddir /usr/bin/meson -Dflatpak-variant=light -Dflatpak=false -Dgenerate_sourcemaps=false
+ COMMAND = /usr/bin/meson --internal scanbuild /home/MauG/GIT/Greybird /home/MauG/GIT/Greybird/uninstall /usr/bin/meson -Dflatpak-variant=light -Dflatpak=false -Dgenerate_sourcemaps=false
  pool = console
 
 build scan-build: phony meson-scan-build
@@ -109,7 +109,7 @@ build all: phony light/gtk.css light/gtk-dark.css light/gtk.gresource dark/gtk.c
 build clean: phony meson-clean
 
 build meson-clean-ctlist: CUSTOM_COMMAND PHONY
- COMMAND = /usr/bin/meson --internal cleantrees /home/MauG/GIT/Greybird/builddir/meson-private/cleantrees.dat
+ COMMAND = /usr/bin/meson --internal cleantrees /home/MauG/GIT/Greybird/uninstall/meson-private/cleantrees.dat
  description = Cleaning$ custom$ target$ directories.
 
 build clean-ctlist: phony meson-clean-ctlist

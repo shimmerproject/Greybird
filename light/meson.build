@@ -2,6 +2,7 @@ theme_path = join_paths(get_option('datadir'), 'themes/Greybird')
 a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Accessibility')
 compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Compact')
 bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Bright')
+plank_theme_path= join_paths(get_option('datadir'), 'plank/themes/Greybird')
 
 #
 # GTK+-2.0 Files
@@ -544,6 +545,13 @@ xfwm4_compact_files = files([
 ])
 
 #
+# Plank files
+#
+plank_files = files([
+    'plank/dock.theme'
+])
+
+#
 #   Installing
 #
 
@@ -595,4 +603,5 @@ if not get_option('flatpak')
     install_data(xfwm4_files, install_dir : join_paths (theme_path, 'xfwm4'))
     install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
     install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
+    install_data(plank_files, install_dir : plank_theme_path)
 endif

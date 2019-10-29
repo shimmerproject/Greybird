@@ -1,10 +1,10 @@
-Build started at 2019-10-29T23:23:58.862485
+Build started at 2019-10-30T00:40:17.437119
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
 Version: 0.51.2
 Source dir: /home/MauG/GIT/Greybird
-Build dir: /home/MauG/GIT/Greybird/builddir
+Build dir: /home/MauG/GIT/Greybird/buildir
 Build type: native build
 Project name: Greybird
 Project version: undefined
