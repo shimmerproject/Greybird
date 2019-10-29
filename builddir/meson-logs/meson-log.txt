@@ -1,0 +1,34 @@
+Build started at 2019-10-30T02:26:56.220389
+Main binary: /usr/bin/python3
+Python system: Linux
+The Meson build system
+Version: 0.51.2
+Source dir: /home/MauG/GIT/Greybird
+Build dir: /home/MauG/GIT/Greybird/builddir
+Build type: native build
+Project name: Greybird
+Project version: undefined
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Program sassc found: YES (/usr/bin/sassc)
+Program glib-compile-resources found: YES (/usr/bin/glib-compile-resources)
+Pkg-config binary for MachineChoice.BUILD is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default pkg-config fallback at pkg-config
+Trying pkg-config binary pkg-config for machine MachineChoice.BUILD at ['/usr/bin/pkg-config']
+Found pkg-config: /usr/bin/pkg-config (1.6.3)
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+2.62.1
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-L/usr/lib64 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-lglib-2.0
+Build targets in project: 6
+Found ninja-1.9.0 at /usr/bin/ninja

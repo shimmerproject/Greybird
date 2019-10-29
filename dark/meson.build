@@ -496,6 +496,40 @@ xfwm4_compact_files = files([
 ])
 
 #
+# Unity files
+#
+unity_files = files([
+    'unity/close_focused_normal.png',
+    'unity/close_focused_prelight.png',
+    'unity/close_focused_pressed.png',
+    'unity/close.png',
+    'unity/close_unfocused.png',
+    'unity/close_unfocused_prelight.png',
+    'unity/close_unfocused_pressed.png',
+    'unity/maximize_focused_normal.png',
+    'unity/maximize_focused_prelight.png',
+    'unity/maximize_focused_pressed.png',
+    'unity/maximize.png',
+    'unity/maximize_unfocused.png',
+    'unity/maximize_unfocused_prelight.png',
+    'unity/maximize_unfocused_pressed.png',
+    'unity/minimize_focused_normal.png',
+    'unity/minimize_focused_prelight.png',
+    'unity/minimize_focused_pressed.png',
+    'unity/minimize.png',
+    'unity/minimize_unfocused.png',
+    'unity/minimize_unfocused_prelight.png',
+    'unity/minimize_unfocused_pressed.png',
+    'unity/unmaximize_focused_normal.png',
+    'unity/unmaximize_focused_prelight.png',
+    'unity/unmaximize_focused_pressed.png',
+    'unity/unmaximize.png',
+    'unity/unmaximize_unfocused.png',
+    'unity/unmaximize_unfocused_prelight.png',
+    'unity/unmaximize_unfocused_pressed.png'
+])
+
+#
 #   Installing
 #
 
@@ -561,4 +595,5 @@ if not get_option('flatpak')
     # install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
     # we're not installing xfwm compact for dark
     # install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
+    install_data(unity_files, install_dir : join_paths (theme_path, 'unity'))
 endif
