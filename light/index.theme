@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Greybird Geeko Light
-Comment=Greybird Geeko theme
+Name=Greybird
+Comment=Greybird GTK theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Greybird Geeko Light
-MetacityTheme=Greybird Geeko Light
+GtkTheme=Greybird
+MetacityTheme=Greybird
 IconTheme=elementary-xfce-dark
 CursorTheme=DMZ-Black
 ButtonLayout=:minimize,maximize,close
