@@ -1,7 +1,7 @@
-theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark')
-a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark-Accessibility')
-compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark-Compact')
-bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark-Bright')
+theme_path = join_paths(get_option('datadir'), 'themes/Greybird-dark')
+a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark-accessibility')
+compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-dark-compact')
+bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-dark-bright')
 
 #
 # GTK+-2.0 Files
@@ -496,6 +496,13 @@ xfwm4_compact_files = files([
 ])
 
 #
+# Plank files
+#
+plank_files = files([
+    'plank/dock.theme'
+])
+
+#
 # Unity files
 #
 unity_files = files([
@@ -582,7 +589,7 @@ install_data(gtk3_assets, install_dir : join_paths (theme_path, 'gtk-3.0/assets'
 
 # we don't want to install these in the flatpak
 if not get_option('flatpak')
-    install_data('Greybird.emerald', rename: 'Greybird-Dark.emerald', install_dir : theme_path)
+    install_data('Greybird.emerald', rename: 'Greybird-dark.emerald', install_dir : theme_path)
     install_data(gtk2_files, install_dir : join_paths(theme_path, 'gtk-2.0'))
     install_data(gtk2_apps, install_dir : join_paths(theme_path, 'gtk-2.0/apps'))
     install_data(gtk2_thunar, install_dir : join_paths(theme_path, 'gtk-2.0/apps/thunar'))
@@ -595,5 +602,6 @@ if not get_option('flatpak')
     # install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
     # we're not installing xfwm compact for dark
     # install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
+    install_data(plank_files, install_dir : join_paths (theme_path, 'plank'))
     install_data(unity_files, install_dir : join_paths (theme_path, 'unity'))
 endif
