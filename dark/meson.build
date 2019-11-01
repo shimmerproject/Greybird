@@ -1,7 +1,7 @@
 theme_path = join_paths(get_option('datadir'), 'themes/Greybird-dark')
-a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Dark-accessibility')
+a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-dark-accessibility')
 compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-dark-compact')
-bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-dark-bright')
+# bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-bright')
 
 #
 # GTK+-2.0 Files
@@ -201,6 +201,14 @@ xfce_notify_files = files([
     'xfce-notify-4.0/gtkrc'
 ])
 
+#
+# Xfce Notify 4.0 Bright Files
+#
+
+xfce_notify_bright_files = files([
+    'xfce-notify-4.0_bright/gtk.css',
+    'xfce-notify-4.0_bright/gtkrc'
+])
 #
 # Xfwm4 Files
 #
@@ -544,7 +552,7 @@ unity_files = files([
 install_data('index.theme', install_dir : theme_path)
 
 # gtk3 stuff, also always install this
-theme_deps += custom_target('Greybird-Dark',
+theme_deps += custom_target('Greybird-dark',
                             input: 'gtk-3.0/gtk-contained.scss',
                             output: 'gtk.css',
                             command: [
@@ -596,12 +604,15 @@ if not get_option('flatpak')
     install_data(gtk2_assets, install_dir : join_paths(theme_path, 'gtk-2.0/assets'))
     install_data(['gnome-shell/gnome-shell.css'], install_dir : join_paths (theme_path, 'gnome-shell'))
     install_data(metacity_files, install_dir : join_paths (theme_path, 'metacity-1'))
-    install_data(xfce_notify_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
     install_data(xfwm4_files, install_dir : join_paths (theme_path, 'xfwm4'))
-    # we're not installing xfwm a11y for dark
+
+    # we're not installing xfwm a11y xfce_notify for dark
     # install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
     # we're not installing xfwm compact for dark
     # install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
+    # we're not installing xfce-notify for dark
+    # install_data(xfce_notify_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
+    # install_data(xfce_notify_bright_files, install_dir : join_paths (bright_theme_path, 'xfce-notify-4.0_bright'))
     install_data(plank_files, install_dir : join_paths (theme_path, 'plank'))
     install_data(unity_files, install_dir : join_paths (theme_path, 'unity'))
 endif
