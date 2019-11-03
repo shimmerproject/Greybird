@@ -1516,29 +1516,36 @@ headerbar {
 }
 
 headerbar {
+  min-height: 24px;
+
   // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
   entry,
-  spinbutton,
-  separator,
-  button {
+  separator {
     margin-top: 3px;
     margin-bottom: 3px;
   }
+  spinbutton,
+  button {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   button label {
     min-width: 28px;
-    min-height: 28px;
+    min-height: 20px;
   }
   button.titlebutton image {
     min-width: 22px;
-    min-height: 22px;
+    min-height: 20px;
   }
   button:not(.image-button):not(.titlebutton) image {
     min-width: 28px;
-    min-height: 28px;
+    min-height: 20px;
   }
   button.image-button {
     min-width: 28px;
-    min-height: 28px;
+    min-height: 20px;
     padding-left: 2px;
     padding-right: 2px;
   }
