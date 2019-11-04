@@ -10,3 +10,4 @@ install-sh
 missing
 gtk.gresource
 .sass-cache/
+builddir/

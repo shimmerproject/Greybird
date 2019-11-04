@@ -42,8 +42,20 @@ openSUSE:
 
 ### Build and Install ###
 
+#### Local (User) Install ####
+
 ```
-meson builddir
+meson --prefix=$HOME/.local builddir
+cd builddir
+ninja
+ninja install
+ln -sf ~/.local/share/themes ~/.themes # Required for GTK2
+```
+
+#### System Install ####
+
+```
+meson --prefix=/usr builddir
 cd builddir
 ninja
 ninja install
