@@ -1332,7 +1332,7 @@ searchbar,
 %titlebar,
 headerbar {
   padding: 0 5px;
-  min-height: 38px;
+  min-height: 32px;
   border-width: 0 0 1px;
   border-style: solid;
   border-color: $borders_color;
@@ -1492,11 +1492,11 @@ headerbar {
 
   &.default-decoration {
     padding: 4px;
-    min-height: 28px;
+    min-height: 24px;
 
     button.titlebutton {
-      min-height: 26px;
-      min-width: 26px;
+      min-height: 22px;
+      min-width: 22px;
       margin: 0;
       padding: 0;
     }
@@ -1519,39 +1519,39 @@ headerbar {
   min-height: 24px;
 
   // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
-entry,
-separator {
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-spinbutton,
-button {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
+  entry,
+  separator {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  spinbutton,
+  button {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   button label {
     min-width: 28px;
-    min-height: 20px;
+    min-height: 22px;
   }
   button.titlebutton image {
     min-width: 22px;
-    min-height: 20px;
+    min-height: 22px;
   }
   button:not(.image-button):not(.titlebutton) image {
-    min-width: 28px;
-    min-height: 20px;
+    min-width: 22px;
+    min-height: 22px;
   }
   button.image-button {
-    min-width: 28px;
-    min-height: 20px;
+    min-width: 22px;
+    min-height: 22px;
     padding-left: 2px;
     padding-right: 2px;
   }
   switch {
-    margin-top: 9px;
-    margin-bottom: 9px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   buttonbox { padding: 0px; }
 }
