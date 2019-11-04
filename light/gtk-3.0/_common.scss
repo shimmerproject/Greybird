@@ -1549,6 +1549,14 @@ headerbar {
     padding-left: 2px;
     padding-right: 2px;
   }
+  .linked button {
+    min-width: 26px;
+    min-height: 26px;
+    &:not(.text-button) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
   switch {
     margin-top: 5px;
     margin-bottom: 5px;
