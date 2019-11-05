@@ -38,7 +38,7 @@ Fedora:
 
 openSUSE:
 
-`zypper in meson fdupes gdk-pixbuf-devel gdk-pixbuf-loader-rsvg glib2-devel meson sassc`
+`zypper in fdupes gdk-pixbuf-devel gdk-pixbuf-loader-rsvg glib2-devel meson sassc`
 
 ### Build and Install ###
 
