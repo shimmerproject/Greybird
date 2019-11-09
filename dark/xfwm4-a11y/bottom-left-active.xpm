@@ -1,9 +1,1 @@
-/* XPM */
-static char * bottom_left_active_xpm[] = {
-"3 3 3 1",
-" 	c None",
-".	c #939393",
-"+	c #DEDEDE s active_color_2",
-".++",
-".++",
-"..."};
+./bottom-active.xpm

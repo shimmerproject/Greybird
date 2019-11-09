@@ -1,18 +1,16 @@
-# Author: Simon Steinbeiß <simon.steinbeiss@elfenbeinturm.at>
-# Modified by: Marcelo Aguero <marceloaguero@gmail.com>
-# Modified again by: Simon Steinbeiß <simon.steinbeiss@elfenbeinturm.at>
-# Modified again by: Ramon Kaes <ramon.kaes@gmail.com>
-# Author of original metacity theme: elementart Art Team
+# Author Maurizio Galli <maurizio.galli@gmail.com>
+# Author of original Greybird xfwm4 theme: Simon Steinbeiß <simon.steinbeiss@elfenbeinturm.at>
+# Author: elementart Art Team
 # Greybird theme for xfwm4 using GTK color pickup.
 # License: GPL
 # Date: January 2011
 
-active_text_color=#686868
-active_text_shadow_color=#ececec
+active_text_color=#ffffff
+# active_text_shadow_color=#ececec
 inactive_text_color=#bbbbbb
-inactive_text_shadow_color=#ececec
-title_shadow_active=true
-title_shadow_inactive=true
+# inactive_text_shadow_color=#ececec
+title_shadow_active=false
+title_shadow_inactive=false
 full_width_title=true
 title_vertical_offset_active=2
 title_vertical_offset_inactive=2
