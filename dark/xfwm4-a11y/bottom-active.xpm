@@ -1,6 +1,10 @@
 /* XPM */
 static char * bottom_active_xpm[] = {
-"1 1 2 1",
+"1 3 4 1",
 " 	c None",
-".	c #6C6C6C",
-"."};
+".	c #3B3E3F",
+"+	c #212121",
+"@	c #6C6C6C",
+".",
+"+",
+"@"};
