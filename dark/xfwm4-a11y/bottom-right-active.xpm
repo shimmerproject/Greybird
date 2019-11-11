@@ -1,1 +1,10 @@
-./bottom-active.xpm
+/* XPM */
+static char * bottom_right_active_xpm[] = {
+"3 3 4 1",
+" 	c None",
+".	c #3B3E3F",
+"+	c #212121",
+"@	c #6C6C6C",
+".+@",
+"++@",
+"@@@"};
