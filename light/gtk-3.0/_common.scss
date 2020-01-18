@@ -3611,7 +3611,10 @@ messagedialog { // Message Dialog styling
       border-bottom-right-radius: 9px;
     }
 
-    buttonbox { padding: 0px; }
+    buttonbox {
+      padding: 0px;
+      button { padding: 6px; }
+    }
 
     .dialog-action-area button {
       padding: 10px 14px; // labels are not vertically centered on message dialog, this is a workaround
