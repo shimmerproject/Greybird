@@ -149,7 +149,7 @@ wnck-pager {
 
 /* Thunar's sidebar top border */
 .thunar {
-  :backdrop { color: $insensitive_fg_color; }
+  grid :backdrop { color: $insensitive_fg_color; }
   toolbar {
     border-bottom: none;
 
