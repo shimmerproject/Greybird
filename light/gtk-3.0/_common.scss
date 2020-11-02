@@ -4608,3 +4608,11 @@ popover.emoji-completion contents row box {
 popover.emoji-completion .emoji:hover {
   background: $popover_hover_color;
 }
+
+// Fix for https://github.com/shimmerproject/Greybird/issues/265
+.horizontal.linked > entry:last-child,
+.horizontal.linked > button:last-child,
+.path-bar > button:last-child {
+  border-right-style: solid;
+  border-right-width: 1px;
+}
