@@ -6,6 +6,7 @@ $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $asset_suffix: if($variant=='dark', '-dark', '');
 $backdrop_transition: 200ms ease-out;
 $button_transition: all 200ms $ease-out-quad;
+$button_radius: 3px;
 
 * {
   padding: 0;
@@ -869,65 +870,105 @@ button {
 }
 
 // More inline toolbar buttons
-toolbar.inline-toolbar toolbutton,
-toolbar.inline-toolbar toolbutton:backdrop {
+toolbar.inline-toolbar toolbutton {
   > button.flat { @extend %linked_middle; }
 
-  &:first-child > button.flat { @extend %linked:first-child; }
+  &:first-child > button.flat { @extend %linked_left; }
 
-  &:last-child > button.flat { @extend %linked:last-child; }
+  &:last-child > button.flat { @extend %linked_right; }
 
-  &:only-child > button.flat { @extend %linked:only-child; }
+  &:only-child > button.flat { @extend %linked_only_child; }
 }
 
 %linked_middle {
-  border-radius: 0;
   border-right-style: none;
+  border-radius: 0;
+  -gtk-outline-radius: 0;
 }
 
+%linked_left {
+    border-top-left-radius: $button_radius;
+    border-bottom-left-radius: $button_radius;
+    -gtk-outline-top-left-radius: $button_radius;
+    -gtk-outline-bottom-left-radius: $button_radius;
+}
+
+%linked_right {
+    border-right-style: solid;
+    border-top-right-radius: $button_radius;
+    border-bottom-right-radius: $button_radius;
+    -gtk-outline-top-right-radius: $button_radius;
+    -gtk-outline-bottom-right-radius: $button_radius;
+}
+
+%linked_only_child {
+    border-style: solid;
+    border-radius: $button_radius;
+    -gtk-outline-radius: $button_radius;
+}
+
+// .linked assumes Box, which reverses nodes in RTL, so 1st child is always left
 %linked {
   @extend %linked_middle;
 
-  &:first-child {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+  &:first-child { @extend %linked_left; }
+  &:last-child { @extend %linked_right; }
+
+  &:only-child { @extend %linked_only_child; }
+}
+
+// Other widgets use widget child order, so 1st/last child are at text start/end
+%linked_flippable {
+  @extend %linked_middle;
+
+  &:dir(ltr) {
+    &:first-child { @extend %linked_left; }
+    &:last-child { @extend %linked_right; }
   }
 
-  &:last-child {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-right-style: solid;
+  &:dir(rtl) {
+    &:first-child { @extend %linked_right; }
+    &:last-child { @extend %linked_left; }
   }
 
-  &:only-child {
-    border-radius: 3px;
-    border-style: solid;
-  }
+  &:only-child { @extend %linked_only_child; }
 }
 
 %linked_vertical_middle {
   border-style: solid solid none solid;
   border-radius: 0;
+  -gtk-outline-radius: 0;
 }
 
-%linked_vertical{
+%linked_vertical_top {
+  border-top-left-radius: $button_radius;
+  border-top-right-radius: $button_radius;
+  -gtk-outline-top-left-radius: $button_radius;
+  -gtk-outline-top-right-radius: $button_radius;
+}
+
+%linked_vertical_bottom {
+  border-bottom-style: solid;
+  border-bottom-left-radius: $button_radius;
+  border-bottom-right-radius: $button_radius;
+  -gtk-outline-bottom-left-radius: $button_radius;
+  -gtk-outline-bottom-right-radius: $button_radius;
+}
+
+%linked_vertical_only_child {
+  border-style: solid;
+  border-radius: $button_radius;
+  -gtk-outline-radius: $button_radius;
+}
+
+%linked_vertical {
   @extend %linked_vertical_middle;
 
-  &:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-  }
+  &:first-child { @extend %linked_vertical_top; }
 
-  &:last-child {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-style: solid;
-  }
+  &:last-child { @extend %linked_vertical_bottom; }
 
-  &:only-child {
-    border-radius: 3px;
-    border-style: solid;
-  }
+  &:only-child { @extend %linked_vertical_only_child; }
 }
 
 %undecorated_button {
