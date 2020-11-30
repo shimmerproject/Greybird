@@ -246,10 +246,10 @@ XfdesktopIconView.view {
         box-shadow: none;
 
         &:active, &:checked, &:active:hover, &:checked:hover {
-            background: transparentize($bg_color, 0.7);
+            background: mix(black, $selected_bg_color, 40%);
         }
         &:hover {
-            background: mix(black, $selected_bg_color, 40%);
+            background: transparentize($bg_color, 0.7);
             transition-duration: 50ms;
         }
     }
