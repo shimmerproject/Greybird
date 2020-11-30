@@ -251,7 +251,7 @@ XfdesktopIconView.view {
         box-shadow: none;
 
         &:active, &:checked, &:active:hover, &:checked:hover {
-            background: transparentize($bg_color, 0.7);
+            background: transparentize($fg_color, 0.7);
         }
         &:hover {
             background: mix(black, $selected_bg_color, 40%);
