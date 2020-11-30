@@ -795,6 +795,10 @@ button {
     border-radius: 2px;
     border-width: 1px;
     @extend %linked;
+    button {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
   }
 
   .primary-toolbar & { -gtk-icon-shadow: none; } // tango icons don't need shadows
