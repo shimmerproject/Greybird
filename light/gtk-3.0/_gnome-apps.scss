@@ -53,3 +53,11 @@
 .conversation-frame .view.cell:selected:focus {
     background-color: $selected_bg_color;
 }
+
+/*****************
+ * Gnome Builder *
+ *****************/
+headerbar entry .vertical.pan button image {
+    min-height: 12px;
+    padding: 0;
+}
