@@ -3342,6 +3342,7 @@ progressbar {
   // FIXME: insensitive state missing and some other state should be set probably
   font-size: smaller;
   color: transparentize($fg_color, 0.6);
+  font-feature-settings: "tnum";
 
   &:backdrop {
     box-shadow: none;
@@ -3350,12 +3351,10 @@ progressbar {
 
   trough { @extend %scale_trough; }
 
-  &:backdrop trough { @extend %scale_trough:backdrop; } // looks like states are not passed to the trough component here
-
   progress {
     @extend %scale_highlight;
-    border: 1px solid shade($selected_bg_color, 0.7);
 
+    border: 1px solid shade($selected_bg_color, 0.7);
     border-radius: 3px;
 
     &.left {
@@ -3377,11 +3376,6 @@ progressbar {
       border-bottom-right-radius: 3px;
       border-bottom-left-radius: 3px;
     }
-  }
-
-  &:backdrop progress { // states not passed here as well
-    @extend %scale_highlight:backdrop;
-    box-shadow: none;
   }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
