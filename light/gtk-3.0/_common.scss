@@ -2528,10 +2528,44 @@ scrollbar {
     -GtkScrollbar-has-forward-stepper: false;
   }
 
-  background-image: linear-gradient(to right,
-                                    lighten($bg_color, 10%),
-                                    lighten($bg_color, 30%)
-                                    );
+  &.vertical {
+    background-image: linear-gradient(to right,
+                                      lighten($bg_color, 10%),
+                                      lighten($bg_color, 30%)
+                                      );
+
+    slider {
+      background-image: linear-gradient(to right,
+                                        lighten($scrollbar_slider_color, 5%),
+                                        lighten($scrollbar_slider_color, 1%));
+
+      &:hover {
+        background-image: linear-gradient(to right,
+                                          darken($scrollbar_slider_color, 5%),
+                                          darken($scrollbar_slider_color, 1%));
+      }
+    }
+  }
+
+  &.horizontal {
+    background-image: linear-gradient(to bottom,
+                                      lighten($bg_color, 10%),
+                                      lighten($bg_color, 30%)
+                                      );
+
+    slider {
+      background-image: linear-gradient(to bottom,
+                                        lighten($scrollbar_slider_color, 5%),
+                                        lighten($scrollbar_slider_color, 1%));
+
+      &:hover {
+        background-image: linear-gradient(to bottom,
+                                          darken($scrollbar_slider_color, 5%),
+                                          darken($scrollbar_slider_color, 1%));
+      }
+    }
+  }
+
   transition: 300ms $ease-out-quad;
 
   // scrollbar border
@@ -2554,15 +2588,8 @@ scrollbar {
     border: 1px solid darken($bg_color, 30%);
     border-radius: 10px;
     background-clip: padding-box;
-    background-image: linear-gradient(to right,
-                                      lighten($scrollbar_slider_color, 5%),
-                                      lighten($scrollbar_slider_color, 1%));
 
-    &:hover {
-      background-image: linear-gradient(to right,
-                                        darken($scrollbar_slider_color, 5%),
-                                        darken($scrollbar_slider_color, 1%));
-    }
+
 
     &:hover:active { background-color: $scrollbar_slider_active_color; }
 
