@@ -149,7 +149,7 @@ wnck-pager {
 
 /* Thunar's sidebar top border */
 .thunar {
-  :backdrop { color: $insensitive_fg_color; }
+  grid :backdrop { color: $insensitive_fg_color; }
   toolbar {
     border-bottom: none;
 
@@ -183,14 +183,20 @@ XfdesktopIconView.view {
     background-color: shade($panel_bg_color, 0.3);
     color: $panel_fg_color;
     border-color: shade($panel_bg_color, 0.6);
+    box-shadow: none;
 
     buttonbox { padding: 0; }
 
     button {
+        color: $panel_fg_color;
         background-image: none;
         border-color: shade($panel_fg_color, 0.35);
         border-radius: 3px;
         box-shadow: none;
+        &:hover {
+            background-color: shade($panel_bg_color, 0.4);
+            border-color: shade($panel_fg_color, 0.45);
+        }
     }
 
     label#summary {
