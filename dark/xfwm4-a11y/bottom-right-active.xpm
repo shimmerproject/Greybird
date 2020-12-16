@@ -1,9 +1,10 @@
 /* XPM */
-static char * bottom_left_active_xpm[] = {
-"3 3 3 1",
+static char * bottom_right_active_xpm[] = {
+"3 3 4 1",
 " 	c None",
-".	c #939393",
-"+	c #DEDEDE s active_color_2",
-"++.",
-"++.",
-"..."};
+".	c #3B3E3F",
+"+	c #212121",
+"@	c #6C6C6C",
+".+@",
+"++@",
+"@@@"};
