@@ -2,14 +2,21 @@
     background-color: shade(#686868, 0.3);
     color: #fcfcfc;
     border: 1px solid shade(#686868, 0.6);
+    border-radius: 6px;
 }
 
 #XfceNotifyWindow button {
     background-image: none;
-    background-color: shade(#686868, 0.5);
+    background-color: shade(#686868, 0.3);
     color: #fcfcfc;
     border-color: shade(#fcfcfc, 0.35);
     border-radius: 3px;
+}
+
+
+#XfceNotifyWindow button:hover {
+    background-color: shade(#686868, 0.4);
+    border-color: shade(#fcfcfc, 0.45);
 }
 
 #XfceNotifyWindow label#summary {
