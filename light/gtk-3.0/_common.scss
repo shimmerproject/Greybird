@@ -3776,27 +3776,25 @@ messagedialog { // Message Dialog styling
       border-bottom-right-radius: 9px;
     }
 
-    buttonbox {
+    .dialog-action-area {
       padding: 0px;
-      button { padding: 6px; }
-    }
+      button {
+        padding: 3px;
+        border-radius: 0px;
+        border-left-style: solid;
+        border-right-style: none;
+        border-bottom-style: none;
 
-    .dialog-action-area button {
-      padding: 10px 14px; // labels are not vertically centered on message dialog, this is a workaround
-      border-radius: 0;
-      border-left-style: solid;
-      border-right-style: none;
-      border-bottom-style: none;
+        &:first-child{
+          border-left-style: none;
+          border-bottom-left-radius: 7px;
+          -gtk-outline-bottom-left-radius: 5px;
+        }
 
-      &:first-child{
-        border-left-style: none;
-        border-bottom-left-radius: 7px;
-        -gtk-outline-bottom-left-radius: 5px;
-      }
-
-      &:last-child {
-        border-bottom-right-radius: 7px;
-        -gtk-outline-bottom-right-radius: 5px;
+        &:last-child {
+          border-bottom-right-radius: 7px;
+          -gtk-outline-bottom-right-radius: 5px;
+        }
       }
     }
   }
