@@ -8,15 +8,15 @@ style "theme-panel" = "dark"
 	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
 	bg[SELECTED]	= @selected_bg_color
 
-	fg[NORMAL]	= shade (0.9, @base_color)
-	fg[PRELIGHT]	= @base_color
-	fg[ACTIVE]	= shade (0.9, @base_color)
-	fg[SELECTED]	= shade (0.9, @base_color)
+	fg[NORMAL]	= shade (0.9, @panel_fg)
+	fg[PRELIGHT]	= @panel_fg
+	fg[ACTIVE]	= shade (0.9, @panel_fg)
+	fg[SELECTED]	= shade (0.9, @panel_fg)
 
-	text[NORMAL]	= shade (0.9, @base_color)
-	text[PRELIGHT]	= @base_color
-	text[ACTIVE]	= shade (0.9, @base_color)
-	text[SELECTED]	= shade (0.9, @base_color)
+	text[NORMAL]	= shade (0.9, @panel_fg)
+	text[PRELIGHT]	= @panel_fg
+	text[ACTIVE]	= shade (0.9, @panel_fg)
+	text[SELECTED]	= shade (0.9, @panel_fg)
 
 	engine "murrine" {
 		roundness	= 0
@@ -29,13 +29,13 @@ style "theme-panel" = "dark"
 
 style "theme-panel-text"
 {
-	fg[NORMAL]	= @base_color
+	fg[NORMAL]	= @panel_fg
 	fg[PRELIGHT]	= "#ffffff"
-	fg[ACTIVE]	= @base_color
+	fg[ACTIVE]	= @panel_fg
 
-	text[NORMAL]	= @base_color
+	text[NORMAL]	= @panel_fg
 	text[PRELIGHT]	= "#ffffff"
-	text[ACTIVE]	= @base_color
+	text[ACTIVE]	= @panel_fg
 
 	engine "murrine" {
 		textstyle	= 1
@@ -80,9 +80,9 @@ style "window-buttons" = "theme-panel"
 	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
 	bg[SELECTED]	= shade (0.85, @selected_bg_color)
 
-	fg[NORMAL]	= shade (0.7, @base_color)
-	fg[ACTIVE]	= @base_color
-	fg[PRELIGHT]	= @base_color
+	fg[NORMAL]	= shade (0.7, @panel_fg)
+	fg[ACTIVE]	= @panel_fg
+	fg[PRELIGHT]	= @panel_fg
 
 	engine "murrine" {
 		contrast = 0.0
