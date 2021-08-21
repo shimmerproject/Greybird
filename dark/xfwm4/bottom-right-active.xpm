@@ -1,1 +1,5 @@
-./bottom-active.xpm
+/* XPM */
+static char * bottom_right_active_xpm[] = {
+"1 1 1 1",
+" 	c #1D2123",
+" "};
