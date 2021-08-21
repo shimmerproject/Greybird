@@ -1,1 +1,5 @@
-right-active.xpm
+/* XPM */
+static char * right_inactive_xpm[] = {
+"1 1 1 1",
+" 	c #1D2123",
+" "};
