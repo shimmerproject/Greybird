@@ -41,6 +41,7 @@ $button_radius: 3px;
   -gtk-secondary-caret-color: $selected_bg_color
 }
 
+selection { @extend %selected_items; }
 
 /***************
  * Base States *
@@ -114,9 +115,8 @@ treeview.expander:disabled { -gtk-icon-effect: dim; }
   }
 
   &:selected {
+    @extend %selected_items;
     &:focus, & {
-      @extend %selected_items;
-
       border-radius: 3px;
     }
   }
@@ -126,8 +126,6 @@ treeview.expander:disabled { -gtk-icon-effect: dim; }
 textview {
   text {
     @extend %view;
-
-    selection { &:focus, & { @extend %selected_items; }}
   }
 }
 
@@ -181,11 +179,6 @@ label {
   row:selected &,
   &:selected { @extend %nobg_selected_items; }
 
-  selection {
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
-  }
-
   &:disabled {
     color: $insensitive_fg_color;
 
@@ -198,10 +191,6 @@ label {
     }
 
     selection { @extend %selected_items:disabled; }
-  }
-
-  &:backdrop {
-    selection { @extend %selected_items:backdrop; }
   }
 }
 
@@ -316,8 +305,6 @@ entry {
     }
 
     &:backdrop:disabled { @include entry(backdrop-insensitive); }
-
-    selection { @extend %selected_items; }
 
     // entry error and warning style
     @each $e_type, $e_color in (error, $error_color),
@@ -1824,8 +1811,6 @@ treeview.view {
   &:selected {
     &:focus, & {
       border-radius: 0;
-
-      @extend %selected_items;
     }
 
     &:backdrop, & {
@@ -4506,7 +4491,17 @@ headerbar.selection-mode button.titlebutton,
 // catch all extend :)
 
 %selected_items {
-  background-color: $selected_bg_color;
+
+  // don't differentiate between focussed and unfocussed widgets.
+  &:focus, &{
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+  }
+
+  &:backdrop {
+    color: $backdrop_selected_fg_color;
+    background-color: $backdrop_selected_bg_color;
+  }
 
   @at-root %nobg_selected_items, & {
     color: $selected_fg_color;
@@ -4517,6 +4512,7 @@ headerbar.selection-mode button.titlebutton,
 
     &:backdrop {
       color: $backdrop_selected_fg_color;
+      background-color: $backdrop_selected_bg_color;
 
       &:disabled { color: mix($backdrop_selected_fg_color, $selected_bg_color, 30%); }
     }
