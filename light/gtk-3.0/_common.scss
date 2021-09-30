@@ -3670,7 +3670,7 @@ row {
       &.has-open-popup,
       &:hover { background-color: mix($fg_color, $selected_bg_color, 10%); }
 
-      &:backdrop { background-color: $selected_bg_color; }
+      @extend %selected_items;
     }
   }
 
