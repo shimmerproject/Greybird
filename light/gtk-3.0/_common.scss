@@ -179,6 +179,7 @@ label {
   row:selected &,
   &:selected { @extend %nobg_selected_items; }
 
+
   &:disabled {
     color: $insensitive_fg_color;
 
@@ -191,6 +192,13 @@ label {
     }
 
     selection { @extend %selected_items:disabled; }
+  }
+
+  // Special case for selections in labels.
+  // (because `selection:backdrop` does not apply)
+  &:backdrop selection {
+    color: $backdrop_selected_fg_color;
+    background-color: $backdrop_selected_bg_color;
   }
 }
 
