@@ -3674,7 +3674,7 @@ row {
 
     &:selected {
       @extend %selected_items;
-      
+
       &:active { box-shadow: inset 0 2px 3px -1px transparentize(black, 0.5); }
 
       &.has-open-popup,
