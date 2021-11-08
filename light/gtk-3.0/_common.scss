@@ -179,7 +179,6 @@ label {
   row:selected &,
   &:selected { @extend %nobg_selected_items; }
 
-
   &:disabled {
     color: $insensitive_fg_color;
 
