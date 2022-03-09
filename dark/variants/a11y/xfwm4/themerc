@@ -24,3 +24,4 @@ shadow_opacity=50
 
 maximized_offset=3
 show_app_icon=false
+frame_border_top=1
