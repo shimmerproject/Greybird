@@ -22,3 +22,4 @@ shadow_delta_width=0
 shadow_delta_x=0
 shadow_delta_y=-10
 shadow_opacity=50
+frame_border_top=1
