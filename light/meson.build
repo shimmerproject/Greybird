@@ -9,6 +9,7 @@ subdir('gtk-4.0')
 
 # we don't want to install these in the flatpak
 if not get_option('flatpak')
+    install_data('index.theme', install_dir : theme_path)
     install_data('Greybird.emerald', install_dir : theme_path)
     install_subdir('gtk-2.0', install_dir : theme_path)
     install_subdir('gnome-shell', install_dir : theme_path)
