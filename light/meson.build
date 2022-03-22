@@ -20,5 +20,5 @@ if not get_option('flatpak')
     install_subdir('unity', install_dir : theme_path)
     install_subdir('variants/a11y/xfwm4', install_dir : a11y_theme_path)
     install_subdir('variants/bright/xfce-notify-4.0', install_dir : bright_theme_path)
-    install_subdir('variants/comptact/xfwm4', install_dir : compact_theme_path)
+    install_subdir('variants/compact/xfwm4', install_dir : compact_theme_path)
 endif
