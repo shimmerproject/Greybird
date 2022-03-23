@@ -76,7 +76,7 @@ if not get_option('flatpak')
     install_subdir('gnome-shell', install_dir : theme_path)
     install_subdir('metacity-1', install_dir : theme_path)
     install_subdir('xfwm4', install_dir : theme_path)
-    install_subdir('xfwm4-a11y', install_dir : join_paths (a11y_theme_path, 'xfwm4'))
     install_subdir('plank', install_dir : theme_path)
     install_subdir('unity', install_dir : theme_path)
+    install_subdir('variants/a11y/xfwm4', install_dir : a11y_theme_path)
 endif
