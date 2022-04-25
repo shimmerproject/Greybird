@@ -61,3 +61,10 @@ headerbar entry .vertical.pan button image {
     min-height: 12px;
     padding: 0;
 }
+
+/******************
+ * Gnome Software *
+ ******************/
+headerbar viewswitcher button stack box {
+    padding-top: 0px; padding-bottom: 0px;
+}
