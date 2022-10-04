@@ -544,6 +544,7 @@ button {
     }
 
     @at-root %button_basic_flat,
+    .toolbar &,
     &.flat {
       @include button(undecorated);
       // to avoid adjacent buttons borders clashing when transitioning, the transition on the normal state is set
@@ -1368,6 +1369,7 @@ combobox {
   background-color: $bg_color;
 }
 
+.toolbar,
 toolbar {
   @extend %toolbar;
   @include headerbar_fill;
