@@ -207,7 +207,7 @@
     @include _shadows(inset 0 1px $_hilight_color, $_button_edge);
   }
 
-  @else if $t==hover {
+  @else if $t==hover or $t==undecorated-hover {
   //
   // hovered button
   //
@@ -271,7 +271,7 @@
   }
 
 
-  @else if $t==active {
+  @else if $t==active or $t==undecorated-active {
   //
   // pushed button
   //
