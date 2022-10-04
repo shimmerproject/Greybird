@@ -2158,6 +2158,7 @@ menubar,
 
   &:backdrop { background-color: $backdrop_bg_color; }
 
+  > item,
   > menuitem {
     min-height: 16px;
     padding: 3px 8px;
