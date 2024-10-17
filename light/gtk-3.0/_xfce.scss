@@ -177,8 +177,11 @@ XfdesktopIconView.view {
       color: $selected_fg_color;
       background-color: transparent;
     }
-    &:selected, &:selected:backdrop {
-      background-color: rgba(darken($selected_bg_color, 20%), 0.5);
+    &:selected {
+      background-color: darken($selected_bg_color, 20%);
+    }
+    &:selected:backdrop {
+      background-color: rgba($selected_bg_color, 0.5);
     }
   }
   .rubberband {
