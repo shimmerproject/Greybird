@@ -163,14 +163,25 @@ XfdesktopIconView.view {
   color: $panel_fg_color;
   border-radius: 3px;
   &:active {
-    background: rgba(darken($selected_bg_color, 15%), 0.5);
+    background: rgba(darken($selected_bg_color, 20%), 0.5);
     color: $selected_bg_color;
     text-shadow: 0 1px 1px black;
   }
   .label {
     text-shadow: 1px 1px 2px black;
+    outline-style: none;
     &:active {
       color: $selected_fg_color;
+    }
+    &:backdrop {
+      color: $selected_fg_color;
+      background-color: transparent;
+    }
+    &:selected {
+      background-color: darken($selected_bg_color, 20%);
+    }
+    &:selected:backdrop {
+      background-color: rgba($selected_bg_color, 0.5);
     }
   }
   .rubberband {
