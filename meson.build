@@ -25,7 +25,7 @@ else
 endif
 
 if get_option('opaque-panel-light-theme')
-    run_command('sed', '-i', '"s/\$opaque_panel: false;/\$opaque_panel: true;/"', 'light/gtk-3.0/_xfce.scss')
+    run_command('sed', '-i', '"s/\$opaque_panel: false;/\$opaque_panel: true;/"', meson.source_root() + '/light/gtk-3.0/_xfce.scss')
     message('Panel transparency with light theme: opaque')
 else
     message('Panel transparency with light theme: semi-transparent')
