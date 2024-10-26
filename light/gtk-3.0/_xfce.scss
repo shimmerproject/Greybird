@@ -1,4 +1,5 @@
 $variant: 'light';
+$opaque_panel: false;
 
 @import 'colors';
 
@@ -13,7 +14,7 @@ $variant: 'light';
 }
 
 .xfce4-panel.background {
-    background-color: rgba(36, 36, 36, 0.8);
+    background-color: rgba(36, 36, 36, if($opaque_panel, 1, 0.8));
     color: $panel_fg_color;
     font-weight: normal;
     button {
