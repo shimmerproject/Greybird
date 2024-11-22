@@ -147,7 +147,6 @@ wnck-pager {
   &:hover { background-color: $selected_bg_color; }
 }
 
-/* Thunar's sidebar top border */
 .thunar {
   grid :backdrop { color: $insensitive_fg_color; }
   toolbar {
@@ -155,7 +154,10 @@ wnck-pager {
 
     entry { min-height: 24px; }
   }
-  .sidebar.frame { border-top: 1px solid $borders_color; }
+  .sidebar {
+    &.frame { border-top: 1px solid $borders_color; }
+    .view:selected:backdrop { color: $insensitive_fg_color; }
+  }
 }
 
 XfdesktopIconView.view {
