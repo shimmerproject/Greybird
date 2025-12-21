@@ -3910,14 +3910,15 @@ filechooserbutton:drop(active) {
 }
 
 // Nemo rename file
-.nemo-window-pane widget.entry {
+.nemo-window-pane .entry {
   border: 1px solid;
   border-radius: 3px;
 
   @include entry(focus);
 
   &:selected {
-    &:focus, & { 
+    &,
+    &:focus {
       @extend %selected_items;
     }
   }
