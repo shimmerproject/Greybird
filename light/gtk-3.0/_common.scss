@@ -3909,6 +3909,21 @@ filechooserbutton:drop(active) {
   paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; } }
 }
 
+// Nemo rename file
+.nemo-window-pane .entry {
+  border: 1px solid;
+  border-radius: 3px;
+
+  @include entry(focus);
+
+  &:selected {
+    &,
+    &:focus {
+      @extend %selected_items;
+    }
+  }
+}
+
 stacksidebar {
   &.sidebar {
     &:dir(ltr),
